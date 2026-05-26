@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+{% unless site.data.data.sidebar.education %}
+  {% include education.html %}
+{% endunless %}
+
+{% unless site.data.data.sidebar.complementary_education %}
+  {% include complementary_education.html %}
+{% endunless %}
+
+{% include experiences.html %}
+
+{% include certifications.html %}
+
+{% include research.html %}
+
+{% include management.html %}
+
+{% include top_publications.html %}
+
+{% include grants.html %}
+
+{% include fellowships.html %}
+
+{% include supervisions.html %}
+
+{% include phd_msc_committees.html %}
+
+{% include teaching.html %}
+
+{% include reviews.html %}
+
+{% include upcoming-events.html %}
+
+{% include outreach.html %}
+
+{% include projects.html %}
+
+{% include oss-contributions.html %}

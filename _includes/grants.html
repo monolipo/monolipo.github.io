@@ -1,0 +1,31 @@
+{% assign grants = site.data.data.grants %}
+{% if grants %}
+<section class="section experiences_plus-section">
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-money-check-edit-alt fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ grants.title }} <span style="font-size: x-small;">{{ grants.description }}</span>
+  </h2>
+
+  {% for grant in grants.info %}
+  <div class="item">
+
+    <div class="meta">
+
+      <div class="upper-row">
+        <h3 class="job-title">{{ grant.item }}</h3>
+        <div class="time">{{ grant.time }}</div>
+      </div><!--//upper-row-->
+
+      <div class="company">{{ grant.detail }}</div>
+
+    </div><!--//meta-->
+
+  </div><!--//item-->
+  {% endfor %}
+
+</section><!--//section-->
+{% endif %}
+

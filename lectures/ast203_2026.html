@@ -1,0 +1,10 @@
+---
+layout: page
+---
+
+{% assign courses = site.data.data.lectures.courses %}
+{% for course in courses %}
+  {% if course.code == "AST-203-4" %}
+    {% include single_course.html %}
+  {% endif %}
+{% endfor %}

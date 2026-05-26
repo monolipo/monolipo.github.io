@@ -1,0 +1,131 @@
+
+<section class="section publications-section">
+
+<div class="previous"><a href="../lectures_ptbr.html">&laquo; Todos os cursos</a></div>
+
+<h2 class="single_course-title" style="background-color: {{ course.background-color | default($theme-color) | safe }}">
+<span class="fa-stack fa-sm">
+    <i class="fas fa-square fa-stack-2x"></i>
+    <i class="fas fa-person-chalkboard fa-stack-1x fa-inverse" style="color: {{ course.background-color | default($theme-color) | safe }}"></i>
+</span>
+{{course.name_ptbr}} 
+</h2>
+<h3 class="section-subtitle" style="color: {{ course.background-color | default($theme-color) | safe }}">
+    {{course.code}} {{course.semester}}
+</h3>
+
+{% if course.institute_long %}
+<h3 class="section-subtitle">
+    {{course.institute_long}}
+</h3>
+<h4 class="section-subsubtitle">
+    {{course.department}}
+</h4>
+{% else %}
+<h3 class="section-subtitle">
+{{course.institute}}
+</h3>
+{% endif %}
+
+<a href="{{course.institute-link}}" target="_blank">Página do curso</a>
+
+
+<div class="course-summary" style="color: {{ course.background-color | default($theme-color) | safe }}">
+  <table>
+{% for info in course.info_ptbr %}
+    <tr>
+      <td style="font-weight: 900 ">{{info.key}}</td>
+
+      <td >{{ info.value }}</td>
+    </tr>
+{% endfor %}
+  </table>
+</div>
+
+ {{course.intro}}
+
+<br><br>
+
+<h3 class="section-title">Ementa</h3>
+<div style = "text-align: justify; text-justify: inter-word;"> {{course.description}} </div>
+
+<br>
+
+
+<h3 class="section-title">Aulas</h3>
+
+<div class="lecture-table" style="color: {{ course.background-color | default($theme-color) | safe }}">
+<table>
+    
+{% for section in course.sections %}
+
+  <tr>
+    <th style="background-color: {{ section.color | default('#666') | safe }}; width:80%"> {{ section.name }} </th>
+    <th style="background-color: {{ section.color | default('#666') | safe }} "></th>
+    <th style="background-color: {{ section.color | default('#666') | safe }} "></th>
+    <th style="background-color: {{ section.color | default('#666') | safe }} "></th>
+    <th style="background-color: {{ section.color | default('#666') | safe }} "></th>
+  </tr>
+
+  {% for lecture in course.lectures %}
+    
+    {% if lecture.section == section.name %}
+
+      <tr>
+        <td> <span style="color: #aaa">{{ lecture.date }} -</span> <a href="{{lecture.link}}" target="_blank" class="lecture-name">{{ lecture.name }}</a> </th>
+        
+        <td>
+            {% if lecture.video %} 
+            <a href="{{ lecture.video }}" target="_blank"><i class="fa-solid fa-play lecture-icon"></i></a> 
+            {% endif %}
+        </td>
+        <td>
+          {% if lecture.pdf %} 
+          <a href="{{ lecture.pdf }}" target="_blank"><i class="fa-solid fa-file-pdf lecture-icon"></i></a> 
+          {% endif %}
+        </td>
+        <td> 
+          {% if lecture.drive %} 
+          <a href="{{ lecture.drive }}" target="_blank"><i class="fa-brands fa-google-drive lecture-icon"></i></a> 
+          {% endif %}
+        </td>
+        <td>
+          {% if lecture.blog %} 
+          <a href="{{ lecture.blog }}" target="_blank"><i class="fa-solid fa-newspaper lecture-icon"></i></a>
+          {% endif %}
+        </td>
+      </tr>
+    
+    {% endif %}
+  {% endfor %}
+
+{% endfor %}
+
+</table>
+</div>
+
+
+<h3 class="section-title">Documentos</h3>
+
+
+<div class="doc-cards">
+    {% for document in course.documents %}
+      <a class="doc-card"  href="{{ document.link }}" target="_blank" style="border-color: {{ course.background-color | default('#666') | safe }}; color: {{ course.background-color | default('#FFF') | safe }};">
+        {% if document.type == "pdf" %}
+        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        {% else %}
+        <div class="doc-icon"><i class="fa-solid fa-file"></i></div>
+        {% endif %}
+        
+        {{ document.name }}
+      </a>
+    {% endfor %}
+</div>
+
+<br>
+
+
+<h3 class="section-title">Bibliografia</h3>
+
+{{course.bibliography}}
+</section>

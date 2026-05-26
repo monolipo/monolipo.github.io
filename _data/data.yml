@@ -1,0 +1,1591 @@
+navbar:
+  pages:
+  - title: Home
+    url: /
+    icon: fa fa-fw fa-home
+  - title: Publications
+    url: /publications.html
+    icon: fa fa-fw fa-book
+  - title: Talks and Events
+    url: /events.html
+    icon: fa-solid fa-presentation-screen
+  - title: Lectures
+    url: /lectures.html
+    icon: fa-solid fa-person-chalkboard
+  - title: Projects
+    url: /projects.html
+    icon: fa-solid fa-telescope
+  pages-extra:
+  - title: Thesis and Books
+    url: /thesis_and_books.html
+    icon: fa-solid fa-book
+  - title: Databases
+    url: /databases.html
+    icon: fa-solid fa-database
+  - title: Figures and Plots
+    url: /figures.html
+    icon: fa-solid fa-image
+  - title: Videos
+    url: /videos.html
+    icon: fa-solid fa-play
+  - title: 3D-models
+    url: /models.html
+    icon: fa-solid fa-cube
+  - title: Press Releases
+    url: /press.html
+    icon: fa-solid fa-microphone-stand
+  - title: Admittance History
+    url: /selections.html
+    icon: fa-solid fa-ranking-star
+  - title: Open applications
+    url: /applications.html
+    icon: fa-solid fa-bolt-lightning
+navbar_ptbr:
+  pages:
+  - title: Página Inicial
+    url: /index_ptbr.html
+    icon: fa fa-fw fa-home
+  - title: Publicações
+    url: /publications_ptbr.html
+    icon: fa fa-fw fa-book
+  - title: Palestras e Eventos
+    url: /events_ptbr.html
+    icon: fa-solid fa-presentation-screen
+  - title: Aulas
+    url: /lectures_ptbr.html
+    icon: fa-solid fa-person-chalkboard
+  - title: Projetos
+    url: /projects_ptbr.html
+    icon: fa-solid fa-telescope
+  pages-extra:
+  - title: Teses e Livros
+    url: /thesis_and_books_ptbr.html
+    icon: fa-solid fa-book
+  - title: Bases de Dados
+    url: /databases_ptbr.html
+    icon: fa-solid fa-database
+  - title: Figuras e Gráficos
+    url: /figures_ptbr.html
+    icon: fa-solid fa-image
+  - title: Vídeos
+    url: /videos_ptbr.html
+    icon: fa-solid fa-play
+  - title: Modelos 3D
+    url: /models_ptbr.html
+    icon: fa-solid fa-cube
+  - title: Comunicados de Imprensa
+    url: /press_ptbr.html
+    icon: fa-solid fa-microphone-stand
+  - title: Histórico de Seleções
+    url: /selections_ptbr.html
+    icon: fa-solid fa-ranking-star
+  - title: Aplicações Abertas
+    url: /applications_ptbr.html
+    icon: fa-solid fa-bolt-lightning
+summary:
+  personal-title: Personal Information
+  personal-info:
+  - key: Preferred name
+    value: Ted Leandro de Almeida
+    link: ''
+  - key: Full name
+    value: Leandro de Almeida
+    link: ''
+  - key: Nationality
+    value: Brazilian
+    link: ''
+  academic-title: Academic Information
+  academic-info:
+  - key: Current institute
+    value: INPE - Instituto Nacional de Pesquisas Espaciais
+    link: https://www.gov.br/inpe/pt-br
+  - key: Current position
+    value: Researcher and Professor / Faculty member in Astrophysics
+    link: ''
+  - key: Former institutes
+    value: SOAR / NOIRLab; LNA; UFRN; FURG
+    link: ''
+  - key: Research interests
+    value: Exoplanets, gravitational microlensing, stellar astrophysics, astronomical instrumentation, time-domain astronomy
+    link: ''
+  publication-title: Publications
+  publication-info:
+  - key: Peer-reviewed papers listed here
+    value: '32'
+    link: ''
+  - key: Conference proceedings listed here
+    value: '11'
+    link: ''
+  - key: Lattes iD
+    value: '7278094197406927'
+    link: http://lattes.cnpq.br/7278094197406927
+  - key: ORCID
+    value: 0000-0001-8179-1147
+    link: https://orcid.org/0000-0001-8179-1147
+  additional-title: Additional Information
+  additional-info:
+  - key: Languages
+    value: Portuguese; English; Spanish (reading/intermediate)
+    link: ''
+  - key: Location
+    value: São José dos Campos, SP, Brazil
+    link: ''
+summary_ptbr:
+  personal-title: Informação Pessoal
+  personal-info:
+  - key: Nome de destaque
+    value: Ted Leandro de Almeida
+    link: ''
+  - key: Nome completo
+    value: Leandro de Almeida
+    link: ''
+  - key: Nacionalidade
+    value: Brasileiro
+    link: ''
+  academic-title: Informações Acadêmicas
+  academic-info:
+  - key: Instituto atual
+    value: INPE - Instituto Nacional de Pesquisas Espaciais
+    link: https://www.gov.br/inpe/pt-br
+  - key: Cargo atual
+    value: Pesquisador e professor / docente da pós-graduação em Astrofísica
+    link: ''
+  - key: Institutos anteriores
+    value: SOAR / NOIRLab; LNA; UFRN; FURG
+    link: ''
+  - key: Interesses de pesquisa
+    value: Exoplanetas, microlentes gravitacionais, astrofísica estelar, instrumentação astronômica, astrofísica temporal
+    link: ''
+  publication-title: Publicações
+  publication-info:
+  - key: Artigos em periódicos listados aqui
+    value: '32'
+    link: ''
+  - key: Anais de congresso listados aqui
+    value: '11'
+    link: ''
+  - key: Lattes iD
+    value: '7278094197406927'
+    link: http://lattes.cnpq.br/7278094197406927
+  - key: ORCID
+    value: 0000-0001-8179-1147
+    link: https://orcid.org/0000-0001-8179-1147
+  additional-title: Informações Adicionais
+  additional-info:
+  - key: Idiomas
+    value: Português; Inglês; Espanhol (leitura/intermediário)
+    link: ''
+  - key: Localização
+    value: São José dos Campos, SP, Brasil
+    link: ''
+sidebar:
+  position: right
+  about: false
+  education: true
+  complementary_education: true
+  first_name: Ted
+  name: Leandro de Almeida
+  country-code: br
+  pronoun: PhD - He/Him
+  tagline: Astrophysicist
+  avatar: ted_profile.jpeg
+  institute-logo: inpe_branco.png
+  contact-title: Contact
+  email: monolipo.physics@gmail.com
+  phone: ''
+  lattes: '7278094197406927'
+  ads: Ted Leandro de Almeida
+  ads-link: https://ui.adsabs.harvard.edu/search/q=author%3A%22de%20Almeida%2C%20L%22%20OR%20author%3A%22Almeida%2C%20L%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
+  website: astroted.com
+  linkedin: ''
+  xing: ''
+  github: monolipo
+  telegram: ''
+  gitlab: ''
+  bitbucket: ''
+  twitter: ''
+  stack-overflow: ''
+  codewars: ''
+  goodreads: ''
+  pdf: ''
+  orcid: 0000-0001-8179-1147
+  citizenship: ''
+  institute: INPE
+  institute-link: https://www.gov.br/inpe/pt-br
+  address: São José dos Campos, SP, Brazil
+  timezone: São Paulo Timezone (GMT-3)
+  languages:
+    title: Languages
+    info:
+    - idiom: Portuguese
+      level: Native
+    - idiom: English
+      level: Fluent
+    - idiom: Spanish
+      level: Intermediate reading
+  interests:
+    title: Research Interests
+    info:
+    - item: Gravitational Microlensing
+      link: ''
+    - item: Exoplanets
+      link: ''
+    - item: Stellar Astrophysics
+      link: ''
+    - item: Astronomical Instrumentation
+      link: ''
+    - item: Time-domain Astronomy
+      link: ''
+  hobbies:
+    title: Hobbies
+    info: []
+sidebar_ptbr:
+  position: right
+  about: false
+  education: true
+  complementary_education: true
+  first_name: Ted
+  name: Leandro de Almeida
+  country-code: br
+  pronoun: Dr. - Ele / Dele
+  tagline: Astrofísico
+  avatar: ted_profile.jpeg
+  institute-logo: inpe_branco.png
+  contact-title: Contato
+  email: monolipo.physics@gmail.com
+  phone: ''
+  lattes: '7278094197406927'
+  ads: Ted Leandro de Almeida
+  ads-link: https://ui.adsabs.harvard.edu/search/q=author%3A%22de%20Almeida%2C%20L%22%20OR%20author%3A%22Almeida%2C%20L%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
+  website: astroted.com
+  linkedin: ''
+  xing: ''
+  github: monolipo
+  telegram: ''
+  gitlab: ''
+  bitbucket: ''
+  twitter: ''
+  stack-overflow: ''
+  codewars: ''
+  goodreads: ''
+  pdf: ''
+  orcid: 0000-0001-8179-1147
+  citizenship: ''
+  institute: INPE
+  institute-link: https://www.gov.br/inpe/pt-br
+  address: São José dos Campos, SP, Brasil
+  timezone: Fuso de São Paulo (GMT-3)
+  languages:
+    title: Idiomas
+    info:
+    - idiom: Português
+      level: Nativo
+    - idiom: Inglês
+      level: Fluente
+    - idiom: Espanhol
+      level: Leitura intermediária
+  interests:
+    title: Interesses de Pesquisa
+    info:
+    - item: Microlentes Gravitacionais
+      link: ''
+    - item: Exoplanetas
+      link: ''
+    - item: Astrofísica Estelar
+      link: ''
+    - item: Instrumentação Astronômica
+      link: ''
+    - item: Astrofísica Temporal
+      link: ''
+  hobbies:
+    title: Hobbies
+    info: []
+career-profile:
+  title: Career Profile
+  summary: I am a researcher and professor at the Astrophysics Division of the Instituto Nacional de Pesquisas Espaciais (INPE),
+    where I am also a faculty member of the graduate program in Astrophysics. My work focuses on exoplanets, gravitational
+    microlensing, stellar astrophysics, astronomical instrumentation, and time-domain observations. <br><br>I hold a PhD in
+    Physics from the Universidade Federal do Rio Grande do Norte (UFRN), where I worked on gravitational-microlensing equations
+    and their application to the search for low-mass exoplanets. I have extensive observational experience at the Observatório
+    do Pico dos Dias, with more than 350 observing nights using imaging cameras and spectrographs, and I have contributed
+    to observing proposals with Gemini North and SOAR. I have also worked as a resident astronomer at the SOAR telescope and
+    participated in the commissioning of the SPARC4 instrument. Since 2022, I have contributed to GRANDMA as an observer and
+    data analyst, and I am a member of the PLATO consortium in the stellar-science area.
+  summary-more: ''
+career-profile_ptbr:
+  title: Perfil de Carreira
+  summary: Sou pesquisador e professor da Divisão de Astrofísica do Instituto Nacional de Pesquisas Espaciais (INPE), onde
+    também sou membro do corpo docente da pós-graduação em Astrofísica. Minha atuação se concentra em exoplanetas, microlentes
+    gravitacionais, astrofísica estelar, instrumentação astronômica e observações no domínio temporal. <br><br>Sou doutor
+    em Física pela Universidade Federal do Rio Grande do Norte (UFRN), onde trabalhei com a parametrização das equações de
+    microlentes gravitacionais e sua aplicação na busca por exoplanetas de baixa massa. Tenho ampla experiência observacional
+    no Observatório do Pico dos Dias, com mais de 350 noites de observação usando câmeras diretas e espectrógrafos, e participei
+    de propostas observacionais com o Gemini Norte e o SOAR. Também atuei como astrônomo residente do telescópio SOAR e participei
+    do comissionamento do instrumento SPARC4. Desde 2022, participo da colaboração GRANDMA como observador e na redução/análise
+    de dados, além de integrar o consórcio PLATO na área estelar.
+  summary-more: ''
+education:
+  title: Education and Postdocs
+  info:
+  - degree: Postdoctoral Research - Stellar Astrophysics, Exoplanets and Astronomical Instrumentation
+    university: NOIRLab / SOAR, Chile
+    time: 2025 - 2026
+    details: ''
+  - degree: Postdoctoral Research - Microlensing and Astronomical Instrumentation
+    university: Laboratório Nacional de Astrofísica (LNA), Brazil
+    time: 2021 - 2025
+    details: ''
+  - degree: PhD in Physics
+    university: Universidade Federal do Rio Grande do Norte (UFRN), Brazil
+    time: 2017 - 2021
+    details: 'Thesis: Aplicação da Técnica de Microlentes Gravitacionais na Busca de Exoplanetas de Baixa Massa. Advisor:
+      José Dias do Nascimento Júnior.'
+  - degree: MSc in Physics
+    university: Universidade Federal do Rio Grande do Norte (UFRN), Brazil
+    time: 2015 - 2017
+    details: 'Dissertation: Estudo da Topologia de Microlentes Gravitacionais e a Descoberta de Exoplanetas Distantes.'
+  - degree: BSc in Physics
+    university: Universidade Federal do Rio Grande (FURG), Brazil
+    time: 2011 - 2014
+    details: Undergraduate thesis on the energy source in luminous and ultraluminous infrared galaxies using Spitzer data.
+education_ptbr:
+  title: Formação Acadêmica
+  info:
+  - degree: Pós-doutorado - Astrofísica Estelar, Exoplanetas e Instrumentação Astronômica
+    university: NOIRLab / SOAR, Chile
+    time: 2025 - 2026
+    details: ''
+  - degree: Pós-doutorado - Microlentes e Instrumentação Astronômica
+    university: Laboratório Nacional de Astrofísica (LNA), Brasil
+    time: 2021 - 2025
+    details: ''
+  - degree: Doutorado em Física
+    university: Universidade Federal do Rio Grande do Norte (UFRN), Brasil
+    time: 2017 - 2021
+    details: 'Tese: Aplicação da Técnica de Microlentes Gravitacionais na Busca de Exoplanetas de Baixa Massa. Orientador:
+      José Dias do Nascimento Júnior.'
+  - degree: Mestrado em Física
+    university: Universidade Federal do Rio Grande do Norte (UFRN), Brasil
+    time: 2015 - 2017
+    details: 'Dissertação: Estudo da Topologia de Microlentes Gravitacionais e a Descoberta de Exoplanetas Distantes.'
+  - degree: Graduação em Física - Bacharelado
+    university: Universidade Federal do Rio Grande (FURG), Brasil
+    time: 2011 - 2014
+    details: Trabalho de conclusão sobre a fonte de energia em galáxias luminosas e ultraluminosas no infravermelho usando
+      dados do Spitzer.
+complementary_education:
+  title: Education+
+  info:
+  - degree: 'Nebulatom 3: A School on Emission-Line Objects in the Universe'
+    university: Universidade Federal de Santa Catarina (UFSC), Brazil
+    time: '2017'
+    details: ''
+  - degree: Mathematical Methods of Physics III
+    university: Universidade Federal do Rio Grande (FURG), Brazil
+    time: 2014 - 2015
+    details: ''
+  - degree: Plasma Physics
+    university: Universidade Federal do Rio Grande (FURG), Brazil
+    time: '2014'
+    details: ''
+  - degree: Theory of Relativity
+    university: Universidade Federal do Rio Grande (FURG), Brazil
+    time: '2013'
+    details: ''
+  - degree: Astrophysics
+    university: Universidade Federal do Rio Grande (FURG), Brazil
+    time: '2012'
+    details: ''
+  - degree: Stellar Evolution
+    university: Observatório Nacional (ON), Brazil
+    time: 2010 - 2011
+    details: ''
+complementary_education_ptbr:
+  title: Formação Complementar
+  info:
+  - degree: 'Nebulatom 3: A School on Emission-Line Objects in the Universe'
+    university: Universidade Federal de Santa Catarina (UFSC), Brasil
+    time: '2017'
+    details: ''
+  - degree: Métodos Matemáticos da Física III
+    university: Universidade Federal do Rio Grande (FURG), Brasil
+    time: 2014 - 2015
+    details: ''
+  - degree: Física de Plasmas
+    university: Universidade Federal do Rio Grande (FURG), Brasil
+    time: '2014'
+    details: ''
+  - degree: Teoria da Relatividade
+    university: Universidade Federal do Rio Grande (FURG), Brasil
+    time: '2013'
+    details: ''
+  - degree: Astrofísica
+    university: Universidade Federal do Rio Grande (FURG), Brasil
+    time: '2012'
+    details: ''
+  - degree: Evolução Estelar
+    university: Observatório Nacional (ON), Brasil
+    time: 2010 - 2011
+    details: ''
+experiences:
+  title: Job Experience
+  info:
+  - role: Researcher and Professor
+    time: 2026 - present
+    company: Instituto Nacional de Pesquisas Espaciais (INPE)
+    details: Researcher at the Astrophysics Division and faculty member of the graduate program in Astrophysics.
+  - role: Resident Astronomer of the SOAR Telescope
+    time: 2025 - 2026
+    company: NOIRLab / Southern Astrophysical Research Telescope
+    details: Research in stellar astrophysics and support for Goodman, TripleSpec and SAM+SAMI instruments.
+  - role: Postdoctoral Researcher
+    time: 2021 - 2025
+    company: Laboratório Nacional de Astrofísica (LNA)
+    details: Research and technical work related to microlensing, instrumentation, observing support at SOAR and OPD, and
+      SPARC4 commissioning.
+  - role: Graduate Researcher
+    time: 2015 - 2021
+    company: Universidade Federal do Rio Grande do Norte (UFRN)
+    details: MSc and PhD research on gravitational microlensing and exoplanet detection.
+  - role: Undergraduate researcher and outreach fellow
+    time: 2011 - 2015
+    company: Universidade Federal do Rio Grande (FURG)
+    details: Research on infrared galaxies and activities related to the Observatório Sofia.
+experiences_ptbr:
+  title: Experiência Profissional
+  info:
+  - role: Pesquisador e Professor
+    time: 2026 - atual
+    company: Instituto Nacional de Pesquisas Espaciais (INPE)
+    details: Pesquisador da Divisão de Astrofísica e docente da pós-graduação em Astrofísica.
+  - role: Astrônomo Residente do Telescópio SOAR
+    time: 2025 - 2026
+    company: NOIRLab / Southern Astrophysical Research Telescope
+    details: Pesquisa em astrofísica estelar e suporte aos instrumentos Goodman, TripleSpec e SAM+SAMI.
+  - role: Pesquisador de Pós-doutorado
+    time: 2021 - 2025
+    company: Laboratório Nacional de Astrofísica (LNA)
+    details: Pesquisa e atuação técnica em microlentes, instrumentação, suporte observacional no SOAR e no OPD, e comissionamento
+      do SPARC4.
+  - role: Pesquisador de Pós-graduação
+    time: 2015 - 2021
+    company: Universidade Federal do Rio Grande do Norte (UFRN)
+    details: Pesquisa de mestrado e doutorado em microlentes gravitacionais e detecção de exoplanetas.
+  - role: Iniciação científica e extensão
+    time: 2011 - 2015
+    company: Universidade Federal do Rio Grande (FURG)
+    details: Pesquisa com galáxias no infravermelho e atividades ligadas ao Observatório Sofia.
+research:
+  title: Main Research Topics
+  intro: ''
+  topics:
+  - title: Gravitational Microlensing and Exoplanets
+    link: ''
+    tagline: Detection and characterization of low-mass exoplanets through gravitational microlensing.
+  - title: Stellar Astrophysics
+    link: ''
+    tagline: Solar analogs, stellar rotation, activity cycles, eclipsing binaries, and stellar parameters.
+  - title: Astronomical Instrumentation
+    link: ''
+    tagline: Observational support, spectrographs, imaging cameras, SPARC4 commissioning, and data pipelines.
+  - title: Time-domain and Multimessenger Astronomy
+    link: ''
+    tagline: GRANDMA observations, transient follow-up, GRBs, supernovae and kilonova searches.
+  - title: Observational Data Analysis
+    link: ''
+    tagline: Photometry, spectroscopy, time-series analysis, and computational tools for large astronomical datasets.
+research_ptbr:
+  title: Principais Tópicos de Pesquisa
+  intro: ''
+  topics:
+  - title: Microlentes Gravitacionais e Exoplanetas
+    link: ''
+    tagline: Detecção e caracterização de exoplanetas de baixa massa através da técnica de microlentes gravitacionais.
+  - title: Astrofísica Estelar
+    link: ''
+    tagline: Análogas solares, rotação estelar, ciclos de atividade, binárias eclipsantes e parâmetros estelares.
+  - title: Instrumentação Astronômica
+    link: ''
+    tagline: Suporte observacional, espectrógrafos, câmeras, comissionamento do SPARC4 e pipelines de dados.
+  - title: Astrofísica Temporal e Multimensageira
+    link: ''
+    tagline: Observações na colaboração GRANDMA, acompanhamento de transientes, GRBs, supernovas e busca por kilonovas.
+  - title: Análise de Dados Observacionais
+    link: ''
+    tagline: Fotometria, espectroscopia, séries temporais e ferramentas computacionais para grandes bases astronômicas.
+projects:
+  title: Projects
+  intro: ''
+  assignments:
+  - title: PLATO stellar-science collaboration
+    link: ''
+    tagline: Stellar rotation and limb-darkening work in preparation for the PLATO mission.
+  - title: GRANDMA collaboration
+    link: ''
+    tagline: Observation, reduction and analysis of transient events since 2022.
+  - title: SPARC4 commissioning and scientific validation
+    link: ''
+    tagline: Support for commissioning, pipelines and science validation of the SPARC4 instrument.
+  - title: Detection and characterization of exoplanets through gravitational microlensing
+    link: ''
+    tagline: Research line developed during MSc/PhD and observational campaigns.
+  - title: Observatório Sofia
+    link: http://www.observatoriosofia.blogspot.com
+    tagline: Astronomical observations, astrophotography and public outreach.
+  - title: The Role of Mergers and Interactions in Luminous and Ultra-Luminous Infrared Galaxies
+    link: ''
+    tagline: Spitzer/IRS analysis of LIRGs and ULIRGs.
+projects_ptbr:
+  title: Projetos
+  intro: ''
+  assignments:
+  - title: Colaboração PLATO - área estelar
+    link: ''
+    tagline: Trabalho com rotação estelar e escurecimento de limbo em preparação para a missão PLATO.
+  - title: Colaboração GRANDMA
+    link: ''
+    tagline: Observação, redução e análise de eventos transientes desde 2022.
+  - title: Comissionamento e validação científica do SPARC4
+    link: ''
+    tagline: Suporte ao comissionamento, pipelines e validação científica do instrumento SPARC4.
+  - title: Detecção e caracterização de exoplanetas por microlentes gravitacionais
+    link: ''
+    tagline: Linha de pesquisa desenvolvida no mestrado/doutorado e em campanhas observacionais.
+  - title: Observatório Sofia
+    link: http://www.observatoriosofia.blogspot.com
+    tagline: Observações astronômicas, astrofotografia e divulgação científica.
+  - title: The Role of Mergers and Interactions in Luminous and Ultra-Luminous Infrared Galaxies
+    link: ''
+    tagline: Análise de espectros Spitzer/IRS de LIRGs e ULIRGs.
+publications:
+  title: Publications
+  title_ptbr: Publicações
+  home-title: Selected Publications
+  home-title_ptbr: Publicações Selecionadas
+  intro: ''
+  intro_ptbr: ''
+  papers:
+  - title: ExoClock Project. IV. A Homogeneous Catalog of 620 Updated Exoplanet Ephemerides
+    link: ''
+    authors: Kokori, A.; Tsiaras, A.; Pantelidou, G.; Jones, A.; Siakas, A.; Edwards, B.; Tinetti, G.; Wünsche, A.; Jongen,
+      Y.; Libotte, F.; Corrêa, M.; Mugnai, L. V.; Bocchieri, A.; Capildeo, A. R.; Poultourtzidis, E.; Sidiropoulos, C.; Bewersdorff,
+      L.; Lekkas, G.; Grivas, G.; Almeida, L.; et al.
+    more: ''
+    journal: ApJS
+    volume: '283'
+    page: '5'
+    year: 2026
+    show-home: true
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'Multi-epoch afterglow rebrightenings in GRB 250129A: Evidence of successive shock interactions'
+    link: ''
+    authors: Akl, D.; Antier, S.; Koehn, H.; Pang, P. T. H.; Geng, J. J.; Gill, R.; Abdikamalov, E.; Adami, C.; Aivazyan,
+      V.; Almeida, L.; et al.
+    more: ''
+    journal: A&A
+    volume: '710'
+    page: '1'
+    year: 2026
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'Scientific Validation of the SPARC4 Pipeline: Multi-band Imaging, Polarimetry, and Photometric Time Series for
+      Improved Characterization of Transiting Exoplanets'
+    link: ''
+    authors: Martioli, E.; Rodrigues, C. V.; Campagnolo, J. C. N.; Jablonski, F. J.; Mattiuci, A. C.; Falkenberg, F.; Santos,
+      G. H. S.; Mello, M. M. C.; Lima, I. J.; Monteiro, F. V. M.; Fraga, L.; de Almeida, L.; et al.
+    more: ''
+    journal: PASP
+    volume: '138'
+    page: '054502'
+    year: 2026
+    show-home: true
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: SPARC4 Control System
+    link: ''
+    authors: Bernardes, D.; Verducci Jr., O.; Rodrigues, F.; Rodrigues, C. V.; Fraga, L.; Martioli, E.; Gneiding, C. D.; Alves,
+      A. L. M.; Romão, J.; Andrade, L.; Almeida, L. de; et al.
+    more: ''
+    journal: PASP
+    volume: '137'
+    page: '035003'
+    year: 2025
+    show-home: true
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: The PLATO mission
+    link: ''
+    authors: Rauer, H.; Aerts, C.; Cabrera, J.; Deleuil, M.; Erikson, A.; Gizon, L.; Goupil, M. J.; Heras, A.; Walloschek,
+      T.; Lorenzo-Alvarez, J.; Marliani, F.; Martin-García, C.; Mas-Hesse, J. M.; O'Rourke, L.; Osborn, H.; Pagano, I.; Piotto,
+      G.; Pollacco, D.; Ragazzoni, R.; Almeida, L.; et al.
+    more: ''
+    journal: Experimental Astronomy
+    volume: '59'
+    page: '1'
+    year: 2025
+    show-home: true
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'HIP 8522: A Puzzling Young Solar Twin with the Lowest Detected Lithium Abundance'
+    link: ''
+    authors: Galarza, J. Y.; Lorenzo-Oliveira, D.; Ferreira, T.; Reggiani, H.; Behmard, A.; Simon, J. D.; Martioli, E.; López-Valdivia,
+      R.; de Almeida, L.; Jofré, E.; El-Badry, K.
+    more: ''
+    journal: ApJ
+    volume: '983'
+    page: '70'
+    year: 2025
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: Starspot Temperature of CoRoT-2 from Multiwavelength Observations with SPARC4
+    link: ''
+    authors: Valio, A.; Martioli, E.; Kovács, A. O.; Sumida, V. Y. D.; de Almeida, L.; Lorenzo-Oliveira, D.; Jablonski, F.;
+      Rodrigues, C. V.
+    more: ''
+    journal: ApJ
+    volume: '992'
+    page: '174'
+    year: 2025
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'Limits on the ejecta mass during the search for kilonovae associated with neutron star-black hole mergers: A case
+      study of S230518h, GW230529, S230627c and the low-significance candidate S240422ed'
+    link: ''
+    authors: Pillas, M.; Antier, S.; Ackley, K.; Ahumada, T.; Akl, D.; de Almeida, L.; Anand, S.; Andrade, C.; Andreoni, I.;
+      et al.
+    more: ''
+    journal: Physical Review D
+    volume: '112'
+    page: '1'
+    year: 2025
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: A Comprehensive Analysis of Three Microlensing Planet Candidates with the Planet/Binary Degeneracy
+    link: ''
+    authors: Zhang, J.; Zang, W.; Ryu, Y.-H.; Sumi, T.; Udalski, A.; Mao, S.; Albrow, M. D.; Chung, S.-J.; Gould, A.; Han,
+      C.; Hwang, K.-H.; Jung, Y. K.; Shin, I.-G.; Shvartzvald, Y.; Yee, J. C.; Yang, H.; Cha, S.-M.; Kim, D.-J.; Kim, S.-L.;
+      Almeida, L.; et al.
+    more: ''
+    journal: MNRAS
+    volume: '545'
+    page: 1-16
+    year: 2025
+    show-home: true
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'KMT-2023-BLG-1431Lb: A New q < 10 Microlensing Planet from a Subtle Signature'
+    link: ''
+    authors: Bell, A.; Zhang, J.; Zang, W.; Jung, Y. K.; Yee, J. C.; Yang, H.; Sumi, T.; Udalski, A.; Albrow, M. D.; Chung,
+      S.-J.; Gould, A.; Han, C.; Hwang, K.-H.; Ryu, Y.-H.; Shin, I.-G.; Shvartzvald, Y.; Cha, S.-M.; Kim, D.-J.; Kim, S.-L.;
+      Almeida, L.; et al.
+    more: ''
+    journal: PASP
+    volume: '136'
+    page: '054402'
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'Gaia22dkvLb: A Microlensing Planet Potentially Accessible to Radial-velocity Characterization'
+    link: ''
+    authors: Wu, Z.; Dong, S.; Yi, T.; Liu, Z.; El-Badry, K.; Gould, A.; Wyrzykowski, Ł.; Rybicki, K. A.; Bachelet, E.; Christie,
+      G. W.; de Almeida, L.; et al.
+    more: ''
+    journal: AJ
+    volume: '168'
+    page: '62'
+    year: 2024
+    show-home: true
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'The young exoplanetary system TOI-4562: Confirming the presence of a third body in the system'
+    link: ''
+    authors: Fermiano, V.; Saito, R. K.; Ivanov, V. D.; Cáceres, C.; Almeida, L. A.; Aires, J.; Beamin, J. C.; Minniti, D.;
+      Ferreira, T.; Andrade, L.; Borges, B. W.; de Almeida, L.; Jablonski, F.; Schlindwein, W.
+    more: ''
+    journal: A&A
+    volume: '690'
+    page: '1'
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'TOI-3568 b: A super-Neptune in the sub-Jovian desert'
+    link: ''
+    authors: Martioli, E.; Petrucci, R. P.; Jofré, E.; Hébrard, G.; Ghezzi, L.; Gómez Maqueo Chew, Y.; Díaz, R. F.; Perottoni,
+      H. D.; Garcia, L. H.; Rapetti, D.; Lecavelier des Etangs, A.; de Almeida, L.; et al.
+    more: ''
+    journal: A&A
+    volume: '690'
+    page: A312
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: Early photometric and spectroscopic observations of the extraordinarily bright INTEGRAL-detected GRB221009A
+    link: ''
+    authors: Sanchez-Ramirez, R.; Lang, R. G.; Pozanenko, A.; Martinez-Huerta, H.; Hu, Y.-D.; Pandey, S. B.; Gupta, R.; Ror,
+      A. K.; Zhang, B.-B.; Caballero-García, M. D.; Oates, S. R.; Pérez-García, I.; Guziy, S.; Fernández-García, E. J.; Wu,
+      S.-Y.; Almeida, L.; et al.
+    more: ''
+    journal: A&A
+    volume: '692'
+    page: 1-14
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: GRANDMA Observations of SN 2023wrk, a Luminous Type Ia Supernova with Significant Unburned Carbon in the Outer
+      Ejecta
+    link: ''
+    authors: Andrade, C.; Duverne, P.-A.; Liu, J.; Navarete, F.; Abdelaziz, A. E.; Abdelkareem, M.; Abdi, I.; Aboueisha, M.;
+      Adami, C.; Agayeva, S.; Aivazyan, V.; de Almeida, L.; et al.
+    more: ''
+    journal: RNAAS
+    volume: '8'
+    page: '273'
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: A sub-Neptune planet around TOI-1695 discovered and characterized with SPIRou and TESS
+    link: ''
+    authors: Kiefer, F.; Hébrard, G.; Martioli, E.; Artigau, É.; Doyon, R.; Donati, J.-F.; Cadieux, C.; Carmona, A.; Ciardi,
+      D. R.; Cristofari, P. I.; de Almeida, L.; et al.
+    more: ''
+    journal: A&A
+    volume: '670'
+    page: A136
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: A Hale-like Cycle in the Solar Twin 18 Scorpii
+    link: ''
+    authors: do Nascimento, J.-D.; Barnes, S. A.; Saar, S. H.; de Mello, G. F. Porto; Hall, J. C.; Anthony, F.; de Almeida,
+      L.; Velloso, E. N.; da Costa, J. S.; Petit, P.; Strugarek, A.; et al.
+    more: ''
+    journal: ApJ
+    volume: '958'
+    page: '57'
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'TOI-1736 and TOI-2141: Two systems including sub-Neptunes around solar analogs revealed by TESS and SOPHIE'
+    link: ''
+    authors: Martioli, E.; Hébrard, G.; de Almeida, L.; Heidari, N.; Lorenzo-Oliveira, D.; Kiefer, F.
+    more: ''
+    journal: A&A
+    volume: '680'
+    page: A84
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'TOI-1759 b: A transiting sub-Neptune around a low mass star characterized with SPIRou and TESS'
+    link: ''
+    authors: Martioli, E.; Hébrard, G.; Fouqué, P.; Artigau, É.; Donati, J.-F.; Cadieux, C.; Bellotti, S.; Lecavelier des
+      Etangs, A.; Doyon, R.; do Nascimento, J.-D.; Arnold, L.; Carmona, A.; Cook, N. J.; Cortes-Zuleta, P.; de Almeida, L.;
+      et al.
+    more: ''
+    journal: A&A
+    volume: '660'
+    page: A86
+    year: 2022
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: Precision measurement of a brown dwarf mass in a binary system in the microlensing event
+    link: ''
+    authors: Herald, A.; Udalski, A.; Bozza, V.; Rota, P.; Bond, I. A.; Yee, J. C.; Sajadian, S.; Mróz, P.; Poleski, R.; Skowron,
+      J.; Szymański, M. K.; Soszyński, I.; Pietrukowicz, P.; Kozłowski, S.; Almeida, L.; et al.
+    more: ''
+    journal: A&A
+    volume: '663'
+    page: A100
+    year: 2022
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'Measuring the impact of nonpharmaceutical interventions on the SARS-CoV-2 pandemic at a city level: An agent-based
+      computational modelling study of the City of Natal'
+    link: ''
+    authors: Lopes, P. H.; Wellacott, L.; de Almeida, L.; Villavicencio, L. M. M.; Moreira, A. L. L.; Andrade, D. S.; Souza,
+      A. M. C.; de Sousa, R. K. R.; Silva, P. S.; Lima, L.; Lones, M.; do Nascimento, J.-D.; et al.
+    more: ''
+    journal: PLOS Global Public Health
+    volume: '2'
+    page: e0000540
+    year: 2022
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: Quantifying political influence on COVID-19 fatality in Brazil
+    link: ''
+    authors: de Almeida, L.; Carelli, P. V.; Cavalcanti, N. G.; do Nascimento, J.-D.; Felinto, D.
+    more: ''
+    journal: PLoS One
+    volume: '17'
+    page: e0264293
+    year: 2022
+    show-home: false
+    first-author: true
+    refereed: true
+    rank: 1
+  - title: 'An Earth-mass planet in a time of COVID-19: KMT-2020-BLG-0414Lb'
+    link: ''
+    authors: Zang, W.; Han, C.; Kondo, I.; Yee, J. C.; Lee, C.-U.; Gould, A.; Mao, S.; de Almeida, L.; Shvartzvald, Y.; Zhang,
+      X.; Albrow, M. D.; Chung, S.-J.; Hwang, K.-H.; Jung, Y. K.; Ryu, Y.-H.; Shin, I.-G.; Cha, S.-M.; Kim, D.-J.; Kim, H.-W.;
+      Kim, S.-L.; et al.
+    more: ''
+    journal: Research in Astronomy and Astrophysics
+    volume: '21'
+    page: '239'
+    year: 2021
+    show-home: true
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: Spectroscopic and Asteroseismic Analysis of the Secondary Clump Red Giant HD 226808
+    link: ''
+    authors: de Moura, B. L.; Beck, P. G.; de Almeida, L.; Duarte, T. S. S.; Coelho, H. R.; da Costa, J. S.; Castro, M.; do
+      Nascimento, J.-D.
+    more: ''
+    journal: ApJ
+    volume: '894'
+    page: '67'
+    year: 2020
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: Optimized cutting off transit algorithm to study stellar rotation from PLATO mission light curves
+    link: ''
+    authors: de Almeida, L.; Anthony, F.; Mattiuci, A. C.; Castro, M.; da Costa, J. S.; Samadi, R.; do Nascimento, J.-D.
+    more: ''
+    journal: Experimental Astronomy
+    volume: '50'
+    page: 1-0
+    year: 2020
+    show-home: true
+    first-author: true
+    refereed: true
+    rank: 1
+  - title: 'HD43587: a primary CoRoT target under a Maunder minimum phase?'
+    link: ''
+    authors: Ferreira, R. R.; Barbosa, R.; Castro, M.; Guerrero, G.; de Almeida, L.; Boumier, P.; do Nascimento, J.-D.
+    more: ''
+    journal: A&A
+    volume: '639'
+    page: '1'
+    year: 2020
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: Rotation of Solar Analogs Crossmatching Kepler and Gaia DR2
+    link: ''
+    authors: Nascimento Jr., J.-D.; Almeida, L. de; Velloso, E. N.; Anthony, F.; Barnes, S. A.; Saar, S. H.; Meibom, S.; Costa,
+      J. S.; Castro, M.; Galarza, J. Y.; Lorenzo-Oliveira, D.; Beck, P. G.; Meléndez, J.
+    more: ''
+    journal: ApJ
+    volume: '898'
+    page: '173'
+    year: 2020
+    show-home: true
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'COVID-19 pandemics modeling with modified determinist SEIR, social distancing, and age stratification: The effect
+      of vertical confinement and release in Brazil'
+    link: ''
+    authors: Lyra, W.; do Nascimento, J.-D.; Belkhiria, J.; de Almeida, L.; Chrispim, P. P. M.; de Andrade, I.
+    more: ''
+    journal: PLoS One
+    volume: '15'
+    page: e0237627
+    year: 2020
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'Li-rich giant stars under scrutiny: Binarity, magnetic activity and the evolutionary status after Gaia DR2'
+    link: ''
+    authors: Gonçalves, B. F. O.; da Costa, J. S.; de Almeida, L.; Castro, M.; do Nascimento, J.-D.
+    more: ''
+    journal: MNRAS
+    volume: '1'
+    page: '1'
+    year: 2020
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'TOI-257b (HD 19916b): A Warm sub-Saturn Orbiting an Evolved F-type Star'
+    link: ''
+    authors: Addison, B. C.; Wright, D. J.; Nicholson, B. A.; Cale, B.; Mocnik, T.; Huber, D.; Plavchan, P.; Wittenmyer, R.
+      A.; Vanderburg, A.; Chaplin, W. J.; Chontos, A.; Clark, J. T.; Eastman, J. D.; Ziegler, C.; Brahm, R.; Carter, B. D.;
+      Clerte, M.; Espinoza, N.; Horner, J.; Almeida, L.; et al.
+    more: ''
+    journal: MNRAS
+    volume: '1'
+    page: '1'
+    year: 2020
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: 'Orbital Period Variation of KIC 10544976: Applegate Mechanism versus Light Travel Time Effect'
+    link: ''
+    authors: Almeida, L. A.; de Almeida, L.; Damineli, A.; Rodrigues, C. V.; Castro, M.; Lopes, C. E. Ferreira; Jablonski,
+      F.; do Nascimento, J.-D.; Pereira, M. G.
+    more: ''
+    journal: AJ
+    volume: '157'
+    page: '150'
+    year: 2019
+    show-home: true
+    first-author: false
+    refereed: true
+    rank: 2
+  - title: Microlensing Path Parameterization for Earth-like Exoplanet Detection around Solar-mass Stars
+    link: ''
+    authors: de Almeida, L.; do Nascimento, J.-D.
+    more: ''
+    journal: AJ
+    volume: '156'
+    page: '172'
+    year: 2018
+    show-home: true
+    first-author: true
+    refereed: true
+    rank: 1
+  - title: 'SPARC4 - Simultaneous Polarimeter And Rapid Camera in 4 bands: first light, commissioning, and preliminary results'
+    link: ''
+    authors: Rodrigues, C. V.; Gneiding, C. D.; de Almeida, L.; Alves, A. L. M.; Andrade, L. B. P.; Bernardes, D. V.; Santos,
+      J. B.; Campagnolo, J. C. N.; et al.
+    more: ''
+    journal: Proceedings da Reunião Anual da SAB
+    volume: '35'
+    page: 44-48
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 1
+  - title: Photometric characterization of SPARC4
+    link: ''
+    authors: Schlindwein, W.; Campagnolo, J. C. N.; Martioli, E.; Almeida, L.; Andrade, L. B. P.; Bernardes, D. V.; et al.
+    more: ''
+    journal: Proceedings da Reunião Anual da SAB
+    volume: '35'
+    page: 313-316
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 1
+  - title: Scientific Validation of SPARC4's Reduction Software
+    link: ''
+    authors: Figueiredo, A. C. M.; Campagnolo, J. C. N.; Rodrigues, C. V.; Martioli, E.; Schlindwein, W.; Marques, F.; Bernardes,
+      D. V.; Jablonski, F.; Faria, M. A. F.; de Almeida, L.
+    more: ''
+    journal: Proceedings da Reunião Anual da SAB
+    volume: '34'
+    page: 84-87
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 1
+  - title: Commissioning of SPARC4 cameras
+    link: ''
+    authors: Schlindwein, W.; Bernardes, D. V.; Martioli, E.; Rodrigues, C. V.; Campagnolo, J. C. N.; Figueiredo, A. C. M.;
+      Fraga, L.; Andrade, L. B. P.; de Almeida, L.; et al.
+    more: ''
+    journal: Proceedings da Reunião Anual da SAB
+    volume: '34'
+    page: 281-282
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 1
+  - title: Acquisition system of the SPARC4 instrument
+    link: ''
+    authors: Bernardes, D. V.; Martioli, E.; Verducci Jr., O.; Fraga, L.; Rodrigues, C. V.; Schlindwein, W.; Andrade, L. B.
+      P.; de Almeida, L.; et al.
+    more: ''
+    journal: Proceedings da Reunião Anual da SAB
+    volume: '34'
+    page: 300-304
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 1
+  - title: A computational alternative for the polygon method in gravitational microlensing events
+    link: ''
+    authors: de Almeida, L.; Nascimento Junior, J. D.
+    more: ''
+    journal: Boletim da SAB
+    volume: '31'
+    page: 33-36
+    year: 2020
+    show-home: false
+    first-author: true
+    refereed: false
+    rank: 1
+  - title: An easy way to reduce and analyze light curves from the Kepler mission
+    link: ''
+    authors: de Almeida, L.; Nascimento Junior, J. D.
+    more: ''
+    journal: Boletim da SAB
+    volume: '31'
+    page: 37-38
+    year: 2020
+    show-home: false
+    first-author: true
+    refereed: false
+    rank: 1
+  - title: Differential flux method of cutting off binaries
+    link: ''
+    authors: de Almeida, L.; Figueiredo, A. C. M.; Nascimento Junior, J. D.
+    more: ''
+    journal: Boletim da SAB
+    volume: '31'
+    page: 41-43
+    year: 2020
+    show-home: false
+    first-author: true
+    refereed: false
+    rank: 1
+  - title: TESS photometric observations of HD 17051
+    link: ''
+    authors: de Almeida, L.; Anthony, F.; Nascimento Junior, J. D.
+    more: ''
+    journal: Boletim da SAB
+    volume: '32'
+    page: 80-81
+    year: 2020
+    show-home: false
+    first-author: true
+    refereed: false
+    rank: 1
+  - title: 'Unraveling the Astrophotography: Physical Principles and Techniques for Processing Astronomical Images from CCD
+      and DSLR'
+    link: ''
+    authors: Almeida, L.; Leão, J. R. S.
+    more: ''
+    journal: Boletim da SAB
+    volume: '30'
+    page: 52-53
+    year: 2018
+    show-home: false
+    first-author: true
+    refereed: false
+    rank: 1
+  - title: On the topology of microlensing events of Earth-Sun fraction mass systems
+    link: ''
+    authors: Almeida, L.; Nascimento Junior, J. D.
+    more: ''
+    journal: Boletim da SAB
+    volume: '30'
+    page: 207-210
+    year: 2018
+    show-home: false
+    first-author: true
+    refereed: false
+    rank: 1
+event-participation:
+  upcoming-title: Upcoming events
+  upcoming-title_ptbr: Próximos Eventos
+  title: Past participations
+  title_ptbr: Participações Passadas
+  intro: ''
+  events:
+  - title: XXVI Curso de Introdução a Astronomia e Astrofísica - CIAA 2026
+    title_ptbr: XXVI Curso de Introdução a Astronomia e Astrofísica - CIAA 2026
+    link: https://www.gov.br/inpe/pt-br/eventos/ciaa-2026/programa
+    date: 20-24/Jul/2026
+    date_ptbr: 20-24/Jul/2026
+    location: São José dos Campos, Brazil
+    location_ptbr: São José dos Campos, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Lecturer
+    contribution_ptbr: Professor
+    upcoming: true
+    details: Extension course hosted by INPE. This entry is editable in EDITAR_SITE.html.
+  - title: XLIX Reunião Anual da Sociedade Astronômica Brasileira
+    title_ptbr: XLIX Reunião Anual da Sociedade Astronômica Brasileira
+    link: https://sab-astro.org.br/eventos/reuniao-anual-da-sab/xlix-reuniao-anual-da-sab/
+    date: 25-30/Oct/2026
+    date_ptbr: 25-30/Oct/2026
+    location: Praiamar Natal Hotel, Natal-RN, Brazil
+    location_ptbr: Praiamar Natal Hotel, Natal-RN, Brasil
+    country-code: br
+    state-code: br-rn
+    remote: false
+    contribution: TBD
+    contribution_ptbr: A definir
+    upcoming: true
+    details: Annual meeting of the Brazilian Astronomical Society.
+  - title: '2026'
+    year-mark: true
+    upcoming: false
+  - title: 'Exoplanets beyond traditional techniques: the power of gravitational microlensing'
+    title_ptbr: 'Exoplanetas além das técnicas tradicionais: o poder das microlentes gravitacionais'
+    link: ''
+    date: 07/Apr/2026
+    date_ptbr: 07/Apr/2026
+    location: INPE, São José dos Campos, Brazil
+    location_ptbr: INPE, São José dos Campos, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Talk
+    contribution_ptbr: Palestra
+    upcoming: false
+    details: Seminar of the INPE Astrophysics Division.
+  - title: '2023'
+    year-mark: true
+    upcoming: false
+  - title: 'In search of other worlds: how do astronomers hunt exoplanets?'
+    title_ptbr: 'Em busca de outros mundos: como astrônomos caçam exoplanetas?'
+    link: ''
+    date: '2023'
+    date_ptbr: '2023'
+    location: Observatório da UNIVAP, São José dos Campos, Brazil
+    location_ptbr: Observatório da UNIVAP, São José dos Campos, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Invited Talk
+    contribution_ptbr: Palestra convidada
+    upcoming: false
+    details: 5º Espiando a Lua na luneta.
+  - title: 'Exploring the limits of exoplanet detectability: Gravitational Microlensing in focus'
+    title_ptbr: 'Explorando os limites da detectabilidade de exoplanetas: Microlentes Gravitacionais em foco'
+    link: ''
+    date: '2023'
+    date_ptbr: '2023'
+    location: Universidade Presbiteriana Mackenzie, São Paulo, Brazil
+    location_ptbr: Universidade Presbiteriana Mackenzie, São Paulo, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Invited Talk
+    contribution_ptbr: Palestra convidada
+    upcoming: false
+    details: 'Event: Caracterizando Atmosferas de Estrelas e Exoplanetas: A Conexão Estrela-Planeta é Real?'
+  - title: '2022'
+    year-mark: true
+    upcoming: false
+  - title: Vila da Ciência MCTI - Rio Innovation Week
+    title_ptbr: Vila da Ciência MCTI - Rio Innovation Week
+    link: ''
+    date: '2022'
+    date_ptbr: '2022'
+    location: Rio de Janeiro, Brazil
+    location_ptbr: Rio de Janeiro, Brasil
+    country-code: br
+    state-code: br-rj
+    remote: false
+    contribution: Oral presentation
+    contribution_ptbr: Apresentação oral
+    upcoming: false
+    details: Public outreach exhibition.
+  - title: '2021'
+    year-mark: true
+    upcoming: false
+  - title: 'Beyond the Solar System: how do astronomers detect exoplanets?'
+    title_ptbr: 'Além do Sistema Solar: Como Astrônomos detectam Exoplanetas?'
+    link: ''
+    date: '2021'
+    date_ptbr: '2021'
+    location: Laboratório Nacional de Astrofísica, Brazil
+    location_ptbr: Laboratório Nacional de Astrofísica, Brasil
+    country-code: br
+    state-code: ''
+    remote: false
+    contribution: Talk
+    contribution_ptbr: Palestra
+    upcoming: false
+    details: Mês Nacional da Ciência, Tecnologia e Inovações.
+  - title: '2020'
+    year-mark: true
+    upcoming: false
+  - title: 'DRUM TONES: A Differential Flux Method of Cutting Off Eclipses from Binaries and Transits from Planets'
+    title_ptbr: 'DRUM TONES: método do fluxo diferencial para eclipses e trânsitos'
+    link: ''
+    date: '2020'
+    date_ptbr: '2020'
+    location: PLATO ESP workshop
+    location_ptbr: PLATO ESP workshop
+    country-code: gb
+    state-code: ''
+    remote: false
+    contribution: Conference Talk
+    contribution_ptbr: Apresentação em congresso
+    upcoming: false
+    details: Planetary interiors and system architectures workshop.
+  - title: '2019'
+    year-mark: true
+    upcoming: false
+  - title: Photometric observations of HD17051 with the TESS space telescope
+    title_ptbr: Observações fotométricas de HD17051 com o telescópio espacial TESS
+    link: ''
+    date: '2019'
+    date_ptbr: '2019'
+    location: XLIII Reunião Anual da SAB, São Paulo, Brazil
+    location_ptbr: XLIII Reunião Anual da SAB, São Paulo, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Poster
+    contribution_ptbr: Poster / Painel
+    upcoming: false
+    details: ''
+  - title: '2018'
+    year-mark: true
+    upcoming: false
+  - title: 'LEGUME: an easy way to reduce and analyze light curves'
+    title_ptbr: 'LEGUME: um jeito fácil de reduzir e analisar curvas de luz'
+    link: ''
+    date: '2018'
+    date_ptbr: '2018'
+    location: XLII Reunião Anual da SAB, São Paulo, Brazil
+    location_ptbr: XLII Reunião Anual da SAB, São Paulo, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Conference Talk
+    contribution_ptbr: Apresentação oral
+    upcoming: false
+    details: ''
+  - title: Differential flux method for determining rotation in eclipsing binaries from low-cadence light curves
+    title_ptbr: O método do fluxo diferencial para determinação de rotação em binárias eclipsantes em curvas de luz de baixa
+      cadência
+    link: ''
+    date: '2018'
+    date_ptbr: '2018'
+    location: XLII Reunião Anual da SAB, São Paulo, Brazil
+    location_ptbr: XLII Reunião Anual da SAB, São Paulo, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Conference Talk
+    contribution_ptbr: Apresentação oral
+    upcoming: false
+    details: ''
+  - title: A computational alternative for the polygon method in gravitational microlensing events
+    title_ptbr: Uma alternativa para o método do polígono em eventos de microlentes gravitacionais
+    link: ''
+    date: '2018'
+    date_ptbr: '2018'
+    location: XLII Reunião Anual da SAB, São Paulo, Brazil
+    location_ptbr: XLII Reunião Anual da SAB, São Paulo, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Conference Talk
+    contribution_ptbr: Apresentação oral
+    upcoming: false
+    details: ''
+  - title: '2017'
+    year-mark: true
+    upcoming: false
+  - title: 'Unraveling the Astrophotography: Physical Principles and Techniques for Processing Astronomical Images from CCD
+      and DSLR'
+    title_ptbr: 'Desvendando a Astrofotografia: princípios físicos e técnicas para processamento de imagens astronômicas de
+      CCD e DSLR'
+    link: ''
+    date: '2017'
+    date_ptbr: '2017'
+    location: XLI Reunião Anual da SAB, São Paulo, Brazil
+    location_ptbr: XLI Reunião Anual da SAB, São Paulo, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Conference Talk
+    contribution_ptbr: Apresentação oral
+    upcoming: false
+    details: ''
+  - title: Microlensing source-path parameterization for Solar-Earth 2.0 systems
+    title_ptbr: Parametrização do trajeto da fonte em microlentes gravitacionais para a detecção de sistemas Sol-Terra 2.0
+    link: ''
+    date: '2017'
+    date_ptbr: '2017'
+    location: XLI Reunião Anual da SAB, São Paulo, Brazil
+    location_ptbr: XLI Reunião Anual da SAB, São Paulo, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Conference Talk
+    contribution_ptbr: Apresentação oral
+    upcoming: false
+    details: ''
+  - title: '2016'
+    year-mark: true
+    upcoming: false
+  - title: Experimental simulation of binary gravitational microlenses for exoplanet discovery
+    title_ptbr: Simulação Experimental de microlentes gravitacionais binárias na descoberta de exoplanetas
+    link: ''
+    date: '2016'
+    date_ptbr: '2016'
+    location: XL Reunião Anual da SAB, Ribeirão Preto, Brazil
+    location_ptbr: XL Reunião Anual da SAB, Ribeirão Preto, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Conference Talk
+    contribution_ptbr: Apresentação oral
+    upcoming: false
+    details: ''
+  - title: Magnification-map simulation of gravitational microlenses using quasi-regular distributions in inverse ray shooting
+    title_ptbr: Simulação de mapas de magnificação de microlentes gravitacionais através de distribuições quase-regulares
+      na técnica de inverse ray shooting
+    link: ''
+    date: '2016'
+    date_ptbr: '2016'
+    location: XL Reunião Anual da SAB, Ribeirão Preto, Brazil
+    location_ptbr: XL Reunião Anual da SAB, Ribeirão Preto, Brasil
+    country-code: br
+    state-code: br-sp
+    remote: false
+    contribution: Conference Talk
+    contribution_ptbr: Apresentação oral
+    upcoming: false
+    details: ''
+  - title: '2015'
+    year-mark: true
+    upcoming: false
+  - title: IRAF Onedspec Splot spectral line analysis tool in Python
+    title_ptbr: IRAF Onedspec Splot spectral line analysis tool in Python
+    link: ''
+    date: '2015'
+    date_ptbr: '2015'
+    location: XXXIX Reunião Anual da SAB, Ouro Preto, Brazil
+    location_ptbr: XXXIX Reunião Anual da SAB, Ouro Preto, Brasil
+    country-code: br
+    state-code: br-mg
+    remote: false
+    contribution: Poster
+    contribution_ptbr: Poster / Painel
+    upcoming: false
+    details: ''
+  - title: '2014'
+    year-mark: true
+    upcoming: false
+  - title: 'The fraction of Active Galactic Nuclei in Luminous and Ultra Luminous InfraRed Galaxies: A Spitzer Study'
+    title_ptbr: A fração de núcleos ativos em galáxias luminosas e ultraluminosas no infravermelho
+    link: ''
+    date: '2014'
+    date_ptbr: '2014'
+    location: 13ª Mostra de Produção Universitária, Rio Grande, Brazil
+    location_ptbr: 13ª Mostra de Produção Universitária, Rio Grande, Brasil
+    country-code: br
+    state-code: br-rs
+    remote: false
+    contribution: Talk
+    contribution_ptbr: Apresentação oral
+    upcoming: false
+    details: ''
+  - title: 'The challenges of astrophotography: observation and recording techniques'
+    title_ptbr: 'Os desafios da astrofotografia: técnicas de observação e registro'
+    link: ''
+    date: '2014'
+    date_ptbr: '2014'
+    location: XXXVIII Reunião Anual da SAB, Búzios, Brazil
+    location_ptbr: XXXVIII Reunião Anual da SAB, Búzios, Brasil
+    country-code: br
+    state-code: br-rj
+    remote: false
+    contribution: Poster
+    contribution_ptbr: Poster / Painel
+    upcoming: false
+    details: ''
+lectures:
+  title_ongoing: Ongoing Courses
+  title_ongoing_ptbr: Cursos em andamento
+  intro_ongoing: There are no ongoing courses at the moment.
+  intro_ongoing_ptbr: Não há cursos em andamento no momento.
+  title_upcoming: Upcoming Courses
+  title_upcoming_ptbr: Cursos previstos
+  title_finished: Finished Courses
+  title_finished_ptbr: Cursos encerrados
+  courses:
+  - code: AST-203-4
+    semester: '2026'
+    name: Observational Astrophysics Techniques
+    name_ptbr: Técnicas de Astrofísica Observacional
+    type: upcoming
+    link: /lectures/ast203_2026.html
+    institute: INPE
+    institute_long: Instituto Nacional de Pesquisas Espaciais
+    department: Graduate Program in Astrophysics / Programa de Pós-Graduação em Astrofísica
+    institute-link: https://www.gov.br/inpe/pt-br
+    language-code: br
+    background-color: '#800020'
+    info:
+    - key: Role
+      value: Professor / Lecturer
+    - key: Status
+      value: Syllabus and materials will be added later.
+    - key: Language
+      value: Portuguese / English materials as needed
+    - key: Location
+      value: INPE, São José dos Campos
+    info_ptbr:
+    - key: Função
+      value: Professor
+    - key: Status
+      value: Ementa e materiais serão adicionados posteriormente.
+    - key: Idioma
+      value: Português / materiais em inglês quando necessário
+    - key: Local
+      value: INPE, São José dos Campos
+    intro: This page is prepared as a home for AST-203-4. It is intentionally ready for future lecture notes, slides, exercises,
+      datasets, and links.
+    description: Placeholder for the course syllabus. Topics may include observation planning, photometry, spectroscopy, CCD/CMOS
+      detectors, calibration, data reduction, signal-to-noise, time-series analysis, and astronomical instrumentation.
+    sections:
+    - name: Course materials
+      color: '#800020'
+    lectures: []
+    documents: []
+    bibliography: Bibliography and references will be added here.
+teaching:
+  title: Teaching Experience
+  types:
+  - Graduate
+  - Undergraduate
+  - Outreach
+  list:
+  - name: Observational Astrophysics Techniques (AST-203-4)
+    role: Professor
+    semester: Upcoming
+    location: INPE
+    details: Course page prepared for future materials.
+    type: Graduate
+teaching_ptbr:
+  title: Experiência de Ensino
+  list:
+  - name: Técnicas de Astrofísica Observacional (AST-203-4)
+    role: Professor
+    semester: Prevista
+    location: INPE
+    details: Página da disciplina preparada para materiais futuros.
+outreach:
+  title: Outreach Activities
+  list:
+  - name: Public talks on exoplanets and observational astronomy
+    role: Speaker
+    time: 2011 - present
+    location: Multiple locations
+    details: Talks and outreach activities listed in Talks and Events.
+  - name: Observatório Sofia
+    role: Coordinator / collaborator
+    time: 2011 - present
+    location: FURG / online
+    details: Astronomical observations, astrophotography, and public science content.
+outreach_ptbr:
+  title: Atividades de Extensão
+  list:
+  - name: Palestras públicas sobre exoplanetas e astronomia observacional
+    role: Palestrante
+    time: 2011 - atual
+    location: Diversos locais
+    details: Atividades listadas em Palestras e Eventos.
+  - name: Observatório Sofia
+    role: Coordenador / colaborador
+    time: 2011 - atual
+    location: FURG / online
+    details: Observações astronômicas, astrofotografia e divulgação científica.
+reviews:
+  title: Peer-Review Activities
+  info:
+  - role: Reviewer
+    time: 2023 - present
+    company: Rural and Remote Health
+  - role: Reviewer
+    time: 2021 - present
+    company: PLoS One
+reviews_ptbr:
+  title: Atuação como Revisor
+  info:
+  - role: Revisor
+    time: 2023 - atual
+    company: Rural and Remote Health
+  - role: Revisor
+    time: 2021 - atual
+    company: PLoS One
+experiences_plus:
+  title: Additional Experience
+  info:
+  - role: Member of the OPD Program Committee
+    time: 2024 - 2025
+    company: Laboratório Nacional de Astrofísica
+  - role: Peer reviewer
+    time: 2021 - present
+    company: PLoS One / Rural and Remote Health
+  - role: Observer and data analyst
+    time: 2022 - present
+    company: GRANDMA collaboration
+experiences_plus_ptbr:
+  title: Experiência Adicional
+  info:
+  - role: Membro da Comissão de Programas do OPD
+    time: 2024 - 2025
+    company: Laboratório Nacional de Astrofísica
+  - role: Revisor de periódicos
+    time: 2021 - atual
+    company: PLoS One / Rural and Remote Health
+  - role: Observador e analista de dados
+    time: 2022 - atual
+    company: Colaboração GRANDMA
+certifications:
+  title: ''
+  list: []
+certifications_ptbr:
+  title: ''
+  list: []
+oss:
+  title: ''
+  intro: ''
+  contributions: []
+oss_ptbr:
+  title: ''
+  intro: ''
+  contributions: []
+footer: Astroted / Ted Leandro de Almeida. Based on an adapted academic Jekyll template.
+footer_ptbr: Astroted / Ted Leandro de Almeida. Baseado em um template acadêmico Jekyll adaptado.

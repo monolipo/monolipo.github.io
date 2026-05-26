@@ -1,0 +1,137 @@
+{% assign events = site.data.data.event-participation %}
+<section class="section events-section">
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-plane-departure fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ events.upcoming-title }}
+  </h2>
+
+  {% for event in events.events %}
+    {% if event.upcoming == true %}
+      <div class="item-container">
+        <div class="item-row">
+          <div class="item-column">
+            <div class="event-title">
+              {% if event.link %}
+                <a href="{{ event.link }}" target="_blank">{{ event.title }}</a>
+              {% else %}
+                {{ event.title }}
+              {% endif %}
+            </div>
+            <div class="event-loc">
+              {% if event.country-code %}
+                <span class="fi fi-{{ event.country-code }}"></span>
+              {% endif %}
+              {% if event.state-code %}
+                <span class="fi fi-{{ event.state-code }} event-state-flag"></span>
+              {% endif %}
+              {{ event.location }}
+            </div>
+          </div>
+          <div class="item-column2">
+            <div class="item-column2-1">
+              <div class="event-contrib">{{ event.contribution }}</div>
+              <div class="event-date">{{ event.date }}</div>
+            </div>
+            <div class="item-column2-2">
+              {% if event.blog-url %}
+                <div class="blogpost-button">
+                  <a href="{{ event.blog-url }}" target="_blank">
+                    <i class="fa fa-newspaper"></i><br>
+                    <span>Blog</span>
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--//item-->
+    {% endif %}
+  {% endfor %}
+
+  <div class="title-container">
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-timeline-arrow fa-flip-horizontal fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ events.title }}
+  </h2>
+  </div>
+  
+  {% assign first-year = true %}
+  {% for event in events.events %}
+    {% if event.upcoming == false %}
+      {% if event.year-mark %}
+        <div class="subtitle-container">
+          {% if first-year == true %}
+            {% assign first-year = false %}
+          {% else %}
+            <hr>
+          {% endif %}
+          <h3 class="section-subtitle"> {{ event.title }}</h3>
+        </div>
+      {% else %}
+        <div class="item-container">
+          <div class="item-row">
+            <div class="item-column">
+              <div class="event-title">
+                {% if event.link %}
+                  <a href="{{ event.link }}" target="_blank">{{ event.title }}</a>
+                {% else %}
+                  {{ event.title }}
+                {% endif %}
+              </div>
+              <div class="event-loc">
+                {% if event.country-code %}
+                  <span class="fi fi-{{ event.country-code }}"></span>
+                {% endif %}
+                {% if event.state-code %}
+                  <span class="fi fi-{{ event.state-code }} event-state-flag"></span>
+                {% endif %}
+                {% if event.remote %}
+                 <span class="fa-regular fa-globe"></span>
+                {% endif %}
+                {{ event.location }}
+              </div>
+            </div>
+            <div class="item-column2">
+              <div class="item-column2-1">
+                <div class="event-contrib">
+                  {{ event.contribution }}
+                  <!--
+                  {% if event.contrib-icon %}
+                    <span class="fa-solid {{ event.contrib-icon }} event-contrib-icon "></span>
+                  {% endif %}
+                  {% if event.contrib-icon2 %}
+                    <span class="fa-solid {{ event.contrib-icon2 }} event-contrib-icon "></span>
+                  {% endif %}
+                  -->
+                </div>
+                <div class="event-date">{{ event.date }}</div>
+              </div>
+              <div class="item-column2-2">
+                {% if event.blog-url %}
+                  <div class="blogpost-button">
+                    <a href="{{ event.blog-url }}" target="_blank">
+                      <i class="fa fa-newspaper"></i><br>
+                      <span>Blog</span>
+                    </a>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {% endif %}
+    {% endif %}
+    <!--//item-->
+  {% endfor %}
+  <p style="display:block; float:left; width:100%"><br></p>
+
+</section>
+<!--//section-->

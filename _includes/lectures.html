@@ -1,0 +1,119 @@
+{% assign lectures = site.data.data.lectures %}
+{% if lectures %}
+<section class="section publications-section">
+  <!-- (Showing {{ publications.papers | size }} results) -->
+
+  <!-- initiate counter -->
+  {% assign i = 1 %}
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-person-chalkboard fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ lectures.title_ongoing }}
+  </h2>
+
+  {% if lectures.intro_ongoing %}
+  <div class="intro">
+    {{ lectures.intro_ongoing | markdownify }}
+  </div><!--//intro-->
+  {% endif %}
+
+  <div class="course-cards">
+    {% for course in lectures.courses %}
+      {% if course.type == "ongoing" %}
+      <a class="course-card" href="{{ course.link }}" style="border-color: {{ course.background-color | default('#666') | safe }};">
+        <h3>
+          {% if course.language-code %}
+          <span class="fi fi-{{ course.language-code }}" style="border-color: #aaa"></span>
+          {% endif %}
+          {{ course.code }} - {{ course.semester }}
+        </h3>
+        <h4 style="color: {{ course.background-color | default('#666') | safe }};">
+          {{ course.name }}
+        </h4>
+        <h5>
+          {{ course.institute }}
+        </h5>
+      </a>
+      {% endif %}
+    {% endfor %}
+    </div>
+
+  <br>
+  <br>
+  <br>
+  
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-calendar-clock fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ lectures.title_upcoming }}
+  </h2>
+
+  <div class="course-cards">
+    {% for course in lectures.courses %}
+      {% if course.type == "upcoming" %}
+      <a class="course-card" href="{{ course.link }}" style="border-color: {{ course.background-color | default('#666') | safe }};">
+        <h3>
+          {% if course.language-code %}
+          <span class="fi fi-{{ course.language-code }}" style="border-color: #aaa"></span>
+          {% endif %}
+          {{ course.code }} - {{ course.semester }}
+        </h3>
+        <h4 style="color: {{ course.background-color | default('#666') | safe }};">
+          {{ course.name }}
+        </h4>
+        <h5>
+          {{ course.institute }}
+        </h5>
+        {% if course.lectures.size > 1 %}
+          {{ course.lectures | size }} lectures
+        {% endif %}  
+      </a>
+      {% endif %}
+    {% endfor %}
+    </div>
+
+  <br>
+  <br>
+  <br>
+  
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-chalkboard fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ lectures.title_finished }}
+  </h2>
+
+  <div class="course-cards">
+  {% for course in lectures.courses %}
+    {% if course.type == "finished" %}
+    <a class="course-card" href="{{ course.link }}" style="border-color: {{ course.background-color | default('#666') | safe }};">
+      <h3>
+        {% if course.language-code %}
+        <span class="fi fi-{{ course.language-code }}" style="border-color: #aaa"></span>
+        {% endif %}
+        {{ course.code }} - {{ course.semester }}
+      </h3>
+      <h4 style="color: {{ course.background-color | default('#666') | safe }};">
+        {{ course.name }}
+      </h4>
+      <h5>
+        {{ course.institute }}
+      </h5>
+      <h5>
+      {% if course.lectures.size > 1 %}
+        {{ course.lectures | size }} lectures
+      {% endif %} 
+      </h5> 
+    </a>
+    {% endif %}
+  {% endfor %}
+  </div>
+
+</section><!--//section-->
+{% endif %}

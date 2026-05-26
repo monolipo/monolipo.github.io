@@ -1,0 +1,24 @@
+{% assign sidebar = site.data.data.sidebar_ptbr %}
+<div class="sidebar-wrapper">
+
+  {% include ptbr/profile_ptbr.html %}
+
+  {% if sidebar.about %}
+    {% include ptbr/about_ptbr.html %}
+  {% endif %}
+
+  {% include ptbr/contact_ptbr.html %}
+  <hr>
+
+  {% if sidebar.education %}
+    {% include ptbr/education_ptbr.html %}
+    <hr>
+  {% endif %}
+
+  {% if sidebar.complementary_education %}
+    {% include ptbr/complementary_education_ptbr.html %}
+  {% endif %}
+
+  {% include ptbr/summary_ptbr.html %}
+
+</div><!--//sidebar-wrapper-->

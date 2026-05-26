@@ -1,0 +1,10 @@
+---
+layout: page_ptbr
+---
+
+{% assign courses = site.data.data.lectures.courses %}
+{% for course in courses %}
+  {% if course.code == "AST-203-4" %}
+    {% include ptbr/single_course_ptbr.html %}
+  {% endif %}
+{% endfor %}

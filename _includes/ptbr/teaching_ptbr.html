@@ -1,0 +1,43 @@
+{% assign teaching = site.data.data.teaching_ptbr %} {% if teaching %}
+<section class="section teaching-section">
+  <h2 class="section-title-wbutton">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-person-chalkboard fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ teaching.title }}
+  </h2>
+  
+  <div class="button-container">
+    <button onclick="toggleTeachDetails()" class="button-18">+/- details</button>
+  </div>  
+  
+  {% for course in teaching.list %}
+  <div class="item">
+    <div class="meta">
+      <div class="upper-row">
+        <h3 class="course-title">{{ course.name }}</h3>
+        <div class="course-role">
+          {{ course.role }}
+        </div>
+      </div>
+      <!--//upper-row-->
+
+      <div class="second-upper-row">
+        <div class="course-loc">
+          {{ course.location }}
+        </div>
+        <div class="course-semester">
+          {{ course.semester }}
+        </div>
+      </div>
+    </div>
+    <!--//meta-->
+
+    <div class="teach-details">{{ course.details | markdownify }}</div>
+  </div>
+  <!--//item-->
+  {% endfor %}
+</section>
+<!--//section-->
+{% endif %}

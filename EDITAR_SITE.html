@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editar astroted.com</title>
+  <style>
+    :root { --theme: #800020; --bg: #fbf7f8; --text: #2f1b22; --muted: #6d5360; --card: #ffffff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); }
+    header { background: linear-gradient(135deg, var(--theme), #4f0014); color: white; padding: 28px 24px; }
+    header h1 { margin: 0 0 8px; font-size: 28px; }
+    header p { margin: 0; max-width: 960px; line-height: 1.5; opacity: 0.95; }
+    main { max-width: 1180px; margin: 0 auto; padding: 24px; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 18px; }
+    button, label.file { border: 0; border-radius: 10px; background: var(--theme); color: white; padding: 11px 14px; font-weight: 700; cursor: pointer; }
+    button.secondary, label.file { background: #3b3035; }
+    button.ghost { background: #ffffff; color: var(--theme); border: 1px solid #ead6de; }
+    button:disabled { opacity: 0.55; cursor: not-allowed; }
+    input[type=file] { display: none; }
+    .status { padding: 10px 12px; background: #fff; border: 1px solid #ead6de; border-radius: 10px; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 850px) { .grid { grid-template-columns: 1fr; } }
+    section { background: var(--card); border: 1px solid #ead6de; border-radius: 16px; padding: 18px; box-shadow: 0 8px 25px rgba(60, 0, 20, 0.06); }
+    section.full { grid-column: 1 / -1; }
+    h2 { margin: 0 0 12px; font-size: 19px; }
+    .hint { color: var(--muted); font-size: 14px; line-height: 1.45; margin: 0 0 14px; }
+    label.field { display: block; font-weight: 700; margin: 12px 0 6px; }
+    input[type=text], input[type=email], textarea, select { width: 100%; padding: 10px 12px; border: 1px solid #d9c3cc; border-radius: 10px; font: inherit; color: var(--text); background: white; }
+    input[type=color] { width: 64px; height: 42px; padding: 2px; border: 1px solid #d9c3cc; border-radius: 8px; background: white; vertical-align: middle; }
+    textarea { min-height: 120px; resize: vertical; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+    textarea.prose { font-family: inherit; font-size: 15px; min-height: 140px; }
+    details { background: #fff9fb; border: 1px solid #ead6de; border-radius: 12px; padding: 12px; margin-top: 12px; }
+    summary { cursor: pointer; font-weight: 800; color: var(--theme); }
+    .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 850px) { .columns { grid-template-columns: 1fr; } }
+    code { background: #f4e8ec; padding: 2px 5px; border-radius: 5px; }
+    .danger { color: #8b001b; font-weight: 700; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Editor local do astroted.com</h1>
+  <p>Edite as informações principais, listas e cor do tema. Ao clicar em salvar, este editor atualiza <code>content/site_content.json</code>, <code>_data/data.yml</code> e <code>_sass/skins/_custom.scss</code>.</p>
+</header>
+<main>
+  <div class="toolbar">
+    <button id="openDir">Abrir pasta do site</button>
+    <label class="file" for="jsonInput">Carregar site_content.json</label>
+    <input id="jsonInput" type="file" accept="application/json,.json" />
+    <button id="saveBtn" disabled>Salvar e atualizar arquivos do site</button>
+    <button id="downloadBtn" class="secondary" disabled>Baixar arquivos gerados</button>
+    <button id="formatBtn" class="ghost" disabled>Reformatar JSON</button>
+  </div>
+  <p id="status" class="status">Abra a pasta do site ou carregue <code>content/site_content.json</code>.</p>
+
+  <div class="grid">
+    <section>
+      <h2>Tema</h2>
+      <p class="hint">A cor principal atual é bordô. Para mudar tudo no site, altere apenas esta cor e salve.</p>
+      <label class="field">Cor principal</label>
+      <input id="themeColorPicker" type="color" value="#800020" />
+      <input id="themeColor" type="text" value="#800020" />
+      <label class="field">Cor do texto</label>
+      <input id="textColor" type="text" value="#2f1b22" />
+      <label class="field">Texto secundário</label>
+      <input id="textSecondary" type="text" value="#5e4a52" />
+      <label class="field">Cinza auxiliar</label>
+      <input id="textGrey" type="text" value="#a78d97" />
+    </section>
+
+    <section>
+      <h2>Identidade e contatos</h2>
+      <p class="hint">Campos usados na lateral, no título e nos links principais.</p>
+      <label class="field">Primeiro nome</label><input id="firstName" type="text" />
+      <label class="field">Sobrenome / nome destacado</label><input id="lastName" type="text" />
+      <label class="field">Cargo</label><input id="tagline" type="text" />
+      <label class="field">E-mail</label><input id="email" type="email" />
+      <label class="field">Website</label><input id="website" type="text" />
+      <label class="field">GitHub</label><input id="github" type="text" />
+      <label class="field">ORCID</label><input id="orcid" type="text" />
+      <label class="field">Lattes ID</label><input id="lattes" type="text" />
+      <label class="field">Localização</label><input id="location" type="text" />
+    </section>
+
+    <section class="full">
+      <h2>Resumo / Home</h2>
+      <div class="columns">
+        <div>
+          <label class="field">Research summary — EN</label>
+          <textarea id="summaryEN" class="prose"></textarea>
+          <label class="field">Career profile — EN</label>
+          <textarea id="careerEN" class="prose"></textarea>
+        </div>
+        <div>
+          <label class="field">Resumo de pesquisa — PT</label>
+          <textarea id="summaryPT" class="prose"></textarea>
+          <label class="field">Perfil — PT</label>
+          <textarea id="careerPT" class="prose"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section class="full">
+      <h2>Listas editáveis</h2>
+      <p class="hint">Estas listas ficam em JSON. Você pode adicionar/remover itens mantendo a estrutura. Para conferir se está correto, clique em <strong>Reformatar JSON</strong> antes de salvar.</p>
+      <details open><summary>Eventos / Talks and Events</summary><textarea id="eventsJson"></textarea></details>
+      <details><summary>Publicações</summary><textarea id="publicationsJson"></textarea></details>
+      <details><summary>Lectures / Cursos</summary><textarea id="lecturesJson"></textarea></details>
+      <details><summary>Projetos</summary><textarea id="projectsJson"></textarea></details>
+      <details><summary>Pesquisa / Research</summary><textarea id="researchJson"></textarea></details>
+      <details><summary>Educação</summary><textarea id="educationJson"></textarea></details>
+      <details><summary>Experiências profissionais</summary><textarea id="experiencesJson"></textarea></details>
+      <details><summary>Todo o conteúdo bruto</summary><textarea id="allJson"></textarea></details>
+    </section>
+  </div>
+</main>
+
+<script>
+let payload = null;
+let directoryHandle = null;
+
+const $ = (id) => document.getElementById(id);
+const status = (msg) => { $('status').innerHTML = msg; };
+
+const listFields = {
+  eventsJson: 'event-participation',
+  publicationsJson: 'publications',
+  lecturesJson: 'lectures',
+  projectsJson: 'projects',
+  researchJson: 'research',
+  educationJson: 'education',
+  experiencesJson: 'experiences'
+};
+
+function enableEditor() {
+  $('saveBtn').disabled = false;
+  $('downloadBtn').disabled = false;
+  $('formatBtn').disabled = false;
+}
+
+function pretty(obj) {
+  return JSON.stringify(obj, null, 2);
+}
+
+function fillForm() {
+  if (!payload) return;
+  const theme = payload.theme || {};
+  const data = payload.data || {};
+  const sidebar = data.sidebar || {};
+  const summary = data.summary || {};
+  const summaryPT = data.summary_ptbr || {};
+  const career = data['career-profile'] || {};
+  const careerPT = data['career-profile_ptbr'] || {};
+
+  $('themeColorPicker').value = theme.theme_color || '#800020';
+  $('themeColor').value = theme.theme_color || '#800020';
+  $('textColor').value = theme.text_color || '#2f1b22';
+  $('textSecondary').value = theme.text_color_secondary || '#5e4a52';
+  $('textGrey').value = theme.text_grey || '#a78d97';
+
+  $('firstName').value = sidebar.first_name || '';
+  $('lastName').value = sidebar.name || '';
+  $('tagline').value = sidebar.tagline || '';
+  $('email').value = sidebar.email || '';
+  $('website').value = sidebar.website || '';
+  $('github').value = sidebar.github || '';
+  $('orcid').value = sidebar.orcid || '';
+  $('lattes').value = sidebar.lattes || '';
+  $('location').value = sidebar.location || '';
+
+  $('summaryEN').value = summary.summary || '';
+  $('summaryPT').value = summaryPT.summary || '';
+  $('careerEN').value = career.summary || '';
+  $('careerPT').value = careerPT.summary || '';
+
+  for (const [elementId, dataKey] of Object.entries(listFields)) {
+    $(elementId).value = pretty(data[dataKey] || {});
+  }
+  $('allJson').value = pretty(payload);
+  enableEditor();
+}
+
+function parseJSONField(id) {
+  try { return JSON.parse($(id).value || '{}'); }
+  catch (err) { throw new Error(`JSON inválido em ${id}: ${err.message}`); }
+}
+
+function collectForm() {
+  if (!payload) payload = {theme: {}, data: {}};
+
+  // If the raw full JSON was edited, start from it. Then apply the simple form fields.
+  const rawAll = $('allJson').value.trim();
+  if (rawAll) {
+    try { payload = JSON.parse(rawAll); }
+    catch (err) { throw new Error(`JSON inválido em "Todo o conteúdo bruto": ${err.message}`); }
+  }
+
+  payload.theme = payload.theme || {};
+  payload.data = payload.data || {};
+  payload.theme.theme_color = $('themeColor').value.trim() || '#800020';
+  payload.theme.text_color = $('textColor').value.trim() || '#2f1b22';
+  payload.theme.text_color_secondary = $('textSecondary').value.trim() || '#5e4a52';
+  payload.theme.text_grey = $('textGrey').value.trim() || '#a78d97';
+
+  const data = payload.data;
+  data.sidebar = data.sidebar || {};
+  data.sidebar_ptbr = data.sidebar_ptbr || {};
+  for (const target of [data.sidebar, data.sidebar_ptbr]) {
+    target.first_name = $('firstName').value.trim();
+    target.name = $('lastName').value.trim();
+    target.tagline = $('tagline').value.trim();
+    target.email = $('email').value.trim();
+    target.website = $('website').value.trim();
+    target.github = $('github').value.trim();
+    target.orcid = $('orcid').value.trim();
+    target.lattes = $('lattes').value.trim();
+    target.location = $('location').value.trim();
+  }
+
+  data.summary = data.summary || {title: 'Summary'};
+  data.summary_ptbr = data.summary_ptbr || {title: 'Resumo'};
+  data['career-profile'] = data['career-profile'] || {title: 'Career Profile'};
+  data['career-profile_ptbr'] = data['career-profile_ptbr'] || {title: 'Perfil'};
+  data.summary.summary = $('summaryEN').value;
+  data.summary_ptbr.summary = $('summaryPT').value;
+  data['career-profile'].summary = $('careerEN').value;
+  data['career-profile_ptbr'].summary = $('careerPT').value;
+
+  for (const [elementId, dataKey] of Object.entries(listFields)) {
+    data[dataKey] = parseJSONField(elementId);
+  }
+
+  $('allJson').value = pretty(payload);
+  return payload;
+}
+
+function yamlScalar(value) {
+  if (value === null || value === undefined) return 'null';
+  if (typeof value === 'number' || typeof value === 'boolean') return String(value);
+  return JSON.stringify(String(value));
+}
+
+function yamlKey(key) {
+  return /^[A-Za-z0-9_-]+$/.test(key) ? key : JSON.stringify(key);
+}
+
+function yamlDump(value, indent = 0) {
+  const pad = ' '.repeat(indent);
+  if (Array.isArray(value)) {
+    if (value.length === 0) return '[]';
+    return value.map(item => {
+      if (item && typeof item === 'object') {
+        const nested = yamlDump(item, indent + 2);
+        return `${pad}- ${nested.trimStart()}`;
+      }
+      return `${pad}- ${yamlScalar(item)}`;
+    }).join('\n');
+  }
+  if (value && typeof value === 'object') {
+    const entries = Object.entries(value);
+    if (entries.length === 0) return '{}';
+    return entries.map(([k, v]) => {
+      if (v && typeof v === 'object') {
+        return `${pad}${yamlKey(k)}:\n${yamlDump(v, indent + 2)}`;
+      }
+      return `${pad}${yamlKey(k)}: ${yamlScalar(v)}`;
+    }).join('\n');
+  }
+  return `${pad}${yamlScalar(value)}`;
+}
+
+function scssFromTheme(theme) {
+  const t = theme || {};
+  const themeColor = t.theme_color || '#800020';
+  const textColor = t.text_color || '#2f1b22';
+  const secondary = t.text_color_secondary || '#5e4a52';
+  const grey = t.text_grey || '#a78d97';
+  return `// Tema principal do astroted.com\n// Para mudar a cor principal, altere $theme-color abaixo\n// ou edite content/site_content.json e rode: python tools/update_site.py\n\n$theme-color: ${themeColor};\n$text-color: ${textColor};\n$text-color-secondary: ${secondary};\n$text-grey: ${grey};\n$divider: #e8d7dd;\n$lighter-grey: #f8f1f3;\n$darker-grey: #7c5d69;\n$smoky-white: #fbf7f8;\n$heart: #e25555;\n`;
+}
+
+async function getFileHandleFromPath(dir, parts, create = false) {
+  let current = dir;
+  for (let i = 0; i < parts.length - 1; i++) {
+    current = await current.getDirectoryHandle(parts[i], {create});
+  }
+  return current.getFileHandle(parts[parts.length - 1], {create});
+}
+
+async function writeFile(pathParts, text) {
+  const handle = await getFileHandleFromPath(directoryHandle, pathParts, true);
+  const writable = await handle.createWritable();
+  await writable.write(text);
+  await writable.close();
+}
+
+async function readSiteContentFromDirectory() {
+  const handle = await getFileHandleFromPath(directoryHandle, ['content', 'site_content.json']);
+  const file = await handle.getFile();
+  payload = JSON.parse(await file.text());
+  fillForm();
+}
+
+function download(name, text, type='text/plain') {
+  const blob = new Blob([text], {type});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+async function saveAll() {
+  try {
+    const next = collectForm();
+    const jsonText = pretty(next) + '\n';
+    const ymlText = yamlDump(next.data || {}) + '\n';
+    const scssText = scssFromTheme(next.theme || {});
+
+    if (directoryHandle) {
+      await writeFile(['content', 'site_content.json'], jsonText);
+      await writeFile(['_data', 'data.yml'], ymlText);
+      await writeFile(['_sass', 'skins', '_custom.scss'], scssText);
+      status('Arquivos atualizados na pasta do site. Faça commit/push no GitHub para publicar.');
+    } else {
+      download('site_content.json', jsonText, 'application/json');
+      download('data.yml', ymlText, 'text/yaml');
+      download('_custom.scss', scssText, 'text/x-scss');
+      status('Baixei os arquivos gerados. Copie-os para content/site_content.json, _data/data.yml e _sass/skins/_custom.scss.');
+    }
+  } catch (err) {
+    status(`<span class="danger">${err.message}</span>`);
+  }
+}
+
+$('themeColorPicker').addEventListener('input', (e) => {
+  $('themeColor').value = e.target.value;
+  document.documentElement.style.setProperty('--theme', e.target.value);
+});
+$('themeColor').addEventListener('input', (e) => {
+  if (/^#[0-9a-fA-F]{6}$/.test(e.target.value.trim())) {
+    $('themeColorPicker').value = e.target.value.trim();
+    document.documentElement.style.setProperty('--theme', e.target.value.trim());
+  }
+});
+
+$('openDir').addEventListener('click', async () => {
+  if (!window.showDirectoryPicker) {
+    status('Seu navegador não permite escrita direta em pastas. Use Chrome/Edge em localhost, ou carregue o JSON e baixe os arquivos gerados.');
+    return;
+  }
+  try {
+    directoryHandle = await window.showDirectoryPicker({mode: 'readwrite'});
+    await readSiteContentFromDirectory();
+    status('Pasta carregada. Agora você pode editar e salvar diretamente nos arquivos do site.');
+  } catch (err) {
+    status(`<span class="danger">Não consegui abrir a pasta: ${err.message}</span>`);
+  }
+});
+
+$('jsonInput').addEventListener('change', async (e) => {
+  const file = e.target.files && e.target.files[0];
+  if (!file) return;
+  try {
+    payload = JSON.parse(await file.text());
+    directoryHandle = null;
+    fillForm();
+    status('JSON carregado. Ao salvar, o editor baixará os arquivos gerados.');
+  } catch (err) {
+    status(`<span class="danger">JSON inválido: ${err.message}</span>`);
+  }
+});
+
+$('saveBtn').addEventListener('click', saveAll);
+$('downloadBtn').addEventListener('click', saveAll);
+$('formatBtn').addEventListener('click', () => {
+  try {
+    collectForm();
+    fillForm();
+    status('JSON reformatado e validado.');
+  } catch (err) {
+    status(`<span class="danger">${err.message}</span>`);
+  }
+});
+</script>
+</body>
+</html>

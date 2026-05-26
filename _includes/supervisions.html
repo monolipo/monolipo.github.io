@@ -1,0 +1,90 @@
+{% assign supervisions = site.data.data.supervisions %} {% if supervisions %}
+<section class="section experiences-section">
+  <h2 class="section-title-wbutton">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fad fa-user-friends fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ supervisions.title }}
+  </h2>
+
+  <div class="button-container">
+    <button onclick="toggleSupervisions()" class="button-18">+/- details</button>
+  </div>  
+  
+  <h3 class="section-subtitle">Ongoing supervisions</h3>
+
+  {% for student in supervisions.students %}
+  {% if student.ongoing %}
+  <div class="item">
+    <div class="meta">
+      <div class="upper-row">
+        <h3 class="course-title">{{ student.name }}</h3>
+        <div class="course-role">
+          {{ student.type }}
+        </div>
+      </div>
+      <!--//upper-row-->
+
+      <div class="second-upper-row">
+        <div class="course-loc">
+          <span style="font-style: italic;"> {{ student.project  }} </span> <br>
+          {{ student.institute }}
+          {% if student.fellowship %} 
+            - {{ student.fellowship }}
+          {% endif %} 
+        </div>
+        <div class="course-semester">
+          {{ student.time }}
+        </div>
+      </div>
+    </div>
+    <!--//meta-->
+
+  <div class="supervision-details">{{ course.details | markdownify }}</div>
+
+  </div>
+  <!--//item-->
+  {% endif %}
+  {% endfor %}
+
+  <h3 class="section-subtitle">Finished supervisions</h3>
+
+  {% for student in supervisions.students %}
+  {% if student.ongoing %}
+  {% else %}
+  <div class="item">
+    <div class="meta">
+      <div class="upper-row">
+        <h3 class="course-title">{{ student.name }}</h3>
+        <div class="course-role">
+          {{ student.type }}
+        </div>
+      </div>
+      <!--//upper-row-->
+
+      <div class="second-upper-row">
+        <div class="course-loc">
+          <span style="font-style: italic;"> {{ student.project  }} </span> <br>
+          {{ student.institute }}
+          {% if student.fellowship %} 
+            - {{ student.fellowship }}
+          {% endif %} 
+        </div>
+        <div class="course-semester">
+          {{ student.time }}
+        </div>
+      </div>
+    </div>
+    <!--//meta-->
+
+  <div class="supervision-details">{{ course.details | markdownify }}</div>
+
+  </div>
+  <!--//item-->
+  {% endif %}
+  {% endfor %}
+
+</section>
+<!--//section-->
+{% endif %}

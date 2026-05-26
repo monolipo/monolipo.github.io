@@ -1,0 +1,71 @@
+{% assign upcoming = site.data.data.event-participation %} {% if upcoming.upcoming-title %}
+<section class="section upcoming-section">
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-plane-departure fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ upcoming.upcoming-title_ptbr }}
+  </h2>
+
+  {% for event in upcoming.events %}
+    {% if event.upcoming == true %}
+      <div class="item">
+        <div class="meta">
+          <div class="upper-row">
+            <div class="upcoming-title">
+            {% if event.link %}
+              <a href="{{ event.link }}" target="_blank">{% if event.title_ptbr %} {{ event.title_ptbr }} {% else %} {{ event.title }} {% endif %}</a>
+            {% else %}
+              {% if event.title_ptbr %} {{ event.title_ptbr }} {% else %} {{ event.title }} {% endif %}
+            {% endif %}
+            </div>
+            <div class="upcoming-contrib">
+              {% if event.contribution_ptbr %} {{ event.contribution_ptbr }} {% else %} {{ event.contribution }} {% endif %}
+            </div>
+          </div>
+          <!--//upper-row-->
+
+          <div class="second-upper-row">
+            <div class="upcoming-loc">
+              {% if event.country-code %}
+                <span class="fi fi-{{ event.country-code }}"></span>
+              {% endif %}
+              {% if event.state-code %}
+                <span class="fi fi-{{ event.state-code }} event-state-flag"></span>
+              {% endif %}
+              {% if event.location_ptbr %} {{ event.location_ptbr }} {% else %} {{ event.location }} {% endif %}
+            </div>
+            <div class="upcoming-date">
+              {% if event.date_ptbr %} {{ event.date_ptbr }} {% else %} {{ event.date }} {% endif %}
+            </div>
+          </div>
+        </div>
+        <!--//meta-->
+
+        <div class="event-details">{{ event.details | markdownify }}</div>
+      </div>
+    {% endif %}
+  <!--//item-->
+  {% endfor %}
+
+  <!--count event participations-->
+  {% assign event-counter = 0 %}
+  {% for event in upcoming.events %}
+    {% if event.year-mark == true %}
+      {% continue %}
+    {% else %}
+      {% assign event-counter = event-counter | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+  <!--//count event participations-->
+
+  <div class="button-container-center">
+    <a href="/events_ptbr.html" target="_blank">
+      <button class="button-18 ">Ver todas as {{ event-counter }} participações</button>
+    </a>
+  </div>
+
+</section>
+<!--//section-->
+{% endif %}

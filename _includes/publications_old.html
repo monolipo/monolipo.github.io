@@ -1,0 +1,88 @@
+{% assign publications = site.data.data.publications %}
+{% if publications %}
+<section class="section publications-section">
+  <!-- (Showing {{ publications.papers | size }} results) -->
+
+  {% if publications.intro %}
+  <div class="intro">
+    {{ publications.intro | markdownify }}
+  </div><!--//intro-->
+  {% endif %}
+
+  <h2 class="publication-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-thumbs-up fa-stack-1x fa-inverse"></i>
+    </span>
+    Refereed Papers
+  </h2>
+
+  <h3 class="section-subtitle">First Author</h3>
+  {% for publication in publications.papers %}
+    {% if publication.refereed == true and publication.first-author == true %}
+      <div class="item">
+        {% if publication.link %}
+          <a href="{{ publication.link }}">{{ publication.title }}</a>
+        {% else %}
+          {{ publication.title }}
+        {% endif %}
+        <div class="publication-authors">
+          {{ publication.authors }}
+          {% if publication.more %}
+          <span class="publication-more"> {{ publication.more }}</span>
+          {% endif %}
+        </div>
+        <div class="publication-journal">{{ publication.journal }}</div>
+      </div><!--//item-->
+    {% endif %}
+  {% endfor %}
+
+  <h3 class="section-subtitle">Co-author</h3>
+  {% for publication in publications.papers %}
+    {% if publication.refereed == true and publication.first-author == false %}
+      <div class="item">
+        {% if publication.link %}
+          <a href="{{ publication.link }}">{{ publication.title }}</a>
+        {% else %}
+          {{ publication.title }}
+        {% endif %}
+        <div class="publication-authors">
+          {{ publication.authors }}
+          {% if publication.more %}
+          <span class="publication-more"> {{ publication.more }}</span>
+          {% endif %}
+        </div>
+        <div class="publication-journal">{{ publication.journal }}</div>
+      </div><!--//item-->
+    {% endif %}
+  {% endfor %}
+  
+  <br>
+  <h2 class="publication-title publication-title-paddingtop">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-hourglass-start fa-stack-1x fa-inverse"></i>
+    </span>
+    Non-refereed Papers
+  </h2>
+  {% for publication in publications.papers %}
+    {% if publication.refereed == false %}
+      <div class="item">
+        {% if publication.link %}
+          <a href="{{ publication.link }}">{{ publication.title }}</a>
+        {% else %}
+          {{ publication.title }}
+        {% endif %}
+        <div class="publication-authors">
+          {{ publication.authors }}
+          {% if publication.more %}
+          <span class="publication-more"> {{ publication.more }}</span>
+          {% endif %}
+        </div>
+        <div class="publication-journal">{{ publication.journal }}</div>
+      </div><!--//item-->
+    {% endif %}
+  {% endfor %}
+
+</section><!--//section-->
+{% endif %}

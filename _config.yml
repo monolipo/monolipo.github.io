@@ -1,0 +1,27 @@
+# Site Settings
+title: Ted Leandro de Almeida - Astroted Academic CV
+url: 'https://astroted.com'
+description: Academic CV, publications, talks, events, lectures and projects of Ted Leandro de Almeida.
+theme_skin: custom
+chrome_mobile_color: '#800020'
+
+# Tracker
+analytics:
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Build settings
+compress-site: yes
+encoding: "utf-8"
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Development Settings
+port: 4000
+host: 0.0.0.0
+safe: false

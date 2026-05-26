@@ -1,0 +1,43 @@
+{% assign outreach = site.data.data.outreach_ptbr %} {% if outreach.title %}
+<section class="section outreach-section">
+  <h2 class="section-title-wbutton">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-message fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ outreach.title }}
+  </h2>
+  
+  <div class="button-container">
+    <button onclick="toggleOutreachDetails()" class="button-18">+/- details</button>
+  </div>  
+  
+  {% for event in outreach.list %}
+  <div class="item">
+    <div class="meta">
+      <div class="upper-row">
+        <h3 class="event-title">{{ event.name }}</h3>
+        <div class="event-role">
+          {{ event.role }}
+        </div>
+      </div>
+      <!--//upper-row-->
+
+      <div class="second-upper-row">
+        <div class="event-loc">
+          {{ event.location }}
+        </div>
+        <div class="event-time">
+          {{ event.time }}
+        </div>
+      </div>
+    </div>
+    <!--//meta-->
+
+    <div class="outreach-details">{{ event.details | markdownify }}</div>
+  </div>
+  <!--//item-->
+  {% endfor %}
+</section>
+<!--//section-->
+{% endif %}

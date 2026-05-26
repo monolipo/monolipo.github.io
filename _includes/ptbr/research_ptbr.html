@@ -1,0 +1,38 @@
+{% assign research = site.data.data.research_ptbr %}
+{% if research.title %}
+<section class="section research-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-telescope fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ research.title }}
+  </h2>
+
+  {% if research.intro %}
+  <div class="intro">
+      <p>{{ research.intro }}</p>
+  </div><!--//intro-->
+  {% endif %}
+
+  {% for topic in research.topics %}
+    <div class="item">
+
+      <span class="research-title">
+        {% if topic.link %}
+        <a href="{{ topic.link }}" target="_blank">{{ topic.title }}</a>
+        {% else %}
+        {{ topic.title }}
+        {% endif %}
+      </span>
+
+      {% if topic.tagline %}
+      - <span class="research-tagline">{{ topic.tagline }}</span>
+      {% endif %}
+
+    </div><!--//item-->
+  {% endfor %}
+
+</section><!--//section-->
+{% endif %}

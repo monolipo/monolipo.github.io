@@ -1,0 +1,31 @@
+{% assign reviews = site.data.data.reviews %}
+{% if reviews %}
+<section class="section experiences_plus-section">
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-user-check fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ reviews.title }}
+  </h2>
+
+  {% for review in reviews.info %}
+  <div class="item">
+
+    <div class="meta">
+
+      <div class="upper-row">
+        <h3 class="job-title">{{ review.role }}</h3>
+        <div class="time">{{ review.time }}</div>
+      </div><!--//upper-row-->
+
+      <div class="company">{{ review.company }}</div>
+
+    </div><!--//meta-->
+
+  </div><!--//item-->
+  {% endfor %}
+
+</section><!--//section-->
+{% endif %}
+

@@ -1,0 +1,77 @@
+{% assign managements = site.data.data.managements %}
+{% if managements %}
+<section class="section experiences-section">
+  <h2 class="section-title-wbutton">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-users-cog fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ managements.title }}
+  </h2>
+  
+  <div class="button-container">
+    <button onclick="toggleManagerDetails()" class="button-18">+/- details</button>
+  </div>  
+
+  <h3 class="section-subtitle">Ongoing activities</h3>
+
+  {% for activity in managements.info %}
+  {% if activity.ongoing %}
+  <div class="item">
+
+    <div class="meta">
+
+      <div class="upper-row">
+        <h3 class="job-title">{{ activity.role }}</h3>
+        <div class="time">{{ activity.time }}</div>
+      </div><!--//upper-row-->
+
+      <div class="company">{{ activity.company }}</div>
+
+    </div><!--//meta-->
+
+    {% if activity.details %}
+      <div class="manager-details">
+        {{ activity.details | markdownify }}
+        <hr>
+      </div>
+    <!--//details-->
+    {% endif %}
+
+  </div><!--//item-->
+  {% endif %}
+  {% endfor %}
+
+  <hr>
+  <h3 class="section-subtitle">Finished activities</h3>
+
+  {% for activity in managements.info %}
+  {% if activity.ongoing %}
+  {% else %}
+  <div class="item">
+
+    <div class="meta">
+
+      <div class="upper-row">
+        <h3 class="job-title">{{ activity.role }}</h3>
+        <div class="time">{{ activity.time }}</div>
+      </div><!--//upper-row-->
+
+      <div class="company">{{ activity.company }}</div>
+
+    </div><!--//meta-->
+
+    {% if activity.details %}
+      <div class="manager-details">
+        {{ activity.details | markdownify }}
+        <hr>
+      </div>
+    <!--//details-->
+    {% endif %}
+
+  </div><!--//item-->
+  {% endif %}
+  {% endfor %}
+
+</section><!--//section-->
+{% endif %}

@@ -1,0 +1,44 @@
+{% assign sidebar = site.data.data.sidebar %}
+
+<div class="sidebar-wrapper-smallscreen">
+<div class="profile-container-smallscreen">
+
+    {% if sidebar.avatar %}
+    <div class="avatar-parent">
+
+    <img class="avatar" src="{{ site.baseurl }}/assets/images/{{ sidebar.avatar }}" alt="profile picture" />
+
+    {% if sidebar.institute-logo %}
+    <div class="institute-logo-container">
+      <img class="institute-logo" src="{{ site.baseurl }}/assets/images/{{ sidebar.institute-logo }}" alt="institute logo" />
+    </div>
+    {% endif %}
+
+    </div>
+    {% endif %}
+
+    {% if sidebar.first_name %}
+    <h4 class="first_name">{{ sidebar.first_name }}</h4>
+    {% endif %}
+    
+    {% if sidebar.name %}
+    <h1 class="name">{{ sidebar.name }}</h1>
+    {% endif %}
+
+    {% if sidebar.first_name %}
+    <h4 class="pronoun">
+      {{ sidebar.pronoun }}
+    </h4>
+    {% endif %}
+
+    {% if sidebar.tagline %}
+    <h3 class="tagline">
+      {% if sidebar.country-code %}
+      <span class="fi fi-{{ sidebar.country-code }}" style="border: 0px;"></span>
+      {% endif %}
+      &nbsp;{{ sidebar.tagline }}
+    </h3>
+    {% endif %}
+
+</div><!--//profile-container-->
+</div>

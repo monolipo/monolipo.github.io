@@ -1,0 +1,62 @@
+{% assign navbar = site.data.data.navbar %}
+
+<a class="button-6 button-6-active" href="{{page.url}}"><span class="fi fi-gb"></span> &nbsp; english</a>
+
+{% if page.url == "/" %}
+  <a class="button-6" href="index_ptbr.html"><span class="fi fi-br"></span> &nbsp; portuguese</a>
+{% else %}
+  <a class="button-6" href={{ page.url | replace: ".html", "_ptbr.html" }}><span class="fi fi-br"></span> &nbsp; português</a>
+{% endif %}
+
+<!-- 
+{% if page.url == "/" %}
+  <a class="button-6" href="index_es.html"><span class="fi fi-es"></span> &nbsp; español</a>
+{% else %}
+  <a class="button-6" href={{ page.url | replace: ".html", "_es.html" }}><span class="fi fi-es"></span> &nbsp; español</a>
+{% endif %}
+-->
+
+<nav>
+<ul class="nav">
+  {% for item in navbar.pages %}
+      <li class="{% if item.url == page.url %}active{% endif %}">
+        <a href="{{ item.url }}">
+          {% if item.icon %}
+            <i class="{{ item.icon }}"></i>
+          {% endif %}
+          {{ item.title }}
+        </a>
+      </li>
+  {% endfor %}
+
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-caret-down"></i>
+      More Content
+    </a>
+    <ul>
+      {% for item in navbar.pages-extra %}
+        <li class="{% if item.url == page.url %}active{% endif %}">
+          <a href="{{ item.url }}">
+            {% if item.icon %}
+              <i class="{{ item.icon }} fa-fw"></i>
+            {% endif %}
+            {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </li>
+
+  {% if navbar.blog-title %}
+  <li class="nav-right" style="float:right;">
+    <a href="{{ navbar.blog-url }}">
+      {% if navbar.blog-icon %}
+        <i class="{{ navbar.blog-icon}}"></i>
+      {% endif %}
+      {{ navbar.blog-title }}
+    </a>
+  </li>
+  {% endif %}
+</ul>
+</nav>

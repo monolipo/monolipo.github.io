@@ -1,0 +1,28 @@
+{% assign career-profile = site.data.data.career-profile_ptbr %}
+{% if career-profile %}
+<section class="summary-section">
+
+  <h2 class="section-title-wbutton">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ career-profile.title }}
+  </h2>
+
+  <div class="button-container">
+    <button onclick="toggleCareerSumamry()" class="button-18">Show more/less</button>
+  </div>
+
+  <div class="summary-container">
+    <div class="career-summary">
+      {{ career-profile.summary | markdownify }}
+    </div>
+    <div class="career-summary-more">
+      {{ career-profile.summary-more | markdownify }}
+    </div>
+  </div><!--//summary-->
+
+
+</section><!--//section-->
+{% endif %}

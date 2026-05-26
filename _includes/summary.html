@@ -1,0 +1,72 @@
+{% assign summary = site.data.data.summary %}
+
+<div class="summary">
+  <hr>
+  <table>
+    <tr>
+      <th colspan=2><i class="fa-regular fa-address-card"></i> {{summary.personal-title}}</th>
+    </tr>
+    {% for info in summary.personal-info %}
+      <tr>
+        <td style="font-weight: 900">{{info.key}}</td>
+        {% if info.link %}
+        <a href="{{ info.link }}" target="_blank"><td>{{ info.value }}</td></a>
+        {% else %}
+        <td style="color: #ccc">{{ info.value }}</td>
+        {% endif %}
+      </tr>
+    {% endfor %}
+  </table>
+  <hr>
+
+  <table>
+      <tr>
+        <th colspan=2><i class="fa-solid fa-user-graduate"></i> {{summary.academic-title}}</th>
+      </tr>
+    {% for info in summary.academic-info %}
+      <tr>
+        <td style="font-weight: 900">{{info.key}}</td>
+        {% if info.link %}
+        <td><a href="{{ info.link }}" target="_blank">{{ info.value }}</a></td>
+        {% else %}
+        <td style="color: #ccc">{{ info.value }}</td>
+        {% endif %}
+      </tr>
+    {% endfor %}
+  </table>
+  <hr>
+
+  <table>
+    <tr>
+      <th colspan=2><i class="fa-solid fa-pen-nib"></i> {{summary.publication-title}}</th>
+    </tr>
+  {% for info in summary.publication-info %}
+    <tr>
+      <td style="font-weight: 900">{{info.key}}</td>
+      {% if info.link %}
+      <a href="{{ info.link }}" target="_blank"><td>{{ info.value }}</td></a>
+      {% else %}
+      <td style="color: #ccc">{{ info.value }}</td>
+      {% endif %}
+    </tr>
+  {% endfor %}
+  </table>
+  <hr>
+
+  <table>
+    <tr>
+      <th colspan=2><i class="fa-regular fa-table"></i> {{summary.additional-title}}</th>
+    </tr>
+  {% for info in summary.additional-info %}
+    <tr>
+      <td style="font-weight: 900">{{info.key}}</td>
+      {% if info.link %}
+      <a href="{{ info.link }}" target="_blank"><td>{{ info.value }}</td></a>
+      {% else %}
+      <td style="color: #ccc">{{ info.value }}</td>
+      {% endif %}
+    </tr>
+  {% endfor %}
+  </table>
+
+</div><!--//summary-container-->

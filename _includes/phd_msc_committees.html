@@ -1,0 +1,48 @@
+{% assign phd_msc_committees = site.data.data.phd_msc_committees %}
+{% if phd_msc_committees %}
+<section class="section experiences-section">
+  <h2 class="section-title-wbutton">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fad fa-people-group fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ phd_msc_committees.title }}
+  </h2>
+  
+  <div class="button-container">
+    <button onclick="togglePhDMScCommitteesDetails()" class="button-18">+/- details</button>
+  </div>  
+
+  {% for type in phd_msc_committees.types %}
+  <h3 class="section-subtitle"> {{ type  }} </h3>
+
+    {% for committee in phd_msc_committees.committees %}
+      {% if committee.type == type %}
+        <div class="item">
+          <div class="meta">
+            <div class="upper-row">
+              <h3 class="course-title">{{ committee.student }}</h3>
+              <div class="course-role">
+                {{ committee.description }}
+              </div>
+            </div>
+            <!--//upper-row-->
+
+            <div class="second-upper-row">
+              <div class="course-loc">
+                <span style="font-style: italic;"> {{ committee.title  }} </span> <br>
+                {{ committee.location }}
+              </div>
+              <div class="course-semester">
+                {{ committee.date }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      <!--//meta-->
+    {% endfor %}
+  {% endfor %}
+
+</section><!--//section-->
+{% endif %}

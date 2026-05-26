@@ -1,0 +1,115 @@
+{% assign lectures = site.data.data.lectures %}
+{% if lectures %}
+<section class="section publications-section">
+  <!-- (Showing {{ publications.papers | size }} results) -->
+
+  <!-- initiate counter -->
+  {% assign i = 1 %}
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-person-chalkboard fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ lectures.title_ongoing_ptbr }}
+  </h2>
+
+  {% if lectures.intro_ongoing_ptbr %}
+  <div class="intro">
+    {{ lectures.intro_ongoing_ptbr | markdownify }}
+  </div><!--//intro-->
+  {% endif %}
+
+  {% for course in lectures.courses %}
+    {% if course.type == "ongoing" %}
+    <div class="course-card">{{ course.name_ptbr | default: course.name }}</div>
+    {% endif %}
+  {% endfor %}
+
+  <div class="course-cards">
+    {% for course in lectures.courses %}
+      {% if course.type == "ongoing" %}
+      <a class="course-card" href="{{ course.link | replace: '.html', '_ptbr.html' }}" style="background-color: {{ course.background-color | default('#666') | safe }}; color: {{ course.text-color | default('#FFF') | safe }};">
+        <h3>
+          {% if course.language-code %}
+          <span class="fi fi-{{ course.language-code }}" style="border-color: #aaa"></span>
+          {% endif %}
+          {{ course.code }} - {{ course.semester }}
+        </h3>
+        <h4>
+          {{ course.name_ptbr }}
+        </h4>
+        <h5>
+          {{ course.institute }}
+        </h5>
+      </a>
+      {% endif %}
+    {% endfor %}
+    </div>
+
+  <br>
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-calendar-clock fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ lectures.title_upcoming_ptbr }}
+  </h2>
+
+  <div class="course-cards">
+    {% for course in lectures.courses %}
+      {% if course.type == "upcoming" %}
+      <a class="course-card" href="{{ course.link | replace: '.html', '_ptbr.html' }}" style="background-color: {{ course.background-color | default('#666') | safe }}; color: {{ course.text-color | default('#FFF') | safe }};">
+        <h3>
+          {% if course.language-code %}
+          <span class="fi fi-{{ course.language-code }}" style="border-color: #aaa"></span>
+          {% endif %}
+          {{ course.code }} - {{ course.semester }}
+        </h3>
+        <h4>
+          {{ course.name_ptbr }}
+        </h4>
+        <h5>
+          {{ course.institute }}
+        </h5>
+      </a>
+      {% endif %}
+    {% endfor %}
+    </div>
+
+  <br>
+  <br>
+  <br>
+  
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-chalkboard fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ lectures.title_finished_ptbr }}
+  </h2>
+
+  <div class="course-cards">
+  {% for course in lectures.courses %}
+    {% if course.type == "finished" %}
+    <a class="course-card"  href="{{ course.link | replace: '.html', '_ptbr.html' }}" style="background-color: {{ course.background-color | default('#666') | safe }}; color: {{ course.text-color | default('#FFF') | safe }};">
+      <h3>
+        {% if course.language-code %}
+        <span class="fi fi-{{ course.language-code }}" style="border-color: #aaa"></span>
+        {% endif %}
+        {{ course.code }} - {{ course.semester }}
+      </h3>
+      <h4>
+        {{ course.name_ptbr }}
+      </h4>
+      <h5>
+        {{ course.institute }}
+      </h5>
+    </a>
+    {% endif %}
+  {% endfor %}
+  </div>
+
+</section><!--//section-->
+{% endif %}

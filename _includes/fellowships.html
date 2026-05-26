@@ -1,0 +1,41 @@
+{% assign fellowships = site.data.data.fellowships %}
+{% if fellowships %}
+<section class="section experiences_plus-section">
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-badge-dollar fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ fellowships.title }} <span style="font-size: x-small;">{{ fellowships.description }}</span>
+  </h2>
+
+  {% for fellowship in fellowships.itens %}
+  <div class="item">
+    <div class="meta">
+      <div class="upper-row">
+        <h3 class="course-title">{{ fellowship.name }}</h3>
+        <div class="course-role">
+          {{ fellowship.funding }}
+        </div>
+      </div>
+      <!--//upper-row-->
+
+      <div class="second-upper-row">
+        <div class="course-loc">
+          {{ fellowship.supervisor }}
+        </div>
+        <div class="course-semester">
+          {{ fellowship.time }}
+        </div>
+      </div>
+    </div>
+    <!--//meta-->
+
+    <div class="teach-details">{{ course.details | markdownify }}</div>
+  </div>
+  <!--//item-->
+  {% endfor %}
+
+</section><!--//section-->
+{% endif %}
+

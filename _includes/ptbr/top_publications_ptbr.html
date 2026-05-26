@@ -1,0 +1,45 @@
+{% assign publications = site.data.data.publications %}
+{% if publications %}
+<section class="section publications-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ publications.home-title_ptbr }}
+  </h2>
+  <!-- <h5>({{ publications.papers | size }} results)</h5> -->
+
+  {% if publications.intro_ptbr %}
+  <div class="intro">
+    {{ publications.intro_ptbr | markdownify }}
+  </div><!--//intro-->
+  {% endif %}
+
+  {% for publication in publications.papers %}
+    {% if publication.show-home %}
+      <div class="item">
+        {% if publication.link %}
+          <a href="{{ publication.link }}"> {% if publication.title_ptbr %} {{ publication.title_ptbr }} {% else %} {{ publication.title }} {% endif %}</a>
+        {% else %}
+          {% if publication.title_ptbr %} {{ publication.title_ptbr }} {% else %} {{ publication.title }} {% endif %}
+        {% endif %}
+        <div class="publication-authors">
+          {% if publication.authors_ptbr %} {{ publication.authors_ptbr }} {% else %} {{ publication.authors }} {% endif %}
+          {% if publication.more %}
+          <span class="publication-more"> {% if publication.more %} e {{ publication.authors_ptbr }} mais {% else %} and {{ publication.authors }} more {% endif %} </span>
+          {% endif %}
+        </div>
+        <div class="publication-journal">{% if publication.journal_ptbr %} {{ publication.journal_ptbr }} {% else %} {{ publication.journal }} {% endif %} </div>
+      </div><!--//item-->
+    {% endif %}
+  {% endfor %}
+  <div class="button-container-center">
+    <a href="/publications_ptbr.html" target="_blank">
+      <button class="button-18 ">Ver todas as {{ publications.papers | size }} publicações</button>
+    </a>
+  </div>
+
+</section><!--//section-->
+{% endif %}

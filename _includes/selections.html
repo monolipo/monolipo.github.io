@@ -1,0 +1,124 @@
+{% assign selections = site.data.data.selections %}
+{% if selections %}
+<section class="section selections-section">
+  <!-- (Showing {{ publications.papers | size }} results) -->
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-ranking-star fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ selections.title }}
+  </h2>
+
+  {% if selections.intro %}
+  <div class="intro">
+    {{ selections.intro | markdownify }}
+  </div><!--//intro-->
+  {% endif %}
+
+  <!--Vestibulares-->
+  {% for type in selections.types %}
+    {% for process in selections.process %}
+      {% if process.type == type.name %}
+        {% if process.title-mark == true %}
+          {% assign has_item = true %}
+          <br>
+          <h3 class="section-subtitle">{{process.title}}</h3>
+          {{process.intro}}
+          <table>
+            <tr>
+              <th>Year</th>
+              <th style="text-align: left;">Description</th>
+              <th style="text-align: left;">Location</th>
+              <th>Rank</th>
+              <th>Spots</th>
+              <th>Ratio</th>
+              <th>Status</th>
+              <th>My Decision</th>
+            </tr>
+        {% else %}
+            <tr>
+              <td>{{process.date}}</td>
+              <td style="text-align: left;">{{process.title}}</td>
+              <td style="text-align: left;">{{process.location}}</td>
+              {% if process.rank > 0 %}
+                {% if process.rank == 1 %}
+                  <td style="background-color: #ffffbf;">{{process.rank}}st/{{process.candidates}}</td>
+                {% endif %}
+                {% if process.rank == 2%}
+                  <td style="background-color: #dfdfdf;">{{process.rank}}nd/{{process.candidates}}</td>
+                {% endif %}
+                {% if process.rank == 3 %}
+                  <td style="background-color: #ffdf9f;">{{process.rank}}rd/{{process.candidates}}</td>
+                {% endif %}
+                {% if process.rank == 4 %}
+                  <td style="background-color: #cfcfff;">{{process.rank}}th/{{process.candidates}}</td>
+                {% endif %}  
+                {% if process.rank > 4 %}
+                  <td>{{process.rank}}th/{{process.candidates}}</td>
+                {% endif %}  
+              {% else %}
+                  {% if process.rank == -1 %}
+                    <td> - </td>
+                  {% else %}
+                    <td> ??/{{process.candidates}}</td>
+                  {% endif %}
+              {% endif %}
+              <td>{{process.spots}}</td>
+              <td>{{process.ratio}}</td>
+              {% if process.status == "Approved" %}
+                <td style="background-color: #dfffdf; font-weight: bold">{{process.status}}</td>
+              {% else %}
+                {% if process.status == "Not approved" %}
+                  <td style="background-color: #ffdcdc; font-weight: bold">{{process.status}}</td>
+                {% else %}
+                  {% if process.status == "Ongoing" %}
+                    <td style="background-color: #ffe4c4; font-weight: bold">{{process.status}}</td>
+                  {% else %}
+                    {% if process.status == "Withdrawn" %}
+                      <td style="background-color: #efcfff; font-weight: bold">{{process.status}}</td>
+                    {% else %}
+                      {% if process.status == "Rejected Submission" %}
+                        <td style="background-color: #CCC; font-weight: bold">{{process.status}}</td>
+                      {% else %}
+                        {% if process.status == "Approved/Withdrawn" %}
+                          <td style="background-color: #dfffdf; font-weight: bold">{{process.status}}</td>
+                        {% else %}
+                          <td>{{process.status}}</td>
+                        {% endif %}
+                      {% endif %}
+                    {% endif %}
+                  {% endif %}
+                {% endif %}
+              {% endif %}
+              {% if process.decision == "Accepted" %}
+                <td style="background-color: #cbecff; font-weight: bold">{{process.decision}}</td>
+              {% else %}
+                <td>{{process.decision}}</td>
+              {% endif %}
+            </tr>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% if has_item == true %}
+    </table>
+    {% assign has_item = false %}
+    {% endif %}
+    
+    {% if type.name == "Ongoing" %}
+      <hr>
+    {% endif %}
+    
+  {% endfor %}
+
+
+
+  <!--PG-->
+
+  <!--Postdoc-->
+
+  <!--Jobs-->
+
+</section><!--//section-->
+{% endif %}

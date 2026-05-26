@@ -191,12 +191,12 @@ sidebar:
   avatar: ted_profile.jpeg
   institute-logo: inpe_branco.png
   contact-title: Contact
-  email: monolipo.physics@gmail.com
+  email: leandro.almeida@inpe.br
   phone: ''
   lattes: '7278094197406927'
   ads: Ted Leandro de Almeida
-  ads-link: https://ui.adsabs.harvard.edu/search/q=author%3A%22de%20Almeida%2C%20L%22%20OR%20author%3A%22Almeida%2C%20L%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
-  website: astroted.com
+  ads-link: https://ui.adsabs.harvard.edu/search/q=author%3A%22de%20Almeida%2C%20Leandro%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
+  website: astrotedleandro.com
   linkedin: ''
   xing: ''
   github: monolipo
@@ -222,7 +222,7 @@ sidebar:
     - idiom: English
       level: Fluent
     - idiom: Spanish
-      level: Intermediate reading
+      level: Intermediate
   interests:
     title: Research Interests
     info:
@@ -256,8 +256,8 @@ sidebar_ptbr:
   phone: ''
   lattes: '7278094197406927'
   ads: Ted Leandro de Almeida
-  ads-link: https://ui.adsabs.harvard.edu/search/q=author%3A%22de%20Almeida%2C%20L%22%20OR%20author%3A%22Almeida%2C%20L%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
-  website: astroted.com
+  ads-link: https://ui.adsabs.harvard.edu/search/q=author%3A%22de%20Almeida%2C%20Leandro%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
+  website: astrotedleandro.com
   linkedin: ''
   xing: ''
   github: monolipo
@@ -283,7 +283,7 @@ sidebar_ptbr:
     - idiom: Inglês
       level: Fluente
     - idiom: Espanhol
-      level: Leitura intermediária
+      level: intermediário
   interests:
     title: Interesses de Pesquisa
     info:
@@ -302,9 +302,9 @@ sidebar_ptbr:
     info: []
 career-profile:
   title: Career Profile
-  summary: I am a researcher and professor at the Astrophysics Division of the Instituto Nacional de Pesquisas Espaciais (INPE),
+  summary: I am a Researcher at the Astrophysics Division of the Instituto Nacional de Pesquisas Espaciais (INPE),
     where I am also a faculty member of the graduate program in Astrophysics. My work focuses on exoplanets, gravitational
-    microlensing, stellar astrophysics, astronomical instrumentation, and time-domain observations. <br><br>I hold a PhD in
+    microlensing, stellar astrophysics, astronomical instrumentation, and time-domain observations. I hold a PhD in
     Physics from the Universidade Federal do Rio Grande do Norte (UFRN), where I worked on gravitational-microlensing equations
     and their application to the search for low-mass exoplanets. I have extensive observational experience at the Observatório
     do Pico dos Dias, with more than 350 observing nights using imaging cameras and spectrographs, and I have contributed
@@ -314,9 +314,9 @@ career-profile:
   summary-more: ''
 career-profile_ptbr:
   title: Perfil de Carreira
-  summary: Sou pesquisador e professor da Divisão de Astrofísica do Instituto Nacional de Pesquisas Espaciais (INPE), onde
+  summary: Sou Pesquisador da Divisão de Astrofísica do Instituto Nacional de Pesquisas Espaciais (INPE), onde
     também sou membro do corpo docente da pós-graduação em Astrofísica. Minha atuação se concentra em exoplanetas, microlentes
-    gravitacionais, astrofísica estelar, instrumentação astronômica e observações no domínio temporal. <br><br>Sou doutor
+    gravitacionais, astrofísica estelar, instrumentação astronômica e observações no domínio temporal. <br><br>Doutor
     em Física pela Universidade Federal do Rio Grande do Norte (UFRN), onde trabalhei com a parametrização das equações de
     microlentes gravitacionais e sua aplicação na busca por exoplanetas de baixa massa. Tenho ampla experiência observacional
     no Observatório do Pico dos Dias, com mais de 350 noites de observação usando câmeras diretas e espectrógrafos, e participei

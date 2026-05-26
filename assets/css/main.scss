@@ -1,0 +1,22 @@
+---
+
+---
+
+@charset "utf-8";
+
+
+// define variable with front matter
+{% if site.data.data.sidebar.position == 'left' %}
+$navbar-order: 1;
+$resume-order: 3;
+$sidebar-order: 2;
+{% else %}
+$navbar-order: 1;
+$resume-order: 2;
+$sidebar-order: 3;
+{% endif %}
+
+
+
+@import "skins/{{ site.theme_skin | default: 'blue' }}"; // skin
+@import "default"; // main partials

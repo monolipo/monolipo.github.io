@@ -1,0 +1,16 @@
+{
+  "systemParams": "linux-x64-64",
+  "modulesFolders": [
+    "node_modules"
+  ],
+  "flags": [],
+  "linkedModules": [],
+  "topLevelPatterns": [
+    "flag-icons@^6.11.2"
+  ],
+  "lockfileEntries": {
+    "flag-icons@^6.11.2": "https://registry.yarnpkg.com/flag-icons/-/flag-icons-6.11.2.tgz#a0e6fa03e6d7a8466c58c5af792bdecb454e2497"
+  },
+  "files": [],
+  "artifacts": {}
+}

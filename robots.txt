@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://monolipo.github.io/sitemap.xml

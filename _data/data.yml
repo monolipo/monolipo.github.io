@@ -3161,3 +3161,842 @@ oss_ptbr:
   contributions: []
 footer: Astroted / Ted Leandro de Almeida. Based on an adapted academic Jekyll template.
 footer_ptbr: Astroted / Ted Leandro de Almeida. Baseado em um template acadêmico Jekyll adaptado.
+
+thesis_and_books:
+  page_title: Thesis and Books
+  page_title_ptbr: Teses e Livros
+  intro: Selected theses, dissertation, and book chapter. Use the +info button to expand additional details for each item.
+  intro_ptbr: Teses, dissertação e capítulo de livro selecionados. Use o botão +info para expandir detalhes adicionais de
+    cada item.
+  map_button: World map view
+  map_button_ptbr: Visualização no mapa mundial
+  map_link: /thesis_map.html
+  map_link_ptbr: /thesis_map_ptbr.html
+  sections:
+  - key: phd
+    label: Ph.D. Thesis
+    label_ptbr: Tese de Doutorado
+    entries:
+    - title: Application of the gravitational microlensing technique in the search for low-mass exoplanets
+      title_ptbr: Aplicação da técnica de microlentes gravitacionais na busca de exoplanetas de baixa massa
+      authors: Leandro de Almeida
+      year: 2021
+      type: Doctoral thesis
+      type_ptbr: Tese de doutorado
+      institution: Universidade Federal do Rio Grande do Norte (UFRN)
+      program: Graduate Program in Physics
+      program_ptbr: Programa de Pós-Graduação em Física
+      advisor: José Dias do Nascimento Júnior
+      coadvisor: ''
+      pages: 113f
+      defense_date: '2021-03-18'
+      repository_link: https://repositorio.ufrn.br/items/aad32c68-5bdf-4599-8f2e-51e4b0d657e0
+      handle_link: https://repositorio.ufrn.br/handle/123456789/33222
+      pdf_link: https://repositorio.ufrn.br/bitstream/123456789/33222/1/Aplicacaotecnicamicrolentes_Almeida_2021.pdf
+      keywords: Exoplanets; Gravitational microlensing; General relativity; Photometry; Detection
+      keywords_ptbr: Exoplanetas; Microlentes gravitacionais; Relatividade geral; Fotometria; Detecção
+      abstract: Gravitational lenses were proposed by Albert Einstein in the course of developing the theory of general relativity.
+        This thesis focuses on gravitational microlensing events and their application to the detection of low-mass exoplanets.
+        It discusses the topology of planetary caustics, photometric observations of microlensing events monitored at Pico
+        dos Dias Observatory, and a parameterization of source trajectories designed to increase the probability of detecting
+        Earth-mass planets. The thesis also reports the analysis of candidate exoplanet detections, including one using data
+        observed at OPD during the doctoral work.
+      abstract_ptbr: As lentes gravitacionais foram propostas por Albert Einstein no percurso da elaboração da teoria da relatividade
+        geral. Esta tese é focada em eventos de microlentes gravitacionais e em sua aplicação na detecção de exoplanetas de
+        baixa massa. O trabalho discute a topologia de cáusticas planetárias, observações fotométricas de eventos acompanhados
+        no Observatório do Pico dos Dias, e uma parametrização de trajetórias da fonte para aumentar a probabilidade de detecção
+        de planetas com massa similar à da Terra. A tese também apresenta a análise de candidatos a exoplanetas, incluindo
+        um caso com dados observados no OPD durante o doutorado.
+  - key: msc
+    label: MSc Dissertation
+    label_ptbr: Dissertação de Mestrado
+    entries:
+    - title: Study of gravitational microlensing topology and the discovery of Earth-like exoplanets in the habitable zone
+      title_ptbr: Estudo da topologia de microlentes gravitacionais e a descoberta de exoplanetas do tipo Terra na zona habitável
+      authors: Leandro de Almeida
+      year: 2017
+      type: MSc dissertation
+      type_ptbr: Dissertação de mestrado
+      institution: Universidade Federal do Rio Grande do Norte (UFRN)
+      program: Graduate Program in Physics
+      program_ptbr: Programa de Pós-Graduação em Física
+      advisor: José Dias do Nascimento Júnior
+      coadvisor: João Rodrigo Souza Leão
+      pages: 101f
+      defense_date: '2017-02-10'
+      repository_link: https://repositorio.ufrn.br/items/2a4fb102-7680-41ec-a379-dc40b16d1bb6
+      handle_link: https://repositorio.ufrn.br/jspui/handle/123456789/23146
+      pdf_link: https://repositorio.ufrn.br/bitstream/123456789/23146/1/LeandroDeAlmeida_DISSERT.pdf
+      keywords: Gravitational microlensing; Exoplanets; Detection
+      keywords_ptbr: Microlentes gravitacionais; Exoplanetas; Detecção
+      abstract: 'This MSc dissertation presents the equations behind gravitational microlensing theory and their application
+        to the detection of distant, low-mass planets. It focuses on systems with close topology, planetary mass ratios comparable
+        to Earth-like planets around solar-type stars, and source trajectory parameterizations designed to reduce the search
+        time in simulated light curves. The work also describes two algorithms used to simulate the topology and light curves
+        of microlensing events: a semi-analytical lens-equation method and an Inverse Ray Shooting method.'
+      abstract_ptbr: Na última década, o número de exoplanetas descobertos cresceu exponencialmente, principalmente devido
+        às observações realizadas pela missão Kepler e pela missão K2. A maior parte dessas descobertas foi feita pelo método
+        de trânsito planetário, que possui baixa sensibilidade para planetas de baixa massa distantes de suas estrelas. Em
+        contrapartida, a técnica de microlentes gravitacionais é sensível a planetas de baixa massa em órbitas mais afastadas.
+        Nesta dissertação são apresentadas as equações da teoria de microlentes gravitacionais e suas aplicações na detecção
+        de planetas distantes de baixa massa, com foco na caracterização de sistemas com topologia fechada e massas planetárias
+        comparáveis à Terra. O trabalho também propõe uma parametrização para reduzir o tempo de busca em curvas de luz geradas
+        por sistemas com topologia close e descreve algoritmos de simulação por método semi-analítico e Inverse Ray Shooting.
+  - key: books
+    label: Books
+    label_ptbr: Livros
+    entries:
+    - title: 'Unraveling Astrophotography: Physical Principles and Techniques for Processing Astronomical Images from CCD
+        and DSLR'
+      title_ptbr: 'Desvendando a Astrofotografia: Princípios Físicos e Técnicas para Processamento de Imagens Astronômicas
+        de CCD e DSLR'
+      authors: Leandro de Almeida; João Rodrigo de Souza Leão
+      year: 2023
+      type: Book chapter
+      type_ptbr: Capítulo de livro
+      book: 'Fundamentos das ciências exatas: da matemática à física e além'
+      edition: 1st ed.
+      publisher: Atena Editora
+      pages: 31-36
+      doi: 10.22533/at.ed.2792329113
+      doi_link: https://doi.org/10.22533/at.ed.2792329113
+      chapter_link: https://atenaeditora.com.br/catalogo/post/desvendando-a-astrofotografia-principios-fisicos-e-tecnicas-para-processamento-de-imagens-astronomicas-de-ccd-e-dslr
+      book_link: https://atenaeditora.com.br/catalogo/ebook/fundamentos-das-ciencias-exatas-da-matematica-a-fisica-e-alem
+      keywords: Astrophotography; Telescope; CCD; DSLR; Astronomy
+      keywords_ptbr: Astrofotografia; Telescópio; CCD; DSLR; Astronomia
+      abstract: This work outlines the methodology used in telescope and astrophotography workshops. The mini-course trains
+        participants to operate motorized telescopes, perform basic maintenance and optical collimation, and understand current
+        image-processing techniques used in astrophotography. The chapter covers topics ranging from telescope optics to the
+        final processing steps for astronomical images.
+      abstract_ptbr: Este trabalho apresenta a metodologia utilizada em oficinas de telescópios e astrofotografia. O minicurso
+        capacita participantes a realizar operações básicas em telescópios motorizados, manutenção e colimação da óptica,
+        além de fornecer conhecimentos básicos das principais técnicas atuais de processamento em astrofotografia. O capítulo
+        cobre tópicos que vão dos fundamentos de óptica de telescópios ao processamento final de imagens astronômicas.
+thesis_and_books_map:
+  page_title: World map view
+  page_title_ptbr: Visualização no mapa mundial
+  intro: Combined repository view statistics for the Ph.D. thesis and MSc dissertation. Country and city counts are summed
+    across both works.
+  intro_ptbr: Estatísticas combinadas de visualização no repositório para a tese de doutorado e a dissertação de mestrado.
+    As contagens por país e cidade são somadas entre os dois trabalhos.
+  total_repository_visits: 729
+  phd_repository_visits: 355
+  msc_repository_visits: 374
+  country_views:
+  - name: Brasil
+    views: 397
+    lat: -10.0
+    lon: -55.0
+  - name: Estados Unidos
+    views: 123
+    lat: 39.8
+    lon: -98.6
+  - name: Irlanda
+    views: 43
+    lat: 53.3
+    lon: -8.0
+  - name: Alemanha
+    views: 21
+    lat: 51.2
+    lon: 10.4
+  - name: China
+    views: 10
+    lat: 35.9
+    lon: 104.2
+  - name: Países Baixos
+    views: 10
+    lat: 52.1
+    lon: 5.3
+  - name: França
+    views: 7
+    lat: 46.2
+    lon: 2.2
+  - name: Suécia
+    views: 6
+    lat: 60.1
+    lon: 18.6
+  - name: Romênia
+    views: 4
+    lat: 45.9
+    lon: 24.9
+  - name: Singapura
+    views: 4
+    lat: 1.35
+    lon: 103.82
+  - name: Bélgica
+    views: 3
+    lat: 50.5
+    lon: 4.5
+  - name: Japão
+    views: 3
+    lat: 36.2
+    lon: 138.3
+  - name: Canadá
+    views: 2
+    lat: 56.1
+    lon: -106.3
+  - name: Espanha
+    views: 2
+    lat: 40.5
+    lon: -3.7
+  - name: Panamá
+    views: 2
+    lat: 8.5
+    lon: -80.8
+  - name: Portugal
+    views: 2
+    lat: 39.4
+    lon: -8.2
+  - name: Argentina
+    views: 1
+    lat: -38.4
+    lon: -63.6
+  - name: Bulgária
+    views: 1
+    lat: 42.7
+    lon: 25.5
+  - name: Colômbia
+    views: 1
+    lat: 4.6
+    lon: -74.1
+  - name: Finlândia
+    views: 1
+    lat: 61.9
+    lon: 25.7
+  - name: Polônia
+    views: 1
+    lat: 51.9
+    lon: 19.1
+  - name: Reino Unido
+    views: 1
+    lat: 55.4
+    lon: -3.4
+  - name: Rússia
+    views: 1
+    lat: 61.5
+    lon: 105.3
+  - name: Uruguai
+    views: 1
+    lat: -32.5
+    lon: -55.8
+  city_views:
+  - name: Natal
+    views: 34
+    lat: -5.7945
+    lon: -35.211
+  - name: São Paulo
+    views: 23
+    lat: -23.5505
+    lon: -46.6333
+  - name: Varginha
+    views: 18
+    lat: -21.556
+    lon: -45.436
+  - name: Campinas
+    views: 16
+    lat: -22.9056
+    lon: -47.0608
+  - name: Parnamirim
+    views: 15
+    lat: -5.9156
+    lon: -35.2628
+  - name: Mariana
+    views: 14
+    lat: -20.3778
+    lon: -43.4161
+  - name: Fortaleza
+    views: 13
+    lat: -3.7319
+    lon: -38.5267
+  - name: Dublin
+    views: 12
+    lat: 53.3498
+    lon: -6.2603
+  - name: Rio de Janeiro
+    views: 10
+    lat: -22.9068
+    lon: -43.1729
+  - name: Goianinha
+    views: 9
+    lat: -6.2669
+    lon: -35.2128
+  - name: Mossoro
+    views: 8
+    lat: -5.1875
+    lon: -37.3442
+  - name: Uberlândia
+    views: 7
+    lat: -18.9146
+    lon: -48.2754
+  - name: Balneário Camboriú
+    views: 6
+    lat: -26.9906
+    lon: -48.634
+  - name: Ipaporanga
+    views: 6
+    lat: -4.8969
+    lon: -40.7567
+  - name: Belo Horizonte
+    views: 5
+    lat: -19.9167
+    lon: -43.9345
+  - name: Zhengzhou
+    views: 5
+    lat: 34.7466
+    lon: 113.6254
+  - name: Aracaju
+    views: 4
+    lat: -10.9472
+    lon: -37.0731
+  - name: Campina Grande
+    views: 4
+    lat: -7.2306
+    lon: -35.8811
+  - name: Juazeiro do Norte
+    views: 4
+    lat: -7.2131
+    lon: -39.3153
+  - name: Singapore
+    views: 4
+    lat: 1.3521
+    lon: 103.8198
+  - name: Belmont
+    views: 3
+    lat: 37.5202
+    lon: -122.2758
+  - name: Brasília
+    views: 3
+    lat: -15.7939
+    lon: -47.8828
+  - name: Brotas
+    views: 3
+    lat: -22.2846
+    lon: -48.1266
+  - name: Des Moines
+    views: 3
+    lat: 41.5868
+    lon: -93.625
+  - name: Escada
+    views: 3
+    lat: -8.3592
+    lon: -35.2247
+  - name: Ivoti
+    views: 3
+    lat: -29.5911
+    lon: -51.1608
+  - name: Osasco
+    views: 3
+    lat: -23.5329
+    lon: -46.792
+  - name: Ponta Grossa
+    views: 3
+    lat: -25.0994
+    lon: -50.1583
+  - name: Porto Alegre
+    views: 3
+    lat: -30.0346
+    lon: -51.2177
+  - name: Uberaba
+    views: 3
+    lat: -19.7472
+    lon: -47.9381
+  - name: Andover
+    views: 2
+    lat: 42.6584
+    lon: -71.137
+  - name: Ann Arbor
+    views: 2
+    lat: 42.2808
+    lon: -83.743
+  - name: Barra do Piraí
+    views: 2
+    lat: -22.4711
+    lon: -43.8256
+  - name: Beijing
+    views: 2
+    lat: 39.9042
+    lon: 116.4074
+  - name: Bowie
+    views: 2
+    lat: 38.9428
+    lon: -76.7303
+  - name: Cachoeirinha
+    views: 2
+    lat: -29.9511
+    lon: -51.0936
+  - name: Cajazeiras
+    views: 2
+    lat: -6.8903
+    lon: -38.5559
+  - name: Camacari
+    views: 2
+    lat: -12.6975
+    lon: -38.3242
+  - name: Cambe
+    views: 2
+    lat: -23.2758
+    lon: -51.2783
+  - name: Campos dos Goytacazes
+    views: 2
+    lat: -21.7622
+    lon: -41.3181
+  - name: Capanema
+    views: 2
+    lat: -1.1967
+    lon: -47.1808
+  - name: Crato
+    views: 2
+    lat: -7.2342
+    lon: -39.4097
+  - name: Criciúma
+    views: 2
+    lat: -28.6775
+    lon: -49.3697
+  - name: Curitiba
+    views: 2
+    lat: -25.4284
+    lon: -49.2733
+  - name: Florianópolis
+    views: 2
+    lat: -27.5949
+    lon: -48.5482
+  - name: Foz do Iguaçu
+    views: 2
+    lat: -25.5163
+    lon: -54.5854
+  - name: Goiânia
+    views: 2
+    lat: -16.6869
+    lon: -49.2648
+  - name: Ipaumirim
+    views: 2
+    lat: -6.7853
+    lon: -38.7175
+  - name: Itajuba
+    views: 2
+    lat: -22.4256
+    lon: -45.4528
+  - name: Jacana
+    views: 2
+    lat: -6.4189
+    lon: -36.2047
+  - name: Manaus
+    views: 2
+    lat: -3.119
+    lon: -60.0217
+  - name: Maringá
+    views: 2
+    lat: -23.4205
+    lon: -51.9331
+  - name: Mountain View
+    views: 2
+    lat: 37.3861
+    lon: -122.0839
+  - name: Niagara Falls
+    views: 2
+    lat: 43.0962
+    lon: -79.0377
+  - name: Nova Friburgo
+    views: 2
+    lat: -22.2819
+    lon: -42.5311
+  - name: Nova Lima
+    views: 2
+    lat: -19.9856
+    lon: -43.8467
+  - name: Petrópolis
+    views: 2
+    lat: -22.505
+    lon: -43.1786
+  - name: Picarras
+    views: 2
+    lat: -26.7639
+    lon: -48.6717
+  - name: Pindai
+    views: 2
+    lat: -14.4906
+    lon: -42.6872
+  - name: Pinheiro
+    views: 2
+    lat: -2.5219
+    lon: -45.0822
+  - name: Recife
+    views: 2
+    lat: -8.0476
+    lon: -34.877
+  - name: Sotanga
+    views: 2
+    lat: -6.3
+    lon: 35.0
+  - name: Acari
+    views: 1
+    lat: -6.4356
+    lon: -36.6397
+  - name: Americo Brasiliense
+    views: 1
+    lat: -21.7247
+    lon: -48.1014
+  - name: Amsterdam
+    views: 1
+    lat: 52.3676
+    lon: 4.9041
+  - name: Anaheim
+    views: 1
+    lat: 33.8366
+    lon: -117.9143
+  - name: Apodi
+    views: 1
+    lat: -5.6646
+    lon: -37.7989
+  - name: Arlington
+    views: 1
+    lat: 38.8816
+    lon: -77.091
+  - name: Assis
+    views: 1
+    lat: -22.6617
+    lon: -50.4122
+  - name: Barra dos Coqueiros
+    views: 1
+    lat: -10.9089
+    lon: -37.0386
+  - name: Belém
+    views: 1
+    lat: -1.4558
+    lon: -48.5039
+  - name: Betim
+    views: 1
+    lat: -19.9678
+    lon: -44.1983
+  - name: Boa Vista
+    views: 1
+    lat: 2.8235
+    lon: -60.6758
+  - name: Botucatu
+    views: 1
+    lat: -22.8858
+    lon: -48.445
+  - name: Buenos Aires
+    views: 1
+    lat: -34.6037
+    lon: -58.3816
+  - name: Caico
+    views: 1
+    lat: -6.4591
+    lon: -37.0976
+  - name: Caieiras
+    views: 1
+    lat: -23.3641
+    lon: -46.7406
+  - name: Cajamar
+    views: 1
+    lat: -23.355
+    lon: -46.8769
+  - name: Camaqua
+    views: 1
+    lat: -30.8511
+    lon: -51.8122
+  - name: Cambuci
+    views: 1
+    lat: -21.5753
+    lon: -41.9111
+  - name: Campo Belo
+    views: 1
+    lat: -20.8972
+    lon: -45.2772
+  - name: Caruaru
+    views: 1
+    lat: -8.2845
+    lon: -35.9702
+  - name: Cascavel
+    views: 1
+    lat: -24.9555
+    lon: -53.4552
+  - name: Cidreira
+    views: 1
+    lat: -30.1764
+    lon: -50.2056
+  - name: Columbus
+    views: 1
+    lat: 39.9612
+    lon: -82.9988
+  - name: Cuiabá
+    views: 1
+    lat: -15.6014
+    lon: -56.0979
+  - name: Cumari
+    views: 1
+    lat: -18.2647
+    lon: -48.1517
+  - name: Curvelo
+    views: 1
+    lat: -18.7564
+    lon: -44.4308
+  - name: Delmiro Gouveia
+    views: 1
+    lat: -9.3886
+    lon: -37.9986
+  - name: Duque de Caxias
+    views: 1
+    lat: -22.7858
+    lon: -43.3049
+  - name: Frankfurt am Main
+    views: 1
+    lat: 50.1109
+    lon: 8.6821
+  - name: Governador Valadares
+    views: 1
+    lat: -18.8549
+    lon: -41.9559
+  - name: Guaira
+    views: 1
+    lat: -24.085
+    lon: -54.2561
+  - name: Guaraciaba do Norte
+    views: 1
+    lat: -4.1669
+    lon: -40.7477
+  - name: Guarapuava
+    views: 1
+    lat: -25.3902
+    lon: -51.4623
+  - name: Guaruja
+    views: 1
+    lat: -23.9931
+    lon: -46.2564
+  - name: Hortolândia
+    views: 1
+    lat: -22.8583
+    lon: -47.22
+  - name: Itaborai
+    views: 1
+    lat: -22.7444
+    lon: -42.8594
+  - name: Itambe
+    views: 1
+    lat: -15.2447
+    lon: -40.6244
+  - name: Itaperuna
+    views: 1
+    lat: -21.2053
+    lon: -41.8878
+  - name: Itarema
+    views: 1
+    lat: -2.9248
+    lon: -39.9167
+  - name: Jacareí
+    views: 1
+    lat: -23.3053
+    lon: -45.9658
+  - name: Jaraguá do Sul
+    views: 1
+    lat: -26.4851
+    lon: -49.0661
+  - name: Jaú
+    views: 1
+    lat: -22.2964
+    lon: -48.5578
+  - name: Jericoacoara
+    views: 1
+    lat: -2.7956
+    lon: -40.514
+  - name: Joao Camara
+    views: 1
+    lat: -5.5409
+    lon: -35.8125
+  - name: Joao Neiva
+    views: 1
+    lat: -19.7578
+    lon: -40.3867
+  - name: Jundiaí
+    views: 1
+    lat: -23.1857
+    lon: -46.8978
+  - name: Lagarto
+    views: 1
+    lat: -10.9178
+    lon: -37.65
+  - name: Lajeado
+    views: 1
+    lat: -29.4669
+    lon: -51.9614
+  - name: Londonderry
+    views: 1
+    lat: 54.9966
+    lon: -7.3086
+  - name: Louveira
+    views: 1
+    lat: -23.0864
+    lon: -46.9506
+  - name: Ludwigshafen am Rhein
+    views: 1
+    lat: 49.4774
+    lon: 8.4452
+  - name: Macaé
+    views: 1
+    lat: -22.3708
+    lon: -41.7869
+  - name: Madrid
+    views: 1
+    lat: 40.4168
+    lon: -3.7038
+  - name: Marica
+    views: 1
+    lat: -22.9194
+    lon: -42.8186
+  - name: Marietta
+    views: 1
+    lat: 33.9526
+    lon: -84.5499
+  - name: Marília
+    views: 1
+    lat: -22.2139
+    lon: -49.9458
+  - name: Messias Targino
+    views: 1
+    lat: -6.0717
+    lon: -37.5158
+  - name: Mogi das Cruzes
+    views: 1
+    lat: -23.5228
+    lon: -46.1883
+  - name: Montevideo
+    views: 1
+    lat: -34.9011
+    lon: -56.1645
+  - name: Niterói
+    views: 1
+    lat: -22.8832
+    lon: -43.1034
+  - name: Nova Granada
+    views: 1
+    lat: -20.5339
+    lon: -49.3142
+  - name: Nuremberg
+    views: 1
+    lat: 49.4521
+    lon: 11.0767
+  - name: Oliveira do Bairro
+    views: 1
+    lat: 40.5147
+    lon: -8.4933
+  - name: Palotina
+    views: 1
+    lat: -24.2868
+    lon: -53.84
+  - name: Panambi
+    views: 1
+    lat: -28.2928
+    lon: -53.5017
+  - name: Passos
+    views: 1
+    lat: -20.7189
+    lon: -46.6097
+  - name: Patos de Minas
+    views: 1
+    lat: -18.5789
+    lon: -46.5181
+  - name: Patrocinio
+    views: 1
+    lat: -18.9439
+    lon: -46.9925
+  - name: Paulista
+    views: 1
+    lat: -7.9408
+    lon: -34.8731
+  - name: Penapolis
+    views: 1
+    lat: -21.4195
+    lon: -50.0776
+  - name: Pesqueira
+    views: 1
+    lat: -8.3578
+    lon: -36.6958
+  - name: Picos
+    views: 1
+    lat: -7.0769
+    lon: -41.4672
+  - name: Porto
+    views: 1
+    lat: 41.1579
+    lon: -8.6291
+  - name: Pratania
+    views: 1
+    lat: -22.8119
+    lon: -48.6644
+  - name: Presidente Bernardes
+    views: 1
+    lat: -22.0061
+    lon: -51.5533
+  - name: Ribeirão Preto
+    views: 1
+    lat: -21.1699
+    lon: -47.8099
+  - name: Rio Claro
+    views: 1
+    lat: -22.4114
+    lon: -47.5614
+  - name: Salgueiro
+    views: 1
+    lat: -8.0736
+    lon: -39.1242
+  - name: Salinas
+    views: 1
+    lat: -16.1703
+    lon: -42.2903
+  - name: Salvador
+    views: 1
+    lat: -12.9777
+    lon: -38.5016
+  - name: Salzgitter
+    views: 1
+    lat: 52.15
+    lon: 10.3333
+  - name: San Mateo
+    views: 1
+    lat: 37.563
+    lon: -122.3255
+  - name: Santo André
+    views: 1
+    lat: -23.6639
+    lon: -46.5383
+  - name: Sarapui
+    views: 1
+    lat: -23.6392
+    lon: -47.8244
+  - name: Sorocaba
+    views: 1
+    lat: -23.5015
+    lon: -47.4526
+  - name: Springfield
+    views: 1
+    lat: 39.7817
+    lon: -89.6501
+  - name: Stoke-on-Trent
+    views: 1
+    lat: 53.0027
+    lon: -2.1794
+  - name: São Luís
+    views: 1
+    lat: -2.5307
+    lon: -44.3068
+  - name: Tiangua
+    views: 1
+    lat: -3.7297
+    lon: -40.9928
+  - name: Toritama
+    views: 1
+    lat: -8.0067
+    lon: -36.0567
+  - name: Tucurui
+    views: 1
+    lat: -3.7659
+    lon: -49.6792
+  - name: Ubajara
+    views: 1
+    lat: -3.8544
+    lon: -40.9211
+  - name: Warsaw
+    views: 1
+    lat: 52.2297
+    lon: 21.0122

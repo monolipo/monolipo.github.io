@@ -1,0 +1,72 @@
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+.thesis-map-header { margin-bottom: 14px; }
+.thesis-map-controls { margin: 12px 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.thesis-map-control { padding: 7px 11px; border: 1px solid #bbb; border-radius: 5px; background: #fff; cursor: pointer; }
+.thesis-map-control.active { background: #800020; color: #fff; border-color: #800020; }
+#thesis-map { height: 650px; width: 100%; border: 1px solid #ddd; border-radius: 6px; }
+.views-bubble { background: rgba(150, 0, 32, 0.58); border: 2px solid rgba(150, 0, 32, 0.85); border-radius: 50%; color: white; font-weight: 700; text-align: center; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 4px rgba(0,0,0,0.35); }
+.views-bubble span { line-height: 1; text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
+.map-note { font-size: 0.92em; color: #666; margin-top: 8px; }
+</style>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+{% assign mp = site.data.data.thesis_and_books_map %}
+<section class="section thesis-map-section">
+  <div class="thesis-map-header">
+    <h2 class="section-title"><i class="fa-solid fa-earth-americas"></i> {{ mp.page_title_ptbr }}</h2>
+    <p>{{ mp.intro_ptbr }}</p>
+    <p><strong>Visitas combinadas no repositório:</strong> {{ mp.total_repository_visits }} &nbsp;|&nbsp; <strong>Tese de doutorado:</strong> {{ mp.phd_repository_visits }} &nbsp;|&nbsp; <strong>Dissertação de mestrado:</strong> {{ mp.msc_repository_visits }}</p>
+  </div>
+  <div class="thesis-map-controls">
+    <button id="country-view-btn" class="thesis-map-control active" type="button">Visualização por país</button>
+    <button id="city-view-btn" class="thesis-map-control" type="button">Visualização por cidade</button>
+    <a class="thesis-map-control" href="{{ site.baseurl }}/thesis_and_books_ptbr.html">Voltar para Teses e Livros</a>
+  </div>
+  <div id="thesis-map"></div>
+  <p class="map-note">Os círculos mostram as contagens combinadas de visualização da tese e da dissertação. As coordenadas das cidades são aproximadas e podem ser editadas em <code>_data/data.yml</code>.</p>
+</section>
+<script>
+const countryViews = [
+{% for item in mp.country_views %}{ name: {{ item.name | jsonify }}, views: {{ item.views }}, lat: {{ item.lat }}, lon: {{ item.lon }} }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+];
+const cityViews = [
+{% for item in mp.city_views %}{ name: {{ item.name | jsonify }}, views: {{ item.views }}, lat: {{ item.lat }}, lon: {{ item.lon }} }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+];
+function bubbleSize(views) { return Math.max(22, Math.min(58, 18 + Math.sqrt(views) * 2.1)); }
+function makeLayer(data, label) {
+  const layer = L.layerGroup();
+  data.forEach(item => {
+    const d = bubbleSize(item.views);
+    const marker = L.marker([item.lat, item.lon], {
+      icon: L.divIcon({ className: 'views-bubble', html: `<span>${item.views}</span>`, iconSize: [d, d], iconAnchor: [d/2, d/2] })
+    });
+    marker.bindPopup(`<strong>${item.name}</strong><br>${item.views} visualizações<br><em>${label}</em>`);
+    marker.addTo(layer);
+  });
+  return layer;
+}
+const map = L.map('thesis-map', { scrollWheelZoom: true }).setView([12, 0], 2);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+const countryLayer = makeLayer(countryViews, 'total por país');
+const cityLayer = makeLayer(cityViews, 'total por cidade');
+countryLayer.addTo(map);
+function showLayer(which) {
+  if (which === 'country') {
+    map.removeLayer(cityLayer); countryLayer.addTo(map);
+    document.getElementById('country-view-btn').classList.add('active');
+    document.getElementById('city-view-btn').classList.remove('active');
+    map.setView([12, 0], 2);
+  } else {
+    map.removeLayer(countryLayer); cityLayer.addTo(map);
+    document.getElementById('city-view-btn').classList.add('active');
+    document.getElementById('country-view-btn').classList.remove('active');
+    map.setView([0, -35], 2);
+  }
+}
+document.getElementById('country-view-btn').addEventListener('click', () => showLayer('country'));
+document.getElementById('city-view-btn').addEventListener('click', () => showLayer('city'));
+</script>

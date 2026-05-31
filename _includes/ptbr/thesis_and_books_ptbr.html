@@ -1,0 +1,66 @@
+
+<style>
+.thesis-books-header { margin-bottom: 18px; }
+.thesis-map-button { display: inline-block; margin: 8px 0 18px 0; padding: 8px 13px; border-radius: 6px; background: #800020; color: #fff !important; text-decoration: none; font-weight: 600; }
+.thesis-map-button:hover { opacity: 0.88; text-decoration: none; }
+.thesis-section-title { margin-top: 24px; padding-bottom: 6px; border-bottom: 1px solid #e5e5e5; }
+.thesis-item { margin: 14px 0 18px 0; padding: 14px 16px; border-left: 4px solid #800020; background: #fbfbfb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+.thesis-item h4 { margin-top: 0; margin-bottom: 8px; }
+.thesis-meta { margin: 3px 0; }
+.thesis-links a { margin-right: 12px; }
+.thesis-info-row { display: none; margin-top: 12px; padding: 12px 14px; border-left: 4px solid #ddd; background: #fff; }
+.thesis-info-row.is-open { display: block; }
+.thesis-mini-button { padding: 3px 8px; border: 1px solid #bbb; border-radius: 4px; background: #fff; cursor: pointer; font-size: 0.9em; }
+.thesis-mini-button:hover { background: #f2f2f2; }
+</style>
+
+{% assign tb = site.data.data.thesis_and_books %}
+<section class="section thesis-books-section">
+  <div class="thesis-books-header">
+    <h2 class="section-title"><i class="fa-solid fa-book"></i> {{ tb.page_title_ptbr }}</h2>
+    <p>{{ tb.intro_ptbr }}</p>
+    <a class="thesis-map-button" href="{{ site.baseurl }}{{ tb.map_link_ptbr }}" target="_blank" rel="noopener">{{ tb.map_button_ptbr }}</a>
+  </div>
+
+  {% for section in tb.sections %}
+  <h3 class="thesis-section-title">{{ section.label_ptbr }}</h3>
+    {% for item in section.entries %}
+      {% assign info_id = section.key | append: '-' | append: forloop.index %}
+      <article class="thesis-item">
+        <h4>{% if item.title_ptbr %}{{ item.title_ptbr }}{% else %}{{ item.title }}{% endif %}</h4>
+        <p class="thesis-meta"><strong>Autores:</strong> {{ item.authors }}</p>
+        <p class="thesis-meta"><strong>Ano:</strong> {{ item.year }}{% if item.type_ptbr %} &nbsp;|&nbsp; <strong>Tipo:</strong> {{ item.type_ptbr }}{% endif %}</p>
+        {% if item.institution %}<p class="thesis-meta"><strong>Instituição:</strong> {{ item.institution }}</p>{% endif %}
+        {% if item.program_ptbr %}<p class="thesis-meta"><strong>Programa:</strong> {{ item.program_ptbr }}</p>{% endif %}
+        {% if item.book %}<p class="thesis-meta"><strong>Livro:</strong> {{ item.book }}</p>{% endif %}
+        {% if item.publisher %}<p class="thesis-meta"><strong>Editora:</strong> {{ item.publisher }}</p>{% endif %}
+        {% if item.pages %}<p class="thesis-meta"><strong>Páginas:</strong> {{ item.pages }}</p>{% endif %}
+        <p class="thesis-links">
+          {% if item.repository_link %}<a href="{{ item.repository_link }}" target="_blank" rel="noopener">Repositório</a>{% endif %}
+          {% if item.handle_link %}<a href="{{ item.handle_link }}" target="_blank" rel="noopener">Handle</a>{% endif %}
+          {% if item.pdf_link %}<a href="{{ item.pdf_link }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+          {% if item.chapter_link %}<a href="{{ item.chapter_link }}" target="_blank" rel="noopener">Página do capítulo</a>{% endif %}
+          {% if item.book_link %}<a href="{{ item.book_link }}" target="_blank" rel="noopener">Página do livro</a>{% endif %}
+          {% if item.doi_link %}<a href="{{ item.doi_link }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+        </p>
+        <button type="button" class="thesis-mini-button" onclick="toggleThesisInfo('thesis-info-{{ info_id }}', this)">+info</button>
+        <div id="thesis-info-{{ info_id }}" class="thesis-info-row">
+          {% if item.abstract_ptbr %}<p><strong>Resumo:</strong> {{ item.abstract_ptbr }}</p>{% elsif item.abstract %}<p><strong>Resumo:</strong> {{ item.abstract }}</p>{% endif %}
+          {% if item.keywords_ptbr %}<p><strong>Palavras-chave:</strong> {{ item.keywords_ptbr }}</p>{% endif %}
+          {% if item.advisor %}<p><strong>Orientador:</strong> {{ item.advisor }}</p>{% endif %}
+          {% if item.coadvisor %}<p><strong>Coorientador:</strong> {{ item.coadvisor }}</p>{% endif %}
+          {% if item.defense_date %}<p><strong>Data de defesa:</strong> {{ item.defense_date }}</p>{% endif %}
+          {% if item.doi %}<p><strong>DOI:</strong> {{ item.doi }}</p>{% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  {% endfor %}
+</section>
+<script>
+function toggleThesisInfo(rowId, button) {
+  const row = document.getElementById(rowId);
+  if (!row) return;
+  const isOpen = row.classList.toggle('is-open');
+  button.textContent = isOpen ? '-info' : '+info';
+}
+</script>

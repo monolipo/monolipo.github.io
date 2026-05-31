@@ -1,7 +1,29 @@
 {% assign publications = site.data.data.publications %}
 {% if publications %}
 <section class="section publications-section">
-  <!-- (Showing {{ publications.papers | size }} results) -->
+
+  <style>
+    .publications-section table { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+    .publications-section th, .publications-section td { vertical-align: top; padding: 6px 7px; }
+    .publications-section th { border-bottom: 1px solid #ddd; }
+    .publication-title-paddingtop { padding-top: 18px; }
+    .publication-mini-button { cursor: pointer; display: inline-block; border: 1px solid #ddd; border-radius: 4px; padding: 1px 6px; font-size: 0.85em; line-height: 1.3; background: #f7f7f7; color: #333; }
+    .publication-mini-button:hover { background: #eeeeee; }
+    .authors-toggle { display: inline; margin-left: 4px; }
+    .authors-toggle summary { display: inline-block; list-style: none; }
+    .authors-toggle summary::-webkit-details-marker, .publication-info-details summary::-webkit-details-marker { display: none; }
+    .authors-toggle[open] .publication-authors-full { display: block; margin-top: 4px; padding: 6px 8px; border-left: 3px solid #ddd; background: #fafafa; font-size: 0.92em; }
+    .publication-info-details summary { list-style: none; }
+    .pub-info-box { margin-top: 6px; min-width: 260px; max-width: 620px; padding: 8px 10px; border-left: 3px solid #ddd; background: #fafafa; text-align: left; }
+    .pub-info-box p { margin: 0 0 8px 0; }
+    .publication-link-placeholder { color: #aaa; }
+    .publication-small-link { white-space: nowrap; }
+    @media (max-width: 800px) {
+      .publications-section table { font-size: 0.9em; }
+      .publication-volume, .publication-page, .publication-col2 { display: none; }
+    }
+  </style>
+
   {% if publications.intro_ptbr %}
   <div class="intro">
     {{ publications.intro_ptbr | markdownify }}
@@ -9,391 +31,109 @@
   {% endif %}
 
   {% assign i = 1 %}
+  {% assign section_list = "first_author||Publicações como Primeiro Autor||SECTION||coauthor||Publicações como Coautor||SECTION||proceedings||Proceedings em Conferências||SECTION||gcn||GRB Coordinates Network||SECTION||atel||The Astronomer's Telegram||SECTION||catalogs||Catálogos||SECTION||codes||Códigos" | split: "||SECTION||" %}
 
-  <br>
-  <h2 class="publication-title publication-title-paddingtop">
-    <span class="fa-stack fa-sm">
-      <i class="fas fa-square fa-stack-2x"></i>
-      <i class="fa-solid fa-user-pen fa-stack-1x fa-inverse"></i>
-    </span>
-    Publicações como primeiro autor
-  </h2>
+  {% for section_item in section_list %}
+    {% assign section_parts = section_item | split: "||" %}
+    {% assign category_key = section_parts[0] %}
+    {% assign category_title = section_parts[1] %}
 
-  <table>
-    <tr>
-      <th>#</th>
-      <th>Ano</th>
-      <th style="text-align: left;">Título</th>
-      <th style="text-align: left;">Autores</th>
-      <th><span class="publication-col2">Jornal</span></th>
-      <th><span class="publication-col2">vol.</span></th>
-      <th><span class="publication-col2">pag.</span></th>
-      <th><span class="publication-col2">arXiv</span></th>
-      <th><span class="publication-col2">DOI</span></th>
-    </tr>
-
+    {% assign has_category = false %}
     {% for publication in publications.papers %}
-      {% if publication.category == 'first-author' %}
-        <tr>
-          <td class="publication-id"> {{i}} </td> {% assign i = i | plus:1 %}
-          <td> {{publication.year}} </td>
-          <td style="text-align: left;">
-            {% if publication.link %}
-              <a href="{{ publication.link }}">{{ publication.title }}</a>
-            {% else %}
-              {{ publication.title }}
-            {% endif %}
-          </td>
-          <td style="text-align: left;">
-            <span class="publication-authors">  {{ publication.authors }} </span>
-              {% if publication.more %}
-              <span class="publication-more"> {{ publication.more }} autores</span>
-              {% endif %}
-          </td>
-          <td> <span class="publication-journal"> {{publication.journal}} </span> </td>
-          <td> <span class="publication-volume">  {{publication.volume}}  </span> </td>
-          <td> <span class="publication-page">    {{publication.page}}    </span> </td>
-          <td>
-            {% if publication.arxiv %}<a href="{{ publication.arxiv }}">arXiv</a>{% endif %}
-          </td>
-          <td>
-            {% if publication.doi %}<a href="{{ publication.doi }}">DOI</a>{% endif %}
-          </td>
-        </tr>
+      {% if publication.category == category_key %}
+        {% assign has_category = true %}
       {% endif %}
     {% endfor %}
 
-  </table>
+    {% if has_category %}
+      <h2 class="publication-title publication-title-paddingtop">
+        <span class="fa-stack fa-sm">
+          <i class="fas fa-square fa-stack-2x"></i>
+          <i class="fas fa-book fa-stack-1x fa-inverse"></i>
+        </span>
+        {{ category_title }}
+      </h2>
 
-  <br>
-  <h2 class="publication-title publication-title-paddingtop">
-    <span class="fa-stack fa-sm">
-      <i class="fas fa-square fa-stack-2x"></i>
-      <i class="fa-solid fa-users fa-stack-1x fa-inverse"></i>
-    </span>
-    Publicações como coautor
-  </h2>
-
-  <table>
-    <tr>
-      <th>#</th>
-      <th>Ano</th>
-      <th style="text-align: left;">Título</th>
-      <th style="text-align: left;">Autores</th>
-      <th><span class="publication-col2">Jornal</span></th>
-      <th><span class="publication-col2">vol.</span></th>
-      <th><span class="publication-col2">pag.</span></th>
-      <th><span class="publication-col2">arXiv</span></th>
-      <th><span class="publication-col2">DOI</span></th>
-    </tr>
-
-    {% for publication in publications.papers %}
-      {% if publication.category == 'co-author' %}
+      <table>
         <tr>
-          <td class="publication-id"> {{i}} </td> {% assign i = i | plus:1 %}
-          <td> {{publication.year}} </td>
-          <td style="text-align: left;">
-            {% if publication.link %}
-              <a href="{{ publication.link }}">{{ publication.title }}</a>
-            {% else %}
-              {{ publication.title }}
-            {% endif %}
-          </td>
-          <td style="text-align: left;">
-            <span class="publication-authors">  {{ publication.authors }} </span>
-              {% if publication.more %}
-              <span class="publication-more"> {{ publication.more }} autores</span>
-              {% endif %}
-          </td>
-          <td> <span class="publication-journal"> {{publication.journal}} </span> </td>
-          <td> <span class="publication-volume">  {{publication.volume}}  </span> </td>
-          <td> <span class="publication-page">    {{publication.page}}    </span> </td>
-          <td>
-            {% if publication.arxiv %}<a href="{{ publication.arxiv }}">arXiv</a>{% endif %}
-          </td>
-          <td>
-            {% if publication.doi %}<a href="{{ publication.doi }}">DOI</a>{% endif %}
-          </td>
+          <th>#</th>
+          <th>Ano</th>
+          <th style="text-align: left;">Título</th>
+          <th style="text-align: left;">Autores</th>
+          <th><span class="publication-col2">Periódico</span></th>
+          <th><span class="publication-col2">vol.</span></th>
+          <th><span class="publication-col2">pág.</span></th>
+          <th>arXiv</th>
+          <th>DOI</th>
+          <th>Info</th>
         </tr>
-      {% endif %}
-    {% endfor %}
 
-  </table>
-
-  <br>
-  <h2 class="publication-title publication-title-paddingtop">
-    <span class="fa-stack fa-sm">
-      <i class="fas fa-square fa-stack-2x"></i>
-      <i class="fa-solid fa-presentation-screen fa-stack-1x fa-inverse"></i>
-    </span>
-    Proceedings em conferências
-  </h2>
-
-  <table>
-    <tr>
-      <th>#</th>
-      <th>Ano</th>
-      <th style="text-align: left;">Título</th>
-      <th style="text-align: left;">Autores</th>
-      <th><span class="publication-col2">Jornal</span></th>
-      <th><span class="publication-col2">vol.</span></th>
-      <th><span class="publication-col2">pag.</span></th>
-      <th><span class="publication-col2">arXiv</span></th>
-      <th><span class="publication-col2">DOI</span></th>
-    </tr>
-
-    {% for publication in publications.papers %}
-      {% if publication.category == 'proceedings' %}
-        <tr>
-          <td class="publication-id"> {{i}} </td> {% assign i = i | plus:1 %}
-          <td> {{publication.year}} </td>
-          <td style="text-align: left;">
-            {% if publication.link %}
-              <a href="{{ publication.link }}">{{ publication.title }}</a>
-            {% else %}
-              {{ publication.title }}
-            {% endif %}
-          </td>
-          <td style="text-align: left;">
-            <span class="publication-authors">  {{ publication.authors }} </span>
-              {% if publication.more %}
-              <span class="publication-more"> {{ publication.more }} autores</span>
-              {% endif %}
-          </td>
-          <td> <span class="publication-journal"> {{publication.journal}} </span> </td>
-          <td> <span class="publication-volume">  {{publication.volume}}  </span> </td>
-          <td> <span class="publication-page">    {{publication.page}}    </span> </td>
-          <td>
-            {% if publication.arxiv %}<a href="{{ publication.arxiv }}">arXiv</a>{% endif %}
-          </td>
-          <td>
-            {% if publication.doi %}<a href="{{ publication.doi }}">DOI</a>{% endif %}
-          </td>
-        </tr>
-      {% endif %}
-    {% endfor %}
-
-  </table>
-
-  <br>
-  <h2 class="publication-title publication-title-paddingtop">
-    <span class="fa-stack fa-sm">
-      <i class="fas fa-square fa-stack-2x"></i>
-      <i class="fa-solid fa-bolt fa-stack-1x fa-inverse"></i>
-    </span>
-    GRB Coordinates Network
-  </h2>
-
-  <table>
-    <tr>
-      <th>#</th>
-      <th>Ano</th>
-      <th style="text-align: left;">Título</th>
-      <th style="text-align: left;">Autores</th>
-      <th><span class="publication-col2">Jornal</span></th>
-      <th><span class="publication-col2">vol.</span></th>
-      <th><span class="publication-col2">pag.</span></th>
-      <th><span class="publication-col2">arXiv</span></th>
-      <th><span class="publication-col2">DOI</span></th>
-    </tr>
-
-    {% for publication in publications.papers %}
-      {% if publication.category == 'gcn' %}
-        <tr>
-          <td class="publication-id"> {{i}} </td> {% assign i = i | plus:1 %}
-          <td> {{publication.year}} </td>
-          <td style="text-align: left;">
-            {% if publication.link %}
-              <a href="{{ publication.link }}">{{ publication.title }}</a>
-            {% else %}
-              {{ publication.title }}
-            {% endif %}
-          </td>
-          <td style="text-align: left;">
-            <span class="publication-authors">  {{ publication.authors }} </span>
-              {% if publication.more %}
-              <span class="publication-more"> {{ publication.more }} autores</span>
-              {% endif %}
-          </td>
-          <td> <span class="publication-journal"> {{publication.journal}} </span> </td>
-          <td> <span class="publication-volume">  {{publication.volume}}  </span> </td>
-          <td> <span class="publication-page">    {{publication.page}}    </span> </td>
-          <td>
-            {% if publication.arxiv %}<a href="{{ publication.arxiv }}">arXiv</a>{% endif %}
-          </td>
-          <td>
-            {% if publication.doi %}<a href="{{ publication.doi }}">DOI</a>{% endif %}
-          </td>
-        </tr>
-      {% endif %}
-    {% endfor %}
-
-  </table>
-
-  <br>
-  <h2 class="publication-title publication-title-paddingtop">
-    <span class="fa-stack fa-sm">
-      <i class="fas fa-square fa-stack-2x"></i>
-      <i class="fa-solid fa-satellite-dish fa-stack-1x fa-inverse"></i>
-    </span>
-    The Astronomer's Telegram
-  </h2>
-
-  <table>
-    <tr>
-      <th>#</th>
-      <th>Ano</th>
-      <th style="text-align: left;">Título</th>
-      <th style="text-align: left;">Autores</th>
-      <th><span class="publication-col2">Jornal</span></th>
-      <th><span class="publication-col2">vol.</span></th>
-      <th><span class="publication-col2">pag.</span></th>
-      <th><span class="publication-col2">arXiv</span></th>
-      <th><span class="publication-col2">DOI</span></th>
-    </tr>
-
-    {% for publication in publications.papers %}
-      {% if publication.category == 'atel' %}
-        <tr>
-          <td class="publication-id"> {{i}} </td> {% assign i = i | plus:1 %}
-          <td> {{publication.year}} </td>
-          <td style="text-align: left;">
-            {% if publication.link %}
-              <a href="{{ publication.link }}">{{ publication.title }}</a>
-            {% else %}
-              {{ publication.title }}
-            {% endif %}
-          </td>
-          <td style="text-align: left;">
-            <span class="publication-authors">  {{ publication.authors }} </span>
-              {% if publication.more %}
-              <span class="publication-more"> {{ publication.more }} autores</span>
-              {% endif %}
-          </td>
-          <td> <span class="publication-journal"> {{publication.journal}} </span> </td>
-          <td> <span class="publication-volume">  {{publication.volume}}  </span> </td>
-          <td> <span class="publication-page">    {{publication.page}}    </span> </td>
-          <td>
-            {% if publication.arxiv %}<a href="{{ publication.arxiv }}">arXiv</a>{% endif %}
-          </td>
-          <td>
-            {% if publication.doi %}<a href="{{ publication.doi }}">DOI</a>{% endif %}
-          </td>
-        </tr>
-      {% endif %}
-    {% endfor %}
-
-  </table>
-
-  <br>
-  <h2 class="publication-title publication-title-paddingtop">
-    <span class="fa-stack fa-sm">
-      <i class="fas fa-square fa-stack-2x"></i>
-      <i class="fa-solid fa-database fa-stack-1x fa-inverse"></i>
-    </span>
-    Catálogos
-  </h2>
-
-  <table>
-    <tr>
-      <th>#</th>
-      <th>Ano</th>
-      <th style="text-align: left;">Título</th>
-      <th style="text-align: left;">Autores</th>
-      <th><span class="publication-col2">Jornal</span></th>
-      <th><span class="publication-col2">vol.</span></th>
-      <th><span class="publication-col2">pag.</span></th>
-      <th><span class="publication-col2">arXiv</span></th>
-      <th><span class="publication-col2">DOI</span></th>
-    </tr>
-
-    {% for publication in publications.papers %}
-      {% if publication.category == 'catalogs' %}
-        <tr>
-          <td class="publication-id"> {{i}} </td> {% assign i = i | plus:1 %}
-          <td> {{publication.year}} </td>
-          <td style="text-align: left;">
-            {% if publication.link %}
-              <a href="{{ publication.link }}">{{ publication.title }}</a>
-            {% else %}
-              {{ publication.title }}
-            {% endif %}
-          </td>
-          <td style="text-align: left;">
-            <span class="publication-authors">  {{ publication.authors }} </span>
-              {% if publication.more %}
-              <span class="publication-more"> {{ publication.more }} autores</span>
-              {% endif %}
-          </td>
-          <td> <span class="publication-journal"> {{publication.journal}} </span> </td>
-          <td> <span class="publication-volume">  {{publication.volume}}  </span> </td>
-          <td> <span class="publication-page">    {{publication.page}}    </span> </td>
-          <td>
-            {% if publication.arxiv %}<a href="{{ publication.arxiv }}">arXiv</a>{% endif %}
-          </td>
-          <td>
-            {% if publication.doi %}<a href="{{ publication.doi }}">DOI</a>{% endif %}
-          </td>
-        </tr>
-      {% endif %}
-    {% endfor %}
-
-  </table>
-
-  <br>
-  <h2 class="publication-title publication-title-paddingtop">
-    <span class="fa-stack fa-sm">
-      <i class="fas fa-square fa-stack-2x"></i>
-      <i class="fa-solid fa-code fa-stack-1x fa-inverse"></i>
-    </span>
-    Códigos
-  </h2>
-
-  <table>
-    <tr>
-      <th>#</th>
-      <th>Ano</th>
-      <th style="text-align: left;">Título</th>
-      <th style="text-align: left;">Autores</th>
-      <th><span class="publication-col2">Jornal</span></th>
-      <th><span class="publication-col2">vol.</span></th>
-      <th><span class="publication-col2">pag.</span></th>
-      <th><span class="publication-col2">arXiv</span></th>
-      <th><span class="publication-col2">DOI</span></th>
-    </tr>
-
-    {% for publication in publications.papers %}
-      {% if publication.category == 'codes' %}
-        <tr>
-          <td class="publication-id"> {{i}} </td> {% assign i = i | plus:1 %}
-          <td> {{publication.year}} </td>
-          <td style="text-align: left;">
-            {% if publication.link %}
-              <a href="{{ publication.link }}">{{ publication.title }}</a>
-            {% else %}
-              {{ publication.title }}
-            {% endif %}
-          </td>
-          <td style="text-align: left;">
-            <span class="publication-authors">  {{ publication.authors }} </span>
-              {% if publication.more %}
-              <span class="publication-more"> {{ publication.more }} autores</span>
-              {% endif %}
-          </td>
-          <td> <span class="publication-journal"> {{publication.journal}} </span> </td>
-          <td> <span class="publication-volume">  {{publication.volume}}  </span> </td>
-          <td> <span class="publication-page">    {{publication.page}}    </span> </td>
-          <td>
-            {% if publication.arxiv %}<a href="{{ publication.arxiv }}">arXiv</a>{% endif %}
-          </td>
-          <td>
-            {% if publication.doi %}<a href="{{ publication.doi }}">DOI</a>{% endif %}
-          </td>
-        </tr>
-      {% endif %}
-    {% endfor %}
-
-  </table>
+        {% for publication in publications.papers %}
+          {% if publication.category == category_key %}
+            <tr>
+              <td class="publication-id">{{ i }}</td>{% assign i = i | plus:1 %}
+              <td>{{ publication.year }}</td>
+              <td style="text-align: left;">
+                {% if publication.link %}
+                  <a href="{{ publication.link }}" target="_blank" rel="noopener">{{ publication.title }}</a>
+                {% else %}
+                  {{ publication.title }}
+                {% endif %}
+              </td>
+              <td style="text-align: left;">
+                <span class="publication-authors">{{ publication.authors }}</span>
+                {% assign lower_authors = publication.authors | downcase %}
+                {% if publication.full-authors and lower_authors contains "et al" %}
+                  <details class="authors-toggle">
+                    <summary class="publication-mini-button">+</summary>
+                    <span class="publication-authors-full">{{ publication.full-authors }}</span>
+                  </details>
+                {% endif %}
+              </td>
+              <td><span class="publication-journal">{{ publication.journal }}</span></td>
+              <td><span class="publication-volume">{{ publication.volume }}</span></td>
+              <td><span class="publication-page">{{ publication.page }}</span></td>
+              <td>
+                {% if publication.arxiv %}
+                  <a class="publication-small-link" href="{{ publication.arxiv }}" target="_blank" rel="noopener">arXiv</a>
+                {% else %}
+                  <span class="publication-link-placeholder">—</span>
+                {% endif %}
+              </td>
+              <td>
+                {% if publication.doi %}
+                  <a class="publication-small-link" href="{{ publication.doi }}" target="_blank" rel="noopener">DOI</a>
+                {% else %}
+                  <span class="publication-link-placeholder">—</span>
+                {% endif %}
+              </td>
+              <td>
+                <details class="publication-info-details">
+                  <summary class="publication-mini-button">+info</summary>
+                  <div class="pub-info-box">
+                    {% if publication.abstract %}
+                      <p><strong>Resumo:</strong> {{ publication.abstract | escape }}</p>
+                    {% else %}
+                      <p><strong>Resumo:</strong></p>
+                    {% endif %}
+                    {% if publication.keywords %}
+                      <p><strong>Palavras-chave:</strong> {{ publication.keywords | escape }}</p>
+                    {% endif %}
+                    {% if publication.ads %}
+                      <p><strong>ADS:</strong> <a href="{{ publication.ads }}" target="_blank" rel="noopener">{{ publication.ads }}</a></p>
+                    {% endif %}
+                    {% if publication.bibcode %}
+                      <p><strong>Bibcode:</strong> {{ publication.bibcode }}</p>
+                    {% endif %}
+                  </div>
+                </details>
+              </td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </table>
+    {% endif %}
+  {% endfor %}
 
 </section><!--//section-->
 {% endif %}

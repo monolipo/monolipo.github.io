@@ -111,10 +111,10 @@ summary:
   publication-title: Publications
   publication-info:
   - key: Peer-reviewed papers listed here
-    value: '32'
+    value: '34'
     link: ''
   - key: Conference proceedings listed here
-    value: '11'
+    value: '14'
     link: ''
   - key: Lattes iD
     value: '7278094197406927'
@@ -159,10 +159,10 @@ summary_ptbr:
   publication-title: Publicações
   publication-info:
   - key: Artigos em periódicos listados aqui
-    value: '32'
+    value: '34'
     link: ''
   - key: Anais de congresso listados aqui
-    value: '11'
+    value: '14'
     link: ''
   - key: Lattes iD
     value: '7278094197406927'
@@ -302,27 +302,27 @@ sidebar_ptbr:
     info: []
 career-profile:
   title: Career Profile
-  summary: I am a Researcher at the Astrophysics Division of the Instituto Nacional de Pesquisas Espaciais (INPE),
-    where I am also a faculty member of the graduate program in Astrophysics. My work focuses on exoplanets, gravitational
-    microlensing, stellar astrophysics, astronomical instrumentation, and time-domain observations. I hold a PhD in
-    Physics from the Universidade Federal do Rio Grande do Norte (UFRN), where I worked on gravitational-microlensing equations
-    and their application to the search for low-mass exoplanets. I have extensive observational experience at the Observatório
-    do Pico dos Dias, with more than 350 observing nights using imaging cameras and spectrographs, and I have contributed
-    to observing proposals with Gemini North and SOAR. I have also worked as a resident astronomer at the SOAR telescope and
-    participated in the commissioning of the SPARC4 instrument. Since 2022, I have contributed to GRANDMA as an observer and
-    data analyst, and I am a member of the PLATO consortium in the stellar-science area.
+  summary: I am a Researcher at the Astrophysics Division of the Instituto Nacional de Pesquisas Espaciais (INPE), where I
+    am also a faculty member of the graduate program in Astrophysics. My work focuses on exoplanets, gravitational microlensing,
+    stellar astrophysics, astronomical instrumentation, and time-domain observations. I hold a PhD in Physics from the Universidade
+    Federal do Rio Grande do Norte (UFRN), where I worked on gravitational-microlensing equations and their application to
+    the search for low-mass exoplanets. I have extensive observational experience at the Observatório do Pico dos Dias, with
+    more than 350 observing nights using imaging cameras and spectrographs, and I have contributed to observing proposals
+    with Gemini North and SOAR. I have also worked as a resident astronomer at the SOAR telescope and participated in the
+    commissioning of the SPARC4 instrument. Since 2022, I have contributed to GRANDMA as an observer and data analyst, and
+    I am a member of the PLATO consortium in the stellar-science area.
   summary-more: ''
 career-profile_ptbr:
   title: Perfil de Carreira
-  summary: Sou Pesquisador da Divisão de Astrofísica do Instituto Nacional de Pesquisas Espaciais (INPE), onde
-    também sou membro do corpo docente da pós-graduação em Astrofísica. Minha atuação se concentra em exoplanetas, microlentes
-    gravitacionais, astrofísica estelar, instrumentação astronômica e observações no domínio temporal. <br><br>Doutor
-    em Física pela Universidade Federal do Rio Grande do Norte (UFRN), onde trabalhei com a parametrização das equações de
-    microlentes gravitacionais e sua aplicação na busca por exoplanetas de baixa massa. Tenho ampla experiência observacional
-    no Observatório do Pico dos Dias, com mais de 350 noites de observação usando câmeras diretas e espectrógrafos, e participei
-    de propostas observacionais com o Gemini Norte e o SOAR. Também atuei como astrônomo residente do telescópio SOAR e participei
-    do comissionamento do instrumento SPARC4. Desde 2022, participo da colaboração GRANDMA como observador e na redução/análise
-    de dados, além de integrar o consórcio PLATO na área estelar.
+  summary: Sou Pesquisador da Divisão de Astrofísica do Instituto Nacional de Pesquisas Espaciais (INPE), onde também sou
+    membro do corpo docente da pós-graduação em Astrofísica. Minha atuação se concentra em exoplanetas, microlentes gravitacionais,
+    astrofísica estelar, instrumentação astronômica e observações no domínio temporal. <br><br>Doutor em Física pela Universidade
+    Federal do Rio Grande do Norte (UFRN), onde trabalhei com a parametrização das equações de microlentes gravitacionais
+    e sua aplicação na busca por exoplanetas de baixa massa. Tenho ampla experiência observacional no Observatório do Pico
+    dos Dias, com mais de 350 noites de observação usando câmeras diretas e espectrógrafos, e participei de propostas observacionais
+    com o Gemini Norte e o SOAR. Também atuei como astrônomo residente do telescópio SOAR e participei do comissionamento
+    do instrumento SPARC4. Desde 2022, participo da colaboração GRANDMA como observador e na redução/análise de dados, além
+    de integrar o consórcio PLATO na área estelar.
   summary-more: ''
 education:
   title: Education and Postdocs
@@ -565,6 +565,74 @@ publications:
   intro: ''
   intro_ptbr: ''
   papers:
+  - title: Quantifying political influence on COVID-19 fatality in Brazil
+    link: ''
+    authors: de Almeida, L.; Carelli, P. V.; Cavalcanti, N. G.; do Nascimento, J.-D.; Felinto, D.
+    more: ''
+    journal: PLoS One
+    volume: '17'
+    page: e0264293
+    year: 2022
+    show-home: false
+    first-author: true
+    refereed: true
+    rank: 1
+    category: first-author
+    ads: https://ui.adsabs.harvard.edu/abs/2022PLoSO..1764293D/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1371/journal.pone.0264293
+    bibcode: 2022PLoSO..1764293D
+  - title: Optimized cutting off transit algorithm to study stellar rotation from PLATO mission light curves
+    link: ''
+    authors: de Almeida, L.; Anthony, F.; Mattiuci, A. C.; Castro, M.; da Costa, J. S.; Samadi, R.; do Nascimento, J.-D.
+    more: ''
+    journal: Experimental Astronomy
+    volume: '50'
+    page: 1-0
+    year: 2020
+    show-home: true
+    first-author: true
+    refereed: true
+    rank: 1
+    category: first-author
+    ads: https://ui.adsabs.harvard.edu/abs/2020ExA....50...73D/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1007/s10686-020-09664-x
+    bibcode: 2020ExA....50...73D
+  - title: Microlensing Path Parameterization for Earth-like Exoplanet Detection around Solar-mass Stars
+    link: ''
+    authors: de Almeida, L.; do Nascimento, J.-D.
+    more: ''
+    journal: AJ
+    volume: '156'
+    page: '172'
+    year: 2018
+    show-home: true
+    first-author: true
+    refereed: true
+    rank: 1
+    category: first-author
+    ads: https://ui.adsabs.harvard.edu/abs/2018AJ....156..172D/abstract
+    arxiv: ''
+    doi: https://doi.org/10.3847/1538-3881/aadc68
+    bibcode: 2018AJ....156..172D
+  - title: arXiv:2603.09045
+    link: https://ui.adsabs.harvard.edu/abs/2026arXiv260309045T/abstract
+    authors: Tang, Y.; Zang, W.; Ryu, Y.-H.; et al.
+    more: ''
+    journal: arXiv e-prints
+    volume: ''
+    page: '2603.09045'
+    year: 2026
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2026arXiv260309045T/abstract
+    arxiv: https://ui.adsabs.harvard.edu/abs/2026arXiv260309045T/abstract
+    doi: https://doi.org/10.48550/arXiv.2603.09045
+    bibcode: 2026arXiv260309045T
   - title: ExoClock Project. IV. A Homogeneous Catalog of 620 Updated Exoplanet Ephemerides
     link: ''
     authors: Kokori, A.; Tsiaras, A.; Pantelidou, G.; Jones, A.; Siakas, A.; Edwards, B.; Tinetti, G.; Wünsche, A.; Jongen,
@@ -579,6 +647,11 @@ publications:
     first-author: false
     refereed: true
     rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2026ApJS..283....5K/abstract
+    arxiv: ''
+    doi: https://doi.org/10.3847/1538-4365/ae3238
+    bibcode: 2026ApJS..283....5K
   - title: 'Multi-epoch afterglow rebrightenings in GRB 250129A: Evidence of successive shock interactions'
     link: ''
     authors: Akl, D.; Antier, S.; Koehn, H.; Pang, P. T. H.; Geng, J. J.; Gill, R.; Abdikamalov, E.; Adami, C.; Aivazyan,
@@ -592,6 +665,10 @@ publications:
     first-author: false
     refereed: true
     rank: 2
+    category: co-author
+    ads: ''
+    arxiv: ''
+    doi: ''
   - title: 'Scientific Validation of the SPARC4 Pipeline: Multi-band Imaging, Polarimetry, and Photometric Time Series for
       Improved Characterization of Transiting Exoplanets'
     link: ''
@@ -606,73 +683,11 @@ publications:
     first-author: false
     refereed: true
     rank: 2
-  - title: SPARC4 Control System
-    link: ''
-    authors: Bernardes, D.; Verducci Jr., O.; Rodrigues, F.; Rodrigues, C. V.; Fraga, L.; Martioli, E.; Gneiding, C. D.; Alves,
-      A. L. M.; Romão, J.; Andrade, L.; Almeida, L. de; et al.
-    more: ''
-    journal: PASP
-    volume: '137'
-    page: '035003'
-    year: 2025
-    show-home: true
-    first-author: false
-    refereed: true
-    rank: 2
-  - title: The PLATO mission
-    link: ''
-    authors: Rauer, H.; Aerts, C.; Cabrera, J.; Deleuil, M.; Erikson, A.; Gizon, L.; Goupil, M. J.; Heras, A.; Walloschek,
-      T.; Lorenzo-Alvarez, J.; Marliani, F.; Martin-García, C.; Mas-Hesse, J. M.; O'Rourke, L.; Osborn, H.; Pagano, I.; Piotto,
-      G.; Pollacco, D.; Ragazzoni, R.; Almeida, L.; et al.
-    more: ''
-    journal: Experimental Astronomy
-    volume: '59'
-    page: '1'
-    year: 2025
-    show-home: true
-    first-author: false
-    refereed: true
-    rank: 2
-  - title: 'HIP 8522: A Puzzling Young Solar Twin with the Lowest Detected Lithium Abundance'
-    link: ''
-    authors: Galarza, J. Y.; Lorenzo-Oliveira, D.; Ferreira, T.; Reggiani, H.; Behmard, A.; Simon, J. D.; Martioli, E.; López-Valdivia,
-      R.; de Almeida, L.; Jofré, E.; El-Badry, K.
-    more: ''
-    journal: ApJ
-    volume: '983'
-    page: '70'
-    year: 2025
-    show-home: false
-    first-author: false
-    refereed: true
-    rank: 2
-  - title: Starspot Temperature of CoRoT-2 from Multiwavelength Observations with SPARC4
-    link: ''
-    authors: Valio, A.; Martioli, E.; Kovács, A. O.; Sumida, V. Y. D.; de Almeida, L.; Lorenzo-Oliveira, D.; Jablonski, F.;
-      Rodrigues, C. V.
-    more: ''
-    journal: ApJ
-    volume: '992'
-    page: '174'
-    year: 2025
-    show-home: false
-    first-author: false
-    refereed: true
-    rank: 2
-  - title: 'Limits on the ejecta mass during the search for kilonovae associated with neutron star-black hole mergers: A case
-      study of S230518h, GW230529, S230627c and the low-significance candidate S240422ed'
-    link: ''
-    authors: Pillas, M.; Antier, S.; Ackley, K.; Ahumada, T.; Akl, D.; de Almeida, L.; Anand, S.; Andrade, C.; Andreoni, I.;
-      et al.
-    more: ''
-    journal: Physical Review D
-    volume: '112'
-    page: '1'
-    year: 2025
-    show-home: false
-    first-author: false
-    refereed: true
-    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2026PASP..138e4502M/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1088/1538-3873/ae5b25
+    bibcode: 2026PASP..138e4502M
   - title: A Comprehensive Analysis of Three Microlensing Planet Candidates with the Planet/Binary Degeneracy
     link: ''
     authors: Zhang, J.; Zang, W.; Ryu, Y.-H.; Sumi, T.; Udalski, A.; Mao, S.; Albrow, M. D.; Chung, S.-J.; Gould, A.; Han,
@@ -687,59 +702,102 @@ publications:
     first-author: false
     refereed: true
     rank: 2
-  - title: 'KMT-2023-BLG-1431Lb: A New q < 10 Microlensing Planet from a Subtle Signature'
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2026MNRAS.545f1893Z/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1093/mnras/staf1893
+    bibcode: 2026MNRAS.545f1893Z
+  - title: 'HIP 8522: A Puzzling Young Solar Twin with the Lowest Detected Lithium Abundance'
     link: ''
-    authors: Bell, A.; Zhang, J.; Zang, W.; Jung, Y. K.; Yee, J. C.; Yang, H.; Sumi, T.; Udalski, A.; Albrow, M. D.; Chung,
-      S.-J.; Gould, A.; Han, C.; Hwang, K.-H.; Ryu, Y.-H.; Shin, I.-G.; Shvartzvald, Y.; Cha, S.-M.; Kim, D.-J.; Kim, S.-L.;
-      Almeida, L.; et al.
+    authors: Galarza, J. Y.; Lorenzo-Oliveira, D.; Ferreira, T.; Reggiani, H.; Behmard, A.; Simon, J. D.; Martioli, E.; López-Valdivia,
+      R.; de Almeida, L.; Jofré, E.; El-Badry, K.
     more: ''
-    journal: PASP
-    volume: '136'
-    page: '054402'
-    year: 2024
+    journal: ApJ
+    volume: '983'
+    page: '70'
+    year: 2025
     show-home: false
     first-author: false
     refereed: true
     rank: 2
-  - title: 'Gaia22dkvLb: A Microlensing Planet Potentially Accessible to Radial-velocity Characterization'
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2025ApJ...983...70Y/abstract
+    arxiv: ''
+    doi: https://doi.org/10.3847/1538-4357/adb57b
+    bibcode: 2025ApJ...983...70Y
+  - title: 'Limits on the ejecta mass during the search for kilonovae associated with neutron star-black hole mergers: A case
+      study of S230518h, GW230529, S230627c and the low-significance candidate S240422ed'
     link: ''
-    authors: Wu, Z.; Dong, S.; Yi, T.; Liu, Z.; El-Badry, K.; Gould, A.; Wyrzykowski, Ł.; Rybicki, K. A.; Bachelet, E.; Christie,
-      G. W.; de Almeida, L.; et al.
+    authors: Pillas, M.; Antier, S.; Ackley, K.; Ahumada, T.; Akl, D.; de Almeida, L.; Anand, S.; Andrade, C.; Andreoni, I.;
+      et al.
     more: ''
-    journal: AJ
-    volume: '168'
-    page: '62'
-    year: 2024
+    journal: Physical Review D
+    volume: '112'
+    page: '1'
+    year: 2025
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2025PhRvD.112h3002P/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1103/6ld6-95xh
+    bibcode: 2025PhRvD.112h3002P
+  - title: SPARC4 Control System
+    link: ''
+    authors: Bernardes, D.; Verducci Jr., O.; Rodrigues, F.; Rodrigues, C. V.; Fraga, L.; Martioli, E.; Gneiding, C. D.; Alves,
+      A. L. M.; Romão, J.; Andrade, L.; Almeida, L. de; et al.
+    more: ''
+    journal: PASP
+    volume: '137'
+    page: '035003'
+    year: 2025
     show-home: true
     first-author: false
     refereed: true
     rank: 2
-  - title: 'The young exoplanetary system TOI-4562: Confirming the presence of a third body in the system'
+    category: co-author
+    ads: ''
+    arxiv: ''
+    doi: ''
+  - title: Starspot Temperature of CoRoT-2 from Multiwavelength Observations with SPARC4
     link: ''
-    authors: Fermiano, V.; Saito, R. K.; Ivanov, V. D.; Cáceres, C.; Almeida, L. A.; Aires, J.; Beamin, J. C.; Minniti, D.;
-      Ferreira, T.; Andrade, L.; Borges, B. W.; de Almeida, L.; Jablonski, F.; Schlindwein, W.
+    authors: Valio, A.; Martioli, E.; Kovács, A. O.; Sumida, V. Y. D.; de Almeida, L.; Lorenzo-Oliveira, D.; Jablonski, F.;
+      Rodrigues, C. V.
     more: ''
-    journal: A&A
-    volume: '690'
+    journal: ApJ
+    volume: '992'
+    page: '174'
+    year: 2025
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2025ApJ...992..174V/abstract
+    arxiv: ''
+    doi: https://doi.org/10.3847/1538-4357/adf8e2
+    bibcode: 2025ApJ...992..174V
+  - title: The PLATO mission
+    link: ''
+    authors: Rauer, H.; Aerts, C.; Cabrera, J.; Deleuil, M.; Erikson, A.; Gizon, L.; Goupil, M. J.; Heras, A.; Walloschek,
+      T.; Lorenzo-Alvarez, J.; Marliani, F.; Martin-García, C.; Mas-Hesse, J. M.; O'Rourke, L.; Osborn, H.; Pagano, I.; Piotto,
+      G.; Pollacco, D.; Ragazzoni, R.; Almeida, L.; et al.
+    more: ''
+    journal: Experimental Astronomy
+    volume: '59'
     page: '1'
-    year: 2024
-    show-home: false
+    year: 2025
+    show-home: true
     first-author: false
     refereed: true
     rank: 2
-  - title: 'TOI-3568 b: A super-Neptune in the sub-Jovian desert'
-    link: ''
-    authors: Martioli, E.; Petrucci, R. P.; Jofré, E.; Hébrard, G.; Ghezzi, L.; Gómez Maqueo Chew, Y.; Díaz, R. F.; Perottoni,
-      H. D.; Garcia, L. H.; Rapetti, D.; Lecavelier des Etangs, A.; de Almeida, L.; et al.
-    more: ''
-    journal: A&A
-    volume: '690'
-    page: A312
-    year: 2024
-    show-home: false
-    first-author: false
-    refereed: true
-    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2025ExA....59...26R/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1007/s10686-025-09985-9
+    bibcode: 2025ExA....59...26R
   - title: Early photometric and spectroscopic observations of the extraordinarily bright INTEGRAL-detected GRB221009A
     link: ''
     authors: Sanchez-Ramirez, R.; Lang, R. G.; Pozanenko, A.; Martinez-Huerta, H.; Hu, Y.-D.; Pandey, S. B.; Gupta, R.; Ror,
@@ -754,6 +812,28 @@ publications:
     first-author: false
     refereed: true
     rank: 2
+    category: co-author
+    ads: ''
+    arxiv: ''
+    doi: ''
+  - title: 'Gaia22dkvLb: A Microlensing Planet Potentially Accessible to Radial-velocity Characterization'
+    link: ''
+    authors: Wu, Z.; Dong, S.; Yi, T.; Liu, Z.; El-Badry, K.; Gould, A.; Wyrzykowski, Ł.; Rybicki, K. A.; Bachelet, E.; Christie,
+      G. W.; de Almeida, L.; et al.
+    more: ''
+    journal: AJ
+    volume: '168'
+    page: '62'
+    year: 2024
+    show-home: true
+    first-author: false
+    refereed: true
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2024AJ....168...62W/abstract
+    arxiv: ''
+    doi: https://doi.org/10.3847/1538-3881/ad5203
+    bibcode: 2024AJ....168...62W
   - title: GRANDMA Observations of SN 2023wrk, a Luminous Type Ia Supernova with Significant Unburned Carbon in the Outer
       Ejecta
     link: ''
@@ -768,19 +848,66 @@ publications:
     first-author: false
     refereed: true
     rank: 2
-  - title: A sub-Neptune planet around TOI-1695 discovered and characterized with SPIRou and TESS
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2024RNAAS...8..273A/abstract
+    arxiv: ''
+    doi: https://doi.org/10.3847/2515-5172/ad8bbb
+    bibcode: 2024RNAAS...8..273A
+  - title: 'KMT-2023-BLG-1431Lb: A New q < 10 Microlensing Planet from a Subtle Signature'
     link: ''
-    authors: Kiefer, F.; Hébrard, G.; Martioli, E.; Artigau, É.; Doyon, R.; Donati, J.-F.; Cadieux, C.; Carmona, A.; Ciardi,
-      D. R.; Cristofari, P. I.; de Almeida, L.; et al.
+    authors: Bell, A.; Zhang, J.; Zang, W.; Jung, Y. K.; Yee, J. C.; Yang, H.; Sumi, T.; Udalski, A.; Albrow, M. D.; Chung,
+      S.-J.; Gould, A.; Han, C.; Hwang, K.-H.; Ryu, Y.-H.; Shin, I.-G.; Shvartzvald, Y.; Cha, S.-M.; Kim, D.-J.; Kim, S.-L.;
+      Almeida, L.; et al.
     more: ''
-    journal: A&A
-    volume: '670'
-    page: A136
-    year: 2023
+    journal: PASP
+    volume: '136'
+    page: '054402'
+    year: 2024
     show-home: false
     first-author: false
     refereed: true
     rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2024PASP..136e4402B/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1088/1538-3873/ad48b8
+    bibcode: 2024PASP..136e4402B
+  - title: 'The young exoplanetary system TOI-4562: Confirming the presence of a third body in the system'
+    link: ''
+    authors: Fermiano, V.; Saito, R. K.; Ivanov, V. D.; Cáceres, C.; Almeida, L. A.; Aires, J.; Beamin, J. C.; Minniti, D.;
+      Ferreira, T.; Andrade, L.; Borges, B. W.; de Almeida, L.; Jablonski, F.; Schlindwein, W.
+    more: ''
+    journal: A&A
+    volume: '690'
+    page: '1'
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2024A&A...690L...7F/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1051/0004-6361/202451935
+    bibcode: 2024A&A...690L...7F
+  - title: 'TOI-3568 b: A super-Neptune in the sub-Jovian desert'
+    link: ''
+    authors: Martioli, E.; Petrucci, R. P.; Jofré, E.; Hébrard, G.; Ghezzi, L.; Gómez Maqueo Chew, Y.; Díaz, R. F.; Perottoni,
+      H. D.; Garcia, L. H.; Rapetti, D.; Lecavelier des Etangs, A.; de Almeida, L.; et al.
+    more: ''
+    journal: A&A
+    volume: '690'
+    page: A312
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2024A&A...690A.312M/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1051/0004-6361/202450334
+    bibcode: 2024A&A...690A.312M
   - title: A Hale-like Cycle in the Solar Twin 18 Scorpii
     link: ''
     authors: do Nascimento, J.-D.; Barnes, S. A.; Saar, S. H.; de Mello, G. F. Porto; Hall, J. C.; Anthony, F.; de Almeida,
@@ -794,6 +921,29 @@ publications:
     first-author: false
     refereed: true
     rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2023ApJ...958...57D/abstract
+    arxiv: ''
+    doi: https://doi.org/10.3847/1538-4357/acfc1a
+    bibcode: 2023ApJ...958...57D
+  - title: A sub-Neptune planet around TOI-1695 discovered and characterized with SPIRou and TESS
+    link: ''
+    authors: Kiefer, F.; Hébrard, G.; Martioli, E.; Artigau, É.; Doyon, R.; Donati, J.-F.; Cadieux, C.; Carmona, A.; Ciardi,
+      D. R.; Cristofari, P. I.; de Almeida, L.; et al.
+    more: ''
+    journal: A&A
+    volume: '670'
+    page: A136
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2023A&A...670A.136K/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1051/0004-6361/202245129
+    bibcode: 2023A&A...670A.136K
   - title: 'TOI-1736 and TOI-2141: Two systems including sub-Neptunes around solar analogs revealed by TESS and SOPHIE'
     link: ''
     authors: Martioli, E.; Hébrard, G.; de Almeida, L.; Heidari, N.; Lorenzo-Oliveira, D.; Kiefer, F.
@@ -806,33 +956,11 @@ publications:
     first-author: false
     refereed: true
     rank: 2
-  - title: 'TOI-1759 b: A transiting sub-Neptune around a low mass star characterized with SPIRou and TESS'
-    link: ''
-    authors: Martioli, E.; Hébrard, G.; Fouqué, P.; Artigau, É.; Donati, J.-F.; Cadieux, C.; Bellotti, S.; Lecavelier des
-      Etangs, A.; Doyon, R.; do Nascimento, J.-D.; Arnold, L.; Carmona, A.; Cook, N. J.; Cortes-Zuleta, P.; de Almeida, L.;
-      et al.
-    more: ''
-    journal: A&A
-    volume: '660'
-    page: A86
-    year: 2022
-    show-home: false
-    first-author: false
-    refereed: true
-    rank: 2
-  - title: Precision measurement of a brown dwarf mass in a binary system in the microlensing event
-    link: ''
-    authors: Herald, A.; Udalski, A.; Bozza, V.; Rota, P.; Bond, I. A.; Yee, J. C.; Sajadian, S.; Mróz, P.; Poleski, R.; Skowron,
-      J.; Szymański, M. K.; Soszyński, I.; Pietrukowicz, P.; Kozłowski, S.; Almeida, L.; et al.
-    more: ''
-    journal: A&A
-    volume: '663'
-    page: A100
-    year: 2022
-    show-home: false
-    first-author: false
-    refereed: true
-    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2023A&A...680A..84M/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1051/0004-6361/202347744
+    bibcode: 2023A&A...680A..84M
   - title: 'Measuring the impact of nonpharmaceutical interventions on the SARS-CoV-2 pandemic at a city level: An agent-based
       computational modelling study of the City of Natal'
     link: ''
@@ -847,18 +975,47 @@ publications:
     first-author: false
     refereed: true
     rank: 2
-  - title: Quantifying political influence on COVID-19 fatality in Brazil
+    category: co-author
+    ads: ''
+    arxiv: ''
+    doi: ''
+  - title: Precision measurement of a brown dwarf mass in a binary system in the microlensing event
     link: ''
-    authors: de Almeida, L.; Carelli, P. V.; Cavalcanti, N. G.; do Nascimento, J.-D.; Felinto, D.
+    authors: Herald, A.; Udalski, A.; Bozza, V.; Rota, P.; Bond, I. A.; Yee, J. C.; Sajadian, S.; Mróz, P.; Poleski, R.; Skowron,
+      J.; Szymański, M. K.; Soszyński, I.; Pietrukowicz, P.; Kozłowski, S.; Almeida, L.; et al.
     more: ''
-    journal: PLoS One
-    volume: '17'
-    page: e0264293
+    journal: A&A
+    volume: '663'
+    page: A100
     year: 2022
     show-home: false
-    first-author: true
+    first-author: false
     refereed: true
-    rank: 1
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2022A&A...663A.100H/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1051/0004-6361/202243490
+    bibcode: 2022A&A...663A.100H
+  - title: 'TOI-1759 b: A transiting sub-Neptune around a low mass star characterized with SPIRou and TESS'
+    link: ''
+    authors: Martioli, E.; Hébrard, G.; Fouqué, P.; Artigau, É.; Donati, J.-F.; Cadieux, C.; Bellotti, S.; Lecavelier des
+      Etangs, A.; Doyon, R.; do Nascimento, J.-D.; Arnold, L.; Carmona, A.; Cook, N. J.; Cortes-Zuleta, P.; de Almeida, L.;
+      et al.
+    more: ''
+    journal: A&A
+    volume: '660'
+    page: A86
+    year: 2022
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2022A&A...660A..86M/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1051/0004-6361/202142540
+    bibcode: 2022A&A...660A..86M
   - title: 'An Earth-mass planet in a time of COVID-19: KMT-2020-BLG-0414Lb'
     link: ''
     authors: Zang, W.; Han, C.; Kondo, I.; Yee, J. C.; Lee, C.-U.; Gould, A.; Mao, S.; de Almeida, L.; Shvartzvald, Y.; Zhang,
@@ -873,56 +1030,11 @@ publications:
     first-author: false
     refereed: true
     rank: 2
-  - title: Spectroscopic and Asteroseismic Analysis of the Secondary Clump Red Giant HD 226808
-    link: ''
-    authors: de Moura, B. L.; Beck, P. G.; de Almeida, L.; Duarte, T. S. S.; Coelho, H. R.; da Costa, J. S.; Castro, M.; do
-      Nascimento, J.-D.
-    more: ''
-    journal: ApJ
-    volume: '894'
-    page: '67'
-    year: 2020
-    show-home: false
-    first-author: false
-    refereed: true
-    rank: 2
-  - title: Optimized cutting off transit algorithm to study stellar rotation from PLATO mission light curves
-    link: ''
-    authors: de Almeida, L.; Anthony, F.; Mattiuci, A. C.; Castro, M.; da Costa, J. S.; Samadi, R.; do Nascimento, J.-D.
-    more: ''
-    journal: Experimental Astronomy
-    volume: '50'
-    page: 1-0
-    year: 2020
-    show-home: true
-    first-author: true
-    refereed: true
-    rank: 1
-  - title: 'HD43587: a primary CoRoT target under a Maunder minimum phase?'
-    link: ''
-    authors: Ferreira, R. R.; Barbosa, R.; Castro, M.; Guerrero, G.; de Almeida, L.; Boumier, P.; do Nascimento, J.-D.
-    more: ''
-    journal: A&A
-    volume: '639'
-    page: '1'
-    year: 2020
-    show-home: false
-    first-author: false
-    refereed: true
-    rank: 2
-  - title: Rotation of Solar Analogs Crossmatching Kepler and Gaia DR2
-    link: ''
-    authors: Nascimento Jr., J.-D.; Almeida, L. de; Velloso, E. N.; Anthony, F.; Barnes, S. A.; Saar, S. H.; Meibom, S.; Costa,
-      J. S.; Castro, M.; Galarza, J. Y.; Lorenzo-Oliveira, D.; Beck, P. G.; Meléndez, J.
-    more: ''
-    journal: ApJ
-    volume: '898'
-    page: '173'
-    year: 2020
-    show-home: true
-    first-author: false
-    refereed: true
-    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2021RAA....21..239Z/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1088/1674-4527/21/9/239
+    bibcode: 2021RAA....21..239Z
   - title: 'COVID-19 pandemics modeling with modified determinist SEIR, social distancing, and age stratification: The effect
       of vertical confinement and release in Brazil'
     link: ''
@@ -936,6 +1048,28 @@ publications:
     first-author: false
     refereed: true
     rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2020PLoSO..1537627L/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1371/journal.pone.0237627
+    bibcode: 2020PLoSO..1537627L
+  - title: 'HD43587: a primary CoRoT target under a Maunder minimum phase?'
+    link: ''
+    authors: Ferreira, R. R.; Barbosa, R.; Castro, M.; Guerrero, G.; de Almeida, L.; Boumier, P.; do Nascimento, J.-D.
+    more: ''
+    journal: A&A
+    volume: '639'
+    page: '1'
+    year: 2020
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2020A&A...640A..46F/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1051/0004-6361/201937219
+    bibcode: 2020A&A...640A..46F
   - title: 'Li-rich giant stars under scrutiny: Binarity, magnetic activity and the evolutionary status after Gaia DR2'
     link: ''
     authors: Gonçalves, B. F. O.; da Costa, J. S.; de Almeida, L.; Castro, M.; do Nascimento, J.-D.
@@ -948,6 +1082,47 @@ publications:
     first-author: false
     refereed: true
     rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2020MNRAS.498.2295G/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1093/mnras/staa2408
+    bibcode: 2020MNRAS.498.2295G
+  - title: Rotation of Solar Analogs Crossmatching Kepler and Gaia DR2
+    link: ''
+    authors: Nascimento Jr., J.-D.; Almeida, L. de; Velloso, E. N.; Anthony, F.; Barnes, S. A.; Saar, S. H.; Meibom, S.; Costa,
+      J. S.; Castro, M.; Galarza, J. Y.; Lorenzo-Oliveira, D.; Beck, P. G.; Meléndez, J.
+    more: ''
+    journal: ApJ
+    volume: '898'
+    page: '173'
+    year: 2020
+    show-home: true
+    first-author: false
+    refereed: true
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2020ApJ...898..173D/abstract
+    arxiv: ''
+    doi: https://doi.org/10.3847/1538-4357/ab9c16
+    bibcode: 2020ApJ...898..173D
+  - title: Spectroscopic and Asteroseismic Analysis of the Secondary Clump Red Giant HD 226808
+    link: ''
+    authors: de Moura, B. L.; Beck, P. G.; de Almeida, L.; Duarte, T. S. S.; Coelho, H. R.; da Costa, J. S.; Castro, M.; do
+      Nascimento, J.-D.
+    more: ''
+    journal: ApJ
+    volume: '894'
+    page: '67'
+    year: 2020
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2020ApJ...894...67D/abstract
+    arxiv: ''
+    doi: https://doi.org/10.3847/1538-4357/ab80c8
+    bibcode: 2020ApJ...894...67D
   - title: 'TOI-257b (HD 19916b): A Warm sub-Saturn Orbiting an Evolved F-type Star'
     link: ''
     authors: Addison, B. C.; Wright, D. J.; Nicholson, B. A.; Cale, B.; Mocnik, T.; Huber, D.; Plavchan, P.; Wittenmyer, R.
@@ -962,6 +1137,28 @@ publications:
     first-author: false
     refereed: true
     rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2021MNRAS.502.3704A/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1093/mnras/staa3960
+    bibcode: 2021MNRAS.502.3704A
+  - title: Journal of Instrumentation publication, 14, C07002
+    link: https://ui.adsabs.harvard.edu/abs/2019JInst..14C7002L/abstract
+    authors: Lopes, L.; Alves, A. B.; Assis, P.; et al.
+    more: ''
+    journal: Journal of Instrumentation
+    volume: '14'
+    page: C07002
+    year: 2019
+    show-home: false
+    first-author: false
+    refereed: true
+    rank: 2
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2019JInst..14C7002L/abstract
+    arxiv: ''
+    doi: https://doi.org/10.1088/1748-0221/14/07/C07002
+    bibcode: 2019JInst..14C7002L
   - title: 'Orbital Period Variation of KIC 10544976: Applegate Mechanism versus Light Travel Time Effect'
     link: ''
     authors: Almeida, L. A.; de Almeida, L.; Damineli, A.; Rodrigues, C. V.; Castro, M.; Lopes, C. E. Ferreira; Jablonski,
@@ -975,18 +1172,62 @@ publications:
     first-author: false
     refereed: true
     rank: 2
-  - title: Microlensing Path Parameterization for Earth-like Exoplanet Detection around Solar-mass Stars
-    link: ''
-    authors: de Almeida, L.; do Nascimento, J.-D.
+    category: co-author
+    ads: https://ui.adsabs.harvard.edu/abs/2019AJ....157..150A/abstract
+    arxiv: ''
+    doi: https://doi.org/10.3847/1538-3881/ab0963
+    bibcode: 2019AJ....157..150A
+  - title: Proceedings of the XLVII Reunião Anual da Sociedade Astronômica Brasileira, E1
+    link: https://ui.adsabs.harvard.edu/abs/2026asab.confE...1M/abstract
+    authors: Mello, M.; Rodrigues, C.; Lima, I.; et al.
     more: ''
-    journal: AJ
-    volume: '156'
-    page: '172'
-    year: 2018
-    show-home: true
-    first-author: true
-    refereed: true
+    journal: Proceedings of the XLVII Reunião Anual da Sociedade Astronômica Brasileira
+    volume: ''
+    page: E1
+    year: 2026
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: proceedings
+    ads: https://ui.adsabs.harvard.edu/abs/2026asab.confE...1M/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2026asab.confE...1M
+  - title: Bulletin of the Astronomical Society of Brazil, volume 36, page 65
+    link: https://ui.adsabs.harvard.edu/abs/2025BASBr..36...65M/abstract
+    authors: Martioli, E.; Rodrigues, C. V.; Campagnolo, J.; et al.
+    more: ''
+    journal: Bulletin of the Astronomical Society of Brazil
+    volume: '36'
+    page: '65'
+    year: 2025
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: proceedings
+    ads: https://ui.adsabs.harvard.edu/abs/2025BASBr..36...65M/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2025BASBr..36...65M
+  - title: Photometric characterization of SPARC4
+    link: ''
+    authors: Schlindwein, W.; Campagnolo, J. C. N.; Martioli, E.; Almeida, L.; Andrade, L. B. P.; Bernardes, D. V.; et al.
+    more: ''
+    journal: Proceedings da Reunião Anual da SAB
+    volume: '35'
+    page: 313-316
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: false
     rank: 1
+    category: proceedings
+    ads: https://ui.adsabs.harvard.edu/abs/2024BASBr..35..313S/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2024BASBr..35..313S
   - title: 'SPARC4 - Simultaneous Polarimeter And Rapid Camera in 4 bands: first light, commissioning, and preliminary results'
     link: ''
     authors: Rodrigues, C. V.; Gneiding, C. D.; de Almeida, L.; Alves, A. L. M.; Andrade, L. B. P.; Bernardes, D. V.; Santos,
@@ -1000,44 +1241,10 @@ publications:
     first-author: false
     refereed: false
     rank: 1
-  - title: Photometric characterization of SPARC4
-    link: ''
-    authors: Schlindwein, W.; Campagnolo, J. C. N.; Martioli, E.; Almeida, L.; Andrade, L. B. P.; Bernardes, D. V.; et al.
-    more: ''
-    journal: Proceedings da Reunião Anual da SAB
-    volume: '35'
-    page: 313-316
-    year: 2024
-    show-home: false
-    first-author: false
-    refereed: false
-    rank: 1
-  - title: Scientific Validation of SPARC4's Reduction Software
-    link: ''
-    authors: Figueiredo, A. C. M.; Campagnolo, J. C. N.; Rodrigues, C. V.; Martioli, E.; Schlindwein, W.; Marques, F.; Bernardes,
-      D. V.; Jablonski, F.; Faria, M. A. F.; de Almeida, L.
-    more: ''
-    journal: Proceedings da Reunião Anual da SAB
-    volume: '34'
-    page: 84-87
-    year: 2023
-    show-home: false
-    first-author: false
-    refereed: false
-    rank: 1
-  - title: Commissioning of SPARC4 cameras
-    link: ''
-    authors: Schlindwein, W.; Bernardes, D. V.; Martioli, E.; Rodrigues, C. V.; Campagnolo, J. C. N.; Figueiredo, A. C. M.;
-      Fraga, L.; Andrade, L. B. P.; de Almeida, L.; et al.
-    more: ''
-    journal: Proceedings da Reunião Anual da SAB
-    volume: '34'
-    page: 281-282
-    year: 2023
-    show-home: false
-    first-author: false
-    refereed: false
-    rank: 1
+    category: proceedings
+    ads: ''
+    arxiv: ''
+    doi: ''
   - title: Acquisition system of the SPARC4 instrument
     link: ''
     authors: Bernardes, D. V.; Martioli, E.; Verducci Jr., O.; Fraga, L.; Rodrigues, C. V.; Schlindwein, W.; Andrade, L. B.
@@ -1051,6 +1258,64 @@ publications:
     first-author: false
     refereed: false
     rank: 1
+    category: proceedings
+    ads: https://ui.adsabs.harvard.edu/abs/2023BASBr..34..300B/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2023BASBr..34..300B
+  - title: Commissioning of SPARC4 cameras
+    link: ''
+    authors: Schlindwein, W.; Bernardes, D. V.; Martioli, E.; Rodrigues, C. V.; Campagnolo, J. C. N.; Figueiredo, A. C. M.;
+      Fraga, L.; Andrade, L. B. P.; de Almeida, L.; et al.
+    more: ''
+    journal: Proceedings da Reunião Anual da SAB
+    volume: '34'
+    page: 281-282
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 1
+    category: proceedings
+    ads: https://ui.adsabs.harvard.edu/abs/2023BASBr..34..281S/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2023BASBr..34..281S
+  - title: Scientific Validation of SPARC4's Reduction Software
+    link: ''
+    authors: Figueiredo, A. C. M.; Campagnolo, J. C. N.; Rodrigues, C. V.; Martioli, E.; Schlindwein, W.; Marques, F.; Bernardes,
+      D. V.; Jablonski, F.; Faria, M. A. F.; de Almeida, L.
+    more: ''
+    journal: Proceedings da Reunião Anual da SAB
+    volume: '34'
+    page: 84-87
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 1
+    category: proceedings
+    ads: https://ui.adsabs.harvard.edu/abs/2023BASBr..34...84F/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2023BASBr..34...84F
+  - title: Plato Mission Conference 2021 contribution 60
+    link: https://ui.adsabs.harvard.edu/abs/2021plat.confE..60D/abstract
+    authors: de Almeida, L.; Nunes Velloso, E.; Dias do Nascimento, J.; et al.
+    more: ''
+    journal: Plato Mission Conference 2021
+    volume: '60'
+    page: ''
+    year: 2021
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: proceedings
+    ads: https://ui.adsabs.harvard.edu/abs/2021plat.confE..60D/abstract
+    arxiv: ''
+    doi: https://doi.org/10.5281/zenodo.5560822
+    bibcode: 2021plat.confE..60D
   - title: A computational alternative for the polygon method in gravitational microlensing events
     link: ''
     authors: de Almeida, L.; Nascimento Junior, J. D.
@@ -1063,6 +1328,10 @@ publications:
     first-author: true
     refereed: false
     rank: 1
+    category: proceedings
+    ads: ''
+    arxiv: ''
+    doi: ''
   - title: An easy way to reduce and analyze light curves from the Kepler mission
     link: ''
     authors: de Almeida, L.; Nascimento Junior, J. D.
@@ -1075,6 +1344,10 @@ publications:
     first-author: true
     refereed: false
     rank: 1
+    category: proceedings
+    ads: ''
+    arxiv: ''
+    doi: ''
   - title: Differential flux method of cutting off binaries
     link: ''
     authors: de Almeida, L.; Figueiredo, A. C. M.; Nascimento Junior, J. D.
@@ -1087,6 +1360,10 @@ publications:
     first-author: true
     refereed: false
     rank: 1
+    category: proceedings
+    ads: ''
+    arxiv: ''
+    doi: ''
   - title: TESS photometric observations of HD 17051
     link: ''
     authors: de Almeida, L.; Anthony, F.; Nascimento Junior, J. D.
@@ -1099,6 +1376,26 @@ publications:
     first-author: true
     refereed: false
     rank: 1
+    category: proceedings
+    ads: ''
+    arxiv: ''
+    doi: ''
+  - title: On the topology of microlensing events of Earth-Sun fraction mass systems
+    link: ''
+    authors: Almeida, L.; Nascimento Junior, J. D.
+    more: ''
+    journal: Boletim da SAB
+    volume: '30'
+    page: 207-210
+    year: 2018
+    show-home: false
+    first-author: true
+    refereed: false
+    rank: 1
+    category: proceedings
+    ads: ''
+    arxiv: ''
+    doi: ''
   - title: 'Unraveling the Astrophotography: Physical Principles and Techniques for Processing Astronomical Images from CCD
       and DSLR'
     link: ''
@@ -1112,18 +1409,413 @@ publications:
     first-author: true
     refereed: false
     rank: 1
-  - title: On the topology of microlensing events of Earth-Sun fraction mass systems
-    link: ''
-    authors: Almeida, L.; Nascimento Junior, J. D.
+    category: proceedings
+    ads: ''
+    arxiv: ''
+    doi: ''
+  - title: GRB Coordinates Network Circular 39353
+    link: https://ui.adsabs.harvard.edu/abs/2025GCN.39353....1D/abstract
+    authors: de Almeida, L.; Sasaki, N.; Corradi, W.; et al.
     more: ''
-    journal: Boletim da SAB
-    volume: '30'
-    page: 207-210
+    journal: GRB Coordinates Network
+    volume: '39353'
+    page: '1'
+    year: 2025
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: gcn
+    ads: https://ui.adsabs.harvard.edu/abs/2025GCN.39353....1D/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2025GCN.39353....1D
+  - title: GRB Coordinates Network Circular 41216
+    link: https://ui.adsabs.harvard.edu/abs/2025GCN.41216....1C/abstract
+    authors: Corradi, W.; Sasaki, N.; de Almeida, L.; et al.
+    more: ''
+    journal: GRB Coordinates Network
+    volume: '41216'
+    page: '1'
+    year: 2025
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: gcn
+    ads: https://ui.adsabs.harvard.edu/abs/2025GCN.41216....1C/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2025GCN.41216....1C
+  - title: GRB Coordinates Network Circular 36396
+    link: https://ui.adsabs.harvard.edu/abs/2024GCN.36396....1A/abstract
+    authors: Akl, D.; Pradier, T.; Jegou Du Laz, T.; et al.
+    more: ''
+    journal: GRB Coordinates Network
+    volume: '36396'
+    page: '1'
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: gcn
+    ads: https://ui.adsabs.harvard.edu/abs/2024GCN.36396....1A/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2024GCN.36396....1A
+  - title: GRB Coordinates Network Circular 37738
+    link: https://ui.adsabs.harvard.edu/abs/2024GCN.37738....1H/abstract
+    authors: Hussenot-Desenonges, T.; Rajabov, Y.; Tanasan, M.; et al.
+    more: ''
+    journal: GRB Coordinates Network
+    volume: '37738'
+    page: '1'
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: gcn
+    ads: https://ui.adsabs.harvard.edu/abs/2024GCN.37738....1H/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2024GCN.37738....1H
+  - title: GRB Coordinates Network Circular 38597
+    link: https://ui.adsabs.harvard.edu/abs/2024GCN.38597....1H/abstract
+    authors: Hussenot-Desenonges, T.; de Almeida, L.; Corradi, W.; et al.
+    more: ''
+    journal: GRB Coordinates Network
+    volume: '38597'
+    page: '1'
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: gcn
+    ads: https://ui.adsabs.harvard.edu/abs/2024GCN.38597....1H/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2024GCN.38597....1H
+  - title: GRB Coordinates Network Circular 38628
+    link: https://ui.adsabs.harvard.edu/abs/2024GCN.38628....1H/abstract
+    authors: Hussenot-Desenonges, T.; Colas, F.; de Almeida, L.; et al.
+    more: ''
+    journal: GRB Coordinates Network
+    volume: '38628'
+    page: '1'
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: gcn
+    ads: https://ui.adsabs.harvard.edu/abs/2024GCN.38628....1H/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2024GCN.38628....1H
+  - title: The Astronomer's Telegram 16921
+    link: https://ui.adsabs.harvard.edu/abs/2024ATel16921....1P/abstract
+    authors: Pereyra, A.; Zevallos, M.; Alvarado, D.; et al.
+    more: ''
+    journal: The Astronomer's Telegram
+    volume: '16921'
+    page: '1'
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: atel
+    ads: https://ui.adsabs.harvard.edu/abs/2024ATel16921....1P/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2024ATel16921....1P
+  - title: The Astronomer's Telegram 16143
+    link: https://ui.adsabs.harvard.edu/abs/2023ATel16143....1D/abstract
+    authors: de Almeida, L.; Andrade, L.; Navarete, F.; et al.
+    more: ''
+    journal: The Astronomer's Telegram
+    volume: '16143'
+    page: '1'
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: atel
+    ads: https://ui.adsabs.harvard.edu/abs/2023ATel16143....1D/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2023ATel16143....1D
+  - title: The Astronomer's Telegram 16157
+    link: https://ui.adsabs.harvard.edu/abs/2023ATel16157....1D/abstract
+    authors: de Almeida, L.; Andrade, L.; Navarete, F.; et al.
+    more: ''
+    journal: The Astronomer's Telegram
+    volume: '16157'
+    page: '1'
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: atel
+    ads: https://ui.adsabs.harvard.edu/abs/2023ATel16157....1D/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2023ATel16157....1D
+  - title: The Astronomer's Telegram 16166
+    link: https://ui.adsabs.harvard.edu/abs/2023ATel16166....1P/abstract
+    authors: Pereyra, A.; Espinoza, M.; Tello, J.; et al.
+    more: ''
+    journal: The Astronomer's Telegram
+    volume: '16166'
+    page: '1'
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: atel
+    ads: https://ui.adsabs.harvard.edu/abs/2023ATel16166....1P/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2023ATel16166....1P
+  - title: The Astronomer's Telegram 16203
+    link: https://ui.adsabs.harvard.edu/abs/2023ATel16203....1P/abstract
+    authors: Pereyra, A.; Tello, J.; Alvarado, D.; et al.
+    more: ''
+    journal: The Astronomer's Telegram
+    volume: '16203'
+    page: '1'
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: atel
+    ads: https://ui.adsabs.harvard.edu/abs/2023ATel16203....1P/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2023ATel16203....1P
+  - title: The Astronomer's Telegram 16234
+    link: https://ui.adsabs.harvard.edu/abs/2023ATel16234....1P/abstract
+    authors: Pereyra, A.; Tello, J.; Alvarado, D.; et al.
+    more: ''
+    journal: The Astronomer's Telegram
+    volume: '16234'
+    page: '1'
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: atel
+    ads: https://ui.adsabs.harvard.edu/abs/2023ATel16234....1P/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2023ATel16234....1P
+  - title: The Astronomer's Telegram 15378
+    link: https://ui.adsabs.harvard.edu/abs/2022ATel15378....1P/abstract
+    authors: Pereyra, A.; Tello, J.; Zevallos, M.; et al.
+    more: ''
+    journal: The Astronomer's Telegram
+    volume: '15378'
+    page: '1'
+    year: 2022
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: atel
+    ads: https://ui.adsabs.harvard.edu/abs/2022ATel15378....1P/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2022ATel15378....1P
+  - title: The Astronomer's Telegram 15387
+    link: https://ui.adsabs.harvard.edu/abs/2022ATel15387....1P/abstract
+    authors: Pereyra, A.; Tello, J.; Zevallos, M.; et al.
+    more: ''
+    journal: The Astronomer's Telegram
+    volume: '15387'
+    page: '1'
+    year: 2022
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: atel
+    ads: https://ui.adsabs.harvard.edu/abs/2022ATel15387....1P/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2022ATel15387....1P
+  - title: The Astronomer's Telegram 15526
+    link: https://ui.adsabs.harvard.edu/abs/2022ATel15526....1P/abstract
+    authors: Pereyra, A.; Tello, J.; Zevallos, M.; et al.
+    more: ''
+    journal: The Astronomer's Telegram
+    volume: '15526'
+    page: '1'
+    year: 2022
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: atel
+    ads: https://ui.adsabs.harvard.edu/abs/2022ATel15526....1P/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2022ATel15526....1P
+  - title: The Astronomer's Telegram 15539
+    link: https://ui.adsabs.harvard.edu/abs/2022ATel15539....1P/abstract
+    authors: Pereyra, A.; Tello, J.; Zevallos, M.; et al.
+    more: ''
+    journal: The Astronomer's Telegram
+    volume: '15539'
+    page: '1'
+    year: 2022
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: atel
+    ads: https://ui.adsabs.harvard.edu/abs/2022ATel15539....1P/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2022ATel15539....1P
+  - title: 'VizieR Online Data Catalog: J/A+A/690/L7'
+    link: https://ui.adsabs.harvard.edu/abs/2024yCat..36909007F/abstract
+    authors: Fermiano, V.; Saito, R. K.; Ivanov, V. D.; et al.
+    more: ''
+    journal: VizieR Online Data Catalog
+    volume: '369'
+    page: J/A+A/690/L7
+    year: 2024
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: catalogs
+    ads: https://ui.adsabs.harvard.edu/abs/2024yCat..36909007F/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2024yCat..36909007F
+  - title: 'VizieR Online Data Catalog: J/A+A/680/A84'
+    link: https://ui.adsabs.harvard.edu/abs/2023yCat..36800084M/abstract
+    authors: Martioli, E.; Hebrard, G.; de Almeida, L.; et al.
+    more: ''
+    journal: VizieR Online Data Catalog
+    volume: '368'
+    page: J/A+A/680/A84
+    year: 2023
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: catalogs
+    ads: https://ui.adsabs.harvard.edu/abs/2023yCat..36800084M/abstract
+    arxiv: ''
+    doi: ''
+    bibcode: 2023yCat..36800084M
+  - title: 'VizieR Online Data Catalog: J/A+A/660/A86'
+    link: https://ui.adsabs.harvard.edu/abs/2022yCat..36600086M/abstract
+    authors: Martioli, E.; Hebrard, G.; Fouque, P.; et al.
+    more: ''
+    journal: VizieR Online Data Catalog
+    volume: '366'
+    page: ''
+    year: 2022
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: catalogs
+    ads: https://ui.adsabs.harvard.edu/abs/2022yCat..36600086M/abstract
+    arxiv: ''
+    doi: https://doi.org/10.26093/cds/vizier.36600086
+    bibcode: 2022yCat..36600086M
+  - title: 'VizieR Online Data Catalog: J/ApJ/898/173'
+    link: https://ui.adsabs.harvard.edu/abs/2021yCat..18980173D/abstract
+    authors: Do Nascimento, J.-D.; de Almeida, L.; Velloso, E. N.; et al.
+    more: ''
+    journal: VizieR Online Data Catalog
+    volume: '189'
+    page: ''
+    year: 2021
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: catalogs
+    ads: https://ui.adsabs.harvard.edu/abs/2021yCat..18980173D/abstract
+    arxiv: ''
+    doi: https://doi.org/10.26093/cds/vizier.18980173
+    bibcode: 2021yCat..18980173D
+  - title: 'VizieR Online Data Catalog: J/AJ/157/150'
+    link: https://ui.adsabs.harvard.edu/abs/2019yCat..51570150A/abstract
+    authors: Almeida, L. A.; de Almeida, L.; Damineli, A.; et al.
+    more: ''
+    journal: VizieR Online Data Catalog
+    volume: '515'
+    page: ''
+    year: 2019
+    show-home: false
+    first-author: false
+    refereed: false
+    rank: 2
+    category: catalogs
+    ads: https://ui.adsabs.harvard.edu/abs/2019yCat..51570150A/abstract
+    arxiv: ''
+    doi: https://doi.org/10.26093/cds/vizier.51570150
+    bibcode: 2019yCat..51570150A
+  - title: Zenodo software/code record (v1.0.0)
+    link: https://ui.adsabs.harvard.edu/abs/2018zndo...1323217L/abstract
+    authors: Lustosa De Moura, B. & De Almeida, L
+    more: ''
+    journal: Zenodo
+    volume: v1.0.0
+    page: ''
     year: 2018
     show-home: false
-    first-author: true
+    first-author: false
     refereed: false
-    rank: 1
+    rank: 2
+    category: codes
+    ads: https://ui.adsabs.harvard.edu/abs/2018zndo...1323217L/abstract
+    arxiv: ''
+    doi: https://doi.org/10.5281/zenodo.1323217
+    bibcode: 2018zndo...1323217L
+  categories:
+  - id: first-author
+    title: First-author publications
+    title_ptbr: Publicações como primeiro autor
+    icon: fa-solid fa-user-pen
+  - id: co-author
+    title: Co-author publications
+    title_ptbr: Publicações como coautor
+    icon: fa-solid fa-users
+  - id: proceedings
+    title: Conference proceedings
+    title_ptbr: Proceedings em conferências
+    icon: fa-solid fa-presentation-screen
+  - id: gcn
+    title: GRB Coordinates Network
+    title_ptbr: GRB Coordinates Network
+    icon: fa-solid fa-bolt
+  - id: atel
+    title: The Astronomer's Telegram
+    title_ptbr: The Astronomer's Telegram
+    icon: fa-solid fa-satellite-dish
+  - id: catalogs
+    title: Catalogs
+    title_ptbr: Catálogos
+    icon: fa-solid fa-database
+  - id: codes
+    title: Codes
+    title_ptbr: Códigos
+    icon: fa-solid fa-code
 event-participation:
   upcoming-title: Upcoming events
   upcoming-title_ptbr: Próximos Eventos

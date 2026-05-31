@@ -11,11 +11,14 @@
     .publication-mini-button:hover { background: #eeeeee; }
     .authors-toggle { display: inline; margin-left: 4px; }
     .authors-toggle summary { display: inline-block; list-style: none; }
-    .authors-toggle summary::-webkit-details-marker, .publication-info-details summary::-webkit-details-marker { display: none; }
+    .authors-toggle summary::-webkit-details-marker { display: none; }
     .authors-toggle[open] .publication-authors-full { display: block; margin-top: 4px; padding: 6px 8px; border-left: 3px solid #ddd; background: #fafafa; font-size: 0.92em; }
-    .publication-info-details summary { list-style: none; }
-    .pub-info-box { margin-top: 6px; min-width: 260px; max-width: 620px; padding: 8px 10px; border-left: 3px solid #ddd; background: #fafafa; text-align: left; }
+    .publication-info-row { display: none; }
+    .publication-info-row.is-open { display: table-row; }
+    .publication-info-cell { padding: 0 7px 14px 7px !important; }
+    .pub-info-box { margin-top: 2px; width: 100%; box-sizing: border-box; padding: 12px 14px; border-left: 4px solid #ddd; background: #fafafa; text-align: left; }
     .pub-info-box p { margin: 0 0 8px 0; }
+    .pub-info-box p:last-child { margin-bottom: 0; }
     .publication-link-placeholder { color: #aaa; }
     .publication-small-link { white-space: nowrap; }
     @media (max-width: 800px) {
@@ -70,6 +73,7 @@
 
         {% for publication in publications.papers %}
           {% if publication.category == category_key %}
+            {% assign pub_info_id = category_key | append: '-' | append: forloop.index %}
             <tr>
               <td class="publication-id">{{ i }}</td>{% assign i = i | plus:1 %}
               <td>{{ publication.year }}</td>
@@ -108,25 +112,31 @@
                 {% endif %}
               </td>
               <td>
-                <details class="publication-info-details">
-                  <summary class="publication-mini-button">+info</summary>
-                  <div class="pub-info-box">
-                    {% if publication.abstract %}
-                      <p><strong>Resumo:</strong> {{ publication.abstract | escape }}</p>
-                    {% else %}
-                      <p><strong>Resumo:</strong></p>
-                    {% endif %}
-                    {% if publication.keywords %}
-                      <p><strong>Palavras-chave:</strong> {{ publication.keywords | escape }}</p>
-                    {% endif %}
-                    {% if publication.ads %}
-                      <p><strong>ADS:</strong> <a href="{{ publication.ads }}" target="_blank" rel="noopener">{{ publication.ads }}</a></p>
-                    {% endif %}
-                    {% if publication.bibcode %}
-                      <p><strong>Bibcode:</strong> {{ publication.bibcode }}</p>
-                    {% endif %}
-                  </div>
-                </details>
+                <button type="button"
+                        class="publication-mini-button"
+                        onclick="togglePublicationInfo('publication-info-{{ pub_info_id }}', this)">
+                  +info
+                </button>
+              </td>
+            </tr>
+            <tr id="publication-info-{{ pub_info_id }}" class="publication-info-row">
+              <td colspan="10" class="publication-info-cell">
+                <div class="pub-info-box">
+                  {% if publication.abstract %}
+                    <p><strong>Resumo:</strong> {{ publication.abstract | escape }}</p>
+                  {% else %}
+                    <p><strong>Resumo:</strong></p>
+                  {% endif %}
+                  {% if publication.keywords %}
+                    <p><strong>Palavras-chave:</strong> {{ publication.keywords | escape }}</p>
+                  {% endif %}
+                  {% if publication.ads %}
+                    <p><strong>ADS:</strong> <a href="{{ publication.ads }}" target="_blank" rel="noopener">{{ publication.ads }}</a></p>
+                  {% endif %}
+                  {% if publication.bibcode %}
+                    <p><strong>Bibcode:</strong> {{ publication.bibcode }}</p>
+                  {% endif %}
+                </div>
               </td>
             </tr>
           {% endif %}
@@ -134,6 +144,15 @@
       </table>
     {% endif %}
   {% endfor %}
+
+  <script>
+    function togglePublicationInfo(rowId, button) {
+      var row = document.getElementById(rowId);
+      if (!row) return;
+      var isOpen = row.classList.toggle('is-open');
+      button.textContent = isOpen ? '-info' : '+info';
+    }
+  </script>
 
 </section><!--//section-->
 {% endif %}

@@ -1821,8 +1821,8 @@
     "lectures": {
       "title_ongoing": "Ongoing Courses",
       "title_ongoing_ptbr": "Cursos em andamento",
-      "intro_ongoing": "There are no ongoing courses at the moment.",
-      "intro_ongoing_ptbr": "Não há cursos em andamento no momento.",
+      "intro_ongoing": "Current courses and teaching materials.",
+      "intro_ongoing_ptbr": "Disciplinas em andamento e seus materiais.",
       "title_upcoming": "Upcoming Courses",
       "title_upcoming_ptbr": "Cursos previstos",
       "title_finished": "Finished Courses",
@@ -1830,64 +1830,144 @@
       "courses": [
         {
           "code": "AST-203-4",
-          "semester": "2026",
+          "semester": "2026.2",
           "name": "Observational Astrophysics Techniques",
           "name_ptbr": "Técnicas de Astrofísica Observacional",
-          "type": "upcoming",
+          "type": "ongoing",
           "link": "/lectures/ast203_2026.html",
           "institute": "INPE",
           "institute_long": "Instituto Nacional de Pesquisas Espaciais",
-          "department": "Graduate Program in Astrophysics / Programa de Pós-Graduação em Astrofísica",
-          "institute-link": "https://www.gov.br/inpe/pt-br",
+          "department": "Astrophysics Division",
+          "institute-link": "https://www.gov.br/inpe/pt-br/area-conhecimento/posgraduacao/ast/catalogo-de-disciplinas",
           "language-code": "br",
           "background-color": "#800020",
           "info": [
             {
-              "key": "Role",
-              "value": "Professor / Lecturer"
+              "key": "Lecture Credits",
+              "value": "4"
             },
             {
-              "key": "Status",
-              "value": "Syllabus and materials will be added later."
+              "key": "Work Credits",
+              "value": "0"
+            },
+            {
+              "key": "Total hours",
+              "value": "60h"
+            },
+            {
+              "key": "Type",
+              "value": "Period-long"
             },
             {
               "key": "Language",
-              "value": "Portuguese / English materials as needed"
-            },
-            {
-              "key": "Location",
-              "value": "INPE, São José dos Campos"
+              "value": "Portuguese"
             }
           ],
           "info_ptbr": [
             {
-              "key": "Função",
-              "value": "Professor"
+              "key": "Créditos de aula",
+              "value": "4"
             },
             {
-              "key": "Status",
-              "value": "Ementa e materiais serão adicionados posteriormente."
+              "key": "Créditos de trabalho",
+              "value": "0"
+            },
+            {
+              "key": "Carga horária total",
+              "value": "60h"
+            },
+            {
+              "key": "Tipo",
+              "value": "Período completo"
             },
             {
               "key": "Idioma",
-              "value": "Português / materiais em inglês quando necessário"
-            },
-            {
-              "key": "Local",
-              "value": "INPE, São José dos Campos"
+              "value": "Português"
             }
           ],
-          "intro": "This page is prepared as a home for AST-203-4. It is intentionally ready for future lecture notes, slides, exercises, datasets, and links.",
-          "description": "Placeholder for the course syllabus. Topics may include observation planning, photometry, spectroscopy, CCD/CMOS detectors, calibration, data reduction, signal-to-noise, time-series analysis, and astronomical instrumentation.",
+          "intro": "",
+          "description": "Astronomical coordinates. Earth’s atmosphere: structure, absorption, emission and scattering of radiation. What is observed in Astrophysics. Fourier transform. Statistical treatment of data. Detectors: physical principles of detection. Quantum, thermal and radio-frequency detectors. Signal measurement. Photometry and polarimetry: definition of quantities. Calibration methods. Stokes vector. Imaging: formation (telescopes), degradation and processing. Spectral analysis: instruments. Measurement of continuum and spectral lines.",
           "sections": [
             {
-              "name": "Course materials",
-              "color": "#800020"
+              "name": "Part 2 — Ted",
+              "name_ptbr": "Parte 2 — Ted",
+              "color": "#18794e"
             }
           ],
-          "lectures": [],
-          "documents": [],
-          "bibliography": "Bibliography and references will be added here."
+          "lectures": [
+            {
+              "section": "Part 2 — Ted",
+              "date": "14/07/2026",
+              "name": "Lecture 7 - Telescopes",
+              "name_ptbr": "Aula 7 - Telescópios",
+              "link": "/lectures/ast203_2026_aula7_telescopes.html",
+              "link_ptbr": "/lectures/ast203_2026_aula7_telescopios.html"
+            }
+          ],
+          "documents": [
+            {
+              "name": "Course Description",
+              "name_ptbr": "Descrição do Curso",
+              "type": "pdf",
+              "link": "https://drive.google.com/file/d/1nqn4Ct9pPeUr4S4-14fBVPRli7-1f2A5/view?usp=sharing"
+            },
+            {
+              "name": "Calendar",
+              "name_ptbr": "Calendário",
+              "type": "pdf",
+              "link": "/assets/documents/ast203-2026/Calendario.pdf"
+            }
+          ],
+          "bibliography": "BEVINGTON, P. R. & ROBINSON, D. K. Data reduction and error analysis for the physical sciences, 3rd edition, McGraw-Hill Inc., 2002<br>BRADT, H. Astronomy Methods: A Physical Approach to Astronomical Observations, Cambridge Univ. Press, 2004.<br>GRAY, D. F. Observation and analysis of stellar photospheres, 3rd edition, Cambridge Univ. Press, 2008.<br>HOWELL, S. B. Handbook of CCD Astronomy, 2nd edition, Cambridge, 2006.<br>KITCHIN, C. R. Astrophysical Techniques, 5th edition, CRC, 2008.<br>LÉNA, P., LEBRUN, F. & MIGNARD, F. Observational Astrophysics, 2nd edition, Springer-Verlag, 1998.<br>MCLEAN, I. S. Electronic imaging in astronomy: detectors and instrumentation. Springer & Praxis, 2008.<br>WALKER, G. Astronomical observations: an optical perspective. Cambridge Univ. Press, 1987.<br>Specialized articles in the field.",
+          "link_ptbr": "/lectures/ast203_2026_ptbr.html",
+          "department_ptbr": "Divisão de Astrofísica",
+          "intro_ptbr": "",
+          "description_ptbr": "Coordenadas astronômicas. A atmosfera terrestre; estrutura, absorção, emissão e difusão de radiação. O que se observa em Astrofísica. Transformada de Fourier. Tratamento estatístico de dados. Detectores: princípios físicos de detecção. Detectores quânticos, térmicos e em radiofrequências. Medida do sinal. Fotometria e polarimetria: definição de grandezas. Métodos de calibração. Vetor Stokes. Imagem: formação (telescópios), degradação e tratamento. Análise espectral: instrumentos. Medida de contínuo e de linhas espectrais.",
+          "schedule": [
+            {
+              "date": "14/07/2026",
+              "class": "Lecture 7",
+              "class_ptbr": "Aula 7",
+              "name": "Telescopes",
+              "name_ptbr": "Telescópios"
+            },
+            {
+              "date": "16/07/2026",
+              "class": "Lecture 8",
+              "class_ptbr": "Aula 8",
+              "name": "Detectors",
+              "name_ptbr": "Detectores"
+            },
+            {
+              "date": "21/07/2026",
+              "class": "Lecture 9",
+              "class_ptbr": "Aula 9",
+              "name": "Imaging and photometry",
+              "name_ptbr": "Imageamento e fotometria"
+            },
+            {
+              "date": "23/07/2026",
+              "class": "Lecture 10",
+              "class_ptbr": "Aula 10",
+              "name": "Spectroscopy",
+              "name_ptbr": "Espectroscopia"
+            },
+            {
+              "date": "28/07/2026",
+              "class": "Lecture 11",
+              "class_ptbr": "Aula 11",
+              "name": "Data processing",
+              "name_ptbr": "Processamento de dados"
+            },
+            {
+              "date": "30/07/2026",
+              "class": "Lecture 12",
+              "class_ptbr": "Aula 12",
+              "name": "Observing-time proposal",
+              "name_ptbr": "Pedido de tempo"
+            }
+          ],
+          "bibliography_ptbr": "BEVINGTON, P. R. & ROBINSON, D. K. Data reduction and error analysis for the physical sciences, 3rd edition, McGraw-Hill Inc., 2002<br>BRADT, H. Astronomy Methods: A Physical Approach to Astronomical Observations, Cambridge Univ. Press, 2004.<br>GRAY, D. F. Observation and analysis of stellar photospheres, 3rd edition, Cambridge Univ. Press, 2008.<br>HOWELL, S. B. Handbook of CCD Astronomy, 2nd edition, Cambridge, 2006.<br>KITCHIN, C. R. Astrophysical Techniques, 5th edition, CRC, 2008.<br>LÉNA, P., LEBRUN, F. & MIGNARD, F. Observational Astrophysics, 2nd edition, Springer-Verlag, 1998.<br>MCLEAN, I. S. Electronic imaging in astronomy: detectors and instrumentation. Springer & Praxis, 2008.<br>WALKER, G. Astronomical observations: an optical perspective. Cambridge Univ. Press, 1987.<br>Artigos especializados da área."
         }
       ]
     },
@@ -1901,10 +1981,10 @@
       "list": [
         {
           "name": "Observational Astrophysics Techniques (AST-203-4)",
-          "role": "Professor",
-          "semester": "Upcoming",
+          "role": "Professor / Lecturer",
+          "semester": "2026.2 — Ongoing",
           "location": "INPE",
-          "details": "Course page prepared for future materials.",
+          "details": "Responsible for Lectures 7–12 in the second course block.",
           "type": "Graduate"
         }
       ]
@@ -1915,9 +1995,9 @@
         {
           "name": "Técnicas de Astrofísica Observacional (AST-203-4)",
           "role": "Professor",
-          "semester": "Prevista",
+          "semester": "2026.2 — Em andamento",
           "location": "INPE",
-          "details": "Página da disciplina preparada para materiais futuros."
+          "details": "Responsável pelas Aulas 7–12 no segundo bloco da disciplina."
         }
       ]
     },

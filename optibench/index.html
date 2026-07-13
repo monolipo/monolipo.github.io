@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OptiBench 2D — Bancada Óptica e Espectrógrafos</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">λ</div>
+      <div>
+        <h1>OptiBench 2D</h1>
+        <p>Traçado de raios espectral para bancadas ópticas</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <label class="compact-field">Cena
+        <select id="presetSelect">
+          <option value="blank">Em branco</option>
+          <option value="prism">Espectrógrafo com prisma</option>
+        </select>
+      </label>
+      <button id="newBtn" title="Nova cena">Nova</button>
+      <button id="saveBtn" title="Salvar cena em JSON">Salvar</button>
+      <button id="loadBtn" title="Carregar cena JSON">Carregar</button>
+      <input id="loadInput" type="file" accept="application/json,.json" hidden />
+      <button id="undoBtn" title="Desfazer (Ctrl+Z)">↶</button>
+      <button id="redoBtn" title="Refazer (Ctrl+Y)">↷</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="toolbar" aria-label="Elementos ópticos">
+      <h2>Elementos</h2>
+      <div class="tool-grid">
+        <button class="tool active" data-tool="select" title="Selecionar e mover">↖<span>Selecionar</span></button>
+        <button class="tool" data-tool="source" title="Fonte espectral">☀<span>Fonte</span></button>
+        <button class="tool" data-tool="mirror" title="Espelho plano">╱<span>Espelho</span></button>
+        <button class="tool" data-tool="conicMirror" title="Espelho cônico: esférico, parabólico ou hiperbólico">⌒<span>Espelho cônico</span></button>
+        <button class="tool" data-tool="lens" title="Lente fina com dispersão cromática">)(<span>Lente</span></button>
+        <button class="tool" data-tool="prism" title="Prisma dispersivo">△<span>Prisma</span></button>
+        <button class="tool" data-tool="gratingR" title="Rede de difração refletiva">≋<span>Rede refletiva</span></button>
+        <button class="tool" data-tool="gratingT" title="Rede de difração transmissiva">≋<span>Rede transmissiva</span></button>
+        <button class="tool" data-tool="slit" title="Fenda ajustável">Ⅱ<span>Fenda</span></button>
+        <button class="tool" data-tool="mirrorSlit" title="Fenda com lâminas espelhadas">⫯<span>Fenda espelhada</span></button>
+        <button class="tool" data-tool="blocker" title="Bloqueador opaco">▬<span>Bloqueador</span></button>
+        <button class="tool" data-tool="splitter" title="Divisor de feixe">◇<span>Divisor</span></button>
+        <button class="tool" data-tool="dichroic" title="Espelho dicróico">◈<span>Dicróico</span></button>
+        <button class="tool" data-tool="detector" title="Detector linear">▥<span>Detector</span></button>
+      </div>
+
+      <section class="view-settings">
+        <h2>Visualização</h2>
+        <label><input id="showGrid" type="checkbox" checked /> Grade milimétrica</label>
+        <label><input id="showLabels" type="checkbox" checked /> Rótulos</label>
+        <label><input id="densityMode" type="checkbox" /> Modo densidade/feixe</label>
+        <label><input id="showNormals" type="checkbox" /> Normais locais</label>
+        <label class="stacked">Qualidade
+          <select id="qualitySelect">
+            <option value="fast">Rápida</option>
+            <option value="normal" selected>Normal</option>
+            <option value="high">Alta</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="help-card">
+        <h2>Controles</h2>
+        <p><strong>Arraste</strong> o centro para mover. Arraste as extremidades para redimensionar e girar.</p>
+        <p><strong>Roda do mouse</strong>: zoom. <strong>Botão direito</strong>: panorâmica.</p>
+        <p><strong>Q / E</strong>: girar 1°. <strong>Del</strong>: apagar. <strong>Ctrl+D</strong>: duplicar.</p>
+      </section>
+    </aside>
+
+    <section class="stage-wrap">
+      <canvas id="benchCanvas"></canvas>
+      <div class="stage-status">
+        <span id="cursorStatus">x = 0,0 mm · y = 0,0 mm</span>
+        <span id="traceStatus">0 raios</span>
+        <span id="zoomStatus">100%</span>
+      </div>
+    </section>
+
+    <aside class="inspector">
+      <div class="inspector-head">
+        <div>
+          <h2 id="selectedTitle">Nenhum elemento selecionado</h2>
+          <p id="selectedSubtitle">Escolha uma ferramenta ou carregue um exemplo.</p>
+        </div>
+        <div class="inspector-actions">
+          <button id="duplicateBtn" disabled title="Duplicar">⧉</button>
+          <button id="deleteBtn" disabled title="Apagar">✕</button>
+        </div>
+      </div>
+      <div id="propertyPanel" class="property-panel empty-state">
+        <p>As propriedades físicas do elemento selecionado aparecerão aqui.</p>
+      </div>
+
+      <section class="detector-section">
+        <div class="detector-head">
+          <div>
+            <h2>Leitura do detector</h2>
+            <p id="detectorSummary">Adicione ou selecione um detector.</p>
+          </div>
+          <div class="detector-export-actions">
+            <button id="exportCsvBtn" disabled>CSV</button>
+            <button id="exportPngBtn" disabled>PNG</button>
+          </div>
+        </div>
+        <label class="detector-picker-label">Detector ativo
+          <select id="detectorSelect"></select>
+        </label>
+        <canvas id="detectorCanvas" width="360" height="240"></canvas>
+        <div class="detector-tabs">
+          <button class="detector-tab active" data-mode="spatial">Posição</button>
+          <button class="detector-tab" data-mode="spectral">Espectro</button>
+          <button class="detector-tab" data-mode="image">Imagem CCD</button>
+        </div>
+      </section>
+
+      <section class="physics-note">
+        <h2>Modelo desta versão</h2>
+        <p>Traçado geométrico não sequencial em 2D, Snell com Sellmeier, redes pela conservação do vetor de onda tangencial, espelhos esféricos, parabólicos e hiperbólicos por sag real, com furo central transmissivo opcional, e lentes finas paraxiais. Fontes astronômicas são campos angulares: cada ponto da imagem lança um feixe paralelo pela pupila e é focalizado pela óptica. A reconstrução 2,5D conserva máscaras no plano focal, vinhetagem, escala, paridade e desfoco; a dimensão fora do plano permanece centrada em z = 0.</p>
+      </section>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1493,16 +1493,50 @@ lectures:
       date: 14/07/2026
       name: Lecture 7 - Telescopes
       name_ptbr: Aula 7 - Telescópios
-      link: /assets/documents/ast203-2026/Aula%207%20-%20Telesc%C3%B3pios.pdf
-      link_ptbr: /assets/documents/ast203-2026/Aula%207%20-%20Telesc%C3%B3pios.pdf
+      link: /lectures/ast203_2026_aula7_telescopes.html
+      link_ptbr: /lectures/ast203_2026_aula7_telescopios.html
       pdf: /assets/documents/ast203-2026/Aula%207%20-%20Telesc%C3%B3pios.pdf
+      pdf_name: Aula 7 - Telescópios.pdf
     - section: Part 2 — Ted
       date: 16/07/2026
       name: Lecture 8 - Detectors
       name_ptbr: Aula 8 - Detectores
-      link: /assets/documents/ast203-2026/Aula%208%20-%20Detectores.pdf
-      link_ptbr: /assets/documents/ast203-2026/Aula%208%20-%20Detectores.pdf
+      link: /lectures/ast203_2026_aula8_detectors.html
+      link_ptbr: /lectures/ast203_2026_aula8_detectores.html
       pdf: /assets/documents/ast203-2026/Aula%208%20-%20Detectores.pdf
+      pdf_name: Aula 8 - Detectores.pdf
+    - section: Part 2 — Ted
+      date: 21/07/2026
+      name: Lecture 9 - Imaging and photometry
+      name_ptbr: Aula 9 - Imageamento e fotometria
+      link: /lectures/ast203_2026_aula9_imaging_photometry.html
+      link_ptbr: /lectures/ast203_2026_aula9_imageamento_fotometria.html
+      pdf: /assets/documents/ast203-2026/Aula%209%20-%20Imageamento%20e%20fotometria.pdf
+      pdf_name: Aula 9 - Imageamento e fotometria.pdf
+    - section: Part 2 — Ted
+      date: 23/07/2026
+      name: Lecture 10 - Spectroscopy
+      name_ptbr: Aula 10 - Espectroscopia
+      link: /lectures/ast203_2026_aula10_spectroscopy.html
+      link_ptbr: /lectures/ast203_2026_aula10_espectroscopia.html
+      pdf: /assets/documents/ast203-2026/Aula%2010%20-%20Espectroscopia.pdf
+      pdf_name: Aula 10 - Espectroscopia.pdf
+    - section: Part 2 — Ted
+      date: 28/07/2026
+      name: Lecture 11 - Data processing
+      name_ptbr: Aula 11 - Processamento de dados
+      link: /lectures/ast203_2026_aula11_data_processing.html
+      link_ptbr: /lectures/ast203_2026_aula11_processamento_dados.html
+      pdf: /assets/documents/ast203-2026/Aula%2011%20-%20Processamento%20de%20dados.pdf
+      pdf_name: Aula 11 - Processamento de dados.pdf
+    - section: Part 2 — Ted
+      date: 30/07/2026
+      name: Lecture 12 - Observing-time proposal
+      name_ptbr: Aula 12 - Pedido de tempo
+      link: /lectures/ast203_2026_aula12_observing_time_proposal.html
+      link_ptbr: /lectures/ast203_2026_aula12_pedido_tempo.html
+      pdf: /assets/documents/ast203-2026/Aula%2012%20-%20Pedido%20de%20tempo.pdf
+      pdf_name: Aula 12 - Pedido de tempo.pdf
     documents:
     - name: Course Description
       name_ptbr: Descrição do Curso

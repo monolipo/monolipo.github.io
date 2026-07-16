@@ -69,7 +69,7 @@
   <tr>
     <td><span style="color: #aaa">{{ lecture.date }} -</span> <a href="{{ lecture.link }}" class="lecture-name">{{ lecture.name }}</a></td>
     <td>{% if lecture.video %}<a href="{{ lecture.video }}" target="_blank" rel="noopener"><i class="fa-solid fa-play lecture-icon"></i></a>{% endif %}</td>
-    <td>{% if lecture.pdf %}<a href="{{ lecture.pdf }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf lecture-icon"></i></a>{% endif %}</td>
+    <td>{% if lecture.pdf %}<a href="{{ lecture.pdf }}" download="{{ lecture.pdf_name | default: 'aula.pdf' }}" title="Download PDF" aria-label="Download PDF"><i class="fa-solid fa-file-pdf lecture-icon"></i></a>{% endif %}</td>
     <td>{% if lecture.drive %}<a href="{{ lecture.drive }}" target="_blank" rel="noopener"><i class="fa-brands fa-google-drive lecture-icon"></i></a>{% endif %}</td>
     <td>{% if lecture.blog %}<a href="{{ lecture.blog }}" target="_blank" rel="noopener"><i class="fa-solid fa-newspaper lecture-icon"></i></a>{% endif %}</td>
   </tr>

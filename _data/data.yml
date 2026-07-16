@@ -1493,8 +1493,16 @@ lectures:
       date: 14/07/2026
       name: Lecture 7 - Telescopes
       name_ptbr: Aula 7 - Telescópios
-      link: /lectures/ast203_2026_aula7_telescopes.html
-      link_ptbr: /lectures/ast203_2026_aula7_telescopios.html
+      link: /assets/documents/ast203-2026/Aula%207%20-%20Telesc%C3%B3pios.pdf
+      link_ptbr: /assets/documents/ast203-2026/Aula%207%20-%20Telesc%C3%B3pios.pdf
+      pdf: /assets/documents/ast203-2026/Aula%207%20-%20Telesc%C3%B3pios.pdf
+    - section: Part 2 — Ted
+      date: 16/07/2026
+      name: Lecture 8 - Detectors
+      name_ptbr: Aula 8 - Detectores
+      link: /assets/documents/ast203-2026/Aula%208%20-%20Detectores.pdf
+      link_ptbr: /assets/documents/ast203-2026/Aula%208%20-%20Detectores.pdf
+      pdf: /assets/documents/ast203-2026/Aula%208%20-%20Detectores.pdf
     documents:
     - name: Course Description
       name_ptbr: Descrição do Curso

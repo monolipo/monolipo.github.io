@@ -1495,7 +1495,7 @@ lectures:
       name_ptbr: Aula 7 - Telescópios
       link: /lectures/ast203_2026_aula7_telescopes.html
       link_ptbr: /lectures/ast203_2026_aula7_telescopios.html
-      pdf: /assets/documents/ast203-2026/Aula%207%20-%20Telesc%C3%B3pios.pdf
+      pdf: https://github.com/monolipo/monolipo.github.io/tree/main/assets/documents/ast203-2026/Aula%207%20-%20Telesc%C3%B3pios.pdf
       pdf_name: Aula 7 - Telescópios.pdf
     - section: Part 2 — Ted
       date: 16/07/2026

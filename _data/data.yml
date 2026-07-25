@@ -3055,7 +3055,7 @@ lectures:
       What is observed in Astrophysics. Fourier transform. Statistical treatment of data. Detectors: physical principles of
       detection. Quantum, thermal and radio-frequency detectors. Signal measurement. Photometry and polarimetry: definition
       of quantities. Calibration methods. Stokes vector. Imaging: formation (telescopes), degradation and processing. Spectral
-      analysis: instruments. Measurement of continuum and spectral lines.'
+      analysis: instruments. Measurement of continuum and spectral lines.<br> <b>Homework<b> 2 already in DOCUMENTS.'
     sections:
     - name: Part 2 — Ted
       name_ptbr: Parte 2 — Ted
@@ -3118,6 +3118,10 @@ lectures:
       name_ptbr: Calendário
       type: pdf
       link: /assets/documents/ast203-2026/Calendario.pdf
+    - name: Activity
+      name_ptbr: Atividade 2
+      type: pdf
+      link: /assets/documents/ast203-2026/Atividade2.pdf
     bibliography: 'BEVINGTON, P. R. & ROBINSON, D. K. Data reduction and error analysis for the physical sciences, 3rd edition,
       McGraw-Hill Inc., 2002<br>BRADT, H. Astronomy Methods: A Physical Approach to Astronomical Observations, Cambridge Univ.
       Press, 2004.<br>GRAY, D. F. Observation and analysis of stellar photospheres, 3rd edition, Cambridge Univ. Press, 2008.<br>HOWELL,
@@ -3132,7 +3136,7 @@ lectures:
       O que se observa em Astrofísica. Transformada de Fourier. Tratamento estatístico de dados. Detectores: princípios físicos
       de detecção. Detectores quânticos, térmicos e em radiofrequências. Medida do sinal. Fotometria e polarimetria: definição
       de grandezas. Métodos de calibração. Vetor Stokes. Imagem: formação (telescópios), degradação e tratamento. Análise
-      espectral: instrumentos. Medida de contínuo e de linhas espectrais.'
+      espectral: instrumentos. Medida de contínuo e de linhas espectrais.<br>A <b>atividade 2<b> já está disponível abaixo em DOCUMENTOS'
     schedule:
     - date: 14/07/2026
       class: Lecture 7

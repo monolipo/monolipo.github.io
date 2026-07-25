@@ -2802,7 +2802,7 @@
             }
           ],
           "intro": "",
-          "description": "Astronomical coordinates. Earth’s atmosphere: structure, absorption, emission and scattering of radiation. What is observed in Astrophysics. Fourier transform. Statistical treatment of data. Detectors: physical principles of detection. Quantum, thermal and radio-frequency detectors. Signal measurement. Photometry and polarimetry: definition of quantities. Calibration methods. Stokes vector. Imaging: formation (telescopes), degradation and processing. Spectral analysis: instruments. Measurement of continuum and spectral lines.",
+          "description": "Astronomical coordinates. Earth’s atmosphere: structure, absorption, emission and scattering of radiation. What is observed in Astrophysics. Fourier transform. Statistical treatment of data. Detectors: physical principles of detection. Quantum, thermal and radio-frequency detectors. Signal measurement. Photometry and polarimetry: definition of quantities. Calibration methods. Stokes vector. Imaging: formation (telescopes), degradation and processing. Spectral analysis: instruments. Measurement of continuum and spectral lines.<br>Homework 2 already in DOCUMENTS.",
           "sections": [
             {
               "name": "Part 2 — Ted",
@@ -2884,13 +2884,19 @@
               "name_ptbr": "Calendário",
               "type": "pdf",
               "link": "/assets/documents/ast203-2026/Calendario.pdf"
+            },
+            {
+              "name": "HomeWork 2",
+              "name_ptbr": "Atividade 2",
+              "type": "pdf",
+              "link": "/assets/documents/ast203-2026/Atividade2.pdf"
             }
           ],
           "bibliography": "BEVINGTON, P. R. & ROBINSON, D. K. Data reduction and error analysis for the physical sciences, 3rd edition, McGraw-Hill Inc., 2002<br>BRADT, H. Astronomy Methods: A Physical Approach to Astronomical Observations, Cambridge Univ. Press, 2004.<br>GRAY, D. F. Observation and analysis of stellar photospheres, 3rd edition, Cambridge Univ. Press, 2008.<br>HOWELL, S. B. Handbook of CCD Astronomy, 2nd edition, Cambridge, 2006.<br>KITCHIN, C. R. Astrophysical Techniques, 5th edition, CRC, 2008.<br>LÉNA, P., LEBRUN, F. & MIGNARD, F. Observational Astrophysics, 2nd edition, Springer-Verlag, 1998.<br>MCLEAN, I. S. Electronic imaging in astronomy: detectors and instrumentation. Springer & Praxis, 2008.<br>WALKER, G. Astronomical observations: an optical perspective. Cambridge Univ. Press, 1987.<br>Specialized articles in the field.",
           "link_ptbr": "/lectures/ast203_2026_ptbr.html",
           "department_ptbr": "Divisão de Astrofísica",
           "intro_ptbr": "",
-          "description_ptbr": "Coordenadas astronômicas. A atmosfera terrestre; estrutura, absorção, emissão e difusão de radiação. O que se observa em Astrofísica. Transformada de Fourier. Tratamento estatístico de dados. Detectores: princípios físicos de detecção. Detectores quânticos, térmicos e em radiofrequências. Medida do sinal. Fotometria e polarimetria: definição de grandezas. Métodos de calibração. Vetor Stokes. Imagem: formação (telescópios), degradação e tratamento. Análise espectral: instrumentos. Medida de contínuo e de linhas espectrais.",
+          "description_ptbr": "Coordenadas astronômicas. A atmosfera terrestre; estrutura, absorção, emissão e difusão de radiação. O que se observa em Astrofísica. Transformada de Fourier. Tratamento estatístico de dados. Detectores: princípios físicos de detecção. Detectores quânticos, térmicos e em radiofrequências. Medida do sinal. Fotometria e polarimetria: definição de grandezas. Métodos de calibração. Vetor Stokes. Imagem: formação (telescópios), degradação e tratamento. Análise espectral: instrumentos. Medida de contínuo e de linhas espectrais.<br>A atividade 2 já está disponível abaixo em DOCUMENTOS",
           "schedule": [
             {
               "date": "14/07/2026",

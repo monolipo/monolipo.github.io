@@ -1,0 +1,100 @@
+{
+  "schema": "moinpe-observing-proposal",
+  "version": 2,
+  "call": "2026B",
+  "savedAt": "2026-08-05T18:30:00.000Z",
+  "basic": {
+    "title": "Differential photometry of a short-period eclipsing binary",
+    "abstract": "We propose time-series photometry of a bright eclipsing binary to measure the eclipse depth, refine the time of minimum light and assess short-term variability. Observations in the G and R filters will provide a continuous light curve with a cadence below one minute. The resulting calibrated differential photometry will be compared with published ephemerides and modelled to constrain the eclipse morphology.",
+    "category": "Stellar Astrophysics",
+    "programType": "Regular Proposal (RP)",
+    "observingMode": "Queue / Service Observing",
+    "academicProject": "PhD thesis",
+    "studentName": "Example Student",
+    "advisorName": "Example Advisor"
+  },
+  "team": {
+    "pi": {
+      "name": "Example Student",
+      "institution": "INPE",
+      "email": "student@example.edu",
+      "phone": "+55 12 0000-0000",
+      "orcid": ""
+    },
+    "coauthors": [
+      {
+        "name": "Example Advisor",
+        "institution": "INPE",
+        "email": "advisor@example.edu",
+        "phone": "",
+        "orcid": ""
+      }
+    ]
+  },
+  "observation": {
+    "mode": "Photometry",
+    "requestedHours": "4.0",
+    "minimumHours": "2.5",
+    "proposalPriority": "Normal",
+    "primaryDates": ["2026-08-13"],
+    "backupDates": ["2026-08-20", "2026-08-21"],
+    "preferredStart": "18:30",
+    "preferredEnd": "23:00",
+    "afterMidnight": "No",
+    "midnightJustification": "",
+    "moonConstraint": "Any lunar phase",
+    "dateDistribution": "A single continuous four-hour block is preferred.",
+    "impossibleDates": "",
+    "seeingConstraint": "≤ 5 arcsec",
+    "transparencyConstraint": "Clear",
+    "airmassConstraint": "2.0",
+    "dataRetention": "24 months"
+  },
+  "photometry": {
+    "instrument": "ASI2600MM Pro + RGB + OAG-ASI120MM Mini",
+    "filters": ["G", "R"],
+    "binning": "2 × 2",
+    "readout": "1.11",
+    "gain": "100",
+    "offset": "Instrument standard",
+    "temperature": "-10",
+    "subframe": "Full frame",
+    "dither": "No",
+    "cadence": "45",
+    "calibrations": "Bias/dark + flats in G and R",
+    "comparisonStrategy": "Ensemble differential photometry with at least three non-variable comparison stars.",
+    "calculatorResult": ""
+  },
+  "spectroscopy": {
+    "instrument": "SGSV2.0 + ZWO ASI120MM Mini (guider)",
+    "calculatorResult": ""
+  },
+  "targets": [
+    {
+      "name": "Example Binary",
+      "ra": "18:00:00",
+      "dec": "-20:00:00",
+      "mag": "10.5",
+      "band": "V",
+      "type": "Science",
+      "priority": "1",
+      "exposure": "30",
+      "frames": "300",
+      "visits": "1",
+      "comments": "Continuous monitoring through eclipse"
+    }
+  ],
+  "science": {
+    "scientificJustification": "Eclipsing binaries provide direct constraints on stellar radii, orbital geometry and stellar evolution. The selected target has a well-established short period but its published ephemeris has accumulated uncertainty. A densely sampled eclipse obtained in two filters will measure a new time of minimum light and test whether the eclipse depth is wavelength dependent.",
+    "experimentalDesign": "The target will be monitored continuously before, during and after the predicted eclipse. Alternating G and R exposures will provide colour information while maintaining a cadence below one minute. The field contains several comparison stars of similar brightness. Bias/dark frames and flats in both filters will be obtained with the same detector configuration.",
+    "technicalJustification": "Thirty-second integrations keep the target and comparison stars within the linear detector regime while providing sufficient signal-to-noise. Including the 1.11 s readout, the expected cadence is approximately 31 s per frame. Four hours cover the baseline and full eclipse, while 2.5 hours constitute the minimum useful allocation.",
+    "reductionAnalysis": "Images will be bias/dark corrected and flat-fielded. Differential aperture photometry will be extracted for the target and an ensemble of comparison stars. Time stamps will be converted to a consistent barycentric system. The light curve will be fitted with an eclipse model, and the time of minimum and its uncertainty will be estimated by resampling.",
+    "expectedResults": "A calibrated two-band light curve, a new eclipse timing measurement and a comparison with the published ephemeris.",
+    "previousAllocations": "",
+    "complementaryObservations": "",
+    "backupPlan": "If transparency is variable but the target remains visible, differential photometry in G will be prioritised. If the primary target is unavailable, a second bright variable in the same sky region will be observed using the same configuration.",
+    "references": "Example et al. 2024, AJ, 000, 1"
+  },
+  "figures": [],
+  "declaration": true
+}

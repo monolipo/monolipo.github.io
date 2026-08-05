@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulário de pedido de tempo 2026B do Miniobservatório do INPE.">
+  <meta name="theme-color" content="#800020">
+  <title>Formulário 2026B | Miniobservatório do INPE</title>
+  <link rel="icon" href="assets/img/inpe-logo.png">
+  <link rel="stylesheet" href="assets/css/portal.css">
+</head>
+<body>
+<a class="skip-link" href="#proposalForm">Ir para o formulário</a>
+<header class="portal-header">
+  <div class="portal-header__inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/inpe-logo.png" alt="Logotipo do INPE">
+      <div>
+        <div class="brand__eyebrow">Instituto Nacional de Pesquisas Espaciais</div>
+        <div class="brand__title">Miniobservatório do INPE</div>
+        <div class="brand__subtitle">Observing Time Application Portal</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <span class="call-chip">2026B</span>
+      <button class="header-button" id="loadProposalTop" type="button">Carregar proposta</button>
+    </div>
+  </div>
+</header>
+
+<main class="form-shell">
+  <div class="form-toolbar">
+    <div>
+      <div class="eyebrow" style="color:var(--wine)">Telescópio C11 · Regular Proposal</div>
+      <h1>Observing Time Application</h1>
+    </div>
+    <div class="toolbar-actions">
+      <a class="btn btn-secondary btn-small" href="index.html">← Informações da chamada</a>
+      <button class="btn btn-outline btn-small" id="loadProposal" type="button">Carregar proposta</button>
+      <input class="sr-only" id="proposalFileInput" type="file" accept=".json,.moinpe.json,application/json">
+    </div>
+  </div>
+
+  <nav class="stepper" aria-label="Etapas da submissão">
+    <div class="step done" data-step="1"><span class="step__number">1</span><strong>Informações</strong><span>Chamada e instrumentos</span></div>
+    <div class="step active" data-step="2"><span class="step__number">2</span><strong>Formulário</strong><span>Preparação da proposta</span></div>
+    <div class="step" data-step="3"><span class="step__number">3</span><strong>Conferência e PDF</strong><span>Arquivo final</span></div>
+  </nav>
+
+  <div class="notice" style="margin-bottom:1rem">
+    <strong>Proposal language:</strong> all scientific and technical text fields must be written in English. The interface remains bilingual to assist preparation. All information stays in your browser until you download the proposal file or PDF.
+  </div>
+
+  <form id="proposalForm" novalidate>
+    <div class="form-layout">
+      <div class="form-main">
+        <section class="form-section" id="section-basic">
+          <header class="form-section__header">
+            <h2>1. Basic Information / Informações básicas</h2>
+            <p>Identify the scientific program concisely and classify the dominant area.</p>
+          </header>
+          <div class="form-section__body">
+            <div class="field-grid">
+              <div class="field col-12">
+                <label class="required" for="proposalTitle">Proposal Title <span class="counter" data-counter-for="proposalTitle">0/100</span></label>
+                <input id="proposalTitle" maxlength="100" minlength="10" required placeholder="A descriptive title between 10 and 100 characters">
+                <div class="field-help">Use a clear scientific title. Avoid relying only on the target name.</div>
+              </div>
+              <div class="field col-12">
+                <label class="required" for="abstract">Abstract <span class="counter" data-counter-for="abstract">0/1000</span></label>
+                <textarea id="abstract" maxlength="1000" required placeholder="Scientific motivation, objective, observable, requested observations and expected impact."></textarea>
+                <div class="field-help">Maximum 1000 characters and approximately 150 words.</div>
+              </div>
+              <div class="field col-4">
+                <label class="required" for="category">Category</label>
+                <select id="category" required>
+                  <option value="">Select category</option>
+                  <option>Solar System</option>
+                  <option>Exoplanets and Planet Formation</option>
+                  <option>Stellar Astrophysics</option>
+                  <option>Galactic Astronomy</option>
+                  <option>Extragalactic Astronomy</option>
+                  <option>Transients and Time-Domain Astronomy</option>
+                  <option>Interstellar Medium</option>
+                  <option>Astronomical Instrumentation</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field col-4">
+                <label for="programType">Program Type</label>
+                <input id="programType" value="Regular Proposal (RP)" readonly>
+              </div>
+              <div class="field col-4">
+                <label for="observingMode">Execution Mode</label>
+                <input id="observingMode" value="Queue / Service Observing" readonly>
+              </div>
+              <div class="field col-4">
+                <label for="academicProject">Associated academic work?</label>
+                <select id="academicProject">
+                  <option value="No">No</option>
+                  <option value="MSc thesis">MSc thesis</option>
+                  <option value="PhD thesis">PhD thesis</option>
+                  <option value="Undergraduate research">Undergraduate research</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="field col-4">
+                <label for="studentName">Student name</label>
+                <input id="studentName" placeholder="If applicable">
+              </div>
+              <div class="field col-4">
+                <label for="advisorName">Advisor name</label>
+                <input id="advisorName" placeholder="If applicable">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section" id="section-team">
+          <header class="form-section__header">
+            <h2>2. Investigators / Equipe</h2>
+            <p>Provide complete contact information for the PI and each co-investigator. Two co-authors are recommended, but additional members are allowed.</p>
+          </header>
+          <div class="form-section__body">
+            <h3 style="margin-top:0">Principal Investigator (PI)</h3>
+            <div class="field-grid">
+              <div class="field col-6"><label class="required" for="piName">Full name</label><input id="piName" required autocomplete="name"></div>
+              <div class="field col-6"><label class="required" for="piInstitution">Institution</label><input id="piInstitution" required></div>
+              <div class="field col-4"><label class="required" for="piEmail">E-mail</label><input id="piEmail" type="email" required autocomplete="email"></div>
+              <div class="field col-4"><label class="required" for="piPhone">Phone</label><input id="piPhone" type="tel" required autocomplete="tel"></div>
+              <div class="field col-4"><label for="piOrcid">ORCID</label><input id="piOrcid" placeholder="0000-0000-0000-0000"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;margin:1.2rem 0 .7rem;flex-wrap:wrap">
+              <div><h3 style="margin:0">Co-Investigators</h3><span class="muted small">Recommended: up to two members.</span></div>
+              <button class="btn btn-outline btn-small" id="addCoauthor" type="button">+ Add co-author</button>
+            </div>
+            <div id="coauthorList"></div>
+          </div>
+        </section>
+
+        <section class="form-section" id="section-observation">
+          <header class="form-section__header">
+            <h2>3. Observing Request / Solicitação observacional</h2>
+            <p>Select exactly one observing mode and define the requested allocation.</p>
+          </header>
+          <div class="form-section__body">
+            <label class="field-label required">Observing mode</label>
+            <div class="choice-grid" id="modeChoices">
+              <label class="choice-card" data-mode="Photometry">
+                <input type="radio" name="scienceMode" value="Photometry" required>
+                <strong>Photometry</strong>
+                <span>ASI2600MM Pro + RGB + OAG–ASI120MM Mini</span><br>
+                <small>Imaging, differential photometry and time series.</small>
+              </label>
+              <label class="choice-card" data-mode="Spectroscopy">
+                <input type="radio" name="scienceMode" value="Spectroscopy" required>
+                <strong>Spectroscopy</strong>
+                <span>SGSV2.0 + ZWO ASI120MM Mini (guider)</span><br>
+                <small>Optical slit spectroscopy and spectral time series.</small>
+              </label>
+            </div>
+
+            <div class="field-grid" style="margin-top:1rem">
+              <div class="field col-4"><label class="required" for="requestedHours">Total requested time (hours)</label><input id="requestedHours" type="number" min="0.1" step="0.1" required></div>
+              <div class="field col-4"><label class="required" for="minimumHours">Minimum useful time (hours)</label><input id="minimumHours" type="number" min="0.1" step="0.1" required></div>
+              <div class="field col-4"><label for="proposalPriority">Scheduling priority</label><select id="proposalPriority"><option>Normal</option><option>High — time critical</option><option>Flexible</option></select></div>
+              <div class="field col-12">
+                <label class="required">Primary observing dates</label>
+                <div class="inline-checks">
+                  <label class="check-pill"><input type="checkbox" name="primaryDate" value="2026-08-13"> 13 Aug 2026</label>
+                  <label class="check-pill"><input type="checkbox" name="primaryDate" value="2026-08-14"> 14 Aug 2026</label>
+                </div>
+              </div>
+              <div class="field col-12">
+                <label>Backup dates</label>
+                <div class="inline-checks">
+                  <label class="check-pill"><input type="checkbox" name="backupDate" value="2026-08-20"> 20 Aug 2026</label>
+                  <label class="check-pill"><input type="checkbox" name="backupDate" value="2026-08-21"> 21 Aug 2026</label>
+                </div>
+              </div>
+              <div class="field col-3"><label for="preferredStart">Preferred start</label><input id="preferredStart" type="time" value="18:30"></div>
+              <div class="field col-3"><label for="preferredEnd">Preferred end</label><input id="preferredEnd" type="time" value="23:59"></div>
+              <div class="field col-3"><label for="afterMidnight">After-midnight extension?</label><select id="afterMidnight"><option value="No">No</option><option value="Yes">Yes</option></select></div>
+              <div class="field col-3"><label for="moonConstraint">Moon constraint</label><select id="moonConstraint"><option>Any lunar phase</option><option>Dark/grey time preferred</option><option>Dark time required</option><option>Bright time acceptable</option></select></div>
+              <div class="field col-12 hidden" id="midnightJustificationWrap"><label class="required" for="midnightJustification">Justification for extension after midnight</label><textarea id="midnightJustification" placeholder="Explain why the science requires observations beyond 23:59."></textarea></div>
+              <div class="field col-6"><label for="dateDistribution">Requested time distribution</label><textarea id="dateDistribution" placeholder="How should the requested hours be distributed between the selected dates?"></textarea></div>
+              <div class="field col-6"><label for="impossibleDates">Unusable dates or intervals</label><textarea id="impossibleDates" placeholder="List any restrictions and explain whether they are scientific or operational."></textarea></div>
+              <div class="field col-3"><label for="seeingConstraint">Maximum seeing</label><select id="seeingConstraint"><option>No strict constraint</option><option>≤ 5 arcsec</option><option>≤ 4 arcsec</option><option>≤ 3 arcsec</option><option>Best available</option></select></div>
+              <div class="field col-3"><label for="transparencyConstraint">Transparency</label><select id="transparencyConstraint"><option>Thin clouds acceptable</option><option>Clear</option><option>Photometric</option></select></div>
+              <div class="field col-3"><label for="airmassConstraint">Maximum airmass</label><select id="airmassConstraint"><option>2.5</option><option>2.0</option><option>1.8</option><option>1.5</option><option>No strict limit</option></select></div>
+              <div class="field col-3"><label for="dataRetention">Data retention</label><select id="dataRetention"><option>24 months</option><option>12 months</option><option>No exclusive period</option></select></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section hidden" id="photometrySection">
+          <header class="form-section__header"><h2>4A. Photometric Configuration</h2><p>Define the acquisition configuration and justify the requested cadence and precision.</p></header>
+          <div class="form-section__body">
+            <div class="field-grid">
+              <div class="field col-12"><label for="photInstrument">Instrument</label><input id="photInstrument" value="ASI2600MM Pro + RGB + OAG-ASI120MM Mini" readonly></div>
+              <div class="field col-6"><label class="required">Filters</label><div class="inline-checks">
+                <label class="check-pill"><input type="checkbox" name="photFilter" value="B"> B</label>
+                <label class="check-pill"><input type="checkbox" name="photFilter" value="G"> G</label>
+                <label class="check-pill"><input type="checkbox" name="photFilter" value="R"> R</label>
+                <label class="check-pill"><input type="checkbox" name="photFilter" value="O III"> O III</label>
+                <label class="check-pill"><input type="checkbox" name="photFilter" value="Methane"> Methane</label>
+              </div></div>
+              <div class="field col-3"><label for="photBinning">Binning</label><select id="photBinning"><option>1 × 1</option><option>2 × 2</option><option>3 × 3</option><option>4 × 4</option></select></div>
+              <div class="field col-3"><label for="photReadout">Readout per frame (s)</label><input id="photReadout" type="number" min="0" step="0.01" value="1.11"></div>
+              <div class="field col-3"><label for="photGain">Gain</label><input id="photGain" type="number" min="0" step="1" value="100"></div>
+              <div class="field col-3"><label for="photOffset">Offset</label><input id="photOffset" value="Instrument standard"></div>
+              <div class="field col-3"><label for="photTemperature">Detector temperature (°C)</label><input id="photTemperature" type="number" step="1" value="-10"></div>
+              <div class="field col-3"><label for="photSubframe">Subframe / ROI</label><input id="photSubframe" value="Full frame"></div>
+              <div class="field col-3"><label for="photDither">Dithering</label><select id="photDither"><option>No</option><option>Between visits</option><option>Every N frames</option></select></div>
+              <div class="field col-3"><label for="photCadence">Desired cadence (s)</label><input id="photCadence" type="number" min="0" step="0.1"></div>
+              <div class="field col-6"><label for="photCalibrations">Calibration frames</label><input id="photCalibrations" value="Bias/dark + twilight or panel flats for each filter"></div>
+              <div class="field col-6"><label for="photComparisonStrategy">Comparison-star strategy</label><input id="photComparisonStrategy" placeholder="Ensemble differential photometry, field requirements, colour constraints..."></div>
+            </div>
+            <div class="calculator" style="margin-top:1rem">
+              <h3>Quick exposure-time estimator</h3>
+              <div class="field-grid">
+                <div class="field col-3"><label for="calcPhotFilter">Reference filter</label><select id="calcPhotFilter"><option value="G">G</option><option value="B">B</option></select></div>
+                <div class="field col-3"><label for="calcPhotMag">Target V magnitude</label><input id="calcPhotMag" type="number" step="0.1" value="10"></div>
+                <div class="field col-3"><label for="calcPhotSnr">Required SNR</label><input id="calcPhotSnr" type="number" step="1" value="100"></div>
+                <div class="field col-3" style="align-self:end"><button class="btn btn-outline" id="calcPhotButton" type="button">Estimate</button></div>
+              </div>
+              <div class="calc-output" id="photCalcOutput" aria-live="polite">Enter the target magnitude and required SNR.</div>
+              <div class="field-help">Empirical guide only. The proposal must still address saturation, cadence, sky, airmass and comparison stars.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section hidden" id="spectroscopySection">
+          <header class="form-section__header"><h2>4B. Spectroscopic Configuration</h2><p>Define the spectral region, resolution, slit strategy, calibration and SNR requirement.</p></header>
+          <div class="form-section__body">
+            <div class="field-grid">
+              <div class="field col-12"><label for="specInstrument">Instrument</label><input id="specInstrument" value="SGSV2.0 + ZWO ASI120MM Mini (guider)" readonly></div>
+              <div class="field col-4"><label for="specRegion">Wavelength region</label><input id="specRegion" placeholder="e.g., 580–700 nm"></div>
+              <div class="field col-4"><label for="specFeatures">Primary lines/features</label><input id="specFeatures" placeholder="e.g., Hα, Na D, continuum"></div>
+              <div class="field col-4"><label for="specResolution">Required resolving power R</label><input id="specResolution" type="number" min="1" step="1"></div>
+              <div class="field col-3"><label for="specSlit">Slit width</label><input id="specSlit" placeholder="Instrument setting / arcsec"></div>
+              <div class="field col-3"><label for="specBinning">Binning</label><select id="specBinning"><option>1 × 1</option><option>2 × 2</option><option>3 × 3</option></select></div>
+              <div class="field col-3"><label for="specReadout">Readout per frame (s)</label><input id="specReadout" type="number" min="0" step="0.01" value="2.5"></div>
+              <div class="field col-3"><label for="specGuiding">Guiding</label><input id="specGuiding" value="On-axis target guiding with ASI120MM Mini" readonly></div>
+              <div class="field col-4"><label for="specSnr">Required SNR</label><input id="specSnr" type="number" min="1" step="1"></div>
+              <div class="field col-8"><label for="specSnrDefinition">SNR definition</label><input id="specSnrDefinition" placeholder="e.g., SNR ≥ 50 per resolution element in the continuum near Hα"></div>
+              <div class="field col-12"><label for="specCalibrations">Calibration sequence</label><input id="specCalibrations" value="Bias/dark → spectral flat → arc → target → spectrophotometric standard → arc"></div>
+            </div>
+            <div class="calculator" style="margin-top:1rem">
+              <h3>Quick exposure-time estimator</h3>
+              <div class="field-grid">
+                <div class="field col-3"><label for="calcSpecRegion">Reference wavelength</label><select id="calcSpecRegion"><option value="600">600 nm</option><option value="420">420 nm</option></select></div>
+                <div class="field col-3"><label for="calcSpecMag">Target V magnitude</label><input id="calcSpecMag" type="number" step="0.1" value="6"></div>
+                <div class="field col-3"><label for="calcSpecSnr">Required SNR</label><input id="calcSpecSnr" type="number" step="1" value="50"></div>
+                <div class="field col-3" style="align-self:end"><button class="btn btn-outline" id="calcSpecButton" type="button">Estimate</button></div>
+              </div>
+              <div class="calc-output" id="specCalcOutput" aria-live="polite">Specify the wavelength, magnitude and SNR.</div>
+              <div class="field-help">State whether the SNR is per pixel or per resolution element and where it is evaluated.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section" id="section-targets">
+          <header class="form-section__header"><h2>5. Target List / Lista de alvos</h2><p>Include science targets, standards and comparison fields. Coordinates should be sexagesimal or decimal and unambiguous.</p></header>
+          <div class="form-section__body">
+            <div class="table-wrap">
+              <table class="data-table" aria-label="Lista de alvos">
+                <thead><tr><th>Target</th><th>RA</th><th>Dec</th><th>Mag.</th><th>Band</th><th>Type</th><th>Priority</th><th>Exp. (s)</th><th>Frames</th><th>Visits</th><th>Comments</th><th></th></tr></thead>
+                <tbody id="targetRows"></tbody>
+              </table>
+            </div>
+            <div class="table-actions">
+              <button class="btn btn-outline btn-small" id="addTarget" type="button">+ Add target</button>
+              <button class="btn btn-secondary btn-small" id="downloadTargetTemplate" type="button">Download CSV model</button>
+              <button class="btn btn-secondary btn-small" id="importTargets" type="button">Import CSV</button>
+              <input class="sr-only" id="targetCsvInput" type="file" accept=".csv,text/csv">
+            </div>
+            <div class="notice" id="timeEstimate" style="margin-top:1rem">Add exposure times and frame counts to estimate the execution time.</div>
+          </div>
+        </section>
+
+        <section class="form-section" id="section-science">
+          <header class="form-section__header"><h2>6. Scientific and Technical Case</h2><p>Connect the scientific question to an observable, required precision, instrument configuration and analysis plan.</p></header>
+          <div class="form-section__body">
+            <div class="field-grid">
+              <div class="field col-12"><label class="required" for="scientificJustification">Scientific Justification <span class="counter" data-counter-for="scientificJustification">0 words</span></label><textarea class="long" id="scientificJustification" required placeholder="Scientific background, specific question, current state of knowledge, objectives and expected impact."></textarea><div class="field-help">Recommended maximum: one page in the generated PDF.</div></div>
+              <div class="field col-12"><label class="required" for="experimentalDesign">Experimental Design <span class="counter" data-counter-for="experimentalDesign">0 words</span></label><textarea class="long" id="experimentalDesign" required placeholder="Sample selection, observing sequence, cadence, temporal coverage, standards, calibrations and how the observations answer the question."></textarea></div>
+              <div class="field col-12"><label class="required" for="technicalJustification">Technical Justification <span class="counter" data-counter-for="technicalJustification">0 words</span></label><textarea class="long" id="technicalJustification" required placeholder="Instrument choice, exposure-time/SNR calculation, requested hours, minimum useful time, observing constraints, overheads and feasibility."></textarea></div>
+              <div class="field col-12"><label class="required" for="reductionAnalysis">Data Reduction and Analysis <span class="counter" data-counter-for="reductionAnalysis">0 words</span></label><textarea class="long" id="reductionAnalysis" required placeholder="Calibration and reduction workflow, measured quantities, analysis methods, uncertainty estimation and final scientific products."></textarea></div>
+              <div class="field col-12"><label for="expectedResults">Expected Results and Publication Potential</label><textarea id="expectedResults" placeholder="Expected measurements, conclusions, data products, report or publication prospects."></textarea></div>
+              <div class="field col-6"><label for="previousAllocations">Previous Allocations and Results</label><textarea id="previousAllocations" placeholder="Relevant previous observations, preliminary results or project status."></textarea></div>
+              <div class="field col-6"><label for="complementaryObservations">Complementary Observations / Other Facilities</label><textarea id="complementaryObservations" placeholder="Other telescope requests or archival data and how they complement this proposal."></textarea></div>
+              <div class="field col-12"><label class="required" for="backupPlan">Backup Project and Risk Mitigation</label><textarea id="backupPlan" required placeholder="Plan for clouds, poor transparency, target unavailability, saturation, guiding difficulties or loss of a primary night."></textarea></div>
+              <div class="field col-12"><label for="references">References</label><textarea id="references" placeholder="Only references cited in the proposal, one per line."></textarea></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section" id="section-figures">
+          <header class="form-section__header"><h2>7. Figures and Tables / Figuras e tabelas</h2><p>Optional. Up to two figures are accepted in the generated PDF.</p></header>
+          <div class="form-section__body">
+            <div class="field-grid">
+              <div class="field col-6"><label for="figure1">Figure 1</label><input id="figure1" type="file" accept="image/png,image/jpeg,image/webp"><label for="figure1Caption" style="margin-top:.55rem">Caption</label><input id="figure1Caption" placeholder="Figure 1 caption in English"><div id="figure1Preview"></div></div>
+              <div class="field col-6"><label for="figure2">Figure 2</label><input id="figure2" type="file" accept="image/png,image/jpeg,image/webp"><label for="figure2Caption" style="margin-top:.55rem">Caption</label><input id="figure2Caption" placeholder="Figure 2 caption in English"><div id="figure2Preview"></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section" id="section-declaration">
+          <header class="form-section__header"><h2>8. Declaration</h2><p>Confirm that the proposal is complete and technically defensible.</p></header>
+          <div class="form-section__body">
+            <label class="check-pill" style="border-radius:10px;align-items:flex-start">
+              <input id="declaration" type="checkbox" required style="margin-top:.2rem">
+              <span>I confirm that the scientific and technical information is accurate, that the requested time includes the required overheads and calibrations, and that the proposal has been reviewed by the PI.</span>
+            </label>
+          </div>
+        </section>
+
+        <div class="form-actions">
+          <div><strong>Save often.</strong><div class="muted small">The saved metadata file can be loaded later on this page.</div></div>
+          <div class="form-actions__buttons">
+            <button class="btn btn-secondary" id="saveProposal" type="button">Salvar proposta</button>
+            <button class="btn btn-primary" id="submitProposal" type="button">Submeter proposta</button>
+          </div>
+        </div>
+
+        <section class="review-panel" id="reviewPanel" aria-live="polite">
+          <h2>3. Conferência e PDF</h2>
+          <div id="reviewContent"></div>
+          <div class="review-actions" id="reviewActions"></div>
+        </section>
+      </div>
+
+      <aside class="form-sidebar" aria-label="Resumo da proposta">
+        <div class="card progress-card">
+          <strong>Completion</strong>
+          <div class="progress-bar" aria-hidden="true"><span id="progressFill"></span></div>
+          <div class="small muted" id="progressText">0% complete</div>
+        </div>
+        <div class="card progress-card">
+          <strong>Proposal summary</strong>
+          <ul class="summary-list">
+            <li><span class="muted">Mode:</span> <strong id="summaryMode">Not selected</strong></li>
+            <li><span class="muted">Instrument:</span> <strong id="summaryInstrument">—</strong></li>
+            <li><span class="muted">Requested:</span> <strong id="summaryHours">—</strong></li>
+            <li><span class="muted">Targets:</span> <strong id="summaryTargets">0</strong></li>
+            <li><span class="muted">Schedule estimate:</span> <strong id="summaryEstimate">—</strong></li>
+          </ul>
+        </div>
+        <div class="card progress-card">
+          <strong>Local privacy</strong>
+          <p class="small muted">The page has no server-side database. Saving downloads a local metadata file; submitting generates a PDF in your browser.</p>
+        </div>
+      </aside>
+    </div>
+  </form>
+</main>
+
+<div class="modal-backdrop" id="loadModal" role="dialog" aria-modal="true" aria-labelledby="loadModalTitle">
+  <div class="modal">
+    <div class="modal__head"><h2 id="loadModalTitle">Carregar proposta</h2><button class="modal-close" type="button" data-close-modal aria-label="Fechar">×</button></div>
+    <div class="modal__body">
+      <p>Selecione um arquivo <code>.moinpe.json</code> ou <code>.json</code> salvo anteriormente. Os dados atuais do formulário serão substituídos.</p>
+      <button class="btn btn-primary" id="chooseProposalFile" type="button">Escolher arquivo</button>
+      <button class="btn btn-secondary" type="button" data-close-modal>Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast-stack" id="toastStack" aria-live="polite"></div>
+
+<script src="assets/js/pdf-generator.js"></script>
+<script src="assets/js/form.js"></script>
+</body>
+</html>

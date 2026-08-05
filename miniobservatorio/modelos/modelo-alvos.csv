@@ -1,0 +1,3 @@
+target,ra,dec,magnitude,band,type,priority,exposure,frames,visits,comments
+Example Target,12:34:56.7,-12:34:56,10.5,V,Science,1,60,30,1,Primary science target
+Photometric Standard,12:36:10.1,-12:28:30,11.2,V,Standard,2,20,5,1,Standard or comparison field

@@ -1,0 +1,316 @@
+<!doctype html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Formulário de pedido de tempo 2026B do Miniobservatório do INPE." name="description"/>
+<meta content="#800020" name="theme-color"/>
+<title>Formulário 2026B | Miniobservatório do INPE</title>
+<link href="assets/img/inpe-logo.png" rel="icon"/>
+<link href="assets/css/portal.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#proposalForm">Ir para o formulário</a>
+<header class="portal-header">
+<div class="portal-header__inner">
+<a class="brand" href="index.html">
+<img alt="Logotipo do INPE" src="assets/img/inpe-logo.png"/>
+<div>
+<div class="brand__eyebrow">Instituto Nacional de Pesquisas Espaciais</div>
+<div class="brand__title">Miniobservatório do INPE</div>
+<div class="brand__subtitle">Portal de Pedido de Tempo</div>
+</div>
+</a>
+<div class="header-actions">
+<span class="call-chip">2026B</span>
+<button class="header-button" id="loadProposalTop" type="button">Carregar proposta</button>
+</div>
+</div>
+</header>
+<main class="form-shell">
+<div class="form-toolbar">
+<div>
+<div class="eyebrow" style="color:var(--wine)">Telescópio C11 · Proposta Regular</div>
+<h1>Formulário de Pedido de Tempo</h1>
+</div>
+<div class="toolbar-actions">
+<a class="btn btn-secondary btn-small" href="index.html">← Informações da chamada</a>
+<button class="btn btn-outline btn-small" id="loadProposal" type="button">Carregar proposta</button>
+<input accept=".json,.moinpe.json,application/json" class="sr-only" id="proposalFileInput" type="file"/>
+</div>
+</div>
+<nav aria-label="Etapas da submissão" class="stepper">
+<div class="step done" data-step="1"><span class="step__number">1</span><strong>Informações</strong><span>Chamada e instrumentos</span></div>
+<div class="step active" data-step="2"><span class="step__number">2</span><strong>Formulário</strong><span>Preparação da proposta</span></div>
+<div class="step" data-step="3"><span class="step__number">3</span><strong>Conferência e PDF</strong><span>Arquivo final</span></div>
+</nav>
+<div class="notice" style="margin-bottom:1rem"><strong>Idioma da proposta:</strong> todos os campos científicos e técnicos devem ser preenchidos em português. As informações permanecem apenas no navegador até que o arquivo da proposta ou o PDF seja baixado.</div>
+<form id="proposalForm" novalidate="">
+<div class="form-layout">
+<div class="form-main">
+<section class="form-section" id="section-basic">
+<header class="form-section__header">
+<h2>1. Informações básicas</h2>
+<p>Identifique o programa científico de forma concisa e classifique sua área predominante.</p>
+</header>
+<div class="form-section__body">
+<div class="field-grid">
+<div class="field col-12">
+<label class="required" for="proposalTitle">Título da proposta <span class="counter" data-counter-for="proposalTitle">0/100</span></label>
+<input id="proposalTitle" maxlength="100" minlength="10" placeholder="Um título descritivo entre 10 e 100 caracteres" required=""/>
+<div class="field-help">Use um título científico claro. Evite utilizar apenas o nome do alvo.</div>
+</div>
+<div class="field col-12">
+<label class="required" for="abstract">Resumo <span class="counter" data-counter-for="abstract">0/1000</span></label>
+<textarea id="abstract" maxlength="1000" placeholder="Motivação científica, objetivo, grandeza observável, observações solicitadas e impacto esperado." required=""></textarea>
+<div class="field-help">Máximo de 1000 caracteres e aproximadamente 150 palavras.</div>
+</div>
+<div class="field col-4">
+<label class="required" for="category">Categoria</label>
+<select id="category" required=""><option value="">Selecione a categoria</option><option value="Sistema Solar">Sistema Solar</option><option value="Exoplanetas e formação planetária">Exoplanetas e formação planetária</option><option value="Astrofísica estelar">Astrofísica estelar</option><option value="Astronomia galáctica">Astronomia galáctica</option><option value="Astronomia extragaláctica">Astronomia extragaláctica</option><option value="Transientes e astronomia no domínio do tempo">Transientes e astronomia no domínio do tempo</option><option value="Meio interestelar">Meio interestelar</option><option value="Instrumentação astronômica">Instrumentação astronômica</option><option value="Outro">Outro</option></select>
+</div>
+<div class="field col-4">
+<label for="programType">Tipo de programa</label>
+<input id="programType" readonly="" value="Proposta Regular (PR)"/>
+</div>
+<div class="field col-4">
+<label for="observingMode">Modo de execução</label>
+<select id="observingMode" required=""><option value="">Selecione o modo de execução</option><option value="Observação clássica">Observação clássica — presencial pelos observadores</option><option value="Observação remota">Observação remota</option><option value="Observação em modo fila">Observação em modo fila</option><option value="Observação em modo serviço">Observação em modo serviço</option></select>
+</div>
+<div class="field col-4">
+<label for="academicProject">Trabalho acadêmico associado?</label>
+<select id="academicProject"><option value="Não">Não</option><option value="Dissertação de mestrado">Dissertação de mestrado</option><option value="Tese de doutorado">Tese de doutorado</option><option value="Iniciação científica">Iniciação científica</option><option value="Outro">Outro</option></select>
+</div>
+<div class="field col-4">
+<label for="studentName">Nome do estudante</label>
+<input id="studentName" placeholder="Se aplicável"/>
+</div>
+<div class="field col-4">
+<label for="advisorName">Nome do orientador</label>
+<input id="advisorName" placeholder="Se aplicável"/>
+</div>
+</div>
+</div>
+</section>
+<section class="form-section" id="section-team">
+<header class="form-section__header">
+<h2>2. Equipe proponente</h2>
+<p>Forneça os dados completos de contato do Investigador Principal e de cada coautor. Recomenda-se a inclusão de até dois coautores, mas membros adicionais são permitidos.</p>
+</header>
+<div class="form-section__body">
+<h3 style="margin-top:0">Investigador Principal (IP)</h3>
+<div class="field-grid">
+<div class="field col-6"><label class="required" for="piName">Nome completo</label><input autocomplete="name" id="piName" required=""/></div>
+<div class="field col-6"><label class="required" for="piInstitution">Instituição</label><input id="piInstitution" required=""/></div>
+<div class="field col-4"><label class="required" for="piEmail">E-mail</label><input autocomplete="email" id="piEmail" required="" type="email"/></div>
+<div class="field col-4"><label class="required" for="piPhone">Telefone</label><input autocomplete="tel" id="piPhone" required="" type="tel"/></div>
+<div class="field col-4"><label for="piOrcid">ORCID</label><input id="piOrcid" placeholder="0000-0000-0000-0000"/></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;margin:1.2rem 0 .7rem;flex-wrap:wrap">
+<div><h3 style="margin:0">Coautores</h3><span class="muted small">Recomendação: até dois membros.</span></div>
+<button class="btn btn-outline btn-small" id="addCoauthor" type="button">+ Adicionar coautor</button>
+</div>
+<div id="coauthorList"></div>
+</div>
+</section>
+<section class="form-section" id="section-observation">
+<header class="form-section__header">
+<h2>3. Solicitação observacional</h2>
+<p>Selecione exatamente um modo científico e defina a alocação solicitada.</p>
+</header>
+<div class="form-section__body">
+<label class="field-label required">Modo científico</label>
+<div class="choice-grid" id="modeChoices">
+<label class="choice-card" data-mode="Photometry">
+<input name="scienceMode" required="" type="radio" value="Photometry"/>
+<strong>Fotometria</strong>
+<span>ASI2600MM Pro + RGB + OAG–ASI120MM Mini</span><br/>
+<small>Imageamento, fotometria diferencial e séries temporais.</small>
+</label>
+<label class="choice-card" data-mode="Spectroscopy">
+<input name="scienceMode" required="" type="radio" value="Spectroscopy"/>
+<strong>Espectroscopia</strong>
+<span>SGSV2.0 + ZWO ASI120MM Mini (guiagem)</span><br/>
+<small>Espectroscopia óptica de fenda e séries espectroscópicas.</small>
+</label>
+</div>
+<div class="field-grid" style="margin-top:1rem">
+<div class="field col-4"><label class="required" for="requestedHours">Tempo total solicitado (horas)</label><input id="requestedHours" min="0.1" required="" step="0.1" type="number"/></div>
+<div class="field col-4"><label class="required" for="minimumHours">Tempo mínimo cientificamente útil (horas)</label><input id="minimumHours" min="0.1" required="" step="0.1" type="number"/></div>
+<div class="field col-4"><label for="proposalPriority">Prioridade de agendamento</label><select id="proposalPriority"><option value="Normal">Normal</option><option value="High — time critical">Alta — crítico no tempo</option><option value="Flexible">Flexível</option></select></div>
+<div class="field col-12">
+<label class="required">Datas principais de observação</label>
+<div class="inline-checks">
+<label class="check-pill"><input name="primaryDate" type="checkbox" value="2026-08-13"/> 13 de agosto de 2026</label>
+<label class="check-pill"><input name="primaryDate" type="checkbox" value="2026-08-14"/> 14 de agosto de 2026</label>
+</div>
+</div>
+<div class="field col-12">
+<label>Datas de contingência</label>
+<div class="inline-checks">
+<label class="check-pill"><input name="backupDate" type="checkbox" value="2026-08-20"/> 20 de agosto de 2026</label>
+<label class="check-pill"><input name="backupDate" type="checkbox" value="2026-08-21"/> 21 de agosto de 2026</label>
+</div>
+</div>
+<div class="field col-3"><label for="preferredStart">Início preferencial</label><input id="preferredStart" type="time" value="18:30"/></div>
+<div class="field col-3"><label for="preferredEnd">Término preferencial</label><input id="preferredEnd" type="time" value="23:59"/></div>
+<div class="field col-3"><label for="afterMidnight">Extensão após a meia-noite?</label><select id="afterMidnight"><option value="No">Não</option><option value="Yes">Sim</option></select></div>
+<div class="field col-3"><label for="moonConstraint">Restrição de Lua</label><select id="moonConstraint"><option value="Qualquer fase lunar">Qualquer fase lunar</option><option value="Tempo escuro ou intermediário preferencial">Tempo escuro ou intermediário preferencial</option><option value="Tempo escuro obrigatório">Tempo escuro obrigatório</option><option value="Tempo claro aceitável">Tempo claro aceitável</option></select></div>
+<div class="field col-12 hidden" id="midnightJustificationWrap"><label class="required" for="midnightJustification">Justificativa para extensão após a meia-noite</label><textarea id="midnightJustification" placeholder="Explique por que o objetivo científico exige observações após 23:59."></textarea></div>
+<div class="field col-6"><label for="dateDistribution">Distribuição do tempo solicitado</label><textarea id="dateDistribution" placeholder="Como as horas solicitadas devem ser distribuídas entre as datas selecionadas?"></textarea></div>
+<div class="field col-6"><label for="impossibleDates">Datas ou intervalos inviáveis</label><textarea id="impossibleDates" placeholder="Liste as restrições e explique se são científicas ou operacionais."></textarea></div>
+<div class="field col-3"><label for="seeingConstraint">Qualidade de imagem máxima</label><select id="seeingConstraint"><option value="Sem restrição rígida">Sem restrição rígida</option><option value="≤ 5 segundos de arco">≤ 5 segundos de arco</option><option value="≤ 4 segundos de arco">≤ 4 segundos de arco</option><option value="≤ 3 segundos de arco">≤ 3 segundos de arco</option><option value="Melhor disponível">Melhor disponível</option></select></div>
+<div class="field col-3"><label for="transparencyConstraint">Transparência</label><select id="transparencyConstraint"><option value="Nuvens finas aceitáveis">Nuvens finas aceitáveis</option><option value="Céu limpo">Céu limpo</option><option value="Fotométrico">Fotométrico</option></select></div>
+<div class="field col-3"><label for="airmassConstraint">Massa de ar máxima</label><select id="airmassConstraint"><option value="2.5">2,5</option><option value="2.0">2,0</option><option value="1.8">1,8</option><option value="1.5">1,5</option><option value="Sem limite rígido">Sem limite rígido</option></select></div>
+<div class="field col-3"><label for="dataRetention">Período de exclusividade dos dados</label><select id="dataRetention"><option value="24 meses">24 meses</option><option value="12 meses">12 meses</option><option value="Sem período de exclusividade">Sem período de exclusividade</option></select></div>
+</div>
+</div>
+</section>
+<section class="form-section hidden" id="photometrySection">
+<header class="form-section__header"><h2>4A. Configuração fotométrica</h2><p>Defina a configuração de aquisição e justifique a cadência e a precisão solicitadas.</p></header>
+<div class="form-section__body">
+<div class="field-grid">
+<div class="field col-12"><label for="photInstrument">Instrumento</label><input id="photInstrument" readonly="" value="ASI2600MM Pro + RGB + OAG-ASI120MM Mini"/></div>
+<div class="field col-6"><label class="required">Filtros</label><div class="inline-checks">
+<label class="check-pill"><input name="photFilter" type="checkbox" value="B"/> B</label>
+<label class="check-pill"><input name="photFilter" type="checkbox" value="G"/> G</label>
+<label class="check-pill"><input name="photFilter" type="checkbox" value="R"/> R</label>
+<label class="check-pill"><input name="photFilter" type="checkbox" value="O III"/> O III</label>
+<label class="check-pill"><input name="photFilter" type="checkbox" value="Methane"/> Metano</label>
+</div></div>
+<div class="field col-3"><label for="photBinning">Agrupamento de pixels</label><select id="photBinning"><option>1 × 1</option><option>2 × 2</option><option>3 × 3</option><option>4 × 4</option></select></div>
+<div class="field col-3"><label for="photReadout">Tempo de leitura por imagem (s)</label><input id="photReadout" min="0" step="0.01" type="number" value="1.11"/></div>
+<div class="field col-3"><label for="photGain">Ganho</label><input id="photGain" min="0" step="1" type="number" value="100"/></div>
+<div class="field col-3"><label for="photOffset">Deslocamento eletrônico</label><input id="photOffset" value="Padrão do instrumento"/></div>
+<div class="field col-3"><label for="photTemperature">Temperatura do detector (°C)</label><input id="photTemperature" step="1" type="number" value="-10"/></div>
+<div class="field col-3"><label for="photSubframe">Subquadro / região de interesse</label><input id="photSubframe" value="Quadro completo"/></div>
+<div class="field col-3"><label for="photDither">Deslocamento entre imagens</label><select id="photDither"><option value="No">Não</option><option value="Between visits">Entre visitas</option><option value="Every N frames">A cada N imagens</option></select></div>
+<div class="field col-3"><label for="photCadence">Cadência desejada (s)</label><input id="photCadence" min="0" step="0.1" type="number"/></div>
+<div class="field col-6"><label for="photCalibrations">Imagens de calibração</label><input id="photCalibrations" value="Imagens de viés/escuro + campos planos de crepúsculo ou painel para cada filtro"/></div>
+<div class="field col-6"><label for="photComparisonStrategy">Estratégia de estrelas de comparação</label><input id="photComparisonStrategy" placeholder="Fotometria diferencial por conjunto, requisitos de campo, restrições de cor..."/></div>
+</div>
+</div>
+</section>
+<section class="form-section hidden" id="spectroscopySection">
+<header class="form-section__header"><h2>4B. Configuração espectroscópica</h2><p>Defina a região espectral, a resolução, a estratégia de fenda, as calibrações e a relação sinal-ruído necessária.</p></header>
+<div class="form-section__body">
+<div class="field-grid">
+<div class="field col-12"><label for="specInstrument">Instrumento</label><input id="specInstrument" readonly="" value="SGSV2.0 + ZWO ASI120MM Mini (guiagem)"/></div>
+<div class="field col-4"><label for="specRegion">Região em comprimento de onda</label><input id="specRegion" placeholder="por exemplo, 580–700 nm"/></div>
+<div class="field col-4"><label for="specFeatures">Linhas ou características principais</label><input id="specFeatures" placeholder="por exemplo, Hα, Na D, contínuo"/></div>
+<div class="field col-4"><label for="specResolution">Poder de resolução necessário R</label><input id="specResolution" min="1" step="1" type="number"/></div>
+<div class="field col-3"><label for="specSlit">Largura da fenda</label><input id="specSlit" placeholder="Configuração instrumental / segundos de arco"/></div>
+<div class="field col-3"><label for="specBinning">Agrupamento de pixels</label><select id="specBinning"><option>1 × 1</option><option>2 × 2</option><option>3 × 3</option></select></div>
+<div class="field col-3"><label for="specReadout">Tempo de leitura por imagem (s)</label><input id="specReadout" min="0" step="0.01" type="number" value="2.5"/></div>
+<div class="field col-3"><label for="specGuiding">Guiagem</label><input id="specGuiding" readonly="" value="Guiagem no próprio alvo com a ASI120MM Mini"/></div>
+<div class="field col-4"><label for="specSnr">Relação sinal-ruído necessária</label><input id="specSnr" min="1" step="1" type="number"/></div>
+<div class="field col-8"><label for="specSnrDefinition">Definição da relação sinal-ruído</label><input id="specSnrDefinition" placeholder="por exemplo, S/R ≥ 50 por elemento de resolução no contínuo próximo de Hα"/></div>
+<div class="field col-12"><label for="specCalibrations">Sequência de calibração</label><textarea id="specCalibrations" placeholder="Descreva a sequência de calibração planejada."></textarea><div class="field-help">Sugestão: considere quais imagens de calibração e padrões são necessários antes, durante e depois dos alvos científicos.</div></div>
+</div>
+</div>
+</section>
+<section class="form-section" id="section-targets">
+<header class="form-section__header"><h2>5. Lista de alvos</h2><p>Inclua alvos científicos, padrões e campos de comparação. As coordenadas devem ser inequívocas, em formato sexagesimal ou decimal.</p></header>
+<div class="form-section__body">
+<div class="table-wrap">
+<table aria-label="Lista de alvos" class="data-table">
+<thead><tr><th>Alvo</th><th>AR</th><th>Dec</th><th>Mag.</th><th>Banda</th><th>Tipo</th><th>Prioridade</th><th>Exposição (s)</th><th>Imagens</th><th>Visitas</th><th>Comentários</th><th></th></tr></thead>
+<tbody id="targetRows"></tbody>
+</table>
+</div>
+<div class="table-actions">
+<button class="btn btn-outline btn-small" id="addTarget" type="button">+ Adicionar alvo</button>
+<button class="btn btn-secondary btn-small" id="downloadTargetTemplate" type="button">Baixar modelo CSV</button>
+<button class="btn btn-secondary btn-small" id="importTargets" type="button">Importar CSV</button>
+<input accept=".csv,text/csv" class="sr-only" id="targetCsvInput" type="file"/>
+</div>
+<div class="notice" id="timeEstimate" style="margin-top:1rem">Adicione os tempos de exposição e o número de imagens para estimar o tempo de execução.</div>
+</div>
+</section>
+<section class="form-section" id="section-science">
+<header class="form-section__header"><h2>6. Justificativas científica e técnica</h2><p>Relacione a pergunta científica à grandeza observável, à precisão necessária, à configuração instrumental e ao plano de análise.</p></header>
+<div class="form-section__body">
+<div class="field-grid">
+<div class="field col-12"><label class="required" for="scientificJustification">Justificativa científica <span class="counter" data-counter-for="scientificJustification">0 palavras</span></label><textarea class="long" id="scientificJustification" placeholder="Contexto científico, pergunta específica, estado atual do conhecimento, objetivos e impacto esperado." required=""></textarea><div class="field-help">Máximo recomendado: uma página no PDF gerado.</div></div>
+<div class="field col-12"><label class="required" for="experimentalDesign">Desenho experimental <span class="counter" data-counter-for="experimentalDesign">0 palavras</span></label><textarea class="long" id="experimentalDesign" placeholder="Seleção da amostra, sequência observacional, cadência, cobertura temporal, padrões, calibrações e como as observações respondem à pergunta." required=""></textarea></div>
+<div class="field col-12"><label class="required" for="technicalJustification">Justificativa técnica <span class="counter" data-counter-for="technicalJustification">0 palavras</span></label><textarea class="long" id="technicalJustification" placeholder="Escolha do instrumento, cálculo de tempo de exposição e relação sinal-ruído, horas solicitadas, tempo mínimo útil, restrições observacionais, tempos adicionais e viabilidade." required=""></textarea></div>
+<div class="field col-12"><label class="required" for="reductionAnalysis">Redução e análise dos dados <span class="counter" data-counter-for="reductionAnalysis">0 palavras</span></label><textarea class="long" id="reductionAnalysis" placeholder="Fluxo de calibração e redução, grandezas medidas, métodos de análise, estimativa de incertezas e produtos científicos finais." required=""></textarea></div>
+<div class="field col-12"><label for="expectedResults">Resultados esperados e potencial de publicação</label><textarea id="expectedResults" placeholder="Medidas esperadas, conclusões, produtos de dados e perspectivas de relatório ou publicação."></textarea></div>
+<div class="field col-6"><label for="previousAllocations">Alocações anteriores e resultados</label><textarea id="previousAllocations" placeholder="Observações anteriores relevantes, resultados preliminares ou estado do projeto."></textarea></div>
+<div class="field col-6"><label for="complementaryObservations">Observações complementares / outras instalações</label><textarea id="complementaryObservations" placeholder="Outros pedidos de telescópio ou dados de arquivo e como complementam esta proposta."></textarea></div>
+<div class="field col-12"><label class="required" for="backupPlan">Projeto alternativo e mitigação de riscos</label><textarea id="backupPlan" placeholder="Plano para nuvens, transparência ruim, indisponibilidade do alvo, saturação, dificuldades de guiagem ou perda de uma noite principal." required=""></textarea></div>
+<div class="field col-12"><label for="references">Referências</label><textarea id="references" placeholder="Somente as referências citadas na proposta, uma por linha."></textarea></div>
+</div>
+</div>
+</section>
+<section class="form-section" id="section-figures">
+<header class="form-section__header"><h2>7. Figuras e tabelas</h2><p>Opcional. O PDF gerado aceita até duas figuras.</p></header>
+<div class="form-section__body">
+<div class="field-grid">
+<div class="field col-6"><label for="figure1">Figura 1</label><input accept="image/png,image/jpeg,image/webp" id="figure1" type="file"/><label for="figure1Caption" style="margin-top:.55rem">Legenda</label><input id="figure1Caption" placeholder="Legenda da Figura 1 em português"/><div id="figure1Preview"></div></div>
+<div class="field col-6"><label for="figure2">Figura 2</label><input accept="image/png,image/jpeg,image/webp" id="figure2" type="file"/><label for="figure2Caption" style="margin-top:.55rem">Legenda</label><input id="figure2Caption" placeholder="Legenda da Figura 2 em português"/><div id="figure2Preview"></div></div>
+</div>
+</div>
+</section>
+<section class="form-section" id="section-declaration">
+<header class="form-section__header"><h2>8. Declaração</h2><p>Confirme que a proposta está completa e é tecnicamente defensável.</p></header>
+<div class="form-section__body">
+<label class="check-pill" style="border-radius:10px;align-items:flex-start">
+<input id="declaration" required="" style="margin-top:.2rem" type="checkbox"/>
+<span>Confirmo que as informações científicas e técnicas são corretas, que o tempo solicitado inclui os tempos adicionais e as calibrações necessárias e que a proposta foi revisada pelo Investigador Principal.</span>
+</label>
+</div>
+</section>
+<div class="form-actions">
+<div><strong>Salve com frequência.</strong><div class="muted small">O arquivo de metadados salvo poderá ser carregado posteriormente nesta página.</div></div>
+<div class="form-actions__buttons">
+<button class="btn btn-secondary" id="saveProposal" type="button">Salvar proposta</button>
+<button class="btn btn-primary" id="submitProposal" type="button">Submeter proposta</button>
+</div>
+</div>
+<section aria-live="polite" class="review-panel" id="reviewPanel">
+<h2>3. Conferência e PDF</h2>
+<div id="reviewContent"></div>
+<div class="review-actions" id="reviewActions"></div>
+</section>
+</div>
+<aside aria-label="Resumo da proposta" class="form-sidebar">
+<div class="card progress-card">
+<strong>Preenchimento</strong>
+<div aria-hidden="true" class="progress-bar"><span id="progressFill"></span></div>
+<div class="small muted" id="progressText">0% concluído</div>
+</div>
+<div class="card progress-card">
+<strong>Resumo da proposta</strong>
+<ul class="summary-list">
+<li><span class="muted">Modo:</span> <strong id="summaryMode">Não selecionado</strong></li>
+<li><span class="muted">Instrumento:</span> <strong id="summaryInstrument">—</strong></li>
+<li><span class="muted">Solicitado:</span> <strong id="summaryHours">—</strong></li>
+<li><span class="muted">Alvos:</span> <strong id="summaryTargets">0</strong></li>
+<li><span class="muted">Estimativa de tempo:</span> <strong id="summaryEstimate">—</strong></li>
+</ul>
+</div>
+<div class="card progress-card">
+<strong>Privacidade local</strong>
+<p class="small muted">A página não possui banco de dados no servidor. Salvar baixa um arquivo local de metadados; submeter gera um PDF no navegador.</p>
+</div>
+</aside>
+</div>
+</form>
+</main>
+<div aria-labelledby="loadModalTitle" aria-modal="true" class="modal-backdrop" id="loadModal" role="dialog">
+<div class="modal">
+<div class="modal__head"><h2 id="loadModalTitle">Carregar proposta</h2><button aria-label="Fechar" class="modal-close" data-close-modal="" type="button">×</button></div>
+<div class="modal__body">
+<p>Selecione um arquivo <code>.moinpe.json</code> ou <code>.json</code> salvo anteriormente. Os dados atuais do formulário serão substituídos.</p>
+<button class="btn btn-primary" id="chooseProposalFile" type="button">Escolher arquivo</button>
+<button class="btn btn-secondary" data-close-modal="" type="button">Cancelar</button>
+</div>
+</div>
+</div>
+<div aria-live="polite" class="toast-stack" id="toastStack"></div>
+<script src="assets/js/pdf-generator.js"></script>
+<script src="assets/js/form.js"></script>
+</body>
+</html>

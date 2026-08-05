@@ -1,0 +1,116 @@
+{
+  "schema": "moinpe-observing-proposal",
+  "version": 3,
+  "call": "2026B",
+  "savedAt": "2026-08-05T19:30:00.000Z",
+  "basic": {
+    "title": "Fotometria diferencial de uma binária eclipsante de curto período",
+    "abstract": "Propomos uma série temporal fotométrica de uma binária eclipsante brilhante para medir a profundidade do eclipse, refinar o instante de mínimo e investigar variabilidade de curto prazo. Observações nos filtros G e R fornecerão uma curva de luz contínua com cadência inferior a um minuto. A fotometria diferencial calibrada será comparada a efemérides publicadas e modelada para caracterizar a morfologia do eclipse.",
+    "category": "Astrofísica estelar",
+    "programType": "Proposta Regular (PR)",
+    "observingMode": "Observação clássica",
+    "academicProject": "Tese de doutorado",
+    "studentName": "Estudante de exemplo",
+    "advisorName": "Orientador de exemplo"
+  },
+  "team": {
+    "pi": {
+      "name": "Estudante de exemplo",
+      "institution": "INPE",
+      "email": "estudante@exemplo.edu.br",
+      "phone": "+55 12 0000-0000",
+      "orcid": ""
+    },
+    "coauthors": [
+      {
+        "name": "Orientador de exemplo",
+        "institution": "INPE",
+        "email": "orientador@exemplo.edu.br",
+        "phone": "",
+        "orcid": ""
+      }
+    ]
+  },
+  "observation": {
+    "mode": "Photometry",
+    "requestedHours": "4.0",
+    "minimumHours": "2.5",
+    "proposalPriority": "Normal",
+    "primaryDates": [
+      "2026-08-13"
+    ],
+    "backupDates": [
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "preferredStart": "18:30",
+    "preferredEnd": "23:00",
+    "afterMidnight": "No",
+    "midnightJustification": "",
+    "moonConstraint": "Qualquer fase lunar",
+    "dateDistribution": "É preferível um único bloco contínuo de quatro horas.",
+    "impossibleDates": "",
+    "seeingConstraint": "≤ 5 segundos de arco",
+    "transparencyConstraint": "Céu limpo",
+    "airmassConstraint": "2.0",
+    "dataRetention": "24 meses"
+  },
+  "photometry": {
+    "instrument": "ASI2600MM Pro + RGB + OAG-ASI120MM Mini",
+    "filters": [
+      "G",
+      "R"
+    ],
+    "binning": "2 × 2",
+    "readout": "1.11",
+    "gain": "100",
+    "offset": "Padrão do instrumento",
+    "temperature": "-10",
+    "subframe": "Quadro completo",
+    "dither": "No",
+    "cadence": "45",
+    "calibrations": "Imagens de viés/escuro e campos planos nos filtros G e R",
+    "comparisonStrategy": "Fotometria diferencial por conjunto com ao menos três estrelas de comparação não variáveis."
+  },
+  "spectroscopy": {
+    "instrument": "SGSV2.0 + ZWO ASI120MM Mini (guiagem)",
+    "region": "",
+    "features": "",
+    "resolution": "",
+    "slit": "",
+    "binning": "1 × 1",
+    "readout": "2.5",
+    "guiding": "Guiagem no próprio alvo com a ASI120MM Mini",
+    "snr": "",
+    "snrDefinition": "",
+    "calibrations": ""
+  },
+  "targets": [
+    {
+      "name": "Binária de exemplo",
+      "ra": "18:00:00",
+      "dec": "-20:00:00",
+      "mag": "10.5",
+      "band": "V",
+      "type": "Science",
+      "priority": "1",
+      "exposure": "30",
+      "frames": "300",
+      "visits": "1",
+      "comments": "Monitoramento contínuo durante o eclipse"
+    }
+  ],
+  "science": {
+    "scientificJustification": "Binárias eclipsantes fornecem vínculos diretos para raios estelares, geometria orbital e evolução estelar. O alvo selecionado possui período curto bem estabelecido, mas sua efeméride publicada acumulou incerteza. Um eclipse densamente amostrado em dois filtros permitirá medir um novo instante de mínimo e testar se a profundidade do eclipse depende do comprimento de onda.",
+    "experimentalDesign": "O alvo será monitorado continuamente antes, durante e depois do eclipse previsto. Exposições alternadas em G e R fornecerão informação de cor, mantendo cadência inferior a um minuto. O campo contém várias estrelas de comparação com brilho semelhante. Serão obtidas imagens de viés/escuro e campos planos nos dois filtros com a mesma configuração do detector.",
+    "technicalJustification": "Integrações de trinta segundos mantêm o alvo e as estrelas de comparação na região linear do detector e fornecem relação sinal-ruído suficiente. Incluindo 1,11 s de leitura, a cadência esperada é de aproximadamente 31 s por imagem. Quatro horas cobrem a linha de base e todo o eclipse, enquanto 2,5 horas constituem a alocação mínima útil.",
+    "reductionAnalysis": "As imagens serão corrigidas por viés/escuro e campo plano. Será extraída fotometria diferencial de abertura para o alvo e um conjunto de estrelas de comparação. Os instantes serão convertidos para um sistema temporal baricêntrico consistente. A curva de luz será ajustada por um modelo de eclipse, e o instante de mínimo e sua incerteza serão estimados por reamostragem.",
+    "expectedResults": "Uma curva de luz calibrada em duas bandas, uma nova medida do instante de eclipse e sua comparação com a efeméride publicada.",
+    "previousAllocations": "",
+    "complementaryObservations": "",
+    "backupPlan": "Se a transparência variar, mas o alvo permanecer visível, será priorizada fotometria diferencial em G. Se o alvo principal estiver indisponível, uma segunda variável brilhante na mesma região do céu será observada com a mesma configuração.",
+    "references": "Exemplo et al. 2024, AJ, 000, 1"
+  },
+  "figures": [],
+  "declaration": true
+}

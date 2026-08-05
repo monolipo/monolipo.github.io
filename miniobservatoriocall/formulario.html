@@ -137,7 +137,7 @@
 </div>
 <div class="field-grid" style="margin-top:1rem">
 <div class="field col-4"><label class="required" for="requestedHours">Tempo total solicitado (horas)</label><input id="requestedHours" min="0.1" required="" step="0.1" type="number"/></div>
-<div class="field col-4"><label class="required" for="minimumHours">Tempo mínimo cientificamente útil (horas)</label><input id="minimumHours" min="0.1" required="" step="0.1" type="number"/></div>
+<div class="field col-4"><label class="required" for="minimumHours">Tempo mínimo (horas)</label><input id="minimumHours" min="0.1" required="" step="0.1" type="number"/></div>
 <div class="field col-4"><label for="proposalPriority">Prioridade de agendamento</label><select id="proposalPriority"><option value="Normal">Normal</option><option value="High — time critical">Alta — crítico no tempo</option><option value="Flexible">Flexível</option></select></div>
 <div class="field col-12">
 <label class="required">Datas principais de observação</label>
@@ -163,7 +163,7 @@
 <div class="field col-3"><label for="seeingConstraint">Qualidade de imagem máxima</label><select id="seeingConstraint"><option value="Sem restrição rígida">Sem restrição rígida</option><option value="≤ 5 segundos de arco">≤ 5 segundos de arco</option><option value="≤ 4 segundos de arco">≤ 4 segundos de arco</option><option value="≤ 3 segundos de arco">≤ 3 segundos de arco</option><option value="Melhor disponível">Melhor disponível</option></select></div>
 <div class="field col-3"><label for="transparencyConstraint">Transparência</label><select id="transparencyConstraint"><option value="Nuvens finas aceitáveis">Nuvens finas aceitáveis</option><option value="Céu limpo">Céu limpo</option><option value="Fotométrico">Fotométrico</option></select></div>
 <div class="field col-3"><label for="airmassConstraint">Massa de ar máxima</label><select id="airmassConstraint"><option value="2.5">2,5</option><option value="2.0">2,0</option><option value="1.8">1,8</option><option value="1.5">1,5</option><option value="Sem limite rígido">Sem limite rígido</option></select></div>
-<div class="field col-3"><label for="dataRetention">Período de exclusividade dos dados</label><select id="dataRetention"><option value="24 meses">24 meses</option><option value="12 meses">12 meses</option><option value="Sem período de exclusividade">Sem período de exclusividade</option></select></div>
+<div class="field col-3"><label for="dataRetention">Exclusividade dos dados</label><select id="dataRetention"><option value="24 meses">24 meses</option><option value="12 meses">12 meses</option><option value="Sem período de exclusividade">Sem período de exclusividade</option></select></div>
 </div>
 </div>
 </section>
@@ -187,7 +187,7 @@
 <div class="field col-3"><label for="photSubframe">Subquadro / região de interesse</label><input id="photSubframe" value="Quadro completo"/></div>
 <div class="field col-3"><label for="photDither">Deslocamento entre imagens</label><select id="photDither"><option value="No">Não</option><option value="Between visits">Entre visitas</option><option value="Every N frames">A cada N imagens</option></select></div>
 <div class="field col-3"><label for="photCadence">Cadência desejada (s)</label><input id="photCadence" min="0" step="0.1" type="number"/></div>
-<div class="field col-6"><label for="photCalibrations">Imagens de calibração</label><input id="photCalibrations" value="Imagens de viés/escuro + campos planos de crepúsculo ou painel para cada filtro"/></div>
+<div class="field col-6"><label for="photCalibrations">Imagens de calibração</label><input id="photCalibrations" value="Flats de domo, flats de céu, bias, darks"/></div>
 <div class="field col-6"><label for="photComparisonStrategy">Estratégia de estrelas de comparação</label><input id="photComparisonStrategy" placeholder="Fotometria diferencial por conjunto, requisitos de campo, restrições de cor..."/></div>
 </div>
 </div>
@@ -200,7 +200,7 @@
 <div class="field col-4"><label for="specRegion">Região em comprimento de onda</label><input id="specRegion" placeholder="por exemplo, 580–700 nm"/></div>
 <div class="field col-4"><label for="specFeatures">Linhas ou características principais</label><input id="specFeatures" placeholder="por exemplo, Hα, Na D, contínuo"/></div>
 <div class="field col-4"><label for="specResolution">Poder de resolução necessário R</label><input id="specResolution" min="1" step="1" type="number"/></div>
-<div class="field col-3"><label for="specSlit">Largura da fenda</label><input id="specSlit" placeholder="Configuração instrumental / segundos de arco"/></div>
+<div class="field col-3"><label for="specSlit">Largura da fenda</label><input id="specSlit" placeholder="25 µm ou 100 µm"/></div>
 <div class="field col-3"><label for="specBinning">Agrupamento de pixels</label><select id="specBinning"><option>1 × 1</option><option>2 × 2</option><option>3 × 3</option></select></div>
 <div class="field col-3"><label for="specReadout">Tempo de leitura por imagem (s)</label><input id="specReadout" min="0" step="0.01" type="number" value="2.5"/></div>
 <div class="field col-3"><label for="specGuiding">Guiagem</label><input id="specGuiding" readonly="" value="Guiagem no próprio alvo com a ASI120MM Mini"/></div>
@@ -258,7 +258,7 @@
 <div class="form-section__body">
 <label class="check-pill" style="border-radius:10px;align-items:flex-start">
 <input id="declaration" required="" style="margin-top:.2rem" type="checkbox"/>
-<span>Confirmo que as informações científicas e técnicas são corretas, que o tempo solicitado inclui os tempos adicionais e as calibrações necessárias e que a proposta foi revisada pelo Investigador Principal.</span>
+<span>Confirmo que não foi utilizado IA generativa (ChatGpt, Gemini, CLAUDE e afins) em nenhuma etapa deste formulário. Confirmo que as informações científicas e técnicas são corretas, que o tempo solicitado inclui os tempos adicionais e as calibrações necessárias e que a proposta foi revisado por todos os proponentes.</span>
 </label>
 </div>
 </section>

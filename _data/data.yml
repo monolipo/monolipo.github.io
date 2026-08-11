@@ -3122,6 +3122,14 @@ lectures:
       name_ptbr: Atividade 2
       type: pdf
       link: /assets/documents/ast203-2026/Atividade2.pdf
+    - name: Exam 2
+      name_ptbr: Prova 2
+      type: pdf
+      link: /assets/documents/ast203-2026/prova2.pdf
+    - name: Resolution
+      name_ptbr: Prova 2 Resolvida
+      type: pdf
+      link: /assets/documents/ast203-2026/gabarito_prova_2.pdf
     bibliography: 'BEVINGTON, P. R. & ROBINSON, D. K. Data reduction and error analysis for the physical sciences, 3rd edition,
       McGraw-Hill Inc., 2002<br>BRADT, H. Astronomy Methods: A Physical Approach to Astronomical Observations, Cambridge Univ.
       Press, 2004.<br>GRAY, D. F. Observation and analysis of stellar photospheres, 3rd edition, Cambridge Univ. Press, 2008.<br>HOWELL,

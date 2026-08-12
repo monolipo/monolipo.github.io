@@ -3057,10 +3057,28 @@ lectures:
       of quantities. Calibration methods. Stokes vector. Imaging: formation (telescopes), degradation and processing. Spectral
       analysis: instruments. Measurement of continuum and spectral lines.<br>Homework 2 already in DOCUMENTS.'
     sections:
+    - name: Part 1 — Felipe
+      name_ptbr: Parte 1 — Felipe
+      color: '#425ac7'
+
     - name: Part 2 — Ted
       name_ptbr: Parte 2 — Ted
       color: '#18794e'
+
+    - name: Part 3
+      name_ptbr: Parte 3
+      color: '#a55b2a'
+
     lectures:
+    - section: Part 1 — Felipe
+      date: '[external]'
+      date_ptbr: '[externo]'
+      name: Link to Part 1 content
+      name_ptbr: Link para o conteúdo da parte 1
+      link: https://www.astrofelipe.com/lectures/ast_203_2026_2.html
+      link_ptbr: https://www.astrofelipe.com/lectures/ast_203_2026_2.html
+      blog: https://www.astrofelipe.com/lectures/ast_203_2026_2.html
+
     - section: Part 2 — Ted
       date: 14/07/2026
       name: Lecture 7 - Telescopes
@@ -3069,6 +3087,7 @@ lectures:
       link_ptbr: /lectures/ast203_2026_aula7_telescopios.html
       pdf: /assets/documents/ast203-2026/Aula%207%20-%20Telesc%C3%B3pios.pdf
       pdf_name: Aula 7 - Telescópios.pdf
+
     - section: Part 2 — Ted
       date: 16/07/2026
       name: Lecture 8 - Detectors
@@ -3077,6 +3096,7 @@ lectures:
       link_ptbr: /lectures/ast203_2026_aula8_detectores.html
       pdf: /assets/documents/ast203-2026/Aula%208%20-%20Detectores.pdf
       pdf_name: Aula 8 - Detectores.pdf
+
     - section: Part 2 — Ted
       date: 21/07/2026
       name: Lecture 9 - Imaging and photometry
@@ -3085,6 +3105,7 @@ lectures:
       link_ptbr: /lectures/ast203_2026_aula9_imageamento_fotometria.html
       pdf: /assets/documents/ast203-2026/Aula%209%20-%20Imageamento%20e%20fotometria.pdf
       pdf_name: Aula 9 - Imageamento e fotometria.pdf
+
     - section: Part 2 — Ted
       date: 23/07/2026
       name: Lecture 10 - Spectroscopy
@@ -3093,6 +3114,7 @@ lectures:
       link_ptbr: /lectures/ast203_2026_aula10_espectroscopia.html
       pdf: /assets/documents/ast203-2026/Aula%2010%20-%20Espectroscopia.pdf
       pdf_name: Aula 10 - Espectroscopia.pdf
+
     - section: Part 2 — Ted
       date: 28/07/2026
       name: Lecture 11 - Data processing
@@ -3101,6 +3123,7 @@ lectures:
       link_ptbr: /lectures/ast203_2026_aula11_processamento_dados.html
       pdf: /assets/documents/ast203-2026/Aula%2011%20-%20Processamento%20de%20dados.pdf
       pdf_name: Aula 11 - Processamento de dados.pdf
+
     - section: Part 2 — Ted
       date: 30/07/2026
       name: Lecture 12 - Observing-time proposal
@@ -3109,7 +3132,17 @@ lectures:
       link_ptbr: /lectures/ast203_2026_aula12_pedido_tempo.html
       pdf: /assets/documents/ast203-2026/Aula%2012%20-%20Pedido%20de%20tempo.pdf
       pdf_name: Aula 12 - Pedido de tempo.pdf
-    documents:
+
+    - section: Part 3
+      date: 11/08
+      name: 'Lecture 14: Large Surveys and Astronomical Databases'
+      name_ptbr: 'Aula 14: Grandes Levantamentos e Bases de Dados Astronômicos'
+      link: https://drive.google.com/file/d/1Te5m-EowneP12qK12H_dex4K5Ug5xIEt/view?usp=sharing
+      link_ptbr: https://drive.google.com/file/d/1Te5m-EowneP12qK12H_dex4K5Ug5xIEt/view?usp=sharing
+      video: https://youtu.be/8HHXe8uvfEk
+      pdf: https://drive.google.com/file/d/1Te5m-EowneP12qK12H_dex4K5Ug5xIEt/view?usp=sharing
+      drive: https://docs.google.com/presentation/d/1v-T3vUMu869wLH_Fbody3PwgtmUcVf-Cdf6wx1uiYBc/edit?usp=sharing
+      pdf_name: Aula 14 - Grandes Levantamentos e Bases de Dados Astronômicos.pdf    documents:
     - name: Course Description
       name_ptbr: Descrição do Curso
       type: pdf
@@ -3144,7 +3177,7 @@ lectures:
       O que se observa em Astrofísica. Transformada de Fourier. Tratamento estatístico de dados. Detectores: princípios físicos
       de detecção. Detectores quânticos, térmicos e em radiofrequências. Medida do sinal. Fotometria e polarimetria: definição
       de grandezas. Métodos de calibração. Vetor Stokes. Imagem: formação (telescópios), degradação e tratamento. Análise
-      espectral: instrumentos. Medida de contínuo e de linhas espectrais.<br><br>Link para o bloco 1 da disciplina:<br>https://www.astrofelipe.com/lectures/ast_203_2026_2.html'
+      espectral: instrumentos. Medida de contínuo e de linhas espectrais.'
     schedule:
     - date: 14/07/2026
       class: Lecture 7

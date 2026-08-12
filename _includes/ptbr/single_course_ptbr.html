@@ -69,7 +69,7 @@
   {% for lecture in course.lectures %}
   {% if lecture.section == section.name %}
   <tr>
-    <td><span style="color: #aaa">{{ lecture.date_ptbr | default: lecture.date }} -</span> <a href="{{ lecture.link_ptbr | default: lecture.link }}" class="lecture-name">{{ lecture.name_ptbr | default: lecture.name }}</a></td>
+    <td><span style="color: #aaa">{{ lecture.date }} -</span> <a href="{{ lecture.link_ptbr | default: lecture.link }}" class="lecture-name">{{ lecture.name_ptbr | default: lecture.name }}</a></td>
     <td>{% if lecture.video %}<a href="{{ lecture.video }}" target="_blank" rel="noopener"><i class="fa-solid fa-play lecture-icon"></i></a>{% endif %}</td>
     <td>{% if lecture.pdf %}<a href="{{ lecture.pdf }}" download="{{ lecture.pdf_name | default: 'aula.pdf' }}" title="Baixar PDF" aria-label="Baixar PDF"><i class="fa-solid fa-file-pdf lecture-icon"></i></a>{% endif %}</td>
     <td>{% if lecture.drive %}<a href="{{ lecture.drive }}" target="_blank" rel="noopener"><i class="fa-brands fa-google-drive lecture-icon"></i></a>{% endif %}</td>

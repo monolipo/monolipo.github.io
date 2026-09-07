@@ -1,0 +1,40 @@
+{% assign media = site.data.data.latest_media %}
+{% if media %}
+<section class="section research-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-sm">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fas fa-newspaper fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ media.title }}
+  </h2>
+
+  {% for item in media.info %}
+  <div class="item">
+
+    <h3 class="job-title">
+      <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
+        {{ item.title }}
+      </a>
+    </h3>
+
+    <div class="company">
+      {{ item.source }} · {{ item.date }}
+    </div>
+
+    <div class="job-details" style="display: block;">
+      {{ item.summary | markdownify }}
+    </div>
+
+    <p>
+      <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
+        Read full article →
+      </a>
+    </p>
+
+  </div>
+  {% endfor %}
+
+</section>
+{% endif %}

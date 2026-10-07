@@ -1935,20 +1935,9 @@ event-participation:
   title_ptbr: "Participações Passadas"
   intro: ""
   events:
-    - title: "XXVI Curso de Introdução a Astronomia e Astrofísica - CIAA 2026"
-      title_ptbr: "XXVI Curso de Introdução a Astronomia e Astrofísica - CIAA 2026"
-      link: "https://www.gov.br/inpe/pt-br/eventos/ciaa-2026/programa"
-      date: "20-24/Jul/2026"
-      date_ptbr: "20-24/Jul/2026"
-      location: "São José dos Campos, Brazil"
-      location_ptbr: "São José dos Campos, Brasil"
-      country-code: "br"
-      state-code: "br-sp"
-      remote: false
-      contribution: "Lecturer"
-      contribution_ptbr: "Professor"
+    - title: "2026"
+      year-mark: true
       upcoming: false
-      details: "Extension course hosted by INPE."
     - title: "XLIX Reunião Anual da Sociedade Astronômica Brasileira"
       title_ptbr: "XLIX Reunião Anual da Sociedade Astronômica Brasileira"
       link: "https://sab-astro.org.br/eventos/reuniao-anual-da-sab/xlix-reuniao-anual-da-sab/"
@@ -1966,6 +1955,20 @@ event-participation:
     - title: "2026"
       year-mark: true
       upcoming: false
+    - title: "XXVI Curso de Introdução a Astronomia e Astrofísica - CIAA 2026"
+      title_ptbr: "XXVI Curso de Introdução a Astronomia e Astrofísica - CIAA 2026"
+      link: "https://www.gov.br/inpe/pt-br/eventos/ciaa-2026/programa"
+      date: "20-24/Jul/2026"
+      date_ptbr: "20-24/Jul/2026"
+      location: "São José dos Campos, Brazil"
+      location_ptbr: "São José dos Campos, Brasil"
+      country-code: "br"
+      state-code: "br-sp"
+      remote: false
+      contribution: "Lecturer"
+      contribution_ptbr: "Professor"
+      upcoming: false
+      details: "Extension course hosted by INPE."
     - title: "Exoplanetas além das técnicas tradicionais: microlentes gravitacionais e a busca por outros mundos  - XV Semana da Física"
       title_ptbr: "Exoplanetas além das técnicas tradicionais: microlentes gravitacionais e a busca por outros mundos  - XV Semana da Física"
       link: "https://infis.ufu.br/acontece/2026-08-xv-semana-da-fisica"

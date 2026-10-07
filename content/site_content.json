@@ -225,7 +225,8 @@
           "value": "São José dos Campos, SP, Brazil",
           "link": ""
         }
-      ]
+      ],
+      "summary": ""
     },
     "summary_ptbr": {
       "personal-title": "Informação Pessoal",
@@ -304,7 +305,8 @@
           "value": "São José dos Campos, SP, Brasil",
           "link": ""
         }
-      ]
+      ],
+      "summary": ""
     },
     "sidebar": {
       "position": "right",
@@ -387,7 +389,8 @@
       "hobbies": {
         "title": "Hobbies",
         "info": []
-      }
+      },
+      "location": ""
     },
     "sidebar_ptbr": {
       "position": "right",
@@ -398,11 +401,11 @@
       "name": "Leandro de Almeida",
       "country-code": "br",
       "pronoun": "Dr. - Ele / Dele",
-      "tagline": "Astrofísico",
+      "tagline": "Astrophysicist",
       "avatar": "ted_profile.jpeg",
       "institute-logo": "inpe_branco.png",
       "contact-title": "Contato",
-      "email": "monolipo.physics@gmail.com",
+      "email": "leandro.almeida@inpe.br",
       "phone": "",
       "lattes": "7278094197406927",
       "ads": "Ted Leandro de Almeida",
@@ -470,7 +473,8 @@
       "hobbies": {
         "title": "Hobbies",
         "info": []
-      }
+      },
+      "location": ""
     },
     "career-profile": {
       "title": "Career Profile",
@@ -2386,8 +2390,24 @@
           "remote": false,
           "contribution": "Lecturer",
           "contribution_ptbr": "Professor",
-          "upcoming": true,
-          "details": "Extension course hosted by INPE. This entry is editable in EDITAR_SITE.html."
+          "upcoming": false,
+          "details": "Extension course hosted by INPE."
+        },
+        {
+          "title": "Exoplanetas além das técnicas tradicionais: microlentes gravitacionais e a busca por outros mundos  - XV Semana da Física",
+          "title_ptbr": "Exoplanetas além das técnicas tradicionais: microlentes gravitacionais e a busca por outros mundos  - XV Semana da Física",
+          "link": "https://infis.ufu.br/acontece/2026-08-xv-semana-da-fisica",
+          "date": "06-08/Oct/2026",
+          "date_ptbr": "06-08/Out/2026",
+          "location": "Uberlândia, Brazil",
+          "location_ptbr": "Uberlândia, Brasil",
+          "country-code": "br",
+          "state-code": "br-mg",
+          "remote": false,
+          "contribution": "Invited Lecturer",
+          "contribution_ptbr": "Palestra Convidada",
+          "upcoming": false,
+          "details": "Test"
         },
         {
           "title": "XLIX Reunião Anual da Sociedade Astronômica Brasileira",
@@ -3212,8 +3232,8 @@
         {
           "name": "Brasil",
           "views": 397,
-          "lat": -10.0,
-          "lon": -55.0
+          "lat": -10,
+          "lon": -55
         },
         {
           "name": "Estados Unidos",
@@ -3225,7 +3245,7 @@
           "name": "Irlanda",
           "views": 43,
           "lat": 53.3,
-          "lon": -8.0
+          "lon": -8
         },
         {
           "name": "Alemanha",
@@ -3725,7 +3745,7 @@
           "name": "Sotanga",
           "views": 2,
           "lat": -6.3,
-          "lon": 35.0
+          "lon": 35
         },
         {
           "name": "Acari",

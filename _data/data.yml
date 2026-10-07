@@ -2744,7 +2744,7 @@ event-participation:
     remote: false
     contribution: Lecturer
     contribution_ptbr: Professor
-    upcoming: true
+    upcoming: false
     details: Extension course hosted by INPE. This entry is editable in EDITAR_SITE.html.
   - title: XLIX Reunião Anual da Sociedade Astronômica Brasileira
     title_ptbr: XLIX Reunião Anual da Sociedade Astronômica Brasileira

@@ -2749,6 +2749,21 @@ event-participation:
   - title: '2026'
     year-mark: true
     upcoming: false
+
+  - title: Exoplanetas além das técnicas tradicionais: microlentes gravitacionais e a busca por outros mundos  - XV Semana da Física
+    title_ptbr: Exoplanetas além das técnicas tradicionais: microlentes gravitacionais e a busca por outros mundos  - XV Semana da Física
+    link: https://infis.ufu.br/acontece/2026-08-xv-semana-da-fisica
+    date: 06-08/Oct/2026
+    date_ptbr: 06-08/Out/2026
+    location: Uberlândia, Brazil
+    location_ptbr: Uberlândia, Minas Gerais, Brasil
+    country-code: br
+    state-code: br-mg
+    remote: false
+    contribution: Invited Lecturer
+    contribution_ptbr: Palestra convidada
+    upcoming: false
+    details: Extension course hosted by INPE. This entry is editable in EDITAR_SITE.html.
   - title: XXVI Curso de Introdução a Astronomia e Astrofísica - CIAA 2026
     title_ptbr: XXVI Curso de Introdução a Astronomia e Astrofísica - CIAA 2026
     link: https://www.gov.br/inpe/pt-br/eventos/ciaa-2026/programa
@@ -2762,7 +2777,7 @@ event-participation:
     contribution: Lecturer
     contribution_ptbr: Professor
     upcoming: false
-    details: Extension course hosted by INPE. This entry is editable in EDITAR_SITE.html.
+    details: Palestra convidada na XV Semana da Física na UFU em Uberlândia.
   - title: 'Exoplanets beyond traditional techniques: the power of gravitational microlensing'
     title_ptbr: 'Exoplanetas além das técnicas tradicionais: o poder das microlentes gravitacionais'
     link: ''

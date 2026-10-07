@@ -1949,6 +1949,20 @@ event-participation:
       contribution_ptbr: "Professor"
       upcoming: false
       details: "Extension course hosted by INPE."
+    - title: "Exoplanetas além das técnicas tradicionais: microlentes gravitacionais e a busca por outros mundos  - XV Semana da Física"
+      title_ptbr: "Exoplanetas além das técnicas tradicionais: microlentes gravitacionais e a busca por outros mundos  - XV Semana da Física"
+      link: "https://infis.ufu.br/acontece/2026-08-xv-semana-da-fisica"
+      date: "06-08/Oct/2026"
+      date_ptbr: "06-08/Out/2026"
+      location: "Uberlândia, Brazil"
+      location_ptbr: "Uberlândia, Brasil"
+      country-code: "br"
+      state-code: "br-mg"
+      remote: false
+      contribution: "Invited Lecturer"
+      contribution_ptbr: "Palestra Convidada"
+      upcoming: true
+      details: "Test"
     - title: "XLIX Reunião Anual da Sociedade Astronômica Brasileira"
       title_ptbr: "XLIX Reunião Anual da Sociedade Astronômica Brasileira"
       link: "https://sab-astro.org.br/eventos/reuniao-anual-da-sab/xlix-reuniao-anual-da-sab/"
@@ -1966,20 +1980,6 @@ event-participation:
     - title: "2026"
       year-mark: true
       upcoming: false
-    - title: "Exoplanetas além das técnicas tradicionais: microlentes gravitacionais e a busca por outros mundos  - XV Semana da Física"
-      title_ptbr: "Exoplanetas além das técnicas tradicionais: microlentes gravitacionais e a busca por outros mundos  - XV Semana da Física"
-      link: "https://infis.ufu.br/acontece/2026-08-xv-semana-da-fisica"
-      date: "06-08/Oct/2026"
-      date_ptbr: "06-08/Out/2026"
-      location: "Uberlândia, Brazil"
-      location_ptbr: "Uberlândia, Brasil"
-      country-code: "br"
-      state-code: "br-mg"
-      remote: false
-      contribution: "Invited Lecturer"
-      contribution_ptbr: "Palestra Convidada"
-      upcoming: false
-      details: "Test"
     - title: "Exoplanets beyond traditional techniques: the power of gravitational microlensing"
       title_ptbr: "Exoplanetas além das técnicas tradicionais: o poder das microlentes gravitacionais"
       link: ""

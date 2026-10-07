@@ -2406,7 +2406,7 @@
           "remote": false,
           "contribution": "Invited Lecturer",
           "contribution_ptbr": "Palestra Convidada",
-          "upcoming": false,
+          "upcoming": true,
           "details": "Test"
         },
         {

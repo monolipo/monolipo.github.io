@@ -1963,7 +1963,7 @@ event-participation:
       remote: false
       contribution: "Invited Lecturer"
       contribution_ptbr: "Palestra Convidada"
-      upcoming: false
+      upcoming: true
       details: "Test"
     - title: "XLIX Reunião Anual da Sociedade Astronômica Brasileira"
       title_ptbr: "XLIX Reunião Anual da Sociedade Astronômica Brasileira"

@@ -2378,6 +2378,11 @@
       "intro": "",
       "events": [
         {
+          "title": "2026",
+          "year-mark": true,
+          "upcoming": false
+        },
+        {
           "title": "XLIX Reunião Anual da Sociedade Astronômica Brasileira",
           "title_ptbr": "XLIX Reunião Anual da Sociedade Astronômica Brasileira",
           "link": "https://sab-astro.org.br/eventos/reuniao-anual-da-sab/xlix-reuniao-anual-da-sab/",

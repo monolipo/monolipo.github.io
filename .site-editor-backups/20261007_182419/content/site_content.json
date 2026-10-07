@@ -2378,6 +2378,11 @@
       "intro": "",
       "events": [
         {
+          "title": "2026",
+          "year-mark": true,
+          "upcoming": false
+        },
+        {
           "title": "XLIX Reunião Anual da Sociedade Astronômica Brasileira",
           "title_ptbr": "XLIX Reunião Anual da Sociedade Astronômica Brasileira",
           "link": "https://sab-astro.org.br/eventos/reuniao-anual-da-sab/xlix-reuniao-anual-da-sab/",
@@ -2769,7 +2774,7 @@
           "semester": "2026.2",
           "name": "Observational Astrophysics Techniques",
           "name_ptbr": "Técnicas de Astrofísica Observacional",
-          "type": "finished",
+          "type": "ongoing",
           "link": "/lectures/ast203_2026.html",
           "institute": "INPE",
           "institute_long": "Instituto Nacional de Pesquisas Espaciais",

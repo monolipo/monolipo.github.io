@@ -312,6 +312,26 @@ career-profile_ptbr:
   title: "Perfil de Carreira"
   summary: "Sou Pesquisador da Divisão de Astrofísica do Instituto Nacional de Pesquisas Espaciais (INPE), onde também sou membro do corpo docente da pós-graduação em Astrofísica. Minha atuação se concentra em exoplanetas, microlentes gravitacionais, astrofísica estelar, instrumentação astronômica e observações no domínio temporal. <br><br>Doutor em Física pela Universidade Federal do Rio Grande do Norte (UFRN), onde trabalhei com a parametrização das equações de microlentes gravitacionais e sua aplicação na busca por exoplanetas de baixa massa. Tenho ampla experiência observacional no Observatório do Pico dos Dias, com mais de 350 noites de observação usando câmeras diretas e espectrógrafos, e participei de propostas observacionais com o Gemini Norte e o SOAR. Também atuei como astrônomo residente do telescópio SOAR e participei do comissionamento do instrumento SPARC4. Desde 2022, participo da colaboração GRANDMA como observador e na redução/análise de dados, além de integrar o consórcio PLATO na área estelar."
   summary-more: ""
+latest_media:
+  title: Latest Media Publications
+  info:
+    - title: "From Brazópolis to space: INPE joins international study revealing a planet eight times the mass of Earth"
+      source: "TV UAI"
+      date: "September 4, 2026"
+      link: "https://www.tvuai.com.br/portal/de-brazopolis-para-o-espaco-inpe-participa-de-estudo-internacional-que-revela-planeta-com-oito-vezes-a-massa-da-terra/"
+      summary: "Coverage highlighting the contribution of observations obtained at the Pico dos Dias Observatory to the characterization of the microlensing planet KMT-2025-BLG-0912Lb, with an estimated mass of about eight Earth masses. The article also discusses my participation in the observing campaign and the involvement of graduate students in the acquisition of the Brazilian data."
+
+    - title: "With INPE participation, international study detects a low-mass planet"
+      source: "INPE"
+      date: "August 31, 2026"
+      link: "https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias/com-participacao-do-inpe-estudo-internacional-detecta-planeta-de-baixa-massa"
+      summary: "INPE report on an international study of two planetary systems discovered through gravitational microlensing. Observations from the Pico dos Dias Observatory recorded part of the planetary anomaly of KMT-2025-BLG-0912, helping characterize a planet with a mass close to eight Earth masses. I was responsible for the OPD data used in the study."
+
+latest_media_ptbr:
+  title: Últimas matérias
+  info:
+    - title: "De Brazópolis para o espaço: INPE participa de estudo internacional que revela planeta com oito vezes a massa da Terra"
+      source: "TV UAI"
 education:
   title: "Education and Postdocs"
   info:

@@ -2769,7 +2769,7 @@
           "semester": "2026.2",
           "name": "Observational Astrophysics Techniques",
           "name_ptbr": "Técnicas de Astrofísica Observacional",
-          "type": "finished",
+          "type": "ongoing",
           "link": "/lectures/ast203_2026.html",
           "institute": "INPE",
           "institute_long": "Instituto Nacional de Pesquisas Espaciais",
@@ -2893,11 +2893,11 @@
             },
             {
               "section": "Part 2 — Ted",
-              "date": "",
-              "name": "New lecture",
-              "name_ptbr": "Nova aula",
-              "link": "",
-              "link_ptbr": "",
+              "date": "15/10/2026",
+              "name": "Extra lecture",
+              "name_ptbr": "Aula extra",
+              "link": "/lectures/ast203_2026_aula7_extra_lecture.html",
+              "link_ptbr": "/lectures/ast203_2026_aula7_extra_lecture_ptbr.html",
               "pdf": "",
               "pdf_name": ""
             }

@@ -2834,10 +2834,10 @@
             {
               "section": "Part 2 — Ted",
               "date": "14/07/2026",
-              "name": "Lecture 7 - Telescopes",
-              "name_ptbr": "Aula 7 - Telescópios",
-              "link": "/lectures/ast203_2026_aula7_telescopes.html",
-              "link_ptbr": "/lectures/ast203_2026_aula7_telescopios.html",
+              "name": "Aula 7 - Telescópios",
+              "name_ptbr": "Aula 7 - Telescopes",
+              "link": "/lectures/ast203_2026_aula1_telescopios.html",
+              "link_ptbr": "/lectures/ast203_2026_aula1_telescopios_ptbr.html",
               "pdf": "/assets/documents/ast203-2026/Aula%207%20-%20Telesc%C3%B3pios.pdf",
               "pdf_name": "Aula 7 - Telescópios.pdf"
             },
@@ -2890,6 +2890,16 @@
               "link_ptbr": "/lectures/ast203_2026_aula12_pedido_tempo.html",
               "pdf": "/assets/documents/ast203-2026/Aula%2012%20-%20Pedido%20de%20tempo.pdf",
               "pdf_name": "Aula 12 - Pedido de tempo.pdf"
+            },
+            {
+              "section": "Part 2 — Ted",
+              "date": "",
+              "name": "New lecture",
+              "name_ptbr": "Nova aula",
+              "link": "",
+              "link_ptbr": "",
+              "pdf": "",
+              "pdf_name": ""
             }
           ],
           "documents": [

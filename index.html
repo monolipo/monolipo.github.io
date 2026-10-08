@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% unless site.data.data.sidebar.education %}
+  {% include education.html %}
+{% endunless %}
+
 {% unless site.data.data.sidebar.complementary_education %}
   {% include complementary_education.html %}
 {% endunless %}
@@ -9,8 +13,6 @@ layout: default
 {% include latest-media.html %}
 
 {% include experiences.html %}
-
-{% include education.html %}
 
 {% include certifications.html %}
 

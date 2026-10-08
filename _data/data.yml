@@ -332,6 +332,14 @@ latest_media_ptbr:
   info:
     - title: "De Brazópolis para o espaço: INPE participa de estudo internacional que revela planeta com oito vezes a massa da Terra"
       source: "TV UAI"
+      date: "September 4, 2026"
+      link: "https://www.tvuai.com.br/portal/de-brazopolis-para-o-espaco-inpe-participa-de-estudo-internacional-que-revela-planeta-com-oito-vezes-a-massa-da-terra/"
+      summary: "Um observatório localizado em Brazópolis, no Sul de Minas, ajudou a lançar luz sobre um novo mundo muito distante da Terra. Dados obtidos no Observatório do Pico dos Dias (OPD) foram fundamentais para um estudo internacional que identificou e caracterizou um planeta de baixa massa, com cerca de oito vezes a massa da Terra."
+    - title: "Com participação do INPE, estudo internacional detecta planeta de baixa massa"
+      source: "INPE"
+      date: "August 31, 2026"
+      link: "https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias/com-participacao-do-inpe-estudo-internacional-detecta-planeta-de-baixa-massa"
+      summary: "Publicado no The Astronomical Journal, estudo internacional com a participação do Instituto Nacional de Pesquisas Espaciais (INPE) analisou dois novos sistemas exoplanetários identificados por meio do fenômeno das microlentes gravitacionais. Os dados foram obtidos no Observatório do Pico dos Dias (OPD), em Brazópolis (MG)."
 education:
   title: "Education and Postdocs"
   info:

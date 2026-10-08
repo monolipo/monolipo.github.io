@@ -2434,7 +2434,7 @@ teaching:
   list:
     - name: "Observational Astrophysics Techniques (AST-203-4)"
       role: "Professor / Lecturer"
-      semester: "2026.2 — Ongoing"
+      semester: "Finished"
       location: "INPE"
       details: "Responsible for Lectures 7–12 in the second course block."
       type: "Graduate"
@@ -2443,7 +2443,7 @@ teaching_ptbr:
   list:
     - name: "Técnicas de Astrofísica Observacional (AST-203-4)"
       role: "Professor"
-      semester: "2026.2 — Em andamento"
+      semester: "Encerrado"
       location: "INPE"
       details: "Responsável pelas Aulas 7–12 no segundo bloco da disciplina."
 outreach:

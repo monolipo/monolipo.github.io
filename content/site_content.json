@@ -2962,6 +2962,82 @@
             }
           ],
           "bibliography_ptbr": "BEVINGTON, P. R. & ROBINSON, D. K. Data reduction and error analysis for the physical sciences, 3rd edition, McGraw-Hill Inc., 2002<br>BRADT, H. Astronomy Methods: A Physical Approach to Astronomical Observations, Cambridge Univ. Press, 2004.<br>GRAY, D. F. Observation and analysis of stellar photospheres, 3rd edition, Cambridge Univ. Press, 2008.<br>HOWELL, S. B. Handbook of CCD Astronomy, 2nd edition, Cambridge, 2006.<br>KITCHIN, C. R. Astrophysical Techniques, 5th edition, CRC, 2008.<br>LÉNA, P., LEBRUN, F. & MIGNARD, F. Observational Astrophysics, 2nd edition, Springer-Verlag, 1998.<br>MCLEAN, I. S. Electronic imaging in astronomy: detectors and instrumentation. Springer & Praxis, 2008.<br>WALKER, G. Astronomical observations: an optical perspective. Cambridge Univ. Press, 1987.<br>Artigos especializados da área."
+        },
+        {
+          "code": "AST-OBS-LNA",
+          "semester": "2024.2",
+          "name": "Workshop de Observação, Redução e Análise de Dados utilizando os Telescópios do Observatório do Pico dos Dias",
+          "name_ptbr": "Workshop de Observação, Redução e Análise de Dados utilizando os Telescópios do Observatório do Pico dos Dias",
+          "type": "finished",
+          "link": "/lectures/ast_obs_lna_2024_2.html",
+          "link_ptbr": "/lectures/ast_obs_lna_2024_2_ptbr.html",
+          "institute": "LNA",
+          "institute_long": "LNA",
+          "department": "COAST",
+          "department_ptbr": "COAST",
+          "institute-link": "",
+          "language-code": "br",
+          "background-color": "#800020",
+          "info": [
+            {
+              "key": "Lecture Credits",
+              "value": "4"
+            },
+            {
+              "key": "Total hours",
+              "value": "60h"
+            },
+            {
+              "key": "Type",
+              "value": "Short-Period class"
+            }
+          ],
+          "info_ptbr": [
+            {
+              "key": "Créditos de Aula",
+              "value": "4"
+            },
+            {
+              "key": "Carga horária total",
+              "value": "60h"
+            },
+            {
+              "key": "Tipo",
+              "value": "Curso de curto período"
+            }
+          ],
+          "intro": "",
+          "intro_ptbr": "",
+          "description": " Este treinamento tem como foco observações fotométricas, utilizando os telescópios Zeiss (0.6m) e Boller & Chivens (0.6m) e seus instrumentos correspondentes. Durante as tardes dos dias de treinamento, um workshop dedicado à redução e análise de dados fotométricos será realizado. O treinamento será oferecido para grupo de alunos da Escola de Ciência e Tecnologia (ECT) e do Departamento de Física Teórica e Experimental (DFTE) da UFRN, compreendendo alunos de graduação, mestrado e doutorado. Essa turma virá com custos da própria UFRN e participará também da Reunião Anual da Sociedade Astronômica Brasileira (RASAB)",
+          "description_ptbr": " Este treinamento tem como foco observações fotométricas, utilizando os telescópios Zeiss (0.6m) e Boller & Chivens (0.6m) e seus instrumentos correspondentes. Durante as tardes dos dias de treinamento, um workshop dedicado à redução e análise de dados fotométricos será realizado. O treinamento será oferecido para grupo de alunos da Escola de Ciência e Tecnologia (ECT) e do Departamento de Física Teórica e Experimental (DFTE) da UFRN, compreendendo alunos de graduação, mestrado e doutorado. Essa turma virá com custos da própria UFRN e participará também da Reunião Anual da Sociedade Astronômica Brasileira (RASAB)",
+          "sections": [],
+          "lectures": [],
+          "documents": [],
+          "bibliography": "",
+          "bibliography_ptbr": "",
+          "schedule": [
+            {
+              "date": "27/09/2024",
+              "class": "Day 1",
+              "class_ptbr": "Dia 1",
+              "name": "Introdução a observação com o telescópio ZEISS",
+              "name_ptbr": "Introdução a observação com o telescópio ZEISS"
+            },
+            {
+              "date": "28/09/2024",
+              "class": "Day 2",
+              "class_ptbr": "Dia 2 ",
+              "name": "Observação com o telescópio Boller & Chivens",
+              "name_ptbr": "Observação com o telescópio Boller & Chivens"
+            },
+            {
+              "date": "28/09/2024",
+              "class": "Day 3",
+              "class_ptbr": "Dia 3",
+              "name": "Observação com o telescópio Perkin & Elmer",
+              "name_ptbr": "Observação com o telescópio Perkin & Elmer"
+            }
+          ]
         }
       ]
     },

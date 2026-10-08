@@ -1,0 +1,5 @@
+---
+layout: page
+---
+{% assign course = site.data.data.lectures.courses | where: "code", "AST-OBS-LNA" | first %}
+{% include single_course.html %}

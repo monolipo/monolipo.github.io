@@ -311,7 +311,7 @@ career-profile:
 career-profile_ptbr:
   title: "Perfil de Carreira"
   summary: "Sou Pesquisador da Divisão de Astrofísica do Instituto Nacional de Pesquisas Espaciais (INPE), onde também sou membro do corpo docente da pós-graduação em Astrofísica. Minha atuação se concentra em exoplanetas, microlentes gravitacionais, astrofísica estelar, instrumentação astronômica e observações no domínio temporal. <br><br>Doutor em Física pela Universidade Federal do Rio Grande do Norte (UFRN), onde trabalhei com a parametrização das equações de microlentes gravitacionais e sua aplicação na busca por exoplanetas de baixa massa. Tenho ampla experiência observacional no Observatório do Pico dos Dias, com mais de 350 noites de observação usando câmeras diretas e espectrógrafos, e participei de propostas observacionais com o Gemini Norte e o SOAR. Também atuei como astrônomo residente do telescópio SOAR e participei do comissionamento do instrumento SPARC4. Desde 2022, participo da colaboração GRANDMA como observador e na redução/análise de dados, além de integrar o consórcio PLATO na área estelar."
-  summary-more: ""
+  summary-more: "Dr. Ted Leandro de Almeida é especialista na técnica de microlentes gavitacionais para a detecção de exoplanetas"
 latest_media:
   title: Latest Media Publications
   info:
@@ -573,7 +573,7 @@ publications:
   title_ptbr: "Publicações"
   home-title: "Selected Publications"
   home-title_ptbr: "Publicações Selecionadas"
-  intro: "Selected and complete publication list compiled from my Lattes CV and ADS records. Use **+** after *et al.* to expand the author list, and **+info** to display abstracts and extra links when available."
+  intro: "Use **+** after *et al.* to expand the author list, and **+info** to display abstracts and extra links when available."
   intro_ptbr: "Lista completa e selecionada de publicações compilada a partir do meu currículo Lattes e dos registros do ADS. Use **+** após *et al.* para expandir a lista de autores, e **+info** para exibir resumos e links extras quando disponíveis."
   papers:
     - title: "Revisiting TOI-4438 and TOI-442 planetary systems with new observations from SPIRou and TESS"

@@ -1,0 +1,156 @@
+<!-- ASOTG / ASMINI public AllSky view. No write credentials appear in this file. -->
+<section class="asotg-public" aria-label="Live allsky observations">
+  <style>
+    .asotg-public { color: inherit; max-width: 1150px; margin: 0 auto 3rem; }
+    .asotg-public * { box-sizing: border-box; }
+    .asotg-public [hidden] { display: none !important; }
+    .asotg-public .asotg-intro { margin: .4rem 0 1.5rem; opacity: .8; line-height: 1.65; }
+    .asotg-public .asotg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 390px), 1fr)); gap: 1.35rem; }
+    .asotg-public .asotg-card { background: #121922; border: 1px solid #344456; border-radius: 14px; overflow: hidden; color: #eaf0f5; box-shadow: 0 10px 28px rgba(0,0,0,.12); }
+    .asotg-public .asotg-head { padding: 1rem 1rem .65rem; display:flex; justify-content:space-between; align-items:flex-start; gap:.6rem; }
+    .asotg-public .asotg-head h3 { margin:0; font-size: 1.08rem; line-height: 1.35; color: #fff; }
+    .asotg-public .asotg-head small { color:#a4b5c4; display:block; margin-top:.25rem; }
+    .asotg-public .asotg-badge { display:inline-block; white-space:nowrap; border-radius:999px; background:#364451; padding:.27rem .65rem; font-size:.70rem; font-weight:750; letter-spacing:.04em; }
+    .asotg-public .asotg-badge[data-status="live"] { background:#174a38; color:#bff5d7; }
+    .asotg-public .asotg-badge[data-status="simulation"] { background:#68501b; color:#ffe49b; }
+    .asotg-public .asotg-badge[data-status="idle"] { background:#39495b; color:#d7e2ef; }
+    .asotg-public .asotg-badge[data-status="offline"] { background:#592e33; color:#ffd0d4; }
+    .asotg-public .asotg-media { aspect-ratio: 16 / 10; display:grid; place-items:center; position:relative; background:#05090f; }
+    .asotg-public .asotg-media img { display:block; width:100%; height:100%; object-fit:contain; }
+    .asotg-public .asotg-placeholder { color:#a9bccd; text-align:center; padding:1.4rem; font-size:.94rem; }
+    .asotg-public .asotg-modeflag { position:absolute; top:.7rem; left:.7rem; background:#754c10de; color:#ffe9ae; padding:.27rem .5rem; border-radius:5px; font-size:.7rem; font-weight:800; }
+    .asotg-public .asotg-controls { display:flex; gap:.45rem; align-items:center; padding:.8rem 1rem; flex-wrap:wrap; }
+    .asotg-public .asotg-controls button, .asotg-public .asotg-controls a { border-radius:7px; border:1px solid #47596b; background:#1a2633; color:#eaf0f5; padding:.45rem .7rem; cursor:pointer; font-size:.82rem; text-decoration:none; }
+    .asotg-public .asotg-controls button[aria-pressed="true"] { background:#bb8934; color:#10171f; border-color:#bb8934; font-weight:750; }
+    .asotg-public .asotg-controls button:disabled { opacity:.45; cursor:not-allowed; }
+    .asotg-public .asotg-controls a { margin-left:auto; }
+    .asotg-public .asotg-meta { border-top:1px solid #293847; padding:.7rem 1rem 1rem; font-size:.79rem; line-height:1.7; color:#c4d3df; }
+    .asotg-public .asotg-meta b { color:#fff; }
+    .asotg-public .asotg-notice { color:#6c7e8d; font-size:.83rem; margin-top:1rem; line-height:1.6; }
+    .asotg-public button:focus-visible, .asotg-public a:focus-visible { outline:2px solid #edc36d; outline-offset:2px; }
+  </style>
+  <h2>AllSky Observatory Monitor</h2>
+  <p class="asotg-intro">Current sky conditions at the Miniobservatório do INPE and Observatório Três Garças. Each image is updated automatically when the corresponding ASMINI or ASOTG acquisition system is publishing. The last available image remains accessible when the observatory is offline.</p>
+  <div class="asotg-grid">
+    <article class="asotg-card" data-asotg-site="mini">
+      <div class="asotg-head"><div><h3>Miniobservatório do INPE</h3><small>ASMINI | São José dos Campos, Brazil</small></div><span class="asotg-badge" data-role="badge" data-status="offline">CHECKING</span></div>
+      <div class="asotg-media"><div class="asotg-placeholder" data-role="placeholder">Checking latest available image...</div><img data-role="image" alt="Latest allsky view of Miniobservatório do INPE" hidden><span class="asotg-modeflag" data-role="simulation" hidden>SIMULATION</span></div>
+      <div class="asotg-controls"><button type="button" data-view="clean" aria-pressed="true">Clean</button><button type="button" data-view="annotated" aria-pressed="false">Annotated</button><a data-role="full" target="_blank" rel="noopener noreferrer" hidden>Open image</a></div>
+      <div class="asotg-meta"><div><b>Last acquisition:</b> <span data-role="capture">Not available</span></div><div><b>Last upload:</b> <span data-role="upload">Not available</span></div><div><b>Camera:</b> <span data-role="camera">No status received</span></div><div data-role="detail">Waiting for Cloudflare status</div></div>
+    </article>
+    <article class="asotg-card" data-asotg-site="otg">
+      <div class="asotg-head"><div><h3>Observatório Três Garças</h3><small>ASOTG | Itatiaia region, Brazil</small></div><span class="asotg-badge" data-role="badge" data-status="offline">CHECKING</span></div>
+      <div class="asotg-media"><div class="asotg-placeholder" data-role="placeholder">Checking latest available image...</div><img data-role="image" alt="Latest allsky view of Observatório Três Garças" hidden><span class="asotg-modeflag" data-role="simulation" hidden>SIMULATION</span></div>
+      <div class="asotg-controls"><button type="button" data-view="clean" aria-pressed="true">Clean</button><button type="button" data-view="annotated" aria-pressed="false">Annotated</button><a data-role="full" target="_blank" rel="noopener noreferrer" hidden>Open image</a></div>
+      <div class="asotg-meta"><div><b>Last acquisition:</b> <span data-role="capture">Not available</span></div><div><b>Last upload:</b> <span data-role="upload">Not available</span></div><div><b>Camera:</b> <span data-role="camera">No status received</span></div><div data-role="detail">Waiting for Cloudflare status</div></div>
+    </article>
+  </div>
+  <p class="asotg-notice">Timestamps use Brazilian local time (America/Sao_Paulo). An offline or disconnected indication means that the displayed frame may be historical. The astronomy overlays are generated by ASOTG and depend on the observatory calibration.</p>
+  <script>
+  (() => {
+    'use strict';
+    // REPLACE THIS ONE URL with your actual deployed Cloudflare Worker address.
+    // Example: https://asotg-allsky.your-subdomain.workers.dev
+    const WORKER_BASE = 'https://asotg-allsky.observatoriotresgarcas.workers.dev';
+    const INTERVAL_MS = 30000;
+    const cards = document.querySelectorAll('.asotg-public [data-asotg-site]');
+    const fmtTime = iso => {
+      if (!iso) return 'Not available';
+      const time = new Date(iso);
+      return Number.isNaN(time.getTime()) ? 'Not available' : new Intl.DateTimeFormat('pt-BR', {
+        timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', year: 'numeric',
+        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+      }).format(time) + ' BRT';
+    };
+    const pick = (card, role) => card.querySelector(`[data-role="${role}"]`);
+    const records = new Map();
+    function imageUrl(site, view, version) {
+      const file = view === 'annotated' ? 'latest_annotated.jpg' : 'latest.jpg';
+      return `${WORKER_BASE}/image/${site}/${file}?v=${encodeURIComponent(version || '0')}`;
+    }
+    function render(card, state) {
+      const d = state.data;
+      const site = state.site;
+      const badge = pick(card, 'badge');
+      if (!d || !d.image_available) {
+        pick(card,'image').hidden = true;
+        pick(card,'placeholder').hidden = false;
+        pick(card,'placeholder').textContent = d ? 'No image has been published yet.' : 'Cannot reach the image gateway.';
+        pick(card,'full').hidden = true;
+      } else {
+        const img = pick(card, 'image');
+        const url = imageUrl(site, state.view, d.last_upload_utc);
+        if (img.dataset.url !== url) { img.src = url; img.dataset.url = url; }
+        img.hidden = false;
+        pick(card,'placeholder').hidden = true;
+        const full = pick(card, 'full'); full.href = url; full.hidden = false;
+      }
+      const canAnnotate = !!(d && d.image_available && d.has_annotated);
+      const annButton = card.querySelector('[data-view="annotated"]');
+      annButton.disabled = !canAnnotate;
+      for (const button of card.querySelectorAll('[data-view]'))
+        button.setAttribute('aria-pressed', String(button.dataset.view === state.view));
+      if (d) {
+        pick(card,'capture').textContent = fmtTime(d.last_capture_utc);
+        pick(card,'upload').textContent = fmtTime(d.last_upload_utc);
+        pick(card,'camera').textContent = d.camera_name || 'Not reported';
+        pick(card,'simulation').hidden = !d.simulated;
+        if (!d.online) {
+          badge.textContent = 'OFFLINE'; badge.dataset.status = 'offline';
+          pick(card,'detail').textContent = d.image_available ? 'Last image retained (not live).' : 'Waiting for first publication.';
+        } else if (!d.camera_connected || !d.capturing) {
+          badge.textContent = d.camera_connected ? 'ONLINE / IDLE' : 'CAMERA OFF'; badge.dataset.status = 'idle';
+          pick(card,'detail').textContent = d.camera_connected ? 'ASOTG online, but no recent captures.' : 'ASOTG online, camera disconnected.';
+        } else if (d.simulated) {
+          badge.textContent = 'SIMULATION'; badge.dataset.status = 'simulation';
+          pick(card,'detail').textContent = 'Simulated image stream, not a physical sky observation.';
+        } else if (!d.image_recent) {
+          badge.textContent = 'UPLOAD DELAY'; badge.dataset.status = 'idle';
+          pick(card,'detail').textContent = 'Camera running, but the public image has not been updated recently.';
+        } else {
+          badge.textContent = 'LIVE'; badge.dataset.status = 'live';
+          pick(card,'detail').textContent = 'Camera online and public image recently updated.';
+        }
+      } else {
+        badge.textContent = 'UNAVAILABLE'; badge.dataset.status = 'offline';
+        pick(card,'detail').textContent = 'Public status service unreachable.';
+        pick(card,'camera').textContent = 'Not available';
+      }
+    }
+    async function refresh(card, state) {
+      if (state.busy) return;
+      state.busy = true;
+      try {
+        const response = await fetch(`${WORKER_BASE}/api/status/${state.site}?t=${Date.now()}`,
+                                     { cache: 'no-store' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        state.data = await response.json();
+        // If annotation was disabled on the observatory, return to the clean image.
+        if (state.view === 'annotated' && !state.data.has_annotated) state.view = 'clean';
+      } catch (_) { state.data = null; }
+      finally { state.busy = false; render(card, state); }
+    }
+    for (const card of cards) {
+      const state = { site: card.dataset.asotgSite, view: 'clean', data: null, busy: false };
+      records.set(state.site, state);
+      for (const button of card.querySelectorAll('[data-view]')) button.addEventListener('click', () => {
+        if (button.disabled) return;
+        state.view = button.dataset.view;
+        render(card, state);
+      });
+      if (WORKER_BASE.includes('REPLACE-WITH-YOUR-WORKER')) {
+        pick(card,'placeholder').textContent = 'Configure WORKER_BASE in _includes/allsky_live.html';
+        pick(card,'badge').textContent = 'NOT CONFIGURED';
+        continue;
+      }
+      refresh(card, state);
+    }
+    if (!WORKER_BASE.includes('REPLACE-WITH-YOUR-WORKER')) {
+      setInterval(() => { if (!document.hidden) for (const card of cards) refresh(card, records.get(card.dataset.asotgSite)); }, INTERVAL_MS);
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) for (const card of cards) refresh(card, records.get(card.dataset.asotgSite));
+      });
+    }
+  })();
+  </script>
+</section>

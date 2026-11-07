@@ -1,156 +1,506 @@
-<!-- ASOTG / ASMINI public AllSky view. No write credentials appear in this file. -->
-<section class="asotg-public" aria-label="Live allsky observations">
-  <style>
-    .asotg-public { color: inherit; max-width: 1150px; margin: 0 auto 3rem; }
-    .asotg-public * { box-sizing: border-box; }
-    .asotg-public [hidden] { display: none !important; }
-    .asotg-public .asotg-intro { margin: .4rem 0 1.5rem; opacity: .8; line-height: 1.65; }
-    .asotg-public .asotg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 390px), 1fr)); gap: 1.35rem; }
-    .asotg-public .asotg-card { background: #121922; border: 1px solid #344456; border-radius: 14px; overflow: hidden; color: #eaf0f5; box-shadow: 0 10px 28px rgba(0,0,0,.12); }
-    .asotg-public .asotg-head { padding: 1rem 1rem .65rem; display:flex; justify-content:space-between; align-items:flex-start; gap:.6rem; }
-    .asotg-public .asotg-head h3 { margin:0; font-size: 1.08rem; line-height: 1.35; color: #fff; }
-    .asotg-public .asotg-head small { color:#a4b5c4; display:block; margin-top:.25rem; }
-    .asotg-public .asotg-badge { display:inline-block; white-space:nowrap; border-radius:999px; background:#364451; padding:.27rem .65rem; font-size:.70rem; font-weight:750; letter-spacing:.04em; }
-    .asotg-public .asotg-badge[data-status="live"] { background:#174a38; color:#bff5d7; }
-    .asotg-public .asotg-badge[data-status="simulation"] { background:#68501b; color:#ffe49b; }
-    .asotg-public .asotg-badge[data-status="idle"] { background:#39495b; color:#d7e2ef; }
-    .asotg-public .asotg-badge[data-status="offline"] { background:#592e33; color:#ffd0d4; }
-    .asotg-public .asotg-media { aspect-ratio: 16 / 10; display:grid; place-items:center; position:relative; background:#05090f; }
-    .asotg-public .asotg-media img { display:block; width:100%; height:100%; object-fit:contain; }
-    .asotg-public .asotg-placeholder { color:#a9bccd; text-align:center; padding:1.4rem; font-size:.94rem; }
-    .asotg-public .asotg-modeflag { position:absolute; top:.7rem; left:.7rem; background:#754c10de; color:#ffe9ae; padding:.27rem .5rem; border-radius:5px; font-size:.7rem; font-weight:800; }
-    .asotg-public .asotg-controls { display:flex; gap:.45rem; align-items:center; padding:.8rem 1rem; flex-wrap:wrap; }
-    .asotg-public .asotg-controls button, .asotg-public .asotg-controls a { border-radius:7px; border:1px solid #47596b; background:#1a2633; color:#eaf0f5; padding:.45rem .7rem; cursor:pointer; font-size:.82rem; text-decoration:none; }
-    .asotg-public .asotg-controls button[aria-pressed="true"] { background:#bb8934; color:#10171f; border-color:#bb8934; font-weight:750; }
-    .asotg-public .asotg-controls button:disabled { opacity:.45; cursor:not-allowed; }
-    .asotg-public .asotg-controls a { margin-left:auto; }
-    .asotg-public .asotg-meta { border-top:1px solid #293847; padding:.7rem 1rem 1rem; font-size:.79rem; line-height:1.7; color:#c4d3df; }
-    .asotg-public .asotg-meta b { color:#fff; }
-    .asotg-public .asotg-notice { color:#6c7e8d; font-size:.83rem; margin-top:1rem; line-height:1.6; }
-    .asotg-public button:focus-visible, .asotg-public a:focus-visible { outline:2px solid #edc36d; outline-offset:2px; }
-  </style>
-  <h2>AllSky Observatory Monitor</h2>
-  <p class="asotg-intro">Current sky conditions at the Miniobservatório do INPE and Observatório Três Garças. Each image is updated automatically when the corresponding ASMINI or ASOTG acquisition system is publishing. The last available image remains accessible when the observatory is offline.</p>
-  <div class="asotg-grid">
-    <article class="asotg-card" data-asotg-site="mini">
-      <div class="asotg-head"><div><h3>Miniobservatório do INPE</h3><small>ASMINI | INPE, São José dos Campos, Brazil</small></div><span class="asotg-badge" data-role="badge" data-status="offline">CHECKING</span></div>
-      <div class="asotg-media"><div class="asotg-placeholder" data-role="placeholder">Checking latest available image...</div><img data-role="image" alt="Latest allsky view of Miniobservatório do INPE" hidden><span class="asotg-modeflag" data-role="simulation" hidden>SIMULATION</span></div>
-      <div class="asotg-controls"><button type="button" data-view="clean" aria-pressed="true">Clean</button><button type="button" data-view="annotated" aria-pressed="false">Annotated</button><a data-role="full" target="_blank" rel="noopener noreferrer" hidden>Open image</a></div>
-      <div class="asotg-meta"><div><b>Last acquisition:</b> <span data-role="capture">Not available</span></div><div><b>Last upload:</b> <span data-role="upload">Not available</span></div><div><b>Camera:</b> <span data-role="camera">No status received</span></div><div data-role="detail">Waiting for Cloudflare status</div></div>
-    </article>
-    <article class="asotg-card" data-asotg-site="otg">
-      <div class="asotg-head"><div><h3>Observatório Três Garças</h3><small>ASOTG | Engenheiro Passos, Brazil</small></div><span class="asotg-badge" data-role="badge" data-status="offline">CHECKING</span></div>
-      <div class="asotg-media"><div class="asotg-placeholder" data-role="placeholder">Checking latest available image...</div><img data-role="image" alt="Latest allsky view of Observatório Três Garças" hidden><span class="asotg-modeflag" data-role="simulation" hidden>SIMULATION</span></div>
-      <div class="asotg-controls"><button type="button" data-view="clean" aria-pressed="true">Clean</button><button type="button" data-view="annotated" aria-pressed="false">Annotated</button><a data-role="full" target="_blank" rel="noopener noreferrer" hidden>Open image</a></div>
-      <div class="asotg-meta"><div><b>Last acquisition:</b> <span data-role="capture">Not available</span></div><div><b>Last upload:</b> <span data-role="upload">Not available</span></div><div><b>Camera:</b> <span data-role="camera">No status received</span></div><div data-role="detail">Waiting for Cloudflare status</div></div>
-    </article>
+<!-- ASOTG / ASMINI public AllSky. Site-only UI, no upload credentials or ASOTG modifications. -->
+{% assign asotg_page_site = include.site | default: 'both' %}
+<section class="asotg-public" data-page-site="{{ asotg_page_site }}" data-theme="original" aria-label="AllSky observatory monitor">
+<style>
+.asotg-public{--a-bg:#121922;--a-panel:#17222e;--a-border:#344456;--a-text:#eaf0f5;--a-muted:#a4b5c4;--a-accent:#bb8934;--a-accent-text:#10171f;--a-input:#1a2633;--a-image-bg:#05090f;--a-path:#f6c96d;--a-past:#8fd6ed;--a-shadow:0 10px 28px rgba(0,0,0,.12);color:inherit;max-width:1150px;margin:0 auto 3rem}
+.asotg-public[data-page-site]:not([data-page-site="both"]){max-width:1280px}
+.asotg-public[data-theme="light"]{--a-bg:#fff;--a-panel:#f3f6f9;--a-border:#c7d2df;--a-text:#1b2936;--a-muted:#4a6275;--a-accent:#94631d;--a-accent-text:#fff;--a-input:#fff;--a-image-bg:#101820;--a-path:#ffd272;--a-past:#67d8fd;--a-shadow:0 8px 22px rgba(25,50,75,.09)}
+.asotg-public[data-theme="black"]{--a-bg:#000;--a-panel:#090909;--a-border:#353535;--a-text:#f0f0f0;--a-muted:#b0b0b0;--a-accent:#ebbd54;--a-accent-text:#000;--a-input:#0a0a0a;--a-image-bg:#000;--a-path:#ffe28c;--a-past:#86cae9;--a-shadow:none}
+.asotg-public[data-theme="night"]{--a-bg:#0b0000;--a-panel:#130303;--a-border:#602020;--a-text:#fa7777;--a-muted:#bf6262;--a-accent:#c54444;--a-accent-text:#100000;--a-input:#190404;--a-image-bg:#000;--a-path:#fa6060;--a-past:#b43434;--a-shadow:none}
+.asotg-public *{box-sizing:border-box}
+.asotg-public [hidden]{display:none!important}
+.asotg-public .asotg-intro{margin:.5rem 0 1.15rem;opacity:.85;line-height:1.6}
+.asotg-public .asotg-toolbar{display:flex;align-items:center;justify-content:space-between;gap:.9rem;flex-wrap:wrap;margin:0 0 1.15rem}
+.asotg-public .asotg-toolbar-title{font-size:.86rem;opacity:.8}
+.asotg-public .asotg-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1.6rem}
+.asotg-public .asotg-card{min-width:0;background:var(--a-bg);border:1px solid var(--a-border);border-radius:14px;overflow:hidden;color:var(--a-text);box-shadow:var(--a-shadow)}
+.asotg-public .asotg-head{padding:1.15rem 1.15rem .85rem;display:flex;justify-content:space-between;align-items:flex-start;gap:.8rem;flex-wrap:wrap}
+.asotg-public .asotg-head h3{margin:0;font-size:1.17rem;line-height:1.35;color:var(--a-text)}
+.asotg-public .asotg-head small{color:var(--a-muted);display:block;margin-top:.25rem}
+.asotg-public .asotg-badge{display:inline-block;white-space:nowrap;border-radius:999px;background:#364451;color:#edf0f5;padding:.28rem .7rem;font-size:.71rem;font-weight:750;letter-spacing:.035em}
+.asotg-public .asotg-badge[data-status="live"]{background:#174a38;color:#bff5d7}
+.asotg-public .asotg-badge[data-status="simulation"]{background:#68501b;color:#ffe49b}
+.asotg-public .asotg-badge[data-status="idle"]{background:#39495b;color:#d7e2ef}
+.asotg-public .asotg-badge[data-status="offline"]{background:#592e33;color:#ffd0d4}
+.asotg-public .asotg-media{position:relative;aspect-ratio:16/10;display:grid;place-items:center;background:var(--a-image-bg);min-height:260px}
+.asotg-public .asotg-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.asotg-public[data-theme="night"] .asotg-media img{filter:brightness(.55) sepia(1) saturate(3) hue-rotate(312deg)}
+.asotg-public .asotg-skycanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.asotg-public .asotg-media[data-calibrate] .asotg-skycanvas{pointer-events:auto;cursor:crosshair;touch-action:manipulation}
+.asotg-public .asotg-placeholder{position:relative;z-index:1;color:#a9bccd;text-align:center;padding:1.4rem;font-size:.94rem}
+.asotg-public .asotg-modeflag{position:absolute;z-index:2;top:.7rem;left:.7rem;background:#754c10ed;color:#ffe9ae;padding:.28rem .55rem;border-radius:5px;font-size:.72rem;font-weight:800}
+.asotg-public .asotg-controls{display:flex;gap:.5rem;align-items:center;padding:.85rem 1.1rem;flex-wrap:wrap}
+.asotg-public .asotg-tools{padding:.75rem 1.1rem 1rem;border-top:1px solid var(--a-border);background:var(--a-panel)}
+.asotg-public .asotg-actions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+.asotg-public button,.asotg-public select,.asotg-public input{font:inherit}
+.asotg-public .asotg-controls button,.asotg-public .asotg-controls a,.asotg-public .asotg-tools button,.asotg-public .asotg-tools select,.asotg-public .asotg-theme{border-radius:7px;border:1px solid var(--a-border);background:var(--a-input);color:var(--a-text);padding:.46rem .72rem;cursor:pointer;font-size:.82rem;text-decoration:none}
+.asotg-public button[aria-pressed="true"]{background:var(--a-accent);color:var(--a-accent-text);border-color:var(--a-accent);font-weight:750}
+.asotg-public button:disabled{opacity:.45;cursor:not-allowed}
+.asotg-public .asotg-open-monitor{margin-left:auto}
+.asotg-public input:not([type="checkbox"]){width:100%;min-width:0;border:1px solid var(--a-border);background:var(--a-input);color:var(--a-text);padding:.5rem .65rem;border-radius:7px;font-size:.87rem}
+.asotg-public input[type="range"]{width:100%;accent-color:var(--a-accent)}
+.asotg-public select{max-width:100%}
+.asotg-public .asotg-tools h4{font-size:.92rem;color:var(--a-text);margin:.2rem 0 .5rem}
+.asotg-public .asotg-form{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.25fr) auto;align-items:end;gap:.65rem}
+.asotg-public .asotg-field{min-width:0}
+.asotg-public .asotg-field label{display:block;margin:0 0 .2rem;font-size:.76rem;color:var(--a-muted)}
+.asotg-public .asotg-target-note{font-size:.78rem;color:var(--a-muted);margin:.48rem 0;line-height:1.55}
+.asotg-public .asotg-target-list{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin-top:.6rem}
+.asotg-public .asotg-target-chip{border:1px solid var(--a-border);border-radius:999px;padding:.3rem .55rem;background:var(--a-bg);font-size:.8rem;display:inline-flex;gap:.5rem;align-items:center}
+.asotg-public .asotg-target-chip button{padding:.05rem .22rem;border:none;background:transparent;font-size:1rem}
+.asotg-public details{border-top:1px solid var(--a-border);padding:.65rem 0 0;margin-top:.8rem}
+.asotg-public summary{cursor:pointer;font-size:.84rem;font-weight:650;color:var(--a-text)}
+.asotg-public .asotg-cal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin-top:.8rem}
+.asotg-public .asotg-cal-grid .asotg-field{font-size:.79rem}
+.asotg-public .asotg-cal-value{color:var(--a-muted);font-variant-numeric:tabular-nums}
+.asotg-public .asotg-cal-actions{display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0}
+.asotg-public .asotg-meta{border-top:1px solid var(--a-border);padding:.75rem 1.1rem 1.1rem;font-size:.81rem;line-height:1.8;color:var(--a-muted)}
+.asotg-public .asotg-meta b{color:var(--a-text)}
+.asotg-public .asotg-notice{font-size:.81rem;opacity:.78;margin:1rem 0;line-height:1.65}
+.asotg-public .asotg-page-link{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.asotg-public button:focus-visible,.asotg-public a:focus-visible,.asotg-public input:focus-visible,.asotg-public select:focus-visible{outline:2px solid var(--a-accent);outline-offset:2px}
+@media(max-width:740px){.asotg-public .asotg-form{grid-template-columns:1fr 1fr}.asotg-public .asotg-form button{grid-column:1/-1}.asotg-public .asotg-cal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:470px){.asotg-public .asotg-form{grid-template-columns:1fr}.asotg-public .asotg-cal-grid{grid-template-columns:1fr 1fr}.asotg-public .asotg-media{min-height:210px}.asotg-public .asotg-open-monitor{margin-left:0}}
+</style>
+{% if asotg_page_site == 'mini' %}
+<h2>ASMINI | Miniobservatório do INPE</h2>
+<p class="asotg-intro">Full AllSky monitor for the Miniobservatório do INPE. The most recently published frame remains available when the observatory is offline.</p>
+{% elsif asotg_page_site == 'otg' %}
+<h2>ASOTG | Observatório Três Garças</h2>
+<p class="asotg-intro">Full AllSky monitor for the Observatório Três Garças. The most recently published frame remains available when the observatory is offline.</p>
+{% else %}
+<h2>AllSky Observatory Monitor</h2>
+<p class="asotg-intro">Current sky conditions at the Miniobservatório do INPE and Observatório Três Garças. Images refresh automatically when ASMINI or ASOTG is publishing. The last available frame remains accessible while an observatory is offline.</p>
+{% endif %}
+<div class="asotg-toolbar">
+  <span class="asotg-toolbar-title">Display appearance</span>
+  <label><span class="asotg-toolbar-title">Theme: </span><select class="asotg-theme" data-role="theme" aria-label="AllSky color theme"><option value="original">Original</option><option value="light">Light</option><option value="black">Black</option><option value="night">Night vision</option></select></label>
+</div>
+<div class="asotg-grid">
+{% if asotg_page_site == 'both' or asotg_page_site == 'mini' %}
+<article class="asotg-card" data-asotg-site="mini">
+  <div class="asotg-head"><div><h3>Miniobservatório do INPE</h3><small>ASMINI | INPE, São José dos Campos, Brazil</small></div><span class="asotg-badge" data-role="badge" data-status="offline">CHECKING</span></div>
+  <div class="asotg-media" data-role="media"><div class="asotg-placeholder" data-role="placeholder">Checking latest available image...</div><img data-role="image" alt="Latest allsky view of Miniobservatório do INPE" hidden><canvas class="asotg-skycanvas" data-role="canvas" aria-label="Astronomical target overlay"></canvas><span class="asotg-modeflag" data-role="simulation" hidden>SIMULATION</span></div>
+  <div class="asotg-controls"><button type="button" data-view="clean" aria-pressed="true">Clean</button><button type="button" data-view="annotated" aria-pressed="false">Annotated</button><a data-role="full" target="_blank" rel="noopener noreferrer" hidden>Open image</a><a class="asotg-open-monitor" href="{{ '/allsky_mini.html' | relative_url }}" target="_blank" rel="noopener noreferrer">Open full monitor</a></div>
+  <div class="asotg-tools">
+    <h4>Custom astronomical targets</h4>
+    <form class="asotg-form" data-role="target-form">
+      <div class="asotg-field"><label for="asotg-query-mini">SIMBAD name or J2000 coordinates</label><input id="asotg-query-mini" data-role="query" placeholder="Sirius | 06:45:08.9 -16:42:58 | 101.287 -16.716" autocomplete="off" maxlength="160" required></div>
+      <div class="asotg-field"><label for="asotg-name-mini">Custom name (optional)</label><input id="asotg-name-mini" data-role="custom-name" placeholder="Target" maxlength="70"></div>
+      <button type="submit" data-role="search">Plot target</button>
+    </form>
+    <p class="asotg-target-note" data-role="target-status" aria-live="polite">Search a name in SIMBAD or enter coordinates. Tracks cover 2 hours in the past and 6 hours into the future, relative to the image capture time.</p>
+    <div class="asotg-actions"><label class="asotg-target-note"><input type="checkbox" data-role="overlay-enabled" checked> Show target overlays</label><button type="button" data-role="clear-targets">Clear targets</button></div>
+    <div class="asotg-target-list" data-role="targets"></div>
+    <details data-role="calibration-panel"><summary>Sky alignment and fisheye calibration</summary>
+      <p class="asotg-target-note">The public JPEG does not include the ASOTG camera calibration. Adjust this overlay to the actual sky image. Two-click calibration: select the Zenith, then the North horizon point. Settings are saved in this browser only.</p>
+      <div class="asotg-cal-actions"><button type="button" data-role="two-click">Calibrate with 2 clicks</button><button type="button" data-role="cal-reset">Reset defaults</button><button type="button" data-role="cal-copy">Copy calibration</button></div>
+      <div class="asotg-cal-grid" data-role="cal-fields"></div>
+      <p class="asotg-target-note" data-role="cal-status">Default alignment is approximate until calibrated for this camera and installation.</p>
+    </details>
   </div>
-  <p class="asotg-notice">Timestamps use Brazilian local time (America/Sao_Paulo). An offline or disconnected indication means that the displayed frame may be historical. The astronomy overlays are generated by ASOTG and depend on the observatory calibration.</p>
-  <script>
-  (() => {
-    'use strict';
-    // REPLACE THIS ONE URL with your actual deployed Cloudflare Worker address.
-    // Example: https://asotg-allsky.your-subdomain.workers.dev
-    const WORKER_BASE = 'https://asotg-allsky.observatoriotresgarcas.workers.dev';
-    const INTERVAL_MS = 30000;
-    const cards = document.querySelectorAll('.asotg-public [data-asotg-site]');
-    const fmtTime = iso => {
-      if (!iso) return 'Not available';
-      const time = new Date(iso);
-      return Number.isNaN(time.getTime()) ? 'Not available' : new Intl.DateTimeFormat('pt-BR', {
-        timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', year: 'numeric',
-        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
-      }).format(time) + ' BRT';
-    };
-    const pick = (card, role) => card.querySelector(`[data-role="${role}"]`);
-    const records = new Map();
-    function imageUrl(site, view, version) {
-      const file = view === 'annotated' ? 'latest_annotated.jpg' : 'latest.jpg';
-      return `${WORKER_BASE}/image/${site}/${file}?v=${encodeURIComponent(version || '0')}`;
+  <div class="asotg-meta"><div><b>Last acquisition:</b> <span data-role="capture">Not available</span></div><div><b>Last upload:</b> <span data-role="upload">Not available</span></div><div><b>Camera:</b> <span data-role="camera">No status received</span></div><div><b>Overlay reference:</b> <span data-role="reference">Waiting for image</span></div><div data-role="detail">Waiting for Cloudflare status</div></div>
+</article>
+{% endif %}
+{% if asotg_page_site == 'both' or asotg_page_site == 'otg' %}
+<article class="asotg-card" data-asotg-site="otg">
+  <div class="asotg-head"><div><h3>Observatório Três Garças</h3><small>ASOTG | Engenheiro Passos, Brazil</small></div><span class="asotg-badge" data-role="badge" data-status="offline">CHECKING</span></div>
+  <div class="asotg-media" data-role="media"><div class="asotg-placeholder" data-role="placeholder">Checking latest available image...</div><img data-role="image" alt="Latest allsky view of Observatório Três Garças" hidden><canvas class="asotg-skycanvas" data-role="canvas" aria-label="Astronomical target overlay"></canvas><span class="asotg-modeflag" data-role="simulation" hidden>SIMULATION</span></div>
+  <div class="asotg-controls"><button type="button" data-view="clean" aria-pressed="true">Clean</button><button type="button" data-view="annotated" aria-pressed="false">Annotated</button><a data-role="full" target="_blank" rel="noopener noreferrer" hidden>Open image</a><a class="asotg-open-monitor" href="{{ '/allsky_otg.html' | relative_url }}" target="_blank" rel="noopener noreferrer">Open full monitor</a></div>
+  <div class="asotg-tools">
+    <h4>Custom astronomical targets</h4>
+    <form class="asotg-form" data-role="target-form">
+      <div class="asotg-field"><label for="asotg-query-otg">SIMBAD name or J2000 coordinates</label><input id="asotg-query-otg" data-role="query" placeholder="Sirius | 06:45:08.9 -16:42:58 | 101.287 -16.716" autocomplete="off" maxlength="160" required></div>
+      <div class="asotg-field"><label for="asotg-name-otg">Custom name (optional)</label><input id="asotg-name-otg" data-role="custom-name" placeholder="Target" maxlength="70"></div>
+      <button type="submit" data-role="search">Plot target</button>
+    </form>
+    <p class="asotg-target-note" data-role="target-status" aria-live="polite">Search a name in SIMBAD or enter coordinates. Tracks cover 2 hours in the past and 6 hours into the future, relative to the image capture time.</p>
+    <div class="asotg-actions"><label class="asotg-target-note"><input type="checkbox" data-role="overlay-enabled" checked> Show target overlays</label><button type="button" data-role="clear-targets">Clear targets</button></div>
+    <div class="asotg-target-list" data-role="targets"></div>
+    <details data-role="calibration-panel"><summary>Sky alignment and fisheye calibration</summary>
+      <p class="asotg-target-note">The public JPEG does not include the ASOTG camera calibration. Adjust this overlay to the actual sky image. Two-click calibration: select the Zenith, then the North horizon point. Settings are saved in this browser only.</p>
+      <div class="asotg-cal-actions"><button type="button" data-role="two-click">Calibrate with 2 clicks</button><button type="button" data-role="cal-reset">Reset defaults</button><button type="button" data-role="cal-copy">Copy calibration</button></div>
+      <div class="asotg-cal-grid" data-role="cal-fields"></div>
+      <p class="asotg-target-note" data-role="cal-status">Default alignment is approximate until calibrated for this camera and installation.</p>
+    </details>
+  </div>
+  <div class="asotg-meta"><div><b>Last acquisition:</b> <span data-role="capture">Not available</span></div><div><b>Last upload:</b> <span data-role="upload">Not available</span></div><div><b>Camera:</b> <span data-role="camera">No status received</span></div><div><b>Overlay reference:</b> <span data-role="reference">Waiting for image</span></div><div data-role="detail">Waiting for Cloudflare status</div></div>
+</article>
+{% endif %}
+</div>
+<p class="asotg-notice">Times shown in Brazil local time (America/Sao_Paulo). Offline images remain available, and astronomical target coordinates are projected at the image's capture timestamp, not at the visitor's current time. The overlay is browser-generated and approximate until its alignment is calibrated. Original ASOTG annotations remain embedded only in the Annotated image.</p>
+<script>
+(() => {
+  'use strict';
+  const root = document.currentScript.closest('.asotg-public');
+  if (!root || root.dataset.initialized === '1') return;
+  root.dataset.initialized = '1';
+  // Preserved from the user's customized allsky_live.html.
+  const WORKER_BASE = 'https://asotg-allsky.observatoriotresgarcas.workers.dev';
+  const INTERVAL_MS = 30000;
+  const SITE = {
+    mini: { lat:-23.209107, lon:-45.862162 },
+    otg:  { lat:-22.5505,   lon:-44.6333 }
+  };
+  // Match the original ASOTG defaults. Set separately after physical calibration.
+  const DEFAULT_CALIBRATIONS = {
+    mini: {cx_norm:.5,cy_norm:.5,radius_norm:.43,rotation_deg:0,horizon_zenith_angle_deg:90,projection:'equidistant',flip_x:false,flip_y:false},
+    otg:  {cx_norm:.5,cy_norm:.5,radius_norm:.43,rotation_deg:0,horizon_zenith_angle_deg:90,projection:'equidistant',flip_x:false,flip_y:false}
+  };
+  const cards = [...root.querySelectorAll('[data-asotg-site]')];
+  const states = new Map();
+  const DEG=Math.PI/180, RAD=180/Math.PI;
+  const finite=x=>Number.isFinite(x);
+  const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+  const pick=(card,role)=>card.querySelector(`[data-role="${role}"]`);
+  const getSaved=(key,fallback)=>{try{const raw=localStorage.getItem(key);return raw===null?fallback:JSON.parse(raw)}catch{return fallback}};
+  const save=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value))}catch{}};
+  const fmtTime=iso=>{
+    if(!iso)return 'Not available';
+    const d=new Date(iso);
+    if(!finite(d.getTime()))return 'Not available';
+    return new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(d)+' BRT';
+  };
+  const isoTime=state=>{
+    const t=Date.parse(state.data?.last_capture_utc||'');
+    return finite(t)?new Date(t):null;
+  };
+  function imageUrl(site,view,version){const name=view==='annotated'?'latest_annotated.jpg':'latest.jpg';return `${WORKER_BASE}/image/${site}/${name}?v=${encodeURIComponent(version||'0')}`;}
+  const setMessage=(card,msg)=>{pick(card,'target-status').textContent=msg;};
+
+  // J2000 equatorial coordinates from the catalog are precessed to the observation date.
+  // This is a lightweight Earth-rotation model for browser viewing, not a precise astrometric fit.
+  function precess(raDeg,decDeg,date){
+    const jd=date.getTime()/86400000+2440587.5,T=(jd-2451545)/36525;
+    const zeta=(2306.2181*T+.30188*T*T+.017998*T*T*T)/3600*DEG;
+    const z=(2306.2181*T+1.09468*T*T+.018203*T*T*T)/3600*DEG;
+    const theta=(2004.3109*T-.42665*T*T-.041833*T*T*T)/3600*DEG;
+    const ra=raDeg*DEG,dec=decDeg*DEG;
+    const A=Math.cos(dec)*Math.sin(ra+zeta);
+    const B=Math.cos(theta)*Math.cos(dec)*Math.cos(ra+zeta)-Math.sin(theta)*Math.sin(dec);
+    const C=Math.sin(theta)*Math.cos(dec)*Math.cos(ra+zeta)+Math.cos(theta)*Math.sin(dec);
+    return {ra:(Math.atan2(A,B)+z),dec:Math.asin(clamp(C,-1,1))};
+  }
+  function altAz(raDeg,decDeg,date,site){
+    const loc=SITE[site], eq=precess(raDeg,decDeg,date), jd=date.getTime()/86400000+2440587.5;
+    const gmst=(280.46061837+360.98564736629*(jd-2451545)+.000387933*((jd-2451545)/36525)**2)%360;
+    const ha=(gmst+loc.lon)*DEG-eq.ra, lat=loc.lat*DEG,dec=eq.dec;
+    const sa=Math.sin(lat)*Math.sin(dec)+Math.cos(lat)*Math.cos(dec)*Math.cos(ha);
+    const alt=Math.asin(clamp(sa,-1,1));
+    const north=Math.cos(lat)*Math.sin(dec)-Math.sin(lat)*Math.cos(dec)*Math.cos(ha);
+    const east=-Math.cos(dec)*Math.sin(ha);
+    return {alt:alt*RAD,az:((Math.atan2(east,north)*RAD)%360+360)%360};
+  }
+  function projectionFactor(alt,cal){
+    const theta=(90-alt)*DEG,edge=cal.horizon_zenith_angle_deg*DEG;
+    switch(cal.projection){
+      case'equisolid':return Math.sin(theta/2)/Math.max(1e-9,Math.sin(edge/2));
+      case'stereographic':return Math.tan(theta/2)/Math.max(1e-9,Math.tan(edge/2));
+      case'orthographic':return Math.sin(theta)/Math.max(1e-9,Math.sin(edge));
+      default:return theta/Math.max(1e-9,edge);
     }
-    function render(card, state) {
-      const d = state.data;
-      const site = state.site;
-      const badge = pick(card, 'badge');
-      if (!d || !d.image_available) {
-        pick(card,'image').hidden = true;
-        pick(card,'placeholder').hidden = false;
-        pick(card,'placeholder').textContent = d ? 'No image has been published yet.' : 'Cannot reach the image gateway.';
-        pick(card,'full').hidden = true;
-      } else {
-        const img = pick(card, 'image');
-        const url = imageUrl(site, state.view, d.last_upload_utc);
-        if (img.dataset.url !== url) { img.src = url; img.dataset.url = url; }
-        img.hidden = false;
-        pick(card,'placeholder').hidden = true;
-        const full = pick(card, 'full'); full.href = url; full.hidden = false;
+  }
+  function project(alt,az,state,layout){
+    const c=state.cal,r=Math.min(layout.iw,layout.ih)*c.radius_norm*projectionFactor(alt,c),a=(az+c.rotation_deg)*DEG;
+    let x=-r*Math.sin(a),y=-r*Math.cos(a);
+    if(c.flip_x)x=-x;if(c.flip_y)y=-y;
+    const ix=c.cx_norm*layout.iw+x,iy=c.cy_norm*layout.ih+y;
+    return {x:layout.ox+ix*layout.scale,y:layout.oy+iy*layout.scale};
+  }
+  function layoutFor(card){
+    const media=pick(card,'media'),img=pick(card,'image');
+    const w=media.clientWidth,h=media.clientHeight,iw=img.naturalWidth||w,ih=img.naturalHeight||h;
+    const scale=Math.min(w/iw,h/ih);
+    return {w,h,iw,ih,scale,ox:(w-iw*scale)/2,oy:(h-ih*scale)/2};
+  }
+  function draw(card,state){
+    const canvas=pick(card,'canvas'),ctx=canvas.getContext('2d');if(!ctx)return;
+    const L=layoutFor(card),dpr=Math.min(window.devicePixelRatio||1,2.5);
+    const pw=Math.round(L.w*dpr),ph=Math.round(L.h*dpr);
+    if(canvas.width!==pw||canvas.height!==ph){canvas.width=pw;canvas.height=ph;}
+    ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,L.w,L.h);
+    if(!state.overlayEnabled || !state.data?.image_available || !pick(card,'image').naturalWidth)return;
+    const color=getComputedStyle(root).getPropertyValue('--a-path').trim()||'#f6c96d';
+    const past=getComputedStyle(root).getPropertyValue('--a-past').trim()||'#8fd6ed';
+    const outline=getComputedStyle(root).getPropertyValue('--a-image-bg').trim()||'#000';
+    const time=isoTime(state);if(!time)return;
+    // Calibration guide, shown only while the alignment drawer is open.
+    if(pick(card,'calibration-panel').open){
+      ctx.save();ctx.strokeStyle=color;ctx.globalAlpha=.36;ctx.setLineDash([5,7]);ctx.lineWidth=1.5;
+      let started=false;ctx.beginPath();
+      for(let az=0;az<=360;az+=3){const p=project(0,az,state,L);if(!started){ctx.moveTo(p.x,p.y);started=true;}else ctx.lineTo(p.x,p.y);}ctx.stroke();ctx.setLineDash([]);
+      for(const [label,az] of [['N',0],['E',90],['S',180],['W',270]]){
+        const p=project(5,az,state,L);ctx.font='bold 13px sans-serif';ctx.textAlign='center';ctx.strokeStyle=outline;ctx.lineWidth=3;ctx.strokeText(label,p.x,p.y);ctx.fillStyle=color;ctx.globalAlpha=.9;ctx.fillText(label,p.x,p.y);
       }
-      const canAnnotate = !!(d && d.image_available && d.has_annotated);
-      const annButton = card.querySelector('[data-view="annotated"]');
-      annButton.disabled = !canAnnotate;
-      for (const button of card.querySelectorAll('[data-view]'))
-        button.setAttribute('aria-pressed', String(button.dataset.view === state.view));
-      if (d) {
-        pick(card,'capture').textContent = fmtTime(d.last_capture_utc);
-        pick(card,'upload').textContent = fmtTime(d.last_upload_utc);
-        pick(card,'camera').textContent = d.camera_name || 'Not reported';
-        pick(card,'simulation').hidden = !d.simulated;
-        if (!d.online) {
-          badge.textContent = 'OFFLINE'; badge.dataset.status = 'offline';
-          pick(card,'detail').textContent = d.image_available ? 'Last image retained (not live).' : 'Waiting for first publication.';
-        } else if (!d.camera_connected || !d.capturing) {
-          badge.textContent = d.camera_connected ? 'ONLINE / IDLE' : 'CAMERA OFF'; badge.dataset.status = 'idle';
-          pick(card,'detail').textContent = d.camera_connected ? 'ASOTG online, but no recent captures.' : 'ASOTG online, camera disconnected.';
-        } else if (d.simulated) {
-          badge.textContent = 'SIMULATION'; badge.dataset.status = 'simulation';
-          pick(card,'detail').textContent = 'Simulated image stream, not a physical sky observation.';
-        } else if (!d.image_recent) {
-          badge.textContent = 'UPLOAD DELAY'; badge.dataset.status = 'idle';
-          pick(card,'detail').textContent = 'Camera running, but the public image has not been updated recently.';
-        } else {
-          badge.textContent = 'LIVE'; badge.dataset.status = 'live';
-          pick(card,'detail').textContent = 'Camera online and public image recently updated.';
+      ctx.restore();
+    }
+    for(const t of state.targets){
+      for(const [start,end,stroke,dashed] of [[-120,0,past,true],[0,360,color,false]]){
+        ctx.save();ctx.strokeStyle=stroke;ctx.lineWidth=2.25;ctx.setLineDash(dashed?[6,6]:[]);ctx.beginPath();let segment=false;
+        for(let m=start;m<=end;m+=10){const aa=altAz(t.ra,t.dec,new Date(time.getTime()+m*60000),state.site);
+          if(aa.alt<0){segment=false;continue;}
+          const p=project(aa.alt,aa.az,state,L);if(!segment){ctx.moveTo(p.x,p.y);segment=true;}else ctx.lineTo(p.x,p.y);
         }
-      } else {
-        badge.textContent = 'UNAVAILABLE'; badge.dataset.status = 'offline';
-        pick(card,'detail').textContent = 'Public status service unreachable.';
-        pick(card,'camera').textContent = 'Not available';
+        ctx.stroke();ctx.restore();
+      }
+      const aa=altAz(t.ra,t.dec,time,state.site);
+      if(aa.alt>=0){
+        const p=project(aa.alt,aa.az,state,L);
+        ctx.save();ctx.lineWidth=2.5;ctx.strokeStyle=outline;ctx.fillStyle=color;
+        ctx.beginPath();ctx.arc(p.x,p.y,6,0,2*Math.PI);ctx.fill();ctx.stroke();
+        ctx.beginPath();ctx.moveTo(p.x-13,p.y);ctx.lineTo(p.x+13,p.y);ctx.moveTo(p.x,p.y-13);ctx.lineTo(p.x,p.y+13);ctx.strokeStyle=color;ctx.stroke();
+        ctx.font='bold 14px sans-serif';ctx.textAlign=p.x>L.w*.68?'right':'left';
+        const tx=p.x+(p.x>L.w*.68?-13:13),ty=clamp(p.y-13,15,L.h-8);
+        ctx.strokeStyle=outline;ctx.lineWidth=4;ctx.strokeText(t.name,tx,ty);ctx.fillText(t.name,tx,ty);ctx.restore();
       }
     }
-    async function refresh(card, state) {
-      if (state.busy) return;
-      state.busy = true;
-      try {
-        const response = await fetch(`${WORKER_BASE}/api/status/${state.site}?t=${Date.now()}`,
-                                     { cache: 'no-store' });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        state.data = await response.json();
-        // If annotation was disabled on the observatory, return to the clean image.
-        if (state.view === 'annotated' && !state.data.has_annotated) state.view = 'clean';
-      } catch (_) { state.data = null; }
-      finally { state.busy = false; render(card, state); }
+    if(state.clickCal){
+      ctx.save();ctx.fillStyle=color;ctx.font='bold 16px sans-serif';ctx.textAlign='center';
+      const prompt=state.clickCal.stage===0?'Click the zenith in the image':'Click the NORTH horizon in the image';
+      ctx.strokeStyle=outline;ctx.lineWidth=4;ctx.strokeText(prompt,L.w/2,32);ctx.fillText(prompt,L.w/2,32);ctx.restore();
     }
-    for (const card of cards) {
-      const state = { site: card.dataset.asotgSite, view: 'clean', data: null, busy: false };
-      records.set(state.site, state);
-      for (const button of card.querySelectorAll('[data-view]')) button.addEventListener('click', () => {
-        if (button.disabled) return;
-        state.view = button.dataset.view;
-        render(card, state);
+  }
+  function normalizeCalibration(raw,site){
+    const d=DEFAULT_CALIBRATIONS[site],o={...d};
+    if(!raw||typeof raw!=='object')return o;
+    for(const k of ['cx_norm','cy_norm','radius_norm','rotation_deg','horizon_zenith_angle_deg']){
+      const n=Number(raw[k]);if(finite(n))o[k]=n;
+    }
+    o.cx_norm=clamp(o.cx_norm,0,1);o.cy_norm=clamp(o.cy_norm,0,1);
+    o.radius_norm=clamp(o.radius_norm,.05,1);o.rotation_deg=clamp(o.rotation_deg,-360,360);
+    o.horizon_zenith_angle_deg=clamp(o.horizon_zenith_angle_deg,30,150);
+    if(['equidistant','equisolid','stereographic','orthographic'].includes(raw.projection))o.projection=raw.projection;
+    if(o.projection==='orthographic')o.horizon_zenith_angle_deg=Math.min(o.horizon_zenith_angle_deg,90);
+    o.flip_x=raw.flip_x===true;o.flip_y=raw.flip_y===true;return o;
+  }
+  const calFields=[
+    {k:'cx_norm',name:'Center X',type:'range',min:0,max:1,step:.005},
+    {k:'cy_norm',name:'Center Y',type:'range',min:0,max:1,step:.005},
+    {k:'radius_norm',name:'Horizon radius',type:'range',min:.05,max:1,step:.005},
+    {k:'rotation_deg',name:'North rotation (°)',type:'range',min:-180,max:180,step:1},
+    {k:'horizon_zenith_angle_deg',name:'Lens edge angle (°)',type:'range',min:45,max:120,step:1},
+    {k:'projection',name:'Projection',type:'select',options:['equidistant','equisolid','stereographic','orthographic']},
+    {k:'flip_x',name:'Horizontal flip',type:'check'},
+    {k:'flip_y',name:'Vertical flip',type:'check'}
+  ];
+  function syncCalFields(card,state){
+    for(const el of pick(card,'cal-fields').querySelectorAll('[data-cal-key]')){
+      const k=el.dataset.calKey;const input=el.querySelector('input, select');
+      if(input.type==='checkbox')input.checked=!!state.cal[k];else input.value=state.cal[k];
+      const val=el.querySelector('.asotg-cal-value');if(val)val.textContent=Number(state.cal[k]).toFixed(k==='rotation_deg'||k==='horizon_zenith_angle_deg'?0:3);
+    }
+  }
+  function setupCalFields(card,state){
+    const container=pick(card,'cal-fields');
+    for(const f of calFields){
+      const field=document.createElement('div');field.className='asotg-field';field.dataset.calKey=f.k;
+      const label=document.createElement('label');label.textContent=f.name;const input=document.createElement(f.type==='select'?'select':'input');
+      const id=`cal-${state.site}-${f.k}`;input.id=id;label.htmlFor=id;
+      if(f.type==='range'){input.type='range';input.min=f.min;input.max=f.max;input.step=f.step;}
+      if(f.type==='check')input.type='checkbox';
+      if(f.type==='select'){for(const choice of f.options){const opt=document.createElement('option');opt.value=choice;opt.textContent=choice;input.appendChild(opt);}}
+      field.append(label,input);
+      if(f.type==='range'){const v=document.createElement('span');v.className='asotg-cal-value';field.append(v);}
+      input.addEventListener('input',()=>{
+        const val=f.type==='check'?input.checked:f.type==='range'?Number(input.value):input.value;
+        state.cal[f.k]=val;
+        if(state.cal.projection==='orthographic')state.cal.horizon_zenith_angle_deg=Math.min(90,state.cal.horizon_zenith_angle_deg);
+        save(`asotg-web-cal-${state.site}`,state.cal);syncCalFields(card,state);draw(card,state);
       });
-      if (WORKER_BASE.includes('REPLACE-WITH-YOUR-WORKER')) {
-        pick(card,'placeholder').textContent = 'Configure WORKER_BASE in _includes/allsky_live.html';
-        pick(card,'badge').textContent = 'NOT CONFIGURED';
-        continue;
+      container.appendChild(field);
+    }
+    syncCalFields(card,state);
+    pick(card,'calibration-panel').addEventListener('toggle',()=>draw(card,state));
+    pick(card,'two-click').addEventListener('click',()=>{
+      state.clickCal={stage:0};pick(card,'media').dataset.calibrate='true';
+      pick(card,'cal-status').textContent='Click the zenith on the photograph, then the northern horizon.';draw(card,state);
+    });
+    pick(card,'media').querySelector('canvas').addEventListener('pointerdown',ev=>{
+      if(!state.clickCal)return;
+      const L=layoutFor(card),rect=pick(card,'canvas').getBoundingClientRect();
+      const x=(ev.clientX-rect.left-L.ox)/L.scale,y=(ev.clientY-rect.top-L.oy)/L.scale;
+      if(!finite(x)||!finite(y))return;
+      if(state.clickCal.stage===0){state.clickCal={stage:1,x,y};pick(card,'cal-status').textContent='Zenith registered. Click the northern horizon on the photograph.';}
+      else {
+        const z=state.clickCal,dx=x-z.x,dy=y-z.y;
+        if(Math.hypot(dx,dy)<5){pick(card,'cal-status').textContent='Choose two different points.';return;}
+        state.cal.cx_norm=clamp(z.x/L.iw,0,1);state.cal.cy_norm=clamp(z.y/L.ih,0,1);
+        state.cal.radius_norm=clamp(Math.hypot(dx,dy)/Math.min(L.iw,L.ih),.05,1);
+        state.cal.rotation_deg=Math.atan2(-dx,-dy)*RAD;
+        state.cal.flip_x=false;state.cal.flip_y=false;
+        state.cal.horizon_zenith_angle_deg=90;state.clickCal=null;
+        delete pick(card,'media').dataset.calibrate;
+        save(`asotg-web-cal-${state.site}`,state.cal);syncCalFields(card,state);
+        pick(card,'cal-status').textContent='Calibration saved in this browser. Fine-tune the projection and sliders if necessary.';
       }
-      refresh(card, state);
+      draw(card,state);
+    });
+    pick(card,'cal-reset').addEventListener('click',()=>{
+      state.cal=normalizeCalibration(DEFAULT_CALIBRATIONS[state.site],state.site);
+      save(`asotg-web-cal-${state.site}`,state.cal);state.clickCal=null;delete pick(card,'media').dataset.calibrate;
+      syncCalFields(card,state);draw(card,state);pick(card,'cal-status').textContent='Original ASOTG default calibration restored.';
+    });
+    pick(card,'cal-copy').addEventListener('click',async()=>{
+      const txt=`${state.site}: ${JSON.stringify(state.cal)}`;
+      try{await navigator.clipboard.writeText(txt);pick(card,'cal-status').textContent='Copied. Paste these values into DEFAULT_CALIBRATIONS in allsky_live.html to publish the same calibration for all visitors.';}
+      catch{pick(card,'cal-status').textContent=txt;}
+    });
+  }
+  function parseCoordinates(value){
+    const s=value.trim().replace(/\u2212/g,'-');
+    // Decimal RA/Dec in degrees (comma, semicolon, or whitespace separated).
+    const dec=s.match(/^([+\-]?\d+(?:\.\d+)?)\s*[,;\s]+\s*([+\-]?\d+(?:\.\d+)?)\s*(?:deg|°)?$/i);
+    if(dec){const ra=+dec[1],d=+dec[2];if(ra>=0&&ra<=360&&Math.abs(d)<=90)return {ra,dec:d};}
+    // Sexagesimal RA in hours and declination in degrees (with colon or spaces).
+    const cleaned=s.replace(/[hmsd°′″]/gi,' ').replace(/\s*[:]\s*/g,' ').trim();
+    const pieces=cleaned.split(/[\s,;]+/).filter(Boolean);
+    if(pieces.length===6 && pieces[3].match(/^[+\-]?\d+$/)){
+      const [h,m,sec,dd,dm,ds]=pieces.map(Number);
+      if([h,m,sec,dd,dm,ds].every(finite) && h>=0&&h<=24&&m>=0&&m<60&&sec>=0&&sec<60&&Math.abs(dd)<=90&&dm>=0&&dm<60&&ds>=0&&ds<60){
+        const sign=pieces[3].startsWith('-')?-1:1,ra=15*(h+m/60+sec/3600),dec=sign*(Math.abs(dd)+dm/60+ds/3600);
+        if(ra<=360&&Math.abs(dec)<=90)return {ra,dec};
+      }
     }
-    if (!WORKER_BASE.includes('REPLACE-WITH-YOUR-WORKER')) {
-      setInterval(() => { if (!document.hidden) for (const card of cards) refresh(card, records.get(card.dataset.asotgSite)); }, INTERVAL_MS);
-      document.addEventListener('visibilitychange', () => {
-        if (!document.hidden) for (const card of cards) refresh(card, records.get(card.dataset.asotgSite));
-      });
+    return null;
+  }
+  async function simbadTap(adql){
+    const base='https://simbad.cds.unistra.fr/simbad/sim-tap/sync';
+    const params=new URLSearchParams({request:'doQuery',lang:'adql',format:'json',query:adql});
+    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),11000);
+    try{
+      const r=await fetch(`${base}?${params}`,{signal:controller.signal,mode:'cors',cache:'no-store'});
+      if(!r.ok)throw Error(`SIMBAD returned HTTP ${r.status}`);
+      const j=await r.json();if(!Array.isArray(j.data)||!j.data.length)return null;
+      const row=j.data[0];const columns=(j.metadata||[]).map(m=>String(m.name||'').toLowerCase());
+      const get=(name,index)=>Array.isArray(row)?row[columns.indexOf(name)>=0?columns.indexOf(name):index]:row[name];
+      const name=String(get('main_id',0)||'').trim(),ra=Number(get('ra',1)),dec=Number(get('dec',2));
+      return name&&finite(ra)&&finite(dec)?{name,ra,dec}:null;
+    }finally{clearTimeout(timer);}
+  }
+  async function resolveName(name){
+    const escaped=name.replace(/'/g,"''");
+    return simbadTap(`SELECT TOP 1 b.main_id, b.ra, b.dec FROM basic AS b JOIN ident AS i ON b.oid = i.oidref WHERE LOWER(i.id) = LOWER('${escaped}')`);
+  }
+  async function identifyCoordinates(p){
+    const ra=Number(p.ra.toFixed(7)),dec=Number(p.dec.toFixed(7));
+    return simbadTap(`SELECT TOP 1 main_id, ra, dec FROM basic WHERE 1 = CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', ${ra}, ${dec}, 0.00833333)) ORDER BY DISTANCE(POINT('ICRS', ra, dec), POINT('ICRS', ${ra}, ${dec}))`);
+  }
+  function renderTargets(card,state){
+    const list=pick(card,'targets');list.replaceChildren();
+    for(const t of state.targets){
+      const chip=document.createElement('span');chip.className='asotg-target-chip';
+      const at=isoTime(state),aa=at?altAz(t.ra,t.dec,at,state.site):null;
+      const label=document.createElement('span');label.textContent=`${t.name} | ${aa?`Alt ${aa.alt.toFixed(1)}° / Az ${aa.az.toFixed(1)}°`:`RA ${t.ra.toFixed(3)}°`}`;
+      const del=document.createElement('button');del.type='button';del.textContent='×';del.title=`Remove ${t.name}`;
+      del.addEventListener('click',()=>{state.targets=state.targets.filter(x=>x.id!==t.id);save(`asotg-web-targets-${state.site}`,state.targets);renderTargets(card,state);draw(card,state);});
+      chip.append(label,del);list.append(chip);
     }
-  })();
-  </script>
+  }
+  function setupTargets(card,state){
+    pick(card,'target-form').addEventListener('submit',async ev=>{
+      ev.preventDefault();if(state.searchBusy)return;
+      const q=pick(card,'query').value.trim(),custom=pick(card,'custom-name').value.trim();if(!q)return;
+      state.searchBusy=true;pick(card,'search').disabled=true;
+      setMessage(card,'Resolving target...');
+      try{
+        const coords=parseCoordinates(q);let obj=null,warning='';
+        if(coords){
+          try{obj=await identifyCoordinates(coords);}catch(e){warning='SIMBAD unavailable; using the entered coordinates. ';}
+          if(!obj)obj={...coords,name:custom||'Target'};
+          // Keep the exact coordinates entered by the user; only adopt the matched catalog name.
+          obj={ra:coords.ra,dec:coords.dec,name:custom||(obj.name||'Target')};
+        }else{
+          obj=await resolveName(q);
+          if(!obj)throw new Error('No SIMBAD match. Try a recognized catalog name or J2000 coordinates.');
+          if(custom)obj.name=custom;
+        }
+        const id=`${Date.now()}-${Math.random().toString(36).slice(2,7)}`;
+        state.targets.push({id,ra:obj.ra,dec:obj.dec,name:obj.name.slice(0,70)});
+        if(state.targets.length>12)state.targets.shift();
+        save(`asotg-web-targets-${state.site}`,state.targets);
+        pick(card,'query').value='';pick(card,'custom-name').value='';
+        setMessage(card,`${warning}Added ${obj.name} (J2000: ${obj.ra.toFixed(5)}°, ${obj.dec.toFixed(5)}°). Past trajectory dashed, future solid. Display uses the latest image timestamp.`);
+        renderTargets(card,state);draw(card,state);
+      }catch(err){setMessage(card,`Unable to plot: ${err.message}. If SIMBAD cannot be reached from your browser, enter J2000 coordinates.`);}
+      finally{state.searchBusy=false;pick(card,'search').disabled=false;}
+    });
+    pick(card,'clear-targets').addEventListener('click',()=>{state.targets=[];save(`asotg-web-targets-${state.site}`,[]);renderTargets(card,state);draw(card,state);setMessage(card,'Targets cleared.');});
+    pick(card,'overlay-enabled').addEventListener('change',e=>{state.overlayEnabled=e.target.checked;draw(card,state);});
+    renderTargets(card,state);
+  }
+  function render(card,state){
+    const d=state.data,badge=pick(card,'badge'),img=pick(card,'image');
+    if(!d||!d.image_available){
+      img.hidden=true;pick(card,'placeholder').hidden=false;
+      pick(card,'placeholder').textContent=d?'No image has been published yet.':'Cannot reach the image gateway.';
+      pick(card,'full').hidden=true;
+    }else{
+      const url=imageUrl(state.site,state.view,d.last_upload_utc);
+      if(img.dataset.url!==url){img.dataset.url=url;img.src=url;}
+      if(img.complete&&img.naturalWidth){img.hidden=false;pick(card,'placeholder').hidden=true;}
+      const full=pick(card,'full');full.href=url;full.hidden=false;
+    }
+    const annButton=card.querySelector('[data-view="annotated"]');annButton.disabled=!(d&&d.image_available&&d.has_annotated);
+    for(const btn of card.querySelectorAll('[data-view]'))btn.setAttribute('aria-pressed',String(btn.dataset.view===state.view));
+    if(d){
+      pick(card,'capture').textContent=fmtTime(d.last_capture_utc);pick(card,'upload').textContent=fmtTime(d.last_upload_utc);
+      pick(card,'camera').textContent=d.camera_name||'Not reported';pick(card,'simulation').hidden=!d.simulated;
+      pick(card,'reference').textContent=d.last_capture_utc?`${fmtTime(d.last_capture_utc)} (image time)`:'Not available';
+      if(!d.online){badge.textContent='OFFLINE';badge.dataset.status='offline';pick(card,'detail').textContent=d.image_available?'Last image retained (not live).':'Waiting for first publication.';}
+      else if(!d.camera_connected||!d.capturing){badge.textContent=d.camera_connected?'ONLINE / IDLE':'CAMERA OFF';badge.dataset.status='idle';pick(card,'detail').textContent=d.camera_connected?'ASOTG online, but no recent captures.':'ASOTG online, camera disconnected.';}
+      else if(d.simulated){badge.textContent='SIMULATION';badge.dataset.status='simulation';pick(card,'detail').textContent='Simulated stream, not a physical sky observation.';}
+      else if(!d.image_recent){badge.textContent='UPLOAD DELAY';badge.dataset.status='idle';pick(card,'detail').textContent='Camera running, public image not updated recently.';}
+      else{badge.textContent='LIVE';badge.dataset.status='live';pick(card,'detail').textContent='Camera online and public image recently updated.';}
+    }else{
+      badge.textContent='UNAVAILABLE';badge.dataset.status='offline';pick(card,'detail').textContent='Public status service unreachable.';
+      pick(card,'camera').textContent='Not available';pick(card,'reference').textContent='Not available';
+    }
+    renderTargets(card,state);draw(card,state);
+  }
+  async function refresh(card,state){
+    if(state.busy)return;state.busy=true;
+    try{
+      const response=await fetch(`${WORKER_BASE}/api/status/${state.site}?t=${Date.now()}`,{cache:'no-store'});
+      if(!response.ok)throw Error(`HTTP ${response.status}`);
+      state.data=await response.json();if(state.view==='annotated'&&!state.data.has_annotated)state.view='clean';
+    }catch(_){state.data=null;}
+    finally{state.busy=false;render(card,state);}
+  }
+  const themeSelect=pick(root,'theme');
+  const loadedTheme=getSaved('asotg-web-theme','original');
+  const applyTheme=t=>{if(!['original','light','black','night'].includes(t))t='original';root.dataset.theme=t;themeSelect.value=t;save('asotg-web-theme',t);for(const c of cards){const s=states.get(c.dataset.asotgSite);if(s)draw(c,s);}};
+  themeSelect.addEventListener('change',()=>applyTheme(themeSelect.value));
+  for(const card of cards){
+    const site=card.dataset.asotgSite;
+    if(root.dataset.pageSite===site){
+      const link=card.querySelector('.asotg-open-monitor');
+      link.textContent='All observatories';link.href='{{ "/figures.html" | relative_url }}';
+      link.removeAttribute('target');link.removeAttribute('rel');
+    }
+    const initialTargets=getSaved(`asotg-web-targets-${site}`,[]);
+    const state={site,view:'clean',data:null,busy:false,searchBusy:false,overlayEnabled:true,clickCal:null,
+      targets:Array.isArray(initialTargets)?initialTargets.filter(t=>t&&finite(t.ra)&&finite(t.dec)&&typeof t.name==='string').slice(0,12):[],
+      cal:normalizeCalibration(getSaved(`asotg-web-cal-${site}`,DEFAULT_CALIBRATIONS[site]),site)};
+    states.set(site,state);
+    setupCalFields(card,state);setupTargets(card,state);
+    for(const button of card.querySelectorAll('[data-view]'))button.addEventListener('click',()=>{
+      if(button.disabled)return;state.view=button.dataset.view;render(card,state);
+    });
+    const image=pick(card,'image');
+    image.addEventListener('load',()=>{image.hidden=false;pick(card,'placeholder').hidden=true;draw(card,state);});
+    image.addEventListener('error',()=>{image.hidden=true;pick(card,'placeholder').hidden=false;pick(card,'placeholder').textContent='Image unavailable. The published status may be newer than the image object.';draw(card,state);});
+    if(typeof ResizeObserver!=='undefined'){new ResizeObserver(()=>draw(card,state)).observe(pick(card,'media'));}
+    if(WORKER_BASE.includes('REPLACE-WITH-YOUR-WORKER')){
+      pick(card,'placeholder').textContent='Configure WORKER_BASE in _includes/allsky_live.html';
+      pick(card,'badge').textContent='NOT CONFIGURED';continue;
+    }
+    refresh(card,state);
+  }
+  applyTheme(loadedTheme);
+  if(!WORKER_BASE.includes('REPLACE-WITH-YOUR-WORKER')){
+    setInterval(()=>{if(!document.hidden)for(const card of cards)refresh(card,states.get(card.dataset.asotgSite));},INTERVAL_MS);
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden)for(const card of cards)refresh(card,states.get(card.dataset.asotgSite));});
+  }
+})();
+</script>
 </section>

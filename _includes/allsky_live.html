@@ -30,17 +30,18 @@
       <div class="asotg-field"><label for="asotg-name-mini">Custom name (optional)</label><input id="asotg-name-mini" data-role="custom-name" placeholder="Target" maxlength="70"></div>
       <button type="submit" data-role="search">Plot target</button>
     </form>
-    <p class="asotg-target-note" data-role="target-status" aria-live="polite">Search a name in SIMBAD or enter coordinates. Tracks cover 2 hours in the past and 6 hours into the future, relative to the image capture time.</p>
+    <p class="asotg-target-note" data-role="target-status" aria-live="polite">Enter J2000 coordinates for immediate local plotting (no SIMBAD), or a name to resolve via SIMBAD. Tracks cover 2 hours in the past and 6 hours into the future, relative to the image capture time.</p>
     <div class="asotg-actions"><label class="asotg-target-note"><input type="checkbox" data-role="overlay-enabled" checked> Show target overlays</label><button type="button" data-role="clear-targets">Clear targets</button></div>
     <div class="asotg-target-list" data-role="targets"></div>
     <details data-role="calibration-panel"><summary>Sky alignment and fisheye calibration</summary>
-      <p class="asotg-target-note">The public JPEG does not include the ASOTG camera calibration. Adjust this overlay to the actual sky image. Two-click calibration: select the Zenith, then the North horizon point. Settings are saved in this browser only.</p>
+      <p class="asotg-target-note">Sky alignment is synchronized from the ASOTG via Cloudflare. Uncheck automatic synchronization for a browser-only manual adjustment. Two-click calibration: select the Zenith, then the North horizon point.</p>
+      <label class="asotg-target-note"><input type="checkbox" data-role="use-asotg-cal" checked> Use ASOTG calibration (automatic synchronization)</label>
       <div class="asotg-cal-actions"><button type="button" data-role="two-click">Calibrate with 2 clicks</button><button type="button" data-role="cal-reset">Reset defaults</button><button type="button" data-role="cal-copy">Copy calibration</button></div>
       <div class="asotg-cal-grid" data-role="cal-fields"></div>
-      <p class="asotg-target-note" data-role="cal-status">Default alignment is approximate until calibrated for this camera and installation.</p>
+      <p class="asotg-target-note" data-role="cal-status">Checking calibration sent by the ASOTG.</p>
     </details>
   </div>
-  <div class="asotg-meta"><div><b>Last acquisition:</b> <span data-role="capture">Not available</span></div><div><b>Last upload:</b> <span data-role="upload">Not available</span></div><div><b>Camera:</b> <span data-role="camera">No status received</span></div><div><b>Overlay reference:</b> <span data-role="reference">Waiting for image</span></div><div data-role="detail">Waiting for Cloudflare status</div></div>
+  <div class="asotg-meta"><div><b>Last acquisition:</b> <span data-role="capture">Not available</span></div><div><b>Last upload:</b> <span data-role="upload">Not available</span></div><div><b>Camera:</b> <span data-role="camera">No status received</span></div><div><b>Overlay reference:</b> <span data-role="reference">Waiting for image</span></div><div><b>Sky projection:</b> <span data-role="projection">Waiting for calibration</span></div><div data-role="detail">Waiting for Cloudflare status</div></div>
 </article>
 {% endif %}
 {% if asotg_page_site == 'both' or asotg_page_site == 'otg' %}
@@ -55,20 +56,21 @@
       <div class="asotg-field"><label for="asotg-name-otg">Custom name (optional)</label><input id="asotg-name-otg" data-role="custom-name" placeholder="Target" maxlength="70"></div>
       <button type="submit" data-role="search">Plot target</button>
     </form>
-    <p class="asotg-target-note" data-role="target-status" aria-live="polite">Search a name in SIMBAD or enter coordinates. Tracks cover 2 hours in the past and 6 hours into the future, relative to the image capture time.</p>
+    <p class="asotg-target-note" data-role="target-status" aria-live="polite">Enter J2000 coordinates for immediate local plotting (no SIMBAD), or a name to resolve via SIMBAD. Tracks cover 2 hours in the past and 6 hours into the future, relative to the image capture time.</p>
     <div class="asotg-actions"><label class="asotg-target-note"><input type="checkbox" data-role="overlay-enabled" checked> Show target overlays</label><button type="button" data-role="clear-targets">Clear targets</button></div>
     <div class="asotg-target-list" data-role="targets"></div>
     <details data-role="calibration-panel"><summary>Sky alignment and fisheye calibration</summary>
-      <p class="asotg-target-note">The public JPEG does not include the ASOTG camera calibration. Adjust this overlay to the actual sky image. Two-click calibration: select the Zenith, then the North horizon point. Settings are saved in this browser only.</p>
+      <p class="asotg-target-note">Sky alignment is synchronized from the ASOTG via Cloudflare. Uncheck automatic synchronization for a browser-only manual adjustment. Two-click calibration: select the Zenith, then the North horizon point.</p>
+      <label class="asotg-target-note"><input type="checkbox" data-role="use-asotg-cal" checked> Use ASOTG calibration (automatic synchronization)</label>
       <div class="asotg-cal-actions"><button type="button" data-role="two-click">Calibrate with 2 clicks</button><button type="button" data-role="cal-reset">Reset defaults</button><button type="button" data-role="cal-copy">Copy calibration</button></div>
       <div class="asotg-cal-grid" data-role="cal-fields"></div>
-      <p class="asotg-target-note" data-role="cal-status">Default alignment is approximate until calibrated for this camera and installation.</p>
+      <p class="asotg-target-note" data-role="cal-status">Checking calibration sent by the ASOTG.</p>
     </details>
   </div>
-  <div class="asotg-meta"><div><b>Last acquisition:</b> <span data-role="capture">Not available</span></div><div><b>Last upload:</b> <span data-role="upload">Not available</span></div><div><b>Camera:</b> <span data-role="camera">No status received</span></div><div><b>Overlay reference:</b> <span data-role="reference">Waiting for image</span></div><div data-role="detail">Waiting for Cloudflare status</div></div>
+  <div class="asotg-meta"><div><b>Last acquisition:</b> <span data-role="capture">Not available</span></div><div><b>Last upload:</b> <span data-role="upload">Not available</span></div><div><b>Camera:</b> <span data-role="camera">No status received</span></div><div><b>Overlay reference:</b> <span data-role="reference">Waiting for image</span></div><div><b>Sky projection:</b> <span data-role="projection">Waiting for calibration</span></div><div data-role="detail">Waiting for Cloudflare status</div></div>
 </article>
 {% endif %}
 </div>
-<p class="asotg-notice">Times shown in Brazil local time (America/Sao_Paulo). Offline images remain available, and astronomical target coordinates are projected at the image's capture timestamp, not at the visitor's current time. The overlay is browser-generated and approximate until its alignment is calibrated. Original ASOTG annotations remain embedded only in the Annotated image.</p>
+<p class="asotg-notice">Times shown in Brazil local time (America/Sao_Paulo). Offline images remain available, and astronomical target coordinates are projected at the image's capture timestamp, not at the visitor's current time. The overlay uses the current ASOTG calibration when the Cloudflare gateway supplies it; otherwise it falls back to a local calibration. Original ASOTG annotations remain embedded only in the Annotated image.</p>
 <script src="{{ '/assets/js/allsky-live.js' | relative_url }}" defer></script>
 </section>

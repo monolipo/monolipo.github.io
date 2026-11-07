@@ -1,4 +1,16 @@
 ---
-layout: page
+layout: null
 ---
-{% include allsky_live.html site="otg" %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <title>ASOTG | Observatório Três Garças | AllSky Monitor</title>
+  <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+</head>
+<body class="asotg-standalone" data-theme="original">
+  {% include allsky_live.html site="otg" %}
+</body>
+</html>

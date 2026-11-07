@@ -92,6 +92,8 @@
     const past=getComputedStyle(root).getPropertyValue('--a-past').trim()||'#8fd6ed';
     const outline=getComputedStyle(root).getPropertyValue('--a-image-bg').trim()||'#000';
     const time=isoTime(state);if(!time)return;
+    const display = state.data?.display || {};
+    const targetAlpha = typeof display.opacity === 'number' ? clamp(display.opacity,.10,1) : 1;
     // Calibration guide, shown only while the alignment drawer is open.
     if(pick(card,'calibration-panel').open){
       ctx.save();ctx.strokeStyle=color;ctx.globalAlpha=.36;ctx.setLineDash([5,7]);ctx.lineWidth=1.5;
@@ -103,8 +105,8 @@
       ctx.restore();
     }
     for(const t of state.targets){
-      for(const [start,end,stroke,dashed] of [[-120,0,past,true],[0,360,color,false]]){
-        ctx.save();ctx.strokeStyle=stroke;ctx.lineWidth=2.25;ctx.setLineDash(dashed?[6,6]:[]);ctx.beginPath();let segment=false;
+      if(display.trajectories !== false) for(const [start,end,stroke,dashed] of [[-120,0,past,true],[0,360,color,false]]){
+        ctx.save();ctx.globalAlpha=targetAlpha;ctx.strokeStyle=stroke;ctx.lineWidth=2.25;ctx.setLineDash(dashed?[6,6]:[]);ctx.beginPath();let segment=false;
         for(let m=start;m<=end;m+=10){const aa=altAz(t.ra,t.dec,new Date(time.getTime()+m*60000),state.site);
           if(aa.alt<0){segment=false;continue;}
           const p=project(aa.alt,aa.az,state,L);if(!segment){ctx.moveTo(p.x,p.y);segment=true;}else ctx.lineTo(p.x,p.y);
@@ -114,12 +116,15 @@
       const aa=altAz(t.ra,t.dec,time,state.site);
       if(aa.alt>=0){
         const p=project(aa.alt,aa.az,state,L);
-        ctx.save();ctx.lineWidth=2.5;ctx.strokeStyle=outline;ctx.fillStyle=color;
+        ctx.save();ctx.globalAlpha=targetAlpha;ctx.lineWidth=2.5;ctx.strokeStyle=outline;ctx.fillStyle=color;
         ctx.beginPath();ctx.arc(p.x,p.y,6,0,2*Math.PI);ctx.fill();ctx.stroke();
         ctx.beginPath();ctx.moveTo(p.x-13,p.y);ctx.lineTo(p.x+13,p.y);ctx.moveTo(p.x,p.y-13);ctx.lineTo(p.x,p.y+13);ctx.strokeStyle=color;ctx.stroke();
-        ctx.font='bold 14px sans-serif';ctx.textAlign=p.x>L.w*.68?'right':'left';
-        const tx=p.x+(p.x>L.w*.68?-13:13),ty=clamp(p.y-13,15,L.h-8);
-        ctx.strokeStyle=outline;ctx.lineWidth=4;ctx.strokeText(t.name,tx,ty);ctx.fillText(t.name,tx,ty);ctx.restore();
+        if(display.labels !== false){
+          ctx.font='bold 14px sans-serif';ctx.textAlign=p.x>L.w*.68?'right':'left';
+          const tx=p.x+(p.x>L.w*.68?-13:13),ty=clamp(p.y-13,15,L.h-8);
+          ctx.strokeStyle=outline;ctx.lineWidth=4;ctx.strokeText(t.name,tx,ty);ctx.fillText(t.name,tx,ty);
+        }
+        ctx.restore();
       }
     }
     if(state.clickCal){
@@ -135,8 +140,8 @@
       const n=Number(raw[k]);if(finite(n))o[k]=n;
     }
     o.cx_norm=clamp(o.cx_norm,0,1);o.cy_norm=clamp(o.cy_norm,0,1);
-    o.radius_norm=clamp(o.radius_norm,.05,1);o.rotation_deg=clamp(o.rotation_deg,-360,360);
-    o.horizon_zenith_angle_deg=clamp(o.horizon_zenith_angle_deg,30,150);
+    o.radius_norm=clamp(o.radius_norm,.02,2);o.rotation_deg=clamp(o.rotation_deg,-360,360);
+    o.horizon_zenith_angle_deg=clamp(o.horizon_zenith_angle_deg,15,180);
     if(['equidistant','equisolid','stereographic','orthographic'].includes(raw.projection))o.projection=raw.projection;
     if(o.projection==='orthographic')o.horizon_zenith_angle_deg=Math.min(o.horizon_zenith_angle_deg,90);
     o.flip_x=raw.flip_x===true;o.flip_y=raw.flip_y===true;return o;
@@ -144,13 +149,35 @@
   const calFields=[
     {k:'cx_norm',name:'Center X',type:'range',min:0,max:1,step:.005},
     {k:'cy_norm',name:'Center Y',type:'range',min:0,max:1,step:.005},
-    {k:'radius_norm',name:'Horizon radius',type:'range',min:.05,max:1,step:.005},
+    {k:'radius_norm',name:'Horizon radius',type:'range',min:.02,max:2,step:.005},
     {k:'rotation_deg',name:'North rotation (°)',type:'range',min:-180,max:180,step:1},
-    {k:'horizon_zenith_angle_deg',name:'Lens edge angle (°)',type:'range',min:45,max:120,step:1},
+    {k:'horizon_zenith_angle_deg',name:'Lens edge angle (°)',type:'range',min:15,max:180,step:1},
     {k:'projection',name:'Projection',type:'select',options:['equidistant','equisolid','stereographic','orthographic']},
     {k:'flip_x',name:'Horizontal flip',type:'check'},
     {k:'flip_y',name:'Vertical flip',type:'check'}
   ];
+  function isRemoteCalibration(raw){
+    return !!(raw && typeof raw === 'object' && ['cx_norm','cy_norm','radius_norm','rotation_deg','horizon_zenith_angle_deg']
+      .every(k=>typeof raw[k]==='number' && finite(raw[k])) &&
+      ['equidistant','equisolid','stereographic','orthographic'].includes(raw.projection));
+  }
+  function syncCalMode(card,state){
+    const enabled = state.useRemoteCal && !!state.remoteCal;
+    state.cal=enabled ? state.remoteCal : state.localCal;
+    pick(card,'use-asotg-cal').checked=state.useRemoteCal;
+    for(const input of pick(card,'cal-fields').querySelectorAll('input, select')) input.disabled=enabled;
+    pick(card,'two-click').disabled=enabled;
+    pick(card,'cal-reset').disabled=enabled;
+    if(enabled){
+      pick(card,'cal-status').textContent='Synchronized from ASOTG via Cloudflare. To edit locally, uncheck automatic synchronization.';
+    } else if(state.useRemoteCal){
+      pick(card,'cal-status').textContent='Waiting for calibration metadata from the updated Worker. Using stored browser calibration temporarily.';
+    } else {
+      pick(card,'cal-status').textContent='Using manual calibration saved only in this browser.';
+    }
+    syncCalFields(card,state);
+    draw(card,state);
+  }
   function syncCalFields(card,state){
     for(const el of pick(card,'cal-fields').querySelectorAll('[data-cal-key]')){
       const k=el.dataset.calKey;const input=el.querySelector('input, select');
@@ -171,20 +198,29 @@
       if(f.type==='range'){const v=document.createElement('span');v.className='asotg-cal-value';field.append(v);}
       input.addEventListener('input',()=>{
         const val=f.type==='check'?input.checked:f.type==='range'?Number(input.value):input.value;
-        state.cal[f.k]=val;
-        if(state.cal.projection==='orthographic')state.cal.horizon_zenith_angle_deg=Math.min(90,state.cal.horizon_zenith_angle_deg);
-        save(`asotg-web-cal-${state.site}`,state.cal);syncCalFields(card,state);draw(card,state);
+        if(state.useRemoteCal && state.remoteCal)return;
+        state.localCal[f.k]=val;
+        if(state.localCal.projection==='orthographic')state.localCal.horizon_zenith_angle_deg=Math.min(90,state.localCal.horizon_zenith_angle_deg);
+        state.cal=state.localCal;
+        save(`asotg-web-cal-${state.site}`,state.localCal);syncCalFields(card,state);draw(card,state);
       });
       container.appendChild(field);
     }
     syncCalFields(card,state);
     pick(card,'calibration-panel').addEventListener('toggle',()=>draw(card,state));
+    pick(card,'use-asotg-cal').addEventListener('change',e=>{
+      state.useRemoteCal=e.target.checked;
+      save(`asotg-web-cal-source-${state.site}`,state.useRemoteCal);
+      state.clickCal=null;delete pick(card,'media').dataset.calibrate;
+      syncCalMode(card,state);
+    });
     pick(card,'two-click').addEventListener('click',()=>{
+      if(state.useRemoteCal && state.remoteCal)return;
       state.clickCal={stage:0};pick(card,'media').dataset.calibrate='true';
       pick(card,'cal-status').textContent='Click the zenith on the photograph, then the northern horizon.';draw(card,state);
     });
     pick(card,'media').querySelector('canvas').addEventListener('pointerdown',ev=>{
-      if(!state.clickCal)return;
+      if(!state.clickCal || (state.useRemoteCal && state.remoteCal))return;
       const L=layoutFor(card),rect=pick(card,'canvas').getBoundingClientRect();
       const x=(ev.clientX-rect.left-L.ox)/L.scale,y=(ev.clientY-rect.top-L.oy)/L.scale;
       if(!finite(x)||!finite(y))return;
@@ -192,25 +228,27 @@
       else {
         const z=state.clickCal,dx=x-z.x,dy=y-z.y;
         if(Math.hypot(dx,dy)<5){pick(card,'cal-status').textContent='Choose two different points.';return;}
-        state.cal.cx_norm=clamp(z.x/L.iw,0,1);state.cal.cy_norm=clamp(z.y/L.ih,0,1);
-        state.cal.radius_norm=clamp(Math.hypot(dx,dy)/Math.min(L.iw,L.ih),.05,1);
-        state.cal.rotation_deg=Math.atan2(-dx,-dy)*RAD;
-        state.cal.flip_x=false;state.cal.flip_y=false;
-        state.cal.horizon_zenith_angle_deg=90;state.clickCal=null;
+        state.localCal.cx_norm=clamp(z.x/L.iw,0,1);state.localCal.cy_norm=clamp(z.y/L.ih,0,1);
+        state.localCal.radius_norm=clamp(Math.hypot(dx,dy)/Math.min(L.iw,L.ih),.02,2);
+        state.localCal.rotation_deg=Math.atan2(-dx,-dy)*RAD;
+        state.localCal.flip_x=false;state.localCal.flip_y=false;
+        state.localCal.horizon_zenith_angle_deg=90;state.clickCal=null;
         delete pick(card,'media').dataset.calibrate;
-        save(`asotg-web-cal-${state.site}`,state.cal);syncCalFields(card,state);
+        state.cal=state.localCal;
+        save(`asotg-web-cal-${state.site}`,state.localCal);syncCalFields(card,state);
         pick(card,'cal-status').textContent='Calibration saved in this browser. Fine-tune the projection and sliders if necessary.';
       }
       draw(card,state);
     });
     pick(card,'cal-reset').addEventListener('click',()=>{
-      state.cal=normalizeCalibration(DEFAULT_CALIBRATIONS[state.site],state.site);
-      save(`asotg-web-cal-${state.site}`,state.cal);state.clickCal=null;delete pick(card,'media').dataset.calibrate;
+      if(state.useRemoteCal && state.remoteCal)return;
+      state.localCal=normalizeCalibration(DEFAULT_CALIBRATIONS[state.site],state.site);state.cal=state.localCal;
+      save(`asotg-web-cal-${state.site}`,state.localCal);state.clickCal=null;delete pick(card,'media').dataset.calibrate;
       syncCalFields(card,state);draw(card,state);pick(card,'cal-status').textContent='Original ASOTG default calibration restored.';
     });
     pick(card,'cal-copy').addEventListener('click',async()=>{
       const txt=`${state.site}: ${JSON.stringify(state.cal)}`;
-      try{await navigator.clipboard.writeText(txt);pick(card,'cal-status').textContent='Copied. Paste these values into DEFAULT_CALIBRATIONS in allsky_live.html to publish the same calibration for all visitors.';}
+      try{await navigator.clipboard.writeText(txt);pick(card,'cal-status').textContent='Calibration values copied. Automatic synchronization uses the ASOTG camera calibration.';}
       catch{pick(card,'cal-status').textContent=txt;}
     });
   }
@@ -231,27 +269,26 @@
     }
     return null;
   }
-  async function simbadTap(adql){
-    const base='https://simbad.cds.unistra.fr/simbad/sim-tap/sync';
-    const params=new URLSearchParams({request:'doQuery',lang:'adql',format:'json',query:adql});
-    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),11000);
-    try{
-      const r=await fetch(`${base}?${params}`,{signal:controller.signal,mode:'cors',cache:'no-store'});
-      if(!r.ok)throw Error(`SIMBAD returned HTTP ${r.status}`);
-      const j=await r.json();if(!Array.isArray(j.data)||!j.data.length)return null;
-      const row=j.data[0];const columns=(j.metadata||[]).map(m=>String(m.name||'').toLowerCase());
-      const get=(name,index)=>Array.isArray(row)?row[columns.indexOf(name)>=0?columns.indexOf(name):index]:row[name];
-      const name=String(get('main_id',0)||'').trim(),ra=Number(get('ra',1)),dec=Number(get('dec',2));
-      return name&&finite(ra)&&finite(dec)?{name,ra,dec}:null;
-    }finally{clearTimeout(timer);}
-  }
+  // For astronomical names only. Numeric coordinate parsing never requests the network.
   async function resolveName(name){
-    const escaped=name.replace(/'/g,"''");
-    return simbadTap(`SELECT TOP 1 b.main_id, b.ra, b.dec FROM basic AS b JOIN ident AS i ON b.oid = i.oidref WHERE LOWER(i.id) = LOWER('${escaped}')`);
-  }
-  async function identifyCoordinates(p){
-    const ra=Number(p.ra.toFixed(7)),dec=Number(p.dec.toFixed(7));
-    return simbadTap(`SELECT TOP 1 main_id, ra, dec FROM basic WHERE 1 = CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', ${ra}, ${dec}, 0.00833333)) ORDER BY DISTANCE(POINT('ICRS', ra, dec), POINT('ICRS', ${ra}, ${dec}))`);
+    const url=`${WORKER_BASE}/api/resolve?name=${encodeURIComponent(name)}`;
+    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),30000);
+    try{
+      const response=await fetch(url,{signal:controller.signal,cache:'no-store'});
+      const body=await response.json().catch(()=>({}));
+      if(!response.ok)throw new Error(body.error || `Name resolver returned HTTP ${response.status}`);
+      if(!finite(body.ra)||!finite(body.dec))throw new Error('Resolver returned invalid coordinates');
+      return {ra:body.ra,dec:body.dec,name:String(body.name||name)};
+    }catch(err){
+      // Offline fallback for the two reference stars distributed with the ASOTG catalog.
+      // The server-side SIMBAD resolver is always attempted first for names.
+      const known={sirius:{ra:6.7524770222*15,dec:-16.7161158611},
+                   altair:{ra:19.8463884861*15,dec:8.8683211944}};
+      const fallback=known[name.trim().toLowerCase()];
+      if(fallback)return {...fallback,name,offlineCatalog:true};
+      if(err.name==='AbortError')throw new Error('Name resolution timed out. Try coordinates instead');
+      throw err;
+    }finally{clearTimeout(timer);}
   }
   function renderTargets(card,state){
     const list=pick(card,'targets');list.replaceChildren();
@@ -269,17 +306,15 @@
       ev.preventDefault();if(state.searchBusy)return;
       const q=pick(card,'query').value.trim(),custom=pick(card,'custom-name').value.trim();if(!q)return;
       state.searchBusy=true;pick(card,'search').disabled=true;
-      setMessage(card,'Resolving target...');
+      setMessage(card,'Parsing J2000 coordinates or resolving a name...');
       try{
-        const coords=parseCoordinates(q);let obj=null,warning='';
+        const coords=parseCoordinates(q);let obj=null;
         if(coords){
-          try{obj=await identifyCoordinates(coords);}catch(e){warning='SIMBAD unavailable; using the entered coordinates. ';}
-          if(!obj)obj={...coords,name:custom||'Target'};
-          // Keep the exact coordinates entered by the user; only adopt the matched catalog name.
-          obj={ra:coords.ra,dec:coords.dec,name:custom||(obj.name||'Target')};
+          // Pure local path: NO SIMBAD, Worker, or network request for RA/Dec input.
+          obj={ra:coords.ra,dec:coords.dec,name:custom||'Target'};
         }else{
+          if(/^[+\-\d:.\s,;]+$/.test(q))throw new Error('Invalid J2000 coordinates. Use HH:MM:SS.ss +/-DD:MM:SS.ss or decimal degrees');
           obj=await resolveName(q);
-          if(!obj)throw new Error('No SIMBAD match. Try a recognized catalog name or J2000 coordinates.');
           if(custom)obj.name=custom;
         }
         const id=`${Date.now()}-${Math.random().toString(36).slice(2,7)}`;
@@ -287,9 +322,12 @@
         if(state.targets.length>12)state.targets.shift();
         save(`asotg-web-targets-${state.site}`,state.targets);
         pick(card,'query').value='';pick(card,'custom-name').value='';
-        setMessage(card,`${warning}Added ${obj.name} (J2000: ${obj.ra.toFixed(5)}°, ${obj.dec.toFixed(5)}°). Past trajectory dashed, future solid. Display uses the latest image timestamp.`);
+        const imageTime=isoTime(state);
+        const altitude=imageTime?altAz(obj.ra,obj.dec,imageTime,state.site).alt:null;
+        const below=altitude!==null && altitude<0 ? ` The target is currently below the horizon (Alt ${altitude.toFixed(1)}°), so its present marker is not visible.` : '';
+        setMessage(card,`Added ${obj.name} (J2000: ${obj.ra.toFixed(5)}°, ${obj.dec.toFixed(5)}°). ${coords?'Coordinates plotted locally, without a SIMBAD request.':'Name resolved through SIMBAD/Sesame.'} Past trajectory dashed, future solid. Position is computed at the latest image timestamp.${below}`);
         renderTargets(card,state);draw(card,state);
-      }catch(err){setMessage(card,`Unable to plot: ${err.message}. If SIMBAD cannot be reached from your browser, enter J2000 coordinates.`);}
+      }catch(err){setMessage(card,`Unable to plot: ${err.message}. Names require the Worker resolver. J2000 coordinates work offline.`);}
       finally{state.searchBusy=false;pick(card,'search').disabled=false;}
     });
     pick(card,'clear-targets').addEventListener('click',()=>{state.targets=[];save(`asotg-web-targets-${state.site}`,[]);renderTargets(card,state);draw(card,state);setMessage(card,'Targets cleared.');});
@@ -314,6 +352,7 @@
       pick(card,'capture').textContent=fmtTime(d.last_capture_utc);pick(card,'upload').textContent=fmtTime(d.last_upload_utc);
       pick(card,'camera').textContent=d.camera_name||'Not reported';pick(card,'simulation').hidden=!d.simulated;
       pick(card,'reference').textContent=d.last_capture_utc?`${fmtTime(d.last_capture_utc)} (image time)`:'Not available';
+      pick(card,'projection').textContent=`${state.cal.projection}, north ${state.cal.rotation_deg.toFixed(1)}°, radius ${state.cal.radius_norm.toFixed(3)} (${state.useRemoteCal&&state.remoteCal?'ASOTG sync':'browser calibration'})`;
       if(!d.online){badge.textContent='OFFLINE';badge.dataset.status='offline';pick(card,'detail').textContent=d.image_available?'Last image retained (not live).':'Waiting for first publication.';}
       else if(!d.camera_connected||!d.capturing){badge.textContent=d.camera_connected?'ONLINE / IDLE':'CAMERA OFF';badge.dataset.status='idle';pick(card,'detail').textContent=d.camera_connected?'ASOTG online, but no recent captures.':'ASOTG online, camera disconnected.';}
       else if(d.simulated){badge.textContent='SIMULATION';badge.dataset.status='simulation';pick(card,'detail').textContent='Simulated stream, not a physical sky observation.';}
@@ -322,6 +361,7 @@
     }else{
       badge.textContent='UNAVAILABLE';badge.dataset.status='offline';pick(card,'detail').textContent='Public status service unreachable.';
       pick(card,'camera').textContent='Not available';pick(card,'reference').textContent='Not available';
+      pick(card,'projection').textContent='Last calibration retained in browser';
     }
     renderTargets(card,state);draw(card,state);
   }
@@ -330,13 +370,17 @@
     try{
       const response=await fetch(`${WORKER_BASE}/api/status/${state.site}?t=${Date.now()}`,{cache:'no-store'});
       if(!response.ok)throw Error(`HTTP ${response.status}`);
-      state.data=await response.json();if(state.view==='annotated'&&!state.data.has_annotated)state.view='clean';
+      state.data=await response.json();
+      if(state.view==='annotated'&&!state.data.has_annotated)state.view='clean';
+      // Calibration metadata is site-specific and can change while the camera is idle.
+      state.remoteCal=isRemoteCalibration(state.data.calibration)?normalizeCalibration(state.data.calibration,state.site):null;
+      syncCalMode(card,state);
     }catch(_){state.data=null;}
     finally{state.busy=false;render(card,state);}
   }
   const themeSelect=pick(root,'theme');
   const loadedTheme=getSaved('asotg-web-theme','original');
-  const applyTheme=t=>{if(!['original','light','black','night'].includes(t))t='original';root.dataset.theme=t;themeSelect.value=t;save('asotg-web-theme',t);for(const c of cards){const s=states.get(c.dataset.asotgSite);if(s)draw(c,s);}};
+  const applyTheme=t=>{if(!['original','light','black','night'].includes(t))t='original';root.dataset.theme=t;if(document.body.classList.contains('asotg-standalone'))document.body.dataset.theme=t;themeSelect.value=t;save('asotg-web-theme',t);for(const c of cards){const s=states.get(c.dataset.asotgSite);if(s)draw(c,s);}};
   themeSelect.addEventListener('change',()=>applyTheme(themeSelect.value));
   for(const card of cards){
     const site=card.dataset.asotgSite;
@@ -348,9 +392,11 @@
     const initialTargets=getSaved(`asotg-web-targets-${site}`,[]);
     const state={site,view:'clean',data:null,busy:false,searchBusy:false,overlayEnabled:true,clickCal:null,
       targets:Array.isArray(initialTargets)?initialTargets.filter(t=>t&&finite(t.ra)&&finite(t.dec)&&typeof t.name==='string').slice(0,12):[],
-      cal:normalizeCalibration(getSaved(`asotg-web-cal-${site}`,DEFAULT_CALIBRATIONS[site]),site)};
+      useRemoteCal:getSaved(`asotg-web-cal-source-${site}`,true)!==false,remoteCal:null,
+      localCal:normalizeCalibration(getSaved(`asotg-web-cal-${site}`,DEFAULT_CALIBRATIONS[site]),site)};
+    state.cal=state.localCal;
     states.set(site,state);
-    setupCalFields(card,state);setupTargets(card,state);
+    setupCalFields(card,state);syncCalMode(card,state);setupTargets(card,state);
     for(const button of card.querySelectorAll('[data-view]'))button.addEventListener('click',()=>{
       if(button.disabled)return;state.view=button.dataset.view;render(card,state);
     });

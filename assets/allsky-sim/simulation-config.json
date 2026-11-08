@@ -97,7 +97,7 @@
         "sim_landscape_glow_strength": 0.2,
         "sim_landscape_glow_window_min": 45,
         "sim_landscape_early_darkening_min": 30,
-        "sim_landscape_night_factor": 0.5,
+        "sim_landscape_night_factor": 1,
         "sim_landscape_glow_inner_radius": 0.65,
         "sim_landscape_glow_fade_width": 0.4,
         "sim_landscape_glow_angular_width_deg": 105

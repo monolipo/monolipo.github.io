@@ -178,17 +178,6 @@ function landscapeBrightness(sky,display,events,date){
   }
   return clamp(Math.max(base,floor+moon),0,1);
 }
-function glowIntensity(sky,display,events,date){
-  if(!display.sim_landscape_antisolar_glow||sky.sun.alt_deg<0)return 0;
-  const window=(display.sim_landscape_glow_window_min??30)*60000,time=date.getTime();
-  const distances=[];
-  for(const ev of events){const d=ev.t-time;
-    if(ev.type==='sunset'&&d>=0&&d<=window)distances.push(d);
-    else if(ev.type==='sunrise'&&d<=0&&d>=-window)distances.push(-d);
-  }
-  if(!distances.length)return 0;
-  return smooth(1-Math.min(...distances)/window)*clamp(display.sim_landscape_glow_strength??.58,0,1);
-}
 function skyData(date,loc,stars,con){
   const se=sunEq(date),su={name:'Sun',...horizon(se.ra,se.dec,date,loc)};
   const me=moonEq(date,se),mo={name:'Moon',illum_frac:me.illum_frac,...horizon(me.ra,me.dec,date,loc)};
@@ -214,20 +203,26 @@ function drawBackground(c,site,sky,cal,display,texture,date){
   for(let y=0;y<h;y++)for(let x=0;x<w;x++){
     const p=inversePixel(x,y,w,h,cal),a=p.alt,az=p.az,radial=clamp(p.r,0,1);
     let rgb;
-    if(a<0){rgb=[2,5,11];}
+    if(a<0){
+      // Soft continuation below the geometric horizon prevents a visible circular seam.
+      // The landscape remains opaque wherever its original alpha mask is nonzero.
+      const fade=smooth((-a*RAD)/24);
+      rgb=colors[2].map((v,i)=>v*(1-fade)+[2,5,11][i]*fade);
+    }
     else if(radial<.62){const u=clamp(radial/.62,0,1);rgb=colors[0].map((v,i)=>v*(1-u)+colors[1][i]*u);}
     else{const v=clamp((radial-.62)/.38,0,1);rgb=colors[1].map((v,i)=>v*(1-v)+colors[2][i]*v);}
     if(haloStrength){const rr=Math.hypot(x-sx[0],y-sx[1])/radius,halo=Math.exp(-3.2*rr*rr)*haloStrength*.24;
       rgb=rgb.map((v,i)=>v*(1-halo)+[255,130,76][i]*halo);}
     if(ringStrength){const ring=Math.exp(-Math.pow((radial-.89)/.13,2))*ringStrength*.18;
       rgb=rgb.map((v,i)=>v*(1-ring)+[239,109,94][i]*ring);}
-    if(strength&&a>=0){
+    const textureFade=a>=0?1:1-smooth((-a*RAD)/24);
+    if(strength&&textureFade>0){
       const sinAlt=Math.sin(a),cosAlt=Math.cos(a),ca=Math.cos(az);
       const dec=Math.asin(clamp(sinAlt*sinlat+cosAlt*coslat*ca,-1,1));
       const ha=Math.atan2(-Math.sin(az)*cosAlt,sinAlt*coslat-cosAlt*sinlat*ca);
       const ra=mod((lst*DEG-ha),TAU),tx=Math.floor(mod(.5-ra/TAU,1)*Twidth)%Twidth;
       const ty=clamp(Math.floor((Math.PI/2-dec)/Math.PI*(Theight-1)),0,Theight-1),idx=(ty*Twidth+tx)*4;
-      for(let ch=0;ch<3;ch++)rgb[ch]+=Math.max(0,tex[idx+ch]-7)*strength;
+      for(let ch=0;ch<3;ch++)rgb[ch]+=Math.max(0,tex[idx+ch]-7)*strength*textureFade;
     }
     data[k++]=clamp(rgb[0],0,255);data[k++]=clamp(rgb[1],0,255);data[k++]=clamp(rgb[2],0,255);data[k++]=255;
   }
@@ -241,33 +236,13 @@ function landscapeOn(ctx,src,site,sky,cal,display,date,events,w,h){
   const ox=cal.cx_norm*w-m1*src.width/2-m3*src.height/2;
   const oy=cal.cy_norm*h-m2*src.width/2-m4*src.height/2;
   lctx.setTransform(m1,m2,m3,m4,ox,oy);lctx.drawImage(src,0,0);lctx.setTransform(1,0,0,1,0,0);
-  const brightness=landscapeBrightness(sky,display,events,date),glow=glowIntensity(sky,display,events,date);
-  if(brightness<.9999||glow>0){
+  // Only solar darkening and the optional lunar recovery affect the landscape.
+  const brightness=landscapeBrightness(sky,display,events,date);
+  if(brightness<.9999){
     const im=lctx.getImageData(0,0,w,h),data=im.data;
-    const anti=(sky.sun.az_deg+180)*DEG;
-    const hangle=(display.sim_landscape_glow_angular_width_deg??105)*DEG;
-    const inner=display.sim_landscape_glow_inner_radius??.67,fade=display.sim_landscape_glow_fade_width??.7;
-    const er=cal.horizon_zenith_angle_deg*DEG;
-    let horizonRho=1;
-    if(cal.projection==='equisolid')horizonRho=Math.sin(Math.PI/4)/Math.sin(er/2);
-    if(cal.projection==='stereographic')horizonRho=Math.tan(Math.PI/4)/Math.tan(er/2);
-    if(cal.projection==='orthographic')horizonRho=1/Math.sin(er);
-    if(cal.projection==='equidistant')horizonRho=(Math.PI/2)/er;
-    const divisor=Math.min(w,h)*cal.radius_norm*horizonRho;
-    for(let y=0,k=0;y<h;y++)for(let x=0;x<w;x++,k+=4){
+    for(let k=0;k<data.length;k+=4){
       if(!data[k+3])continue;
-      if(brightness<.9999){data[k]*=brightness;data[k+1]*=brightness;data[k+2]*=brightness;}
-      if(glow>0){
-        let dx=x+.5-cal.cx_norm*w,dy=y+.5-cal.cy_norm*h;
-        if(cal.flip_x)dx=-dx;if(cal.flip_y)dy=-dy;
-        const az=Math.atan2(-dx,-dy)-cal.rotation_deg*DEG;
-        const separation=Math.abs(mod(az-anti+Math.PI,TAU)-Math.PI);
-        const angular=smooth(1-separation/Math.max(1e-6,hangle));
-        const rad=Math.hypot(dx,dy)/divisor;
-        const radial=1-smooth((rad-inner)/Math.max(fade,1e-4));
-        const f=clamp(glow*angular*radial,0,1);
-        data[k]=data[k]*(1-f)+255*f;data[k+1]=data[k+1]*(1-f)+131*f;data[k+2]=data[k+2]*(1-f)+54*f;
-      }
+      data[k]*=brightness;data[k+1]*=brightness;data[k+2]*=brightness;
     }
     lctx.putImageData(im,0,0);
   }

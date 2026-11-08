@@ -1,0 +1,112 @@
+{
+  "version": "2.1.2-frozen",
+  "sites": {
+    "mini": {
+      "location": {
+        "lat": -23.209107,
+        "lon": -45.862162
+      },
+      "calibration": {
+        "cx_norm": 0.505,
+        "cy_norm": 0.504,
+        "radius_norm": 0.916,
+        "rotation_deg": 0.0,
+        "horizon_zenith_angle_deg": 90.0,
+        "projection": "equidistant",
+        "flip_x": false,
+        "flip_y": false
+      },
+      "display": {
+        "horizon": true,
+        "cardinals": true,
+        "altaz_grid": false,
+        "equatorial_grid": true,
+        "ecliptic": false,
+        "galactic_plane": false,
+        "stars": true,
+        "constellations": true,
+        "planets": true,
+        "sun": true,
+        "moon": true,
+        "targets": true,
+        "trajectories": true,
+        "landscape": true,
+        "star_limit": 3.5,
+        "opacity": 0.75,
+        "labels": true,
+        "theme": "amber",
+        "show_crosshair": false,
+        "sim_galaxy_background": true,
+        "sim_galaxy_opacity": 0.55,
+        "sim_landscape_daynight_effect": true,
+        "sim_landscape_moonlight": true,
+        "sim_landscape_moonlight_strength": 0.38,
+        "sim_landscape_night_floor": 0.0,
+        "sim_landscape_antisolar_glow": true,
+        "sim_landscape_glow_strength": 0.58,
+        "sim_landscape_glow_window_min": 30.0,
+        "sim_landscape_early_darkening_min": 0.0,
+        "sim_landscape_night_factor": 1.0,
+        "sim_landscape_glow_inner_radius": 0.67,
+        "sim_landscape_glow_fade_width": 0.7,
+        "sim_landscape_glow_angular_width_deg": 105.0
+      }
+    },
+    "otg": {
+      "location": {
+        "lat": -22.5505,
+        "lon": -44.6333
+      },
+      "calibration": {
+        "cx_norm": 0.534,
+        "cy_norm": 0.576,
+        "radius_norm": 0.843,
+        "rotation_deg": 0.0,
+        "horizon_zenith_angle_deg": 90.0,
+        "projection": "equidistant",
+        "flip_x": false,
+        "flip_y": false
+      },
+      "display": {
+        "horizon": true,
+        "cardinals": true,
+        "altaz_grid": false,
+        "equatorial_grid": false,
+        "ecliptic": false,
+        "galactic_plane": true,
+        "stars": true,
+        "constellations": true,
+        "planets": true,
+        "sun": true,
+        "moon": true,
+        "targets": true,
+        "trajectories": true,
+        "landscape": true,
+        "star_limit": 3.5,
+        "opacity": 0.75,
+        "labels": true,
+        "theme": "amber",
+        "show_crosshair": false,
+        "sim_galaxy_background": true,
+        "sim_galaxy_opacity": 0.55,
+        "sim_landscape_daynight_effect": true,
+        "sim_landscape_moonlight": true,
+        "sim_landscape_moonlight_strength": 0.38,
+        "sim_landscape_night_floor": 0.0,
+        "sim_landscape_antisolar_glow": true,
+        "sim_landscape_glow_strength": 0.2,
+        "sim_landscape_glow_window_min": 45.0,
+        "sim_landscape_early_darkening_min": 30.0,
+        "sim_landscape_night_factor": 0.5,
+        "sim_landscape_glow_inner_radius": 0.65,
+        "sim_landscape_glow_fade_width": 0.4,
+        "sim_landscape_glow_angular_width_deg": 105.0
+      }
+    }
+  },
+  "settings_origin": "ASOTG_V2.1.2(1).zip",
+  "resolution": [
+    1280,
+    720
+  ]
+}

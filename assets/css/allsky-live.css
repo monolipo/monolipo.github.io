@@ -68,3 +68,8 @@ body.asotg-standalone .asotg-public .asotg-grid{grid-template-columns:minmax(0,1
 body.asotg-standalone{padding:clamp(10px,1.7vw,30px);width:100%;box-sizing:border-box}
 body.asotg-standalone .asotg-public .asotg-card{width:100%}
 body.asotg-standalone .asotg-open-monitor{display:none!important}
+
+/* Browser-only simulator. Image and overlay share the original photograph viewport. */
+.asotg-public .asotg-media .asotg-local-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;z-index:0;}
+.asotg-public .asotg-media .asotg-skycanvas{z-index:1;}
+.asotg-public[data-theme="night"] .asotg-local-image{filter:brightness(.55) sepia(1) saturate(3) hue-rotate(312deg);}

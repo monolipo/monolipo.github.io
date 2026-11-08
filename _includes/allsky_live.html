@@ -5,7 +5,7 @@
 
 {% if asotg_page_site == 'mini' %}
 <h2>ASMINI | Miniobservatório do INPE</h2>
-<p class="asotg-intro">Full AllSky monitor for the Miniobservatório astronomico do INPE. The most recently published frame remains available when the observatory is offline.</p>
+<p class="asotg-intro">Full AllSky monitor for the Miniobservatório do INPE. The most recently published frame remains available when the observatory is offline.</p>
 {% elsif asotg_page_site == 'otg' %}
 <h2>ASOTG | Observatório Três Garças</h2>
 <p class="asotg-intro">Full AllSky monitor for the Observatório Três Garças. The most recently published frame remains available when the observatory is offline.</p>
@@ -21,7 +21,7 @@
 {% if asotg_page_site == 'both' or asotg_page_site == 'mini' %}
 <article class="asotg-card" data-asotg-site="mini">
   <div class="asotg-head"><div><h3>Miniobservatório do INPE</h3><small>ASMINI | INPE, São José dos Campos, Brazil</small></div><span class="asotg-badge" data-role="badge" data-status="offline">CHECKING</span></div>
-  <div class="asotg-media" data-role="media"><div class="asotg-placeholder" data-role="placeholder">Checking latest available image...</div><img data-role="image" alt="Latest allsky view of Miniobservatório do INPE" hidden><canvas class="asotg-skycanvas" data-role="canvas" aria-label="Astronomical target overlay"></canvas><span class="asotg-modeflag" data-role="simulation" hidden>SIMULATION</span></div>
+  <div class="asotg-media" data-role="media"><div class="asotg-placeholder" data-role="placeholder">Checking latest available image...</div><img data-role="image" alt="Latest allsky view of Miniobservatório do INPE" hidden><canvas data-role="local-image" class="asotg-local-image" width="1280" height="720" hidden></canvas><canvas class="asotg-skycanvas" data-role="canvas" aria-label="Astronomical target overlay"></canvas><span class="asotg-modeflag" data-role="simulation" hidden>SIMULATION</span></div>
   <div class="asotg-controls"><button type="button" data-view="clean" aria-pressed="true">Clean</button><button type="button" data-view="annotated" aria-pressed="false">Annotated</button><a data-role="full" target="_blank" rel="noopener noreferrer" hidden>Open image</a><a class="asotg-open-monitor" href="{{ '/allsky_mini.html' | relative_url }}" target="_blank" rel="noopener noreferrer">Open full monitor</a></div>
   <div class="asotg-tools">
     <h4>Custom astronomical targets</h4>
@@ -40,7 +40,7 @@
 {% if asotg_page_site == 'both' or asotg_page_site == 'otg' %}
 <article class="asotg-card" data-asotg-site="otg">
   <div class="asotg-head"><div><h3>Observatório Três Garças</h3><small>ASOTG | Engenheiro Passos, Brazil</small></div><span class="asotg-badge" data-role="badge" data-status="offline">CHECKING</span></div>
-  <div class="asotg-media" data-role="media"><div class="asotg-placeholder" data-role="placeholder">Checking latest available image...</div><img data-role="image" alt="Latest allsky view of Observatório Três Garças" hidden><canvas class="asotg-skycanvas" data-role="canvas" aria-label="Astronomical target overlay"></canvas><span class="asotg-modeflag" data-role="simulation" hidden>SIMULATION</span></div>
+  <div class="asotg-media" data-role="media"><div class="asotg-placeholder" data-role="placeholder">Checking latest available image...</div><img data-role="image" alt="Latest allsky view of Observatório Três Garças" hidden><canvas data-role="local-image" class="asotg-local-image" width="1280" height="720" hidden></canvas><canvas class="asotg-skycanvas" data-role="canvas" aria-label="Astronomical target overlay"></canvas><span class="asotg-modeflag" data-role="simulation" hidden>SIMULATION</span></div>
   <div class="asotg-controls"><button type="button" data-view="clean" aria-pressed="true">Clean</button><button type="button" data-view="annotated" aria-pressed="false">Annotated</button><a data-role="full" target="_blank" rel="noopener noreferrer" hidden>Open image</a><a class="asotg-open-monitor" href="{{ '/allsky_otg.html' | relative_url }}" target="_blank" rel="noopener noreferrer">Open full monitor</a></div>
   <div class="asotg-tools">
     <h4>Custom astronomical targets</h4>
@@ -57,6 +57,6 @@
 </article>
 {% endif %}
 </div>
-<p class="asotg-notice">Times shown in Brazil local time (America/Sao_Paulo). Offline images remain available, and astronomical target coordinates are projected at the image's capture timestamp, not at the visitor's current time. Custom targets use the camera geometry published by ASOTG through Cloudflare. If calibration metadata are unavailable, target plotting is paused until they return. Original ASOTG annotations remain embedded only in the Annotated image.</p>
+<p class="asotg-notice">Times shown in Brazil local time (America/Sao_Paulo). Offline images remain available, and astronomical target coordinates are projected at the image's capture timestamp, not at the visitor's current time. Custom targets use ASOTG calibration from Cloudflare, or the frozen site profile during local fallback simulation. Original ASOTG annotations remain embedded only in the Annotated image.</p>
 <script src="{{ '/assets/js/allsky-live.js' | relative_url }}" defer></script>
 </section>

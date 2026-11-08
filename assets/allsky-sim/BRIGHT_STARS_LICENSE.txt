@@ -1,0 +1,17 @@
+Bright-star catalog attribution
+===============================
+
+The file bright_stars_catalog.csv is a 1,000-row filtered subset derived from
+HYG Database v4.1 by David Nash / Astronexus:
+https://github.com/astronexus/HYG-Database
+
+Selection used by CSOTG:
+- apparent visual magnitude <= 5.0
+- declination < +40 degrees
+- brightest 1,000 entries after sorting by V magnitude
+
+HYG Database is licensed under the Creative Commons Attribution-ShareAlike 4.0
+International License (CC BY-SA 4.0):
+https://creativecommons.org/licenses/by-sa/4.0/
+
+The filtered catalog retains J2000 RA/DEC and apparent V magnitude fields.

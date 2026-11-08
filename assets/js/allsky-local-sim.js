@@ -202,27 +202,30 @@ function drawBackground(c,site,sky,cal,display,texture,date){
   let k=0;
   for(let y=0;y<h;y++)for(let x=0;x<w;x++){
     const p=inversePixel(x,y,w,h,cal),a=p.alt,az=p.az,radial=clamp(p.r,0,1);
+    // Continuous background across the camera frame. The landscape mask
+    // represents the actual horizon and vegetation, without a second disc.
     let rgb;
-    if(a<0){
-      // Soft continuation below the geometric horizon prevents a visible circular seam.
-      // The landscape remains opaque wherever its original alpha mask is nonzero.
-      const fade=smooth((-a*RAD)/24);
-      rgb=colors[2].map((v,i)=>v*(1-fade)+[2,5,11][i]*fade);
+    if(radial<.62){
+      const u=clamp(radial/.62,0,1);
+      rgb=colors[0].map((channel,i)=>channel*(1-u)+colors[1][i]*u);
+    }else{
+      const v=clamp((radial-.62)/.38,0,1);
+      // Use channel and v separately: shadowing v here generated negative RGB
+      // values outside radial 0.62, causing the dark circular artifact.
+      rgb=colors[1].map((channel,i)=>channel*(1-v)+colors[2][i]*v);
     }
-    else if(radial<.62){const u=clamp(radial/.62,0,1);rgb=colors[0].map((v,i)=>v*(1-u)+colors[1][i]*u);}
-    else{const v=clamp((radial-.62)/.38,0,1);rgb=colors[1].map((v,i)=>v*(1-v)+colors[2][i]*v);}
     if(haloStrength){const rr=Math.hypot(x-sx[0],y-sx[1])/radius,halo=Math.exp(-3.2*rr*rr)*haloStrength*.24;
       rgb=rgb.map((v,i)=>v*(1-halo)+[255,130,76][i]*halo);}
     if(ringStrength){const ring=Math.exp(-Math.pow((radial-.89)/.13,2))*ringStrength*.18;
       rgb=rgb.map((v,i)=>v*(1-ring)+[239,109,94][i]*ring);}
-    const textureFade=a>=0?1:1-smooth((-a*RAD)/24);
-    if(strength&&textureFade>0){
+    // The texture stays continuous behind foreground silhouettes.
+    if(strength){
       const sinAlt=Math.sin(a),cosAlt=Math.cos(a),ca=Math.cos(az);
       const dec=Math.asin(clamp(sinAlt*sinlat+cosAlt*coslat*ca,-1,1));
       const ha=Math.atan2(-Math.sin(az)*cosAlt,sinAlt*coslat-cosAlt*sinlat*ca);
       const ra=mod((lst*DEG-ha),TAU),tx=Math.floor(mod(.5-ra/TAU,1)*Twidth)%Twidth;
       const ty=clamp(Math.floor((Math.PI/2-dec)/Math.PI*(Theight-1)),0,Theight-1),idx=(ty*Twidth+tx)*4;
-      for(let ch=0;ch<3;ch++)rgb[ch]+=Math.max(0,tex[idx+ch]-7)*strength*textureFade;
+      for(let ch=0;ch<3;ch++)rgb[ch]+=Math.max(0,tex[idx+ch]-7)*strength;
     }
     data[k++]=clamp(rgb[0],0,255);data[k++]=clamp(rgb[1],0,255);data[k++]=clamp(rgb[2],0,255);data[k++]=255;
   }

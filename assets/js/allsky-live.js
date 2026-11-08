@@ -6,9 +6,9 @@
   // Preserved from the user's customized allsky_live.html.
   const WORKER_BASE = 'https://asotg-allsky.observatoriotresgarcas.workers.dev';
   const INTERVAL_MS = 30000;
-  const WORKER_FAILURE_GRACE_MS = 90000;
+  const WORKER_FAILURE_GRACE_MS = 30000;
   const WORKER_TIMEOUT_MS = 8500;
-  const SIMULATOR_SRC = '/assets/js/allsky-local-sim.js?v=1.0';
+  const SIMULATOR_SRC = '/assets/js/allsky-local-sim.js?v=1.4.2';
   let simulatorScriptPromise = null;
   function ensureSimulatorScript(){
     if(window.ASOTGLocalSimulation)return Promise.resolve();
@@ -264,7 +264,7 @@
       pick(card,'camera').textContent=d.camera_name||'Not reported';pick(card,'simulation').hidden=!d.simulated;
       pick(card,'reference').textContent=d.last_capture_utc?`${fmtTime(d.last_capture_utc)} (image time)`:'Not available';
       pick(card,'projection').textContent=state.cal?`${state.cal.projection}, north ${state.cal.rotation_deg.toFixed(1)}°, radius ${state.cal.radius_norm.toFixed(3)} (${state.localMode?'frozen ASOTG profile':'ASOTG synchronized'})`:'Unavailable. Custom targets are not drawn until ASOTG sends calibration.';
-      if(state.localMode){badge.textContent='SIMULATION';badge.dataset.status='simulation';pick(card,'detail').textContent='Browser-generated AllSky. The Cloudflare gateway has been unreachable for 90 seconds or more.';}
+      if(state.localMode){badge.textContent='SIMULATION';badge.dataset.status='simulation';pick(card,'detail').textContent='Browser-generated AllSky. The Cloudflare gateway has been unreachable for 30 seconds or more.';}
       else if(!d.online){badge.textContent='OFFLINE';badge.dataset.status='offline';pick(card,'detail').textContent=d.image_available?'Last image retained (not live).':'Waiting for first publication.';}
       else if(!d.camera_connected||!d.capturing){badge.textContent=d.camera_connected?'ONLINE / IDLE':'CAMERA OFF';badge.dataset.status='idle';pick(card,'detail').textContent=d.camera_connected?'ASOTG online, but no recent captures.':'ASOTG online, camera disconnected.';}
       else if(d.simulated){badge.textContent='SIMULATION';badge.dataset.status='simulation';pick(card,'detail').textContent='Simulated stream, not a physical sky observation.';}

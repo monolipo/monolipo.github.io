@@ -4,11 +4,11 @@
   if (!root || root.dataset.initialized === '1') return;
   root.dataset.initialized = '1';
   // Preserved from the user's customized allsky_live.html.
-  const WORKER_BASE = 'https://asotg-allsky.observatoriotresgarcas.workers.dev';
+  const WORKER_BASE = "https://asotg-allsky.observatoriotresgarcas.workers.dev";
   const INTERVAL_MS = 30000;
-  const WORKER_FAILURE_GRACE_MS = 30000;
+  const WORKER_FAILURE_GRACE_MS = 35000;
   const WORKER_TIMEOUT_MS = 8500;
-  const SIMULATOR_SRC = '/assets/js/allsky-local-sim.js?v=1.4.2';
+  const SIMULATOR_SRC = "/assets/js/allsky-local-sim.js?v=1.4.2";
   let simulatorScriptPromise = null;
   function ensureSimulatorScript(){
     if(window.ASOTGLocalSimulation)return Promise.resolve();
